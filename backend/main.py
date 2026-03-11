@@ -3,7 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from database import get_db, Base, engine
 from models import Material, TariffCode
-from pydantic import BaseModel
+from schemas import MaterialSchema, TariffCodeSchema, ClusterSchema
+from clustering import generate_clusters
 from typing import List, Optional
 
 app = FastAPI(title="Harmonized Tariff Codes Classification API")
@@ -15,27 +16,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-# Pydantic schemas for serialization
-class MaterialSchema(BaseModel):
-    id: int
-    material_number: str
-    short_text: Optional[str] = None
-    purchase_order_text: Optional[str] = None
-    is_classified: bool
-    tariff_code_id: Optional[int] = None
-
-    class Config:
-        from_attributes = True
-
-class TariffCodeSchema(BaseModel):
-    id: int
-    goods_code: str
-    description: Optional[str] = None
-    language: Optional[str] = None
-
-    class Config:
-        from_attributes = True
 
 @app.get("/materials", response_model=List[MaterialSchema])
 def get_all_materials(skip: int = 0, limit: int = 200, db: Session = Depends(get_db)):
@@ -50,3 +30,12 @@ def get_tariffs(skip: int = 0, limit: int = 200, search: Optional[str] = None, d
         query = query.filter(TariffCode.goods_code.ilike(search_fmt) | TariffCode.description.ilike(search_fmt))
     tariffs = query.offset(skip).limit(limit).all()
     return tariffs
+
+@app.get("/clusters", response_model=List[ClusterSchema])
+def get_clusters():
+    """
+    Returns product clusters.
+    Calls the underlying cluster generation logic.
+    """
+    return generate_clusters()
+
