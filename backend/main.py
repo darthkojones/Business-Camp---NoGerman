@@ -3,8 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from database import get_db, Base, engine
 from models import Material, TariffCode
-from schemas import MaterialSchema, TariffCodeSchema, ClusterSchema
+from schemas import MaterialSchema, TariffCodeSchema, ClusterSchema, TariffSuggestionResponse
 from clustering import generate_clusters
+from tariff_matcher import match_cluster_to_tariff, clear_cache
 from typing import List, Optional
 
 app = FastAPI(title="Harmonized Tariff Codes Classification API")
@@ -38,4 +39,58 @@ def get_clusters(db: Session = Depends(get_db)):
     Calls the underlying cluster generation logic.
     """
     return generate_clusters(db)
+
+
+@app.post("/clusters/{cluster_id}/suggest-tariffs", response_model=TariffSuggestionResponse)
+def suggest_tariffs_for_cluster(
+    cluster_id: str,
+    model: Optional[str] = Query("gpt-4o-mini", description="OpenAI model to use (gpt-4o-mini, gpt-4, gpt-3.5-turbo)"),
+    use_cache: bool = Query(True, description="Use cached results if available"),
+    db: Session = Depends(get_db)
+):
+    """
+    Suggest appropriate tariff codes for a specific cluster using OpenAI.
+    
+    - **cluster_id**: The ID of the cluster (e.g., CL-001)
+    - **model**: OpenAI model to use (default: gpt-4o-mini for cost efficiency)
+    - **use_cache**: Whether to use cached results (default: True)
+    
+    Returns ranked tariff code suggestions with confidence scores and reasoning.
+    """
+    # Get all clusters
+    clusters = generate_clusters(db)
+    
+    # Find the specific cluster
+    target_cluster = None
+    for cluster in clusters:
+        if cluster.cluster_id == cluster_id:
+            target_cluster = cluster
+            break
+    
+    if not target_cluster:
+        raise HTTPException(status_code=404, detail=f"Cluster {cluster_id} not found")
+    
+    # Call the matching service
+    try:
+        result = match_cluster_to_tariff(
+            cluster=target_cluster,
+            db=db,
+            use_cache=use_cache,
+            model=model
+        )
+        return result
+    except ValueError as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error during tariff matching: {str(e)}")
+
+
+@app.post("/clusters/clear-cache")
+def clear_matching_cache():
+    """
+    Clear the tariff matching cache.
+    Useful when you want to force fresh API calls.
+    """
+    clear_cache()
+    return {"message": "Cache cleared successfully"}
 

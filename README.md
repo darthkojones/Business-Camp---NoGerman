@@ -6,9 +6,10 @@ This project provides an internal tool for viewing unmatched SAP export material
 
 ## Features
 - **Frontend**: SvelteKit application using TailwindCSS and Flowbite-Svelte. Currently displays a table with all products available in database.
-- **Backend**: FastAPI Python backend, supplying basic data endpoints (`/materials`, `/tariffs`).
+- **Backend**: FastAPI Python backend, supplying basic data endpoints (`/materials`, `/tariffs`, `/clusters`).
 - **Database**: Containerized PostgreSQL database.
 - **Data Seeding**: Automatically populates the PostgreSQL database from `data/Export_SAP_200MM.csv` and `data/CostumsData.csv` on startup.
+- **AI-Powered Tariff Matching**: LLM-assisted cluster-to-tariff code matching using OpenAI API for intelligent classification suggestions.
 
 ## Getting Started
 
@@ -26,6 +27,52 @@ Once the containers are built and the database has been seeded, you can access:
 - **Backend API Docs**: [http://localhost:8000/docs](http://localhost:8000/docs)
 
 *(Note: Data seeding may take a few seconds on the first run as it loads the CSV files into PostgreSQL).*
+
+### Configuring OpenAI API (Required for AI Matching)
+
+To use the AI-powered tariff matching feature, you need to set up your OpenAI API key:
+
+1. Copy the example environment file:
+   ```bash
+   cp backend/.env.example backend/.env
+   ```
+
+2. Edit `backend/.env` and add your OpenAI API key:
+   ```
+   OPENAI_API_KEY=sk-your-actual-openai-api-key-here
+   ```
+
+3. Restart the backend container to apply the changes:
+   ```bash
+   docker compose restart backend
+   ```
+
+### Using the AI Tariff Matching Feature
+
+Once configured, you can use the tariff matching endpoint:
+
+1. **Get all clusters**: `GET http://localhost:8000/clusters`
+2. **Get tariff suggestions for a cluster**: `POST http://localhost:8000/clusters/{cluster_id}/suggest-tariffs`
+
+Example using curl:
+```bash
+# Get all clusters
+curl http://localhost:8000/clusters
+
+# Get AI suggestions for cluster CL-001
+curl -X POST "http://localhost:8000/clusters/CL-001/suggest-tariffs?model=gpt-4o-mini&use_cache=true"
+```
+
+The API will return ranked tariff code suggestions with:
+- Tariff code
+- Confidence score (0.0 - 1.0)
+- Reasoning for the match
+- Section information
+
+**Available Models:**
+- `gpt-4o-mini` (default, cost-efficient)
+- `gpt-4` (higher accuracy, more expensive)
+- `gpt-3.5-turbo` (fastest, lowest cost)
 
 ## Development Workflow
 
