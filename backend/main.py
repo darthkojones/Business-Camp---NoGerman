@@ -32,10 +32,10 @@ def get_tariffs(skip: int = 0, limit: int = 200, search: Optional[str] = None, d
     return tariffs
 
 @app.get("/clusters", response_model=List[ClusterSchema])
-def get_clusters():
+def get_clusters(db: Session = Depends(get_db)):
     """
     Returns product clusters.
     Calls the underlying cluster generation logic.
     """
-    return generate_clusters()
+    return generate_clusters(db)
 
