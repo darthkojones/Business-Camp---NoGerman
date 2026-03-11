@@ -32,3 +32,18 @@ class ClusterSchema(BaseModel):
     item_count: int
     common_attributes: List[str]
     items: List[ClusterItemSchema]
+
+
+class TariffMatchSchema(BaseModel):
+    tariff_code: str
+    confidence_score: float  # 0.0 to 1.0
+    reasoning: str
+    section_info: Optional[str] = None
+    description: Optional[str] = None
+
+
+class TariffSuggestionResponse(BaseModel):
+    cluster_id: str
+    cluster_name: str
+    matches: List[TariffMatchSchema]
+    timestamp: str
