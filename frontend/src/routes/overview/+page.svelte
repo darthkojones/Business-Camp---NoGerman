@@ -1,3 +1,9 @@
+<script context="module" lang="ts">
+  // this route uses client‑only dependencies (chart.js), disable SSR/prerender
+  export const prerender = false;
+  export const ssr = false;
+</script>
+
 <script lang="ts">
   import { onMount, onDestroy } from "svelte";
   import { goto } from "$app/navigation";

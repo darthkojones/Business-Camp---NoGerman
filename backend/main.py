@@ -435,6 +435,19 @@ def confirm_material_assignment(
         # Mark material as classified
         material.is_classified = True
         
+        # also update the material's tariff_code_id so that overview reflects the
+        # user selection. look up the TariffCode row by goods_code (8‑digit HS code)
+        # and assign its id; if no match exists we leave it unset.
+        if confirmation.assigned_tariff_code:
+            tariff = db.query(TariffCode).filter(
+                TariffCode.goods_code == confirmation.assigned_tariff_code
+            ).first()
+            if tariff:
+                material.tariff_code_id = tariff.id
+            else:
+                # supply a warning in the log if the code didn't match
+                print(f"Warning: assigned tariff code {confirmation.assigned_tariff_code} not found in table")
+        
         db.commit()
         
         return ConfirmationResponse(
