@@ -42,6 +42,16 @@ class TariffMatchSchema(BaseModel):
     description: Optional[str] = None
 
 
+class DistributionItemSchema(BaseModel):
+    tariff_code_id: Optional[int] = None
+    goods_code: Optional[str] = None
+    description: Optional[str] = None
+    count: int
+
+class BulkUpdateMaterialSchema(BaseModel):
+    material_ids: List[int]
+    new_tariff_code_id: int
+
 class TariffSuggestionResponse(BaseModel):
     cluster_id: str
     cluster_name: str

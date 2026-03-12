@@ -1,0 +1,445 @@
+<script lang="ts">
+  import { onMount, onDestroy } from "svelte";
+  import { goto } from "$app/navigation";
+  import {
+    Chart as ChartJS,
+    Title,
+    Tooltip,
+    Legend,
+    BarElement,
+    BarController,
+    CategoryScale,
+    LinearScale,
+    type ChartConfiguration,
+  } from "chart.js";
+  import { Search, CheckCircle, RefreshCw } from "lucide-svelte";
+
+  ChartJS.register(
+    Title,
+    Tooltip,
+    Legend,
+    BarElement,
+    BarController,
+    CategoryScale,
+    LinearScale,
+  );
+
+  interface DistributionItem {
+    tariff_code_id: number | null;
+    goods_code: string | null;
+    description: string | null;
+    count: number;
+  }
+
+  interface Material {
+    id: number;
+    material_number: string;
+    short_text: string | null;
+    purchase_order_text: string | null;
+    is_classified: boolean;
+    tariff_code_id: number | null;
+  }
+
+  interface TariffCode {
+    id: number;
+    goods_code: string;
+    description: string | null;
+  }
+
+  let distributionData: DistributionItem[] = [];
+  let loadingDistribution = true;
+
+  let selectedCodeId: number | null = null;
+  let selectedCodeInfo: DistributionItem | null = null;
+
+  let materials: Material[] = [];
+  let loadingMaterials = false;
+
+  let allTariffs: TariffCode[] = [];
+  let tariffSearchQuery = "";
+
+  // Selection state
+  let selectedMaterialIds: Set<number> = new Set();
+  let targetTariffCodeId: number | null = null;
+  let updating = false;
+
+  onMount(async () => {
+    await fetchDistribution();
+    await fetchAllTariffs();
+  });
+
+  async function fetchDistribution() {
+    loadingDistribution = true;
+    try {
+      const res = await fetch("http://localhost:8000/analytics/distribution");
+      if (res.ok) {
+        distributionData = await res.json();
+      }
+    } catch (e) {
+      console.error("Failed to fetch distribution:", e);
+    } finally {
+      loadingDistribution = false;
+    }
+  }
+
+  async function fetchAllTariffs() {
+    try {
+      const res = await fetch("http://localhost:8000/tariffs?limit=1000");
+      if (res.ok) {
+        allTariffs = await res.json();
+      }
+    } catch (e) {
+      console.error("Failed to fetch tariffs:", e);
+    }
+  }
+
+  async function loadMaterials(
+    tariff_code_id: number | null,
+    itemInfo: DistributionItem,
+  ) {
+    if (tariff_code_id === null) {
+      // Redirect to main page for unclassified
+      goto("/");
+      return;
+    }
+
+    selectedCodeId = tariff_code_id;
+    selectedCodeInfo = itemInfo;
+    loadingMaterials = true;
+    selectedMaterialIds.clear(); // reset selection
+    targetTariffCodeId = null;
+
+    try {
+      const res = await fetch(
+        `http://localhost:8000/materials?tariff_code_id=${tariff_code_id}&limit=500`,
+      );
+      if (res.ok) {
+        materials = await res.json();
+      }
+    } catch (e) {
+      console.error("Failed to fetch materials:", e);
+    } finally {
+      loadingMaterials = false;
+    }
+  }
+
+  async function applyBulkUpdate() {
+    if (selectedMaterialIds.size === 0 || !targetTariffCodeId) return;
+
+    updating = true;
+    try {
+      const res = await fetch("http://localhost:8000/materials/bulk-update", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          material_ids: Array.from(selectedMaterialIds),
+          new_tariff_code_id: targetTariffCodeId,
+        }),
+      });
+
+      if (res.ok) {
+        // Refresh data
+        await fetchDistribution();
+        if (selectedCodeId && selectedCodeInfo) {
+          await loadMaterials(selectedCodeId, selectedCodeInfo);
+        }
+        selectedMaterialIds.clear();
+        targetTariffCodeId = null;
+      } else {
+        console.error("Failed to update bulk items");
+      }
+    } catch (e) {
+      console.error("Failed to apply bulk update:", e);
+    } finally {
+      updating = false;
+    }
+  }
+
+  function toggleSelectAll(e: Event) {
+    const checked = (e.target as HTMLInputElement).checked;
+    if (checked) {
+      selectedMaterialIds = new Set(materials.map((m) => m.id));
+    } else {
+      selectedMaterialIds = new Set();
+    }
+  }
+
+  function toggleMaterial(id: number) {
+    const newSet = new Set(selectedMaterialIds);
+    if (newSet.has(id)) {
+      newSet.delete(id);
+    } else {
+      newSet.add(id);
+    }
+    selectedMaterialIds = newSet;
+  }
+
+  $: chartData = {
+    labels: distributionData.map((d) =>
+      d.tariff_code_id === null
+        ? "Unclassified"
+        : d.goods_code || `Code ${d.tariff_code_id}`,
+    ),
+    datasets: [
+      {
+        label: "Material Count",
+        data: distributionData.map((d) => d.count),
+        backgroundColor: distributionData.map((d) =>
+          d.tariff_code_id === null
+            ? "rgba(239, 68, 68, 0.7)"
+            : "rgba(59, 130, 246, 0.7)",
+        ),
+        borderColor: distributionData.map((d) =>
+          d.tariff_code_id === null
+            ? "rgba(239, 68, 68, 1)"
+            : "rgba(59, 130, 246, 1)",
+        ),
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  const chartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    onClick: (e: any, activeEls: any[]) => {
+      if (activeEls.length > 0) {
+        const index = activeEls[0].index;
+        const item = distributionData[index];
+        loadMaterials(item.tariff_code_id, item);
+      }
+    },
+    plugins: {
+      legend: { display: false },
+      title: { display: false },
+    },
+    scales: {
+      y: {
+        title: { display: true, text: "Number of Materials" },
+      },
+    },
+  };
+  let chartInstance: ChartJS | null = null;
+  let canvasNode: HTMLCanvasElement;
+
+  function renderChart(node: HTMLCanvasElement) {
+    if (chartInstance) {
+      chartInstance.destroy();
+    }
+    chartInstance = new ChartJS(node, {
+      type: "bar",
+      data: chartData,
+      options: chartOptions as any,
+    });
+  }
+
+  $: if (chartInstance && chartData) {
+    chartInstance.data = chartData;
+    chartInstance.update();
+  }
+
+  onDestroy(() => {
+    if (chartInstance) {
+      chartInstance.destroy();
+    }
+  });
+
+  $: filteredTariffs = allTariffs.filter(
+    (t) =>
+      t.goods_code.includes(tariffSearchQuery) ||
+      (t.description &&
+        t.description.toLowerCase().includes(tariffSearchQuery.toLowerCase())),
+  );
+</script>
+
+<div
+  class="h-screen flex flex-col bg-gray-50 text-gray-900 font-sans p-6 overflow-auto"
+>
+  <div class="max-w-7xl mx-auto w-full space-y-6">
+    <div class="flex items-center justify-between">
+      <div>
+        <h1 class="text-3xl font-bold tracking-tight">
+          Tariff Classification Overview
+        </h1>
+        <p class="text-gray-500 mt-2">
+          View the distribution of tariff codes across your materials.
+        </p>
+      </div>
+    </div>
+
+    <!-- Distribution Chart Card -->
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+      <h2 class="text-xl font-semibold mb-6 flex items-center">
+        Material Distribution
+        <span class="text-sm font-normal text-gray-500 ml-3"
+          >(Click a bar to view materials)</span
+        >
+      </h2>
+
+      {#if loadingDistribution}
+        <div class="h-64 flex items-center justify-center">
+          <RefreshCw class="w-8 h-8 text-blue-500 animate-spin" />
+        </div>
+      {:else}
+        <div class="h-80 w-full relative">
+          <canvas use:renderChart></canvas>
+        </div>
+      {/if}
+    </div>
+
+    <!-- Selected Tariff Details & Materials -->
+    {#if selectedCodeId !== null && selectedCodeInfo}
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-gray-200 flex flex-col min-h-[500px]"
+      >
+        <div
+          class="p-6 border-b border-gray-100 flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:justify-between sm:items-start"
+        >
+          <div class="max-w-2xl">
+            <div class="flex items-center space-x-3 mb-2">
+              <span
+                class="inline-flex items-center justify-center px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-sm font-medium"
+              >
+                {selectedCodeInfo.goods_code}
+              </span>
+              <span class="text-gray-500 text-sm"
+                >{selectedCodeInfo.count} items</span
+              >
+            </div>
+            <h3 class="text-xl font-medium text-gray-900 leading-snug">
+              {selectedCodeInfo.description || "No description available"}
+            </h3>
+          </div>
+
+          <!-- Bulk Actions Banner -->
+          {#if selectedMaterialIds.size > 0}
+            <div
+              class="bg-blue-50 border border-blue-100 rounded-xl p-4 flex flex-col shadow-sm sm:w-80 flex-shrink-0 animate-in fade-in slide-in-from-top-4"
+            >
+              <div class="text-sm font-medium text-blue-800 mb-3">
+                {selectedMaterialIds.size} items selected
+              </div>
+
+              <div class="space-y-3">
+                <div class="relative">
+                  <Search
+                    class="absolute left-3 top-2.5 w-4 h-4 text-gray-400"
+                  />
+                  <input
+                    type="text"
+                    bind:value={tariffSearchQuery}
+                    placeholder="Search new code..."
+                    class="w-full pl-9 pr-3 py-2 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white"
+                  />
+                </div>
+
+                <select
+                  bind:value={targetTariffCodeId}
+                  class="w-full py-2 px-3 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white"
+                >
+                  <option value={null}>Select target code...</option>
+                  {#each filteredTariffs as t}
+                    <option value={t.id}
+                      >{t.goods_code} - {t.description
+                        ? t.description.substring(0, 40) + "..."
+                        : ""}</option
+                    >
+                  {/each}
+                </select>
+
+                <button
+                  on:click={applyBulkUpdate}
+                  disabled={updating || !targetTariffCodeId}
+                  class="w-full flex justify-center items-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  {#if updating}
+                    <RefreshCw class="w-4 h-4 animate-spin mr-2" /> Updating...
+                  {:else}
+                    <CheckCircle class="w-4 h-4 mr-2" /> Reassign Codes
+                  {/if}
+                </button>
+              </div>
+            </div>
+          {/if}
+        </div>
+
+        <!-- Materials Table -->
+        <div class="flex-1 overflow-auto">
+          {#if loadingMaterials}
+            <div class="p-12 flex items-center justify-center text-gray-400">
+              Loading materials...
+            </div>
+          {:else if materials.length === 0}
+            <div class="p-12 flex items-center justify-center text-gray-400">
+              No materials found for this tariff code.
+            </div>
+          {:else}
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50 sticky top-0 shadow-sm z-10">
+                <tr>
+                  <th scope="col" class="px-6 py-3 w-12 pt-4">
+                    <input
+                      type="checkbox"
+                      class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                      checked={selectedMaterialIds.size === materials.length &&
+                        materials.length > 0}
+                      on:change={toggleSelectAll}
+                    />
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >Material ID</th
+                  >
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >Short Text</th
+                  >
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >PO Text</th
+                  >
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200">
+                {#each materials as mat}
+                  <tr
+                    class="hover:bg-gray-50 transition-colors {selectedMaterialIds.has(
+                      mat.id,
+                    )
+                      ? 'bg-blue-50/50 hover:bg-blue-50/80'
+                      : ''}"
+                  >
+                    <td class="px-6 py-4 whitespace-nowrap w-12">
+                      <input
+                        type="checkbox"
+                        class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        checked={selectedMaterialIds.has(mat.id)}
+                        on:change={() => toggleMaterial(mat.id)}
+                      />
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                      >{mat.material_number}</td
+                    >
+                    <td
+                      class="px-6 py-4 text-sm text-gray-500 truncate max-w-xs"
+                      title={mat.short_text}>{mat.short_text || "-"}</td
+                    >
+                    <td
+                      class="px-6 py-4 text-sm text-gray-500 truncate max-w-xs"
+                      title={mat.purchase_order_text}
+                      >{mat.purchase_order_text || "-"}</td
+                    >
+                  </tr>
+                {/each}
+              </tbody>
+            </table>
+          {/if}
+        </div>
+      </div>
+    {/if}
+  </div>
+</div>

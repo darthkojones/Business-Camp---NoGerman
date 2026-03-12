@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from database import get_db, Base, engine
 from models import Material, TariffCode
-from schemas import MaterialSchema, TariffCodeSchema, ClusterSchema, TariffSuggestionResponse
+from schemas import MaterialSchema, TariffCodeSchema, ClusterSchema, TariffSuggestionResponse, DistributionItemSchema, BulkUpdateMaterialSchema
 from clustering import generate_clusters
 from tariff_matcher import match_cluster_to_tariff, clear_cache
 from typing import List, Optional
@@ -19,8 +19,14 @@ app.add_middleware(
 )
 
 @app.get("/materials", response_model=List[MaterialSchema])
-def get_all_materials(skip: int = 0, limit: int = 200, db: Session = Depends(get_db)):
-    materials = db.query(Material).offset(skip).limit(limit).all()
+def get_all_materials(skip: int = 0, limit: int = 200, tariff_code_id: Optional[int] = None, is_unclassified: Optional[bool] = None, db: Session = Depends(get_db)):
+    query = db.query(Material)
+    if is_unclassified is True:
+        query = query.filter(Material.tariff_code_id.is_(None))
+    elif tariff_code_id is not None:
+        query = query.filter(Material.tariff_code_id == tariff_code_id)
+    
+    materials = query.offset(skip).limit(limit).all()
     return materials
 
 @app.get("/tariffs", response_model=List[TariffCodeSchema])
@@ -31,6 +37,55 @@ def get_tariffs(skip: int = 0, limit: int = 200, search: Optional[str] = None, d
         query = query.filter(TariffCode.goods_code.ilike(search_fmt) | TariffCode.description.ilike(search_fmt))
     tariffs = query.offset(skip).limit(limit).all()
     return tariffs
+
+from sqlalchemy import func
+
+@app.get("/analytics/distribution", response_model=List[DistributionItemSchema])
+def get_distribution(db: Session = Depends(get_db)):
+    """
+    Returns the distribution of materials across tariff codes, including unclassified ones.
+    """
+    results = db.query(
+        Material.tariff_code_id,
+        TariffCode.goods_code,
+        TariffCode.description,
+        func.count(Material.id).label('count')
+    ).outerjoin(TariffCode, Material.tariff_code_id == TariffCode.id)\
+     .group_by(Material.tariff_code_id, TariffCode.goods_code, TariffCode.description)\
+     .all()
+
+    distribution = []
+    for row in results:
+        distribution.append({
+            "tariff_code_id": row.tariff_code_id,
+            "goods_code": row.goods_code,
+            "description": row.description,
+            "count": row.count
+        })
+    
+    # Sort unclassified first, then by count descending
+    distribution.sort(key=lambda x: (x["tariff_code_id"] is not None, -x["count"]))
+    return distribution
+
+@app.patch("/materials/bulk-update")
+def bulk_update_materials(request: BulkUpdateMaterialSchema, db: Session = Depends(get_db)):
+    """
+    Bulk update materials with a new tariff code.
+    """
+    tariff = db.query(TariffCode).filter(TariffCode.id == request.new_tariff_code_id).first()
+    if not tariff:
+        raise HTTPException(status_code=404, detail="Tariff code not found")
+
+    materials = db.query(Material).filter(Material.id.in_(request.material_ids)).all()
+    if not materials:
+        raise HTTPException(status_code=404, detail="No materials found matching provided IDs")
+
+    for material in materials:
+        material.tariff_code_id = request.new_tariff_code_id
+        material.is_classified = True
+    
+    db.commit()
+    return {"message": f"Successfully updated {len(materials)} materials"}
 
 @app.get("/clusters", response_model=List[ClusterSchema])
 def get_clusters(db: Session = Depends(get_db)):
