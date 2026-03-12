@@ -73,6 +73,12 @@
     {/if}
 
     <div class="space-y-8">
+      <!-- KPI Overview -->
+      <AnalysisOverview {clusters} {loading} />
+
+      <!-- Confidence Level Overview -->
+      <ConfidenceOverview {clusters} {loading} />
+
       <!-- Info Banner -->
       {#if !loading && clusters.length > 0}
         <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
