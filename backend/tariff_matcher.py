@@ -22,8 +22,60 @@ def get_openai_client():
     return client
 
 
-# Simple in-memory cache for results (in production, use Redis or similar)
+# Persistent cache configuration
+CACHE_FILE = "/app/data/tariff_cache.json"
 _match_cache: Dict[str, TariffSuggestionResponse] = {}
+
+
+def load_cache():
+    """Load cache from disk"""
+    global _match_cache
+    if os.path.exists(CACHE_FILE):
+        try:
+            with open(CACHE_FILE, 'r', encoding='utf-8') as f:
+                cache_data = json.load(f)
+                # Convert JSON back to TariffSuggestionResponse objects
+                for key, value in cache_data.items():
+                    matches = [TariffMatchSchema(**match) for match in value.get('matches', [])]
+                    _match_cache[key] = TariffSuggestionResponse(
+                        cluster_id=value['cluster_id'],
+                        cluster_name=value['cluster_name'],
+                        matches=matches,
+                        timestamp=value['timestamp']
+                    )
+                print(f"Loaded {len(_match_cache)} cached results from disk")
+        except Exception as e:
+            print(f"Error loading cache: {e}")
+            _match_cache = {}
+    else:
+        print("No cache file found, starting with empty cache")
+
+
+def save_cache():
+    """Save cache to disk"""
+    try:
+        # Convert TariffSuggestionResponse objects to JSON-serializable dicts
+        cache_data = {}
+        for key, response in _match_cache.items():
+            cache_data[key] = {
+                'cluster_id': response.cluster_id,
+                'cluster_name': response.cluster_name,
+                'matches': [match.model_dump() for match in response.matches],
+                'timestamp': response.timestamp
+            }
+        
+        # Ensure directory exists
+        os.makedirs(os.path.dirname(CACHE_FILE), exist_ok=True)
+        
+        with open(CACHE_FILE, 'w', encoding='utf-8') as f:
+            json.dump(cache_data, f, indent=2, ensure_ascii=False)
+        print(f"Saved {len(_match_cache)} cached results to disk")
+    except Exception as e:
+        print(f"Error saving cache: {e}")
+
+
+# Load cache on module import
+load_cache()
 
 
 def get_section_mapping() -> Dict[str, str]:
@@ -246,6 +298,7 @@ def match_cluster_to_tariff(
         # Cache the result
         if use_cache:
             _match_cache[cache_key] = result
+            save_cache()  # Persist to disk
         
         return result
         
@@ -266,7 +319,16 @@ def match_cluster_to_tariff(
 
 
 def clear_cache():
-    """Clear the matching cache"""
+    """Clear the matching cache both in memory and on disk"""
     global _match_cache
     _match_cache = {}
-    print("Match cache cleared")
+    
+    # Delete cache file
+    if os.path.exists(CACHE_FILE):
+        try:
+            os.remove(CACHE_FILE)
+            print("Match cache cleared (memory and disk)")
+        except Exception as e:
+            print(f"Error deleting cache file: {e}")
+    else:
+        print("Match cache cleared (memory only, no file found)")

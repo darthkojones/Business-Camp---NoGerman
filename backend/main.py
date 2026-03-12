@@ -183,7 +183,8 @@ async def upload_files(
             df_materials = pd.read_csv(io.BytesIO(content), dtype=str)
             df_materials = df_materials.fillna("")
             
-            # Clear existing materials
+            # Clear existing materials (delete confirmations first due to foreign key constraints)
+            db.query(UserConfirmation).delete()
             db.query(Material).delete()
             
             # Insert new materials
