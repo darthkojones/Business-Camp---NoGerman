@@ -8,7 +8,7 @@
     RefreshCw,
   } from "lucide-svelte";
 
-  import { createEventDispatcher } from 'svelte';
+  import { createEventDispatcher } from "svelte";
 
   export let clusters: any[] = [];
   export let loading: boolean = false;
@@ -98,7 +98,7 @@
       confirmedItems = new Set(confirmedItems); // Trigger reactivity by creating new Set
 
       // notify parent that something has been confirmed
-      dispatch('progress', { confirmedItems: confirmedItems.size });
+      dispatch("progress", { confirmedItems: confirmedItems.size });
     } catch (error) {
       console.error("Error confirming item:", error);
       alert(
@@ -184,8 +184,8 @@
         // Add to confirmed items
         confirmedItems.add(key);
 
-      // dispatch progress event for each item confirmation
-      dispatch('progress', { confirmedItems: confirmedItems.size });
+        // dispatch progress event for each item confirmation
+        dispatch("progress", { confirmedItems: confirmedItems.size });
 
         return response.json();
       });
@@ -199,7 +199,7 @@
       itemSelections = { ...itemSelections };
 
       // dispatch progress event so parent can update nav state
-      dispatch('progress', { confirmedClusters: confirmedClusters.size });
+      dispatch("progress", { confirmedClusters: confirmedClusters.size });
 
       // Auto-collapse the cluster after confirmation
       expandedClusters.delete(clusterId);
@@ -434,30 +434,19 @@
   class="border border-gray-200 bg-white shadow-sm rounded-lg overflow-hidden"
 >
   <div class="p-6 border-b border-gray-200 bg-gray-50">
-    <h2 class="text-xl font-semibold text-[#272425]">
-      Detaillierte Ergebnisse
-    </h2>
-    <p class="text-sm text-[#6b6b6b] mt-1">
-      Vollständige Übersicht aller analysierten Produkte mit zugeteilten
-      8-stelligen Zollnummern
-    </p>
-
     <!-- Progress Indicator -->
     {#if totalClusters > 0}
       <div class="mt-4 bg-white rounded-lg border border-gray-200 p-4">
-        <div class="flex items-center justify-between mb-2">
-          <span class="text-sm font-medium text-[#272425]"
-            >Bestätigungsfortschritt</span
-          >
-          <span
-            class="text-sm font-semibold {visuallyConfirmedCount ===
-            totalClusters
-              ? 'text-green-700'
-              : 'text-[#BB1E38]'}"
-          >
-            {visuallyConfirmedCount} / {totalClusters} Cluster bestätigt
-          </span>
-        </div>
+        <span class="text-sm font-medium text-[#272425]"
+          >Bestätigungsfortschritt</span
+        >
+        <span
+          class="text-sm font-semibold {visuallyConfirmedCount === totalClusters
+            ? 'text-green-700'
+            : 'text-[#BB1E38]'}"
+        >
+          {visuallyConfirmedCount} / {totalClusters} Cluster bestätigt
+        </span>
         <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
           <div
             class="h-3 rounded-full transition-all duration-500 ease-out {visuallyConfirmedCount ===
@@ -481,14 +470,6 @@
         {/if}
       </div>
     {/if}
-
-    <div class="mt-3 bg-blue-50 border border-blue-200 rounded-md p-3">
-      <p class="text-xs text-blue-800">
-        <strong>Tipp:</strong> Sie können entweder alle Artikel eines Clusters auf
-        einmal mit dem Top-Vorschlag bestätigen, oder jeden Artikel einzeln mit Ihrer
-        Wahl bestätigen. Bestätigte Cluster werden automatisch eingeklappt.
-      </p>
-    </div>
   </div>
 
   {#if loading}
