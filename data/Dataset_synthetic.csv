@@ -1,5 +1,5 @@
 ﻿Materialnummer,Kurztext,Einkaufsbestelltext
-1970377,GT-Motor K77DRN112M4TFAL,"Getriebemotor
+1,GT-Motor K77DRN112M4TFAL,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: K77 DRN112M4/TF/AL
 Leistung [kW]: 4,000 kW
@@ -17,32 +17,32 @@ Fremdlüfter: Nein
 Motor-Bremse: Nein
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970440,Keilriemen SPA 2500 LW Red Power,"Keilriemen
+2,Keilriemen SPA 2500 LW Red Power,"Keilriemen
 SPA 2.500 mm LW Red Power
 Wirklänge ISO LW 2.500 mm
 Innenlänge LI 2.455 mm
 Außenlänge LA 2.518 mm"
-1970269,"O-Ring 33,3 mm 90Sh FKM NBR","O-Ring
+3,"O-Ring 33,3 mm 90Sh FKM NBR","O-Ring
 33,3 mm
 90Sh
 FKM NBR"
-1970265,Lager 2208EKTN9C3 SKF,"Lager
+4,Lager 2208EKTN9C3 SKF,"Lager
 2208EKTN9C3
 SKF"
-1970144,"Mutter M36x1,5 DIN 439-04 verzinkt.","Hexagonmutter niedrig
+5,"Mutter M36x1,5 DIN 439-04 verzinkt.","Hexagonmutter niedrig
 M30 x 1,5
 DIN 439-04
 verzinkt"
-1970306,Lager NCF 2932 V SKF,"Zylinderrollenlager
+6,Lager NCF 2932 V SKF,"Zylinderrollenlager
 NCF 2932 V
 SKF"
-1895328,Lager 7306 BE-2RZP SKF,"Schrägkugellager
+7,Lager 7306 BE-2RZP SKF,"Schrägkugellager
 7306 BE-2RZP
 SKF"
-1970053,"O-Ring 33,30 x 2,40 mm Viton FPM","O-Ring
+8,"O-Ring 33,30 x 2,40 mm Viton FPM","O-Ring
 33,30 x 2,40 mm
 Viton FKM/FPM"
-1970317,Servomotor AKM32E-ACCNC-00,"Servomotor
+9,Servomotor AKM32E-ACCNC-00,"Servomotor
 Hersteller: KOLLMORGEN
 Typbezeichnung: AKM32E-ACCNC-00
 Leistung [kW]: 0,100 kW
@@ -50,21 +50,21 @@ N1 Antriebsdrehzahl: 8.000,00 1/min
 Antriebsmoment: 2,04 NM
 Spannung [50Hz]: 400V
 Schutzart: IP54-Staubablage/Spritzwasser"
-1970155,PN-Zylinder ADN-25-25-I-P-A 536263 FESTO,"Kompaktzylinder
+10,PN-Zylinder ADN-25-25-I-P-A 536263 FESTO,"Kompaktzylinder
 ADN-25-25-I-P-A
 536263
 FESTO"
-944480,Mutter M8 DIN6923 8.8 verz.,"Mutter
+11,Mutter M8 DIN6923 8.8 verz.,"Mutter
 M8
 DIN 6923
 8.8
 verzinkt"
-1970106,Schraube M20x100 DIN 931 8.8 schwarz.,"Hexagonschraube mit Schaft
+12,Schraube M20x100 DIN 931 8.8 schwarz.,"Hexagonschraube mit Schaft
 M20 x 100
 DIN 931
 8.8
 schwarz"
-1970386,GT-Motor FA47GDRN90S4TFAL,"Getriebemotor
+13,GT-Motor FA47GDRN90S4TFAL,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: FA47/G DRN90S4/TF/AL
 Leistung [kW]: 1,100 kW
@@ -82,15 +82,15 @@ Fremdlüfter: Nein
 Motor-Bremse: Nein
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970321,Lager 61907 2RZ SKF,"Rillenkugellager
+14,Lager 61907 2RZ SKF,"Rillenkugellager
 61907 2RZ
 SKF"
-1970076,"Kettenrad B-2 1"" Z16 d=75mm","Kettenrad
+15,"Kettenrad B-2 1"" Z16 d=75mm","Kettenrad
 B-2 1""
 Z = 16
 geb.75mm
 DIN 8187"
-1806200,Servomotor 1PH7133-7HF03-0BB3-ZNOYF,"Servomotor
+16,Servomotor 1PH7133-7HF03-0BB3-ZNOYF,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1PH7133-7HF03-0BB3-ZNOYF
 Leistung [kW]:                  13,500 kW
@@ -98,15 +98,15 @@ N1 Antriebsdrehzahl:            1.500,00 1/min
 Bauform:                        B35
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser"
-1970280,"ORing 33,3x2x4mm NBR70 0009632319 LINDE","ORing
+17,"ORing 33,3x2x4mm NBR70 0009632319 LINDE","ORing
 33,3 x 2 x 4 mm
 NBR70
 0009632319
 LINDE"
-1970237,Wellendichtring 35 x 62 x 8 BASL,"Wellendichtring
+18,Wellendichtring 35 x 62 x 8 BASL,"Wellendichtring
 35 x 62 x 8
 BASL"
-1970381,GT-Motor KA97TR57DRN80MK4TFEK8RAL,"Getriebemotor
+19,GT-Motor KA97TR57DRN80MK4TFEK8RAL,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: KA97TR57DRN80MK4TFEK8RAL
 Leistung [kW]: 0,550 kW
@@ -122,41 +122,41 @@ Isolierklasse: Iso-Kl.: F (tma x =155°C)
 Schutzart: IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970187,Mutter M8 DIN 928 schw.,"Anschweißmutter
+20,Mutter M8 DIN 928 schw.,"Anschweißmutter
 M8
 DIN 928 schwarz"
-1970436,Radialwellendichtring 35x62x7 BASL,"Radialwellendichtring
+21,Radialwellendichtring 35x62x7 BASL,"Radialwellendichtring
 35x62x7
 BASL"
-1970266,Lager 2208EKTN9C3 SKF,"Lager
+22,Lager 2208EKTN9C3 SKF,"Lager
 2208EKTN9C3
 SKF"
-1970166,Radialwellendichtring 35x62x8 BAUMSL Viton,"Radialwellendichtring
+23,Radialwellendichtring 35x62x8 BAUMSL Viton,"Radialwellendichtring
 35x62x8
 BAUMSL Viton"
-1970322,Lager 61907 2RZ SKF,"Rillenkugellager
+24,Lager 61907 2RZ SKF,"Rillenkugellager
 61907 2RZ
 SKF"
-1970119,"O-Ring 330,30 x 5,70 mm FPM 70 Shore A","O-Ring
+25,"O-Ring 330,30 x 5,70 mm FPM 70 Shore A","O-Ring
 330,30 х 5,70 mm
 WST: FPM
 70° Shore A"
-1970260,Lager 23130CCK SKF,"Lager
+26,Lager 23130CCK SKF,"Lager
 23130CCK
 SKF"
-1970422,"Kette 08A-1 12,70 1/2""x7,85mm DIN 8188","Einfach Rollenkette
+27,"Kette 08A-1 12,70 1/2""x7,85mm DIN 8188","Einfach Rollenkette
 08A-1
 Teilung: 12,70mm (1/2"")
 Innere Breite: 7,85mm
 DIN 8188
 40R5MT_HITACHI
 L85AANSI40_IWIS"
-1970180,"Kette 081 12,70 1/2""x3,30mm DIN 8187","Rollenkette
+28,"Kette 081 12,70 1/2""x3,30mm DIN 8187","Rollenkette
 081
 Teilung: 12,70mm (1/2"")
 Innere Breite: 3,30mm
 DIN 8187"
-1970071,Servomotor 30PM068,"Servomotor
+29,Servomotor 30PM068,"Servomotor
 Hersteller SIBONI
 Typbezeichnung 30PM068
 Leistung [kW] 45,000 W
@@ -165,17 +165,17 @@ Antriebsmoment 0,22 NM
 Spannung [50Hz] 24
 Isolierklasse F
 Schutzart IP44"
-791559,Kettenrad 3-518-11-0150 HOMAG,"Kettenrad gehärtet
+30,Kettenrad 3-518-11-0150 HOMAG,"Kettenrad gehärtet
 10B-1
 Z = 14
 D35+K 1:12
 3-518-11-0150
 HOMAG"
-1970157,PN-Zylinder ADN-25-40-A-P-A 536257 FESTO,"Kompaktzylinder
+31,PN-Zylinder ADN-25-40-A-P-A 536257 FESTO,"Kompaktzylinder
 ADN-25-40-A-P-A
 536257
 FESTO"
-1970082,Servomotor AM80520J210000,"Servomotor
+32,Servomotor AM80520J210000,"Servomotor
 Hersteller BECKHOFF
 Typbezeichnung AM8052-0J21-0000
 Leistung 2,890 kW
@@ -188,22 +188,22 @@ Schutzart IP54
 Motor-Bremse 24V DC 18W
 Thermo KTY Ja
 Art.Nr.: 138325"
-1970145,"O-Ring 33,50 x 2,00 mm N 01095200 KSB","O-Ring
+33,"O-Ring 33,50 x 2,00 mm N 01095200 KSB","O-Ring
 33,5 x 2,0 mm
 N
 01095200
 KSB"
-1970094,Schraube M6x50 DIN 835 8.8 verzinkt.,"Stiftschraube mit Einschraubende
+34,Schraube M6x50 DIN 835 8.8 verzinkt.,"Stiftschraube mit Einschraubende
 M6 x 50
 DIN 835
 8.8
 verzinkt"
-106060,Schraube M20x260 DIN931 8.8 verz.,"Sechskantschraube mit Schaft
+35,Schraube M20x260 DIN931 8.8 verz.,"Sechskantschraube mit Schaft
 M20x260
 DIN 931
 8.8
 verzinkt"
-1970212,Servomotor 1FT60616AF713TA0,"Servomotor
+36,Servomotor 1FT60616AF713TA0,"Servomotor
 Hersteller Siemens
 Typenbezeichnung 1FT6061-6AF71-3TA0
 Motorleistung 1,100 kW
@@ -214,7 +214,7 @@ Isolierklasse F
 Schutzart IP64
 Leistungs-Signalstecker Axial BS
 Resolver 2-polig P=1"
-1970186,GT-Motor FA77DV100L4,"Getriebemotor
+37,GT-Motor FA77DV100L4,"Getriebemotor
 Hersteller SEW
 Typbezeichnung FA77DV100L4
 Motorleistung 3,000 kW
@@ -224,10 +224,10 @@ Spannung 230D/400Y
 Bauform M1
 Isolierklasse F
 Schutzart IP54"
-1970328,Lager 6203 2RS1 VQ658 SKF,"Rillenkugellager
+38,Lager 6203 2RS1 VQ658 SKF,"Rillenkugellager
 6203-2RS1-VQ658
 SKF"
-1970285,GT-Motor R147DRN180M4,"Getriebemotor
+39,GT-Motor R147DRN180M4,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: R147DRN180M4
 Leistung [kW]: 18,500 kW
@@ -241,7 +241,7 @@ Bauform: M1
 Isolierklasse: Iso-Kl.:B (tma x =130°C)
 Schutzart: IP54-Staubablage/Spritzwasser
 Energieeffizienzklasse: IE3 Premium Efficiency"
-1188127,Servomotor AM80330E210000,"Servomotor
+40,Servomotor AM80330E210000,"Servomotor
 Hersteller                     BECKHOFF
 Typbezeichnung                 AM8033-0E21-0000
 Leistung                       0,940 kW
@@ -254,7 +254,7 @@ Schutzart                      IP54
 Motor-Bremse                   24V DC 12W
 Thermo KTY                     Ja
 Art.Nr.:                       139774"
-1842833,Servomotor AKM32E-ACCNC-00,"Servomotor
+41,Servomotor AKM32E-ACCNC-00,"Servomotor
 Hersteller:                     KOLLMORGEN
 Typbezeichnung:                 AKM32E-ACCNC-00
 Leistung [kW]:                  0,100 kW
@@ -262,45 +262,45 @@ N1 Antriebsdrehzahl:            8.000,00 1/min
 Antriebsmoment:                 2,04 NM
 Spannung [50Hz]:                400V
 Schutzart:                      IP54-Staubablage/Spritzwasser"
-1970276,"Mutter M36x1,5-17H 9218201324 LINDE","Mutter
+42,"Mutter M36x1,5-17H 9218201324 LINDE","Mutter
 M36x1,5-17H
 9218201324
 LINDE"
-1059959,Schraube M36x3x240 DIN912 12.9 schw.,"Zylinderschraube mit Innensechskant
+43,Schraube M36x3x240 DIN912 12.9 schw.,"Zylinderschraube mit Innensechskant
 M36 x 3 x 240
 DIN 912
 12.9
 schwarz"
-1970264,Lager 16010 SKF,"Lager
+44,Lager 16010 SKF,"Lager
 16010
 SKF"
-1970092,Schraube M6x35 DIN 835 8.8 verzinkt.,"Stiftschraube mit Einschraubende
+45,Schraube M6x35 DIN 835 8.8 verzinkt.,"Stiftschraube mit Einschraubende
 M6 x 35
 DIN 835
 8.8
 verzinkt"
-1880042,Lager 21311 EC3 SKF,"Pendelrollenlager
+46,Lager 21311 EC3 SKF,"Pendelrollenlager
 21311 E C3
 SKF"
-1870635,Lager NCF 2932 V SKF,"Zylinderrollenlager
+47,Lager NCF 2932 V SKF,"Zylinderrollenlager
 NCF 2932 V
 SKF"
-1970170,Radialwellendichtring 35x62x7 B1SL,"Radialwellendichtring
+48,Radialwellendichtring 35x62x7 B1SL,"Radialwellendichtring
 35x62x7
 B1SL"
-1970156,PN-Zylinder ADN-25-25-I-P-A 536263 FESTO,"Kompaktzylinder
+49,PN-Zylinder ADN-25-25-I-P-A 536263 FESTO,"Kompaktzylinder
 ADN-25-25-I-P-A
 536263
 FESTO"
-1970148,Schraube M30x240 DIN 912 12.9 schwarz.,"Zylinderschraube mit Innensechskant
+50,Schraube M30x240 DIN 912 12.9 schwarz.,"Zylinderschraube mit Innensechskant
 M30 x 240
 DIN 912
 12.9
 schwarz"
-1970277,Lager 61903 2Z SKF,"Rillenkugellager
+51,Lager 61903 2Z SKF,"Rillenkugellager
 61903 2Z
 SKF"
-1970081,Servomotor AM80520J210000,"Servomotor
+52,Servomotor AM80520J210000,"Servomotor
 Hersteller BECKHOFF
 Typbezeichnung AM8052-0J21-0000
 Leistung 2,890 kW
@@ -313,30 +313,30 @@ Schutzart IP54
 Motor-Bremse 24V DC 18W
 Thermo KTY Ja
 Art.Nr.: 138325"
-1970258,Lager 23134 E1AM SKF,"Lager
+53,Lager 23134 E1AM SKF,"Lager
 23134 E1AM
 SKF"
-1970138,"Kettenrad B-1 1 1/2"" Z34 TLB 3030 gehae.","Kettenrad einfach
+54,"Kettenrad B-1 1 1/2"" Z34 TLB 3030 gehae.","Kettenrad einfach
 1 1/2"" Z34 TL3030 vorbereitet
 Nabenüberstand 25/27
 Zahnkranz gehärtet"
-139088,Wellendichtring 35x62x10 BASL,"Wellendichtring
+55,Wellendichtring 35x62x10 BASL,"Wellendichtring
 35x62x10
 BASL"
-1970059,Schraube M10 x 120 DIN 603 4.6 verz.,"Flachrundschraube mit Vierkantansatz
+56,Schraube M10 x 120 DIN 603 4.6 verz.,"Flachrundschraube mit Vierkantansatz
 DIN 603
 M10 x 120
 4.6
 verzinkt"
-1970253,Lager 23940 CC/W33 SKF,"Lager
+57,Lager 23940 CC/W33 SKF,"Lager
 23940 CC/W33
 SKF"
-1970134,Radialwellendichtring 35x62x10 NBR/VA B,"Radialwellendichtring
+58,Radialwellendichtring 35x62x10 NBR/VA B,"Radialwellendichtring
 35x62x10
 Form B
 NBR/VA
 DOMSEL"
-680364,Kettenrad KR90D100 Z10 d=90H7,"Kettenrad
+59,Kettenrad KR90D100 Z10 d=90H7,"Kettenrad
 KR90D100
 Z = 10
 10 Zähne, Zahnbreite 11 mm, nach oben verlängert
@@ -344,25 +344,25 @@ Rollendurchmesser 45mm
 Nabengesamtlänge 71 mm, einseitig
 Nabendurchmesser 130mm
 aus S152-3, ungehärtet, mit Bohrung 90H7 ohne Nut"
-1970224,Schraube M20x130 DIN 938 8.8 schwarz.,"Stiftschraube
+60,Schraube M20x130 DIN 938 8.8 schwarz.,"Stiftschraube
 M20 x 130
 DIN 938
 8.8
 schwarz"
-1970160,Kettenrad 3-518-11-0150 HOMAG,"Kettenrad gehärtet
+61,Kettenrad 3-518-11-0150 HOMAG,"Kettenrad gehärtet
 10B-1
 Z = 14
 D35+K 1:12
 3-518-11-0150
 HOMAG"
-1970395,Modul 6SN1123-1AA00-0CA1 SIEMENS,Modul 6SN1123-1AA00-0CA1 SIEMENS
-1870121,Lager 61903 2Z SKF,"Rillenkugellager
+62,Modul 6SN1123-1AA00-0CA1 SIEMENS,Modul 6SN1123-1AA00-0CA1 SIEMENS
+63,Lager 61903 2Z SKF,"Rillenkugellager
 61903 2Z
 SKF"
-1970235,Wellendichtring 35 x 62 x 10 BASL Viton,"Wellendichtring
+64,Wellendichtring 35 x 62 x 10 BASL Viton,"Wellendichtring
 35 x 62 x 10
 BASL Viton"
-1970345,GT-Motor KH77DRN100LS4BE5KCCTF,"Getriebemotor
+65,GT-Motor KH77DRN100LS4BE5KCCTF,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: KH77DRN100LS4BE5KCCTF
 Leistung [kW]: 2,200 kW
@@ -380,7 +380,7 @@ Motor-Bremse: Ja
 Bremsgroesse: 415VAC 28NM
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1806170,Servomotor 1FK7105-2AF71-1RB0-Z,"Servomotor
+66,Servomotor 1FK7105-2AF71-1RB0-Z,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1FK7105-2AF71-1RB0-Z
 N1 Antriebsdrehzahl:            3.000,00 1/min
@@ -389,20 +389,20 @@ Antriebsmoment:                 26,00 NM
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP64-Staubdicht/Spritzwasser
 Motor-Bremse:                   24DC"
-319065,PN-Zylinder ADN-25-50-A-P-A 536258 FESTO,"Kompaktzylinder
+67,PN-Zylinder ADN-25-50-A-P-A 536258 FESTO,"Kompaktzylinder
 ADN-25-50-A-P-A
 536258
 FESTO"
-1970219,Mutter M36 LH 00746249 SIEMPELKAMP,"Sechskantmutter
+68,Mutter M36 LH 00746249 SIEMPELKAMP,"Sechskantmutter
 M36 LH
 Pos. 31
 00746249
 SIEMPELKAMP"
-1909946,O-Ring 33x2-FKM80 0009632305 LINDE,"O-Ring
+69,O-Ring 33x2-FKM80 0009632305 LINDE,"O-Ring
 33x2-FKM80
 0009632305
 LINDE"
-1970355,GT-Motor FA67DRN100LS4TF,"Getriebemotor
+70,GT-Motor FA67DRN100LS4TF,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: FA67 DRN100LS4/TF
 Leistung [kW]: 2,200 kW
@@ -419,17 +419,17 @@ Schutzart: IP55-Staubablage/Strahlwasser
 Fremdlüfter: Nein
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970420,Servomotor 1FT7105-5AF71-CB0-Z,"Servomotor
+71,Servomotor 1FT7105-5AF71-CB0-Z,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1FT7105-5AF71-CB0-Z
 N1 Antriebsdrehzahl: 3.000,00 1/min
 Antriebsmoment: 28,00 NM
 Isolierklasse: Iso-Kl.:F (tmax=155°C)
 Schutzart: IP55-Staubablage/Strahlwasser"
-1970405,Wellendichtring 35 x 62 x 10 BASL,"Wellendichtring
+72,Wellendichtring 35 x 62 x 10 BASL,"Wellendichtring
 35 x 62 x 10
 BASL"
-1970404,Servomotor 1PH8186-1HF132BD1-Z,"Servomotor
+73,Servomotor 1PH8186-1HF132BD1-Z,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1PH8186-1HF132BD1-Z
 Leistung [kW]: 94,000 kW
@@ -437,14 +437,14 @@ N1 Antriebsdrehzahl: 2.200,00 1/min
 Bauform: B35
 Isolierklasse: Iso-Kl.:H (tmax=180°C)
 Schutzart: IP55-Staubablage/Strahlwasser"
-1970393,"Kette 08A-2 12,7 1/2” x 7,85 mm DIN 8188","Kette
+74,"Kette 08A-2 12,7 1/2” x 7,85 mm DIN 8188","Kette
 08A-2
 Teilung: 12,7
 Teilung: 1/2""
 Innere breite: 7,85 mm
 DIN 8188
 ASA40"
-1970176,Servomotor 1FT60621AH713AH1,"Synchron-Servomotor Drehantrieb
+75,Servomotor 1FT60621AH713AH1,"Synchron-Servomotor Drehantrieb
 Hersteller SIEMENS
 Typbezeichnung 1FT6062-1AH71-3AH1
 Mo: 5,0 / 6,0Nm
@@ -452,7 +452,7 @@ Mh: 3,6Nm
 Antriebsdrehzahl N1 4.500,00 1/min
 Spannung 288V
 Motorbremse 24V / 17W"
-1970303,GT-Motor S37DRN63M4TH,"Getriebemotor
+76,GT-Motor S37DRN63M4TH,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: S37 DRN63M4/TH
 Leistung [kW]: 0,180 kW
@@ -466,14 +466,14 @@ Schutzart: IP54-Staubablage/Spritzwasser
 Fremdlüfter: Nein
 Motor-Bremse: Nein
 Motorvollschutz (Thermofühler): Ja"
-1970274,ORing 33x2-FKM80 0009632305 LINDE,"ORing
+77,ORing 33x2-FKM80 0009632305 LINDE,"ORing
 33x2-FKM80
 0009632305
 LINDE"
-1970048,Radialwellendichtring 35x62x12 BASL,"Radialwellendichtring
+78,Radialwellendichtring 35x62x12 BASL,"Radialwellendichtring
 35x62x12
 BASL"
-1970095,Servomotor AM8052-1J21-9000,"Servomotor
+79,Servomotor AM8052-1J21-9000,"Servomotor
 Hersteller BECKHOFF
 Typbezeichnung AM8052-1J21-9000
 N1 Antriebsdrehzahl 4,000.00 1/min
@@ -482,10 +482,10 @@ Bauform B5
 Isolierklasse F
 Schutzart IP54
 Art.Nr.: 10779584"
-1970042,"ORing 34,00x3,50mm 70 Shore","ORing
+80,"ORing 34,00x3,50mm 70 Shore","ORing
 34,00 x 3,50 mm
 70° Shore"
-1813928,Servomotor 1PH7163-7HF33-0BB3-Z M39,"Servomotor
+81,Servomotor 1PH7163-7HF33-0BB3-Z M39,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1PH7163-7HF33-0BB3-Z M39
 Leistung [kW]:                  31,000 kW
@@ -494,7 +494,7 @@ Spannung [50Hz]:                364Y
 Bauform:                        B35
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser"
-1536696,Servomotor 30PM068,"Servomotor
+82,Servomotor 30PM068,"Servomotor
 Hersteller                     SIBONI
 Typbezeichnung                 30PM068
 Leistung [kW]                  45,000 W
@@ -503,14 +503,14 @@ Antriebsmoment                 0,22 NM
 Spannung [50Hz]                24
 Isolierklasse                  F
 Schutzart                      IP44"
-1904317,Lager 23940 CC/W33 SKF,"Lager
+83,Lager 23940 CC/W33 SKF,"Lager
 23940 CC/W33
 SKF"
-1970389,Wellendichtring 35 x 62 x 7 HMS5RG SKF,"Wellendichtring
+84,Wellendichtring 35 x 62 x 7 HMS5RG SKF,"Wellendichtring
 35 x 62 x 7
 HMS5RG
 SKF"
-1970397,Servomotor 1PH7101-7JF03-0BB3-Z M39,"Servomotor
+85,Servomotor 1PH7101-7JF03-0BB3-Z M39,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1PH7101-7JF03-0BB3-Z M39
 Leistung [kW]: 3,800 kW
@@ -519,19 +519,19 @@ Spannung [50Hz]: 398Y
 Baugröße: B35
 Isolierklasse: Iso-Kl.:F (tma x =155°C)
 Schutzart: IP54-Staubablage/Spritzwasser"
-145475,Wellendichtring 35x65x12 BASL,"Wellendichtring
+86,Wellendichtring 35x65x12 BASL,"Wellendichtring
 35x65x12
 BASL"
-105772,Schraube M6x25 DIN933 5.6 verz.,"Sechskantschraube mit Gewinde bis Kopf
+87,Schraube M6x25 DIN933 5.6 verz.,"Sechskantschraube mit Gewinde bis Kopf
 DIN 933
 M6x25
 5.6
 verzinkt"
-1970120,"ORing 330,30x5,70mm FPM 70 Shore A","ORing
+88,"ORing 330,30x5,70mm FPM 70 Shore A","ORing
 330,30 х 5,70 mm
 WST: FPM
 70° Shore A"
-1970335,GT-Motor KH107TDRN160M4TF,"Getriebemotor
+89,GT-Motor KH107TDRN160M4TF,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: KH107TDRN160M4TF
 Leistung [kW]: 11,000 kW
@@ -546,7 +546,7 @@ Fremdlüfter: Nein
 Motor-Bremse: Nein
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970336,GT-Motor KH107TDRN160M4TF,"Getriebemotor
+90,GT-Motor KH107TDRN160M4TF,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: KH107TDRN160M4TF
 Leistung [kW]: 11,000 kW
@@ -561,21 +561,21 @@ Fremdlüfter: Nein
 Motor-Bremse: Nein
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970135,Kettenrad 12B-1 Z13 d=18 m.Nut gehae.,"Kettenrad gehärtet
+91,Kettenrad 12B-1 Z13 d=18 m.Nut gehae.,"Kettenrad gehärtet
 12B-1
 Z = 13
 D = 18 mm
 mit Nut
 M6"
-1970153,Schraube M12 x 40 DIN 603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
+92,Schraube M12 x 40 DIN 603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
 M12 x 40
 DIN 603
 8.8
 verzinkt"
-1970261,Lager YAT203 SKF,"Lager
+93,Lager YAT203 SKF,"Lager
 YAT203
 SKF"
-194655,Servomotor 373E11Z2006S21,"Servomotor
+94,Servomotor 373E11Z2006S21,"Servomotor
 Hersteller                BAELZ
 Typbezeichnung            373 E11 Z-20-06-S21
 Antriebsmoment            2000 Nm
@@ -583,18 +583,18 @@ Antriebsdrehzahl          6mm/min
 Spannung                  230 V - 115 V
 Isolierklasse             0-50°C - 0-75°C
 Schutzart                 IP44"
-1970320,Lager YAR 215-2F SKF,"Spannlager
+95,Lager YAR 215-2F SKF,"Spannlager
 YAR 215-2F
 SKF"
-1970301,Lager 7306 BE-2RZP SKF,"Schrägkugellager
+96,Lager 7306 BE-2RZP SKF,"Schrägkugellager
 7306 BE-2RZP
 SKF"
-469489,Mutter M8 DIN6334 L=24mm verz.,"Verlängerungsmutter 3d hoch
+97,Mutter M8 DIN6334 L=24mm verz.,"Verlängerungsmutter 3d hoch
 M8 L = 24mm
 DIN 6334
 Automatenstahl
 verzinkt"
-1970372,Servomotor AM8052-0L20-0000,"Servomotor
+98,Servomotor AM8052-0L20-0000,"Servomotor
 Herstellerteilenummer: 105061_BECKHOFF
 Hersteller: Beckhoff
 Typbezeichnung: AM8052-0L20-0000
@@ -604,7 +604,7 @@ Spannung [50Hz]: 400V
 Bauform: B5
 Isolierklasse: Iso-Kl.:F (tmax=155°C)
 Schutzart: IP54-Staubablage/Spritzwasser"
-1961121,GT-Motor R87DRN132M4,"Getriebemotor
+99,GT-Motor R87DRN132M4,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 R87DRN132M4
 Leistung [kW]:                  7,500 kW
@@ -618,7 +618,7 @@ Bauform:                        M1
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse:         IE3 Premium Efficiency"
-1970333,Servomotor 1FL60421AF612AA1,"Servomotor
+100,Servomotor 1FL60421AF612AA1,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1FL6042-1AF61-2AA1
 Leistung [kW]: 0,400 kW
@@ -631,7 +631,7 @@ Spannung [50Hz]: 400 V
 Bauform: B5
 Isolierklasse: Iso-Kl.: B (tma x =130°C)
 Schutzart: IP65-Staubdicht/Strahlwasser"
-1970376,GT-Motor R77DRN100L4TFEK8R,"Getriebemotor
+101,GT-Motor R77DRN100L4TFEK8R,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: R77DRN100L4TFEK8R
 Leistung [kW]: 3,000 kW
@@ -649,7 +649,7 @@ Fremdlüfter: Nein
 Motor-Bremse: Nein
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970293,GT-Motor SA47DRE90M4,"Getriebemotor
+102,GT-Motor SA47DRE90M4,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: SA47DRE90M4
 Leistung [kW]: 1,100 kW
@@ -662,20 +662,20 @@ Bauform: M1A
 Isolierklasse: Iso-Kl.:F (tma x =155°C)
 Schutzart: IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse: IE2 High Efficiency"
-1890173,"O-Ring 33,3x2x4mm NBR70 0009632319 LINDE","O-Ring
+103,"O-Ring 33,3x2x4mm NBR70 0009632319 LINDE","O-Ring
 33,3 x 2 x 4 mm
 NBR70
 0009632319
 LINDE"
-1970250,Lager BS222222RS5VT143 SKF,"Lager
+104,Lager BS222222RS5VT143 SKF,"Lager
 BS222222RS5VT143
 SKF"
-1970217,Schraube M36 x 3 x 240 DIN 912 12.9 schw.,"Zylinderschraube mit Innensechskant
+105,Schraube M36 x 3 x 240 DIN 912 12.9 schw.,"Zylinderschraube mit Innensechskant
 M36 x 3 x 240
 DIN 912
 12.9
 schwarz"
-1958384,GT-Motor FA47GDRN90S4TFAL,"Getriebemotor
+106,GT-Motor FA47GDRN90S4TFAL,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 FA47/G DRN90S4/TF/AL
 Leistung [kW]:                  1,100 kW
@@ -693,7 +693,7 @@ Fremdlüfter:                    Nein
 Motor-Bremse:                   Nein
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1958998,GT-Motor KH107TDRN160M4TF,"Getriebemotor
+107,GT-Motor KH107TDRN160M4TF,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 KH107TDRN160M4TF
 Leistung [kW]:                  11,000 kW
@@ -708,12 +708,12 @@ Fremdlüfter:                    Nein
 Motor-Bremse:                   Nein
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1891990,"O-Ring 34,00x3,00mm EPDM 70Sh perox","O-Ring
+108,"O-Ring 34,00x3,00mm EPDM 70Sh perox","O-Ring
 34,00x3,00mm
 EPDM 70Sh perox
 900060128
 KRONES"
-1958383,GT-Motor K77DRN112M4TFAL,"Getriebemotor
+109,GT-Motor K77DRN112M4TFAL,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 K77 DRN112M4/TF/AL
 Leistung [kW]:                  4,000 kW
@@ -731,7 +731,7 @@ Fremdlüfter:                    Nein
 Motor-Bremse:                   Nein
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970401,Servomotor 1PH7167-7HG33-0BB3-Z M39,"Servomotor
+110,Servomotor 1PH7167-7HG33-0BB3-Z M39,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1PH7167-7HG33-0BB3-Z M39
 Leistung [kW]: 40,000 kW
@@ -740,18 +740,18 @@ Spannung [50Hz]: 400Y
 Bauform: B35
 Isolierklasse: Iso-Kl.:F (tma x =155°C)
 Schutzart: IP54-Staubablage/Spritzwasser"
-1970181,"O-Ring 33,30 x 2,40 mm Viton FPM 85 Shore","O-Ring
+111,"O-Ring 33,30 x 2,40 mm Viton FPM 85 Shore","O-Ring
 33,30 x 2,40 mm
 WST: Viton FKM/FPM
 85° Shore"
-1970427,Lager E1K C3 23152 SKF,"Lager
+112,Lager E1K C3 23152 SKF,"Lager
 E1K C3
 23152
 SKF"
-1970041,"O-Ring 34,00 x 3,50 mm 70 Shore","O-Ring
+113,"O-Ring 34,00 x 3,50 mm 70 Shore","O-Ring
 34,00 x 3,50 mm
 70° Shore"
-1970292,GT-Motor 404157,"Getriebemotor
+114,GT-Motor 404157,"Getriebemotor
 Hersteller: OTT
 Typbezeichnung: 404157
 Antriebsmoment (max): 4,00 NM
@@ -763,34 +763,34 @@ Fremdlüfter: Nein
 Motor-Bremse: Nein
 Energieeffizienzklasse: Unbekannt
 Motorvollschutz (Thermofühler): Nein"
-1921356,Lager 61907 2RZ SKF,"Rillenkugellager
+115,Lager 61907 2RZ SKF,"Rillenkugellager
 61907 2RZ
 SKF"
-319064,PN-Zylinder ADN-25-30-A-P-A 536256 FESTO,"Kompaktzylinder
+116,PN-Zylinder ADN-25-30-A-P-A 536256 FESTO,"Kompaktzylinder
 ADN-25-30-A-P-A
 536256
 FESTO"
-1194011,"O-Ring 33,0x5,0mm Viton FPM 80 Shore","O-Ring
+117,"O-Ring 33,0x5,0mm Viton FPM 80 Shore","O-Ring
 33,00 x 5,00mm
 WST: Viton FPM
 80° Shore"
-826630,Keilriemen SPA 2532 LW,"Keilriemen
+118,Keilriemen SPA 2532 LW,"Keilriemen
 SPA 2532mm LW
 Wirklänge ISO LW 2532mm
 Innenlänge LI 2487mm
 Außenlänge LA 2550mm"
-1970165,Wellendichtring 35 x 62 x 8 BAUMSL Viton,"Wellendichtring
+119,Wellendichtring 35 x 62 x 8 BAUMSL Viton,"Wellendichtring
 35 x 62 x 8
 BAUMSL Viton"
-380433,Mutter M36 DIN982-8 verz.,"Sechskantmutter mit Polyamidklemmteil
+120,Mutter M36 DIN982-8 verz.,"Sechskantmutter mit Polyamidklemmteil
 hohe Form
 M36
 DIN 982-8
 verzinkt"
-1970257,Lager 23134 E1AM SKF,"Lager
+121,Lager 23134 E1AM SKF,"Lager
 23134 E1AM
 SKF"
-1970099,Servomotor AM8051-1G21-9000,"Servomotor
+122,Servomotor AM8051-1G21-9000,"Servomotor
 Hersteller BECKHOFF
 Typbezeichnung AM8051-1G21-9000
 N1 Antriebsdrehzahl 5,000.00 1/min
@@ -799,26 +799,26 @@ Bauform B5
 Isolierklasse F
 Schutzart IP54
 Art.Nr.: 10802210"
-1619853,Mutter M36x2 DIN439-04 verz.,"Sechskantmutter niedrig
+123,Mutter M36x2 DIN439-04 verz.,"Sechskantmutter niedrig
 M36 x 2
 DIN 439-04
 verzinkt"
-1902494,Lager 61840 SKF,"Rillenkugellager
+124,Lager 61840 SKF,"Rillenkugellager
 61840 SKF
 61840 FAG"
-1904136,Lager 22228CCK SKF,"Lager
+125,Lager 22228CCK SKF,"Lager
 22228CCK
 SKF"
-1970103,PN-Schlauch PUN-8-BL-400-HA FESTO,"Kunststoffschlauch
+126,PN-Schlauch PUN-8-BL-400-HA FESTO,"Kunststoffschlauch
 PUN-8-BL-400-HA
 553573
 FESTO"
-1060266,Schraube M10x60H DIN444B 8.8,"Augenschraube
+127,Schraube M10x60H DIN444B 8.8,"Augenschraube
 M10 x 60H
 DIN 444B
 10001815
 VARISCO"
-1970110,Servomotor 1FK71055AY811YY3Z,"Servomotor
+128,Servomotor 1FK71055AY811YY3Z,"Servomotor
 Hersteller KUKA
 Typbezeichnung 1FK7105-5AY81-1YY3-Z
 Leistung 4,300 kW
@@ -829,7 +829,7 @@ Nennstrom 15,5 A
 Isolierklasse F
 Schutzart IP65
 Art.Nr.: 131491"
-1813919,Servomotor 1PH7101-7JF03-0BB3-Z M39,"Servomotor
+129,Servomotor 1PH7101-7JF03-0BB3-Z M39,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1PH7101-7JF03-0BB3-Z M39
 Leistung [kW]:                  3,800 kW
@@ -838,7 +838,7 @@ Spannung [50Hz]:                398Y
 Baugröße:                       B35
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser"
-1957734,GT-Motor S37DRN63M4TH,"Getriebemotor
+130,GT-Motor S37DRN63M4TH,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 S37 DRN63M4/TH
 Leistung [kW]:                  0,180 kW
@@ -852,7 +852,7 @@ Schutzart:                      IP54-Staubablage/Spritzwasser
 Fremdlüfter:                    Nein
 Motor-Bremse:                   Nein
 Motorvollschutz (Thermofühler): Ja"
-1970403,Servomotor 1PH8186-1HF132BD1-Z,"Servomotor
+131,Servomotor 1PH8186-1HF132BD1-Z,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1PH8186-1HF132BD1-Z
 Leistung [kW]: 94,000 kW
@@ -860,7 +860,7 @@ N1 Antriebsdrehzahl: 2.200,00 1/min
 Bauform: B35
 Isolierklasse: Iso-Kl.:H (tma x =180°C)
 Schutzart: IP55-Staubablage/Strahlwasser"
-1970304,GT-Motor S37DRN63M4TH,"Getriebemotor
+132,GT-Motor S37DRN63M4TH,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: S37 DRN63M4/TH
 Leistung [kW]: 0,180 kW
@@ -874,7 +874,7 @@ Schutzart: IP54-Staubablage/Spritzwasser
 Fremdlüfter: Nein
 Motor-Bremse: Nein
 Motorvollschutz (Thermofühler): Ja"
-1970284,GT-Motor FH77DRU100L4TF,"Getriebemotor
+133,GT-Motor FH77DRU100L4TF,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: FH77DRU100L4TF
 Leistung [kW]: 2,200 kW
@@ -890,13 +890,13 @@ Fremdlüfter: Nein
 Motor-Bremse: Nein
 Energieeffizienzklasse: IE4 Super Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970236,Radialwellendichtring 35x62x10 BASL Viton,"Radialwellendichtring
+134,Radialwellendichtring 35x62x10 BASL Viton,"Radialwellendichtring
 35x62x10
 BASL Viton"
-1970313,Lager NJ2322ECML SKF,"Radial-Zylinderrollenlager
+135,Lager NJ2322ECML SKF,"Radial-Zylinderrollenlager
 NJ-2322-ECML
 SKF"
-1970287,GT-Motor KA19BTDRN80MK4EK8SPK,"Getriebemotor
+136,GT-Motor KA19BTDRN80MK4EK8SPK,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: KA19BTDRN80MK4EK8SPK
 Leistung [kW]: 0,550 kW
@@ -910,10 +910,10 @@ Isolierklasse: Iso-Kl.:B (tma x =130°C)
 Schutzart: IP54-Staubablage/Spritzwasser
 Bremsgroesse: NM30/24
 Energieeffizienzklasse: IE3 Premium Efficiency"
-1970267,Lager 23230 CCW33C3 SKF,"Lager
+137,Lager 23230 CCW33C3 SKF,"Lager
 23230 CCW33C3
 SKF"
-1970400,Servomotor 1PH7163-7HF33-0BB3-Z M39,"Servomotor
+138,Servomotor 1PH7163-7HF33-0BB3-Z M39,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1PH7163-7HF33-0BB3-Z M39
 Leistung [kW]: 31,000 kW
@@ -922,7 +922,7 @@ Spannung [50Hz]: 364Y
 Bauform: B35
 Isolierklasse: Iso-Kl.:F (tmax=155°C)
 Schutzart: IP54-Staubablage/Spritzwasser"
-1970343,GT-Motor KH77DRN112M4KCCTF,"Getriebemotor
+139,GT-Motor KH77DRN112M4KCCTF,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: KH77DRN112M4KCCTF
 Leistung [kW]: 4,000 kW
@@ -938,13 +938,13 @@ Isolierklasse: Iso-Kl.:F (tma x =155°C)
 Schutzart: IP54-Staubablage/Spritzwasser
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970127,Mutter M36 DIN 982-8 A2,"Sechskantmutter mit Klemmteil
+140,Mutter M36 DIN 982-8 A2,"Sechskantmutter mit Klemmteil
 hohe Form
 M36
 DIN 982-8
 A2
 Edelstahl"
-1970296,GT-Motor WAF30DRN80MK4TH,"Getriebemotor
+141,GT-Motor WAF30DRN80MK4TH,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: WAF30DRN80MK4TH
 Leistung [kW]: 0,550 kW
@@ -957,31 +957,31 @@ Isolierklasse: Iso-Kl.:F (tmax=155°C)
 Schutzart: IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-994445,"Mutter M36x1,5 DIN439-04 verz.","Sechskantmutter niedrig
+142,"Mutter M36x1,5 DIN439-04 verz.","Sechskantmutter niedrig
 M30 x 1,5
 DIN 439-04
 verzinkt"
-1970331,Lager 21311 EC3 SKF,"Pendelrollenlager
+143,Lager 21311 EC3 SKF,"Pendelrollenlager
 21311 E C3
 SKF"
-1970158,PN-Zylinder ADN-25-40-A-P-A 536257 FESTO,"Kompaktzylinder
+144,PN-Zylinder ADN-25-40-A-P-A 536257 FESTO,"Kompaktzylinder
 ADN-25-40-A-P-A
 536257
 FESTO"
-1820982,Modul 6SN1123-1AA00-0CA1 SIEMENS,Modul 6SN1123-1AA00-0CA1 SIEMENS
-1970196,Lager 2217 KC3 SKF,"Lager
+145,Modul 6SN1123-1AA00-0CA1 SIEMENS,Modul 6SN1123-1AA00-0CA1 SIEMENS
+146,Lager 2217 KC3 SKF,"Lager
 2217 KC3
 SKF"
-1970425,Keilriemen SPA 2532 LW,"Keilriemen
+147,Keilriemen SPA 2532 LW,"Keilriemen
 SPA 2532 mm LW
 Wirklänge ISO LW 2532 mm
 Innenlänge LI 2487 mm
 Außenlänge LA 2550 mm"
-1970078,"Kettenrad B-1 5/8"" Z13 K 9183-4.2.3","Kettenrad
+148,"Kettenrad B-1 5/8"" Z13 K 9183-4.2.3","Kettenrad
 B-1 5/8"" Z13
 K 9183-4.2.3
 DIN 8187"
-195609,GT-Motor KA37DRS80S4TH,"Getriebemotor
+149,GT-Motor KA37DRS80S4TH,"Getriebemotor
 Hersteller                     SEW
 Typbezeichnung                 KA37DRS80S4/TH
 Motorleistung                  0,750 kW
@@ -993,7 +993,7 @@ Isolierklasse                  F
 Schutzart                      IP54
 Ausführungsart                 Hohlwelle
 Hohlwelle                      d = 30mm"
-1958358,GT-Motor KA87DRN180L4TF,"Getriebemotor
+150,GT-Motor KA87DRN180L4TF,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 KA87 DRN180L4/TF
 Leistung [kW]:                  22,000 kW
@@ -1009,13 +1009,13 @@ Isolierklasse:                  Iso-Kl.: F (tmax=155°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970052,Mutter M36 DIN 934-8 verzinkt.,"Hexagonmutter
+151,Mutter M36 DIN 934-8 verzinkt.,"Hexagonmutter
 M36 DIN 934-8 verzinkt."
-1908717,Lager E1K C3 23152 SKF,"Lager
+152,Lager E1K C3 23152 SKF,"Lager
 E1K C3
 23152
 SKF"
-1958083,"Getriebe  R77A i=7,74 SEW","Getriebe
+153,"Getriebe  R77A i=7,74 SEW","Getriebe
 Hersteller:                     SEW
 Typbezeichnung:                 R77A
 N1 Antriebsdrehzahl:            1.400,00 1/min
@@ -1024,35 +1024,35 @@ Drehmoment:                     610,00 NM
 Getriebeübersetzung i:          7,740
 Bauform:                        M1
 Getriebeausführung:             Stirnradgetriebe"
-1970416,Servomotor 1FT7105-5SF70-1CA0,"Servomotor
+154,Servomotor 1FT7105-5SF70-1CA0,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1FT7105-5SF70-1CA0
 N1 Antriebsdrehzahl: 3.000,00 1/min
 Antriebsmoment: 48,00 NM
 Isolierklasse: Iso-Kl.:F (tmax=155°C)
 Schutzart: IP55-Staubablage/Strahlwasser"
-1904384,Lager 22316 EKC3W33 SKF,"Lager
+155,Lager 22316 EKC3W33 SKF,"Lager
 22316 EKC3W33
 SKF"
-682544,"Kettenrad B-2 1 1/4"" Z25 TLB 3030","Kettenraeder fuer Zweifach-Rollenkette
+156,"Kettenrad B-2 1 1/4"" Z25 TLB 3030","Kettenraeder fuer Zweifach-Rollenkette
 1 1/4"" Z25 fuer TL 3030"
-1805162,Servomotor 1FT7105-5AF71-CB0-Z,"Servomotor
+157,Servomotor 1FT7105-5AF71-CB0-Z,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1FT7105-5AF71-CB0-Z
 N1 Antriebsdrehzahl:            3.000,00 1/min
 Antriebsmoment:                 28,00 NM
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser"
-1061094,Schraube M12x70 DIN603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
+158,Schraube M12x70 DIN603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
 DIN 603
 M12x70
 8.8
 verzinkt"
-1970244,Lager 180x225x22mm 61836 SKF,"Lager
+159,Lager 180x225x22mm 61836 SKF,"Lager
 180x225x22mm
 61836
 SKF"
-1958404,GT-Motor KH67DRN112M4BE5KCCTF,"Getriebemotor
+160,GT-Motor KH67DRN112M4BE5KCCTF,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 KH67 DRN112M4/BE5/KCC/TF
 Leistung [kW]:                  4,000 kW
@@ -1068,10 +1068,10 @@ Motor-Bremse:                   BE5
 Bremsgroesse:                   400V AC 55Nm
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970107,Modul 3SU1400-1AA10-3HA0 SIEMENS,"Kontaktmodul
+161,Modul 3SU1400-1AA10-3HA0 SIEMENS,"Kontaktmodul
 3SU1400-1AA10-3HA0
 SIEMENS"
-1818172,Servomotor 1FT6105-8AF71-1EB0,"Servomotor
+162,Servomotor 1FT6105-8AF71-1EB0,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1FT6105-8AF71-1EB0
 N1 Antriebsdrehzahl:            3.000,00 1/min
@@ -1079,26 +1079,26 @@ Antriebsmoment:                 28,00 NM
 Spannung [50Hz]:                297V
 Schutzart:                      IP64-Staubdicht/Spritzwasser
 Motor-Bremse:                   Ja"
-542920,Wellendichtring 35x62x7 B1,"Wellendichtring
+163,Wellendichtring 35x62x7 B1,"Wellendichtring
 35x62x7
 B1"
-1970062,Schraube 12x180 DIN 571 4.6 verzinkt.,"Sechskant - Holzschraube
+164,Schraube 12x180 DIN 571 4.6 verzinkt.,"Sechskant - Holzschraube
 DIN 571
 12x180
 4.6
 galvanisch verzinkt"
-969889,Servomotor 1FK71035AF711AH3Z,"Servomotor
+165,Servomotor 1FK71035AF711AH3Z,"Servomotor
 Hersteller                     SIEMENS
 Typbezeichnung                 1FK71035AF711AH3Z
 Antriebsdrehzahl N1            3.000,00 1/min
 Antriebsmoment                 36,00 NM
 Isolierklasse                  F
 Schutzart                      IP64"
-1970232,PN-Zylinder ADN-25-40-I-P-A 536265 FESTO,"Kompaktzylinder
+166,PN-Zylinder ADN-25-40-I-P-A 536265 FESTO,"Kompaktzylinder
 ADN-25-40-I-P-A
 536265
 FESTO"
-1970290,GT-Motor DRN71M4BE05FTTH,"Getriebemotor
+167,GT-Motor DRN71M4BE05FTTH,"Getriebemotor
 Herstellerteilenummer: XXXX_SIEMPELKAMP
 Hersteller: SEW
 Typbezeichnung: DRN71M4BE05FTTH
@@ -1111,27 +1111,27 @@ Schutzart: IP55-Staubablage/Strahlwasser
 Bremsgroesse: 24 DC
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970329,Mutter M36 ISO4032 5.2 schw.,"Mutter
+168,Mutter M36 ISO4032 5.2 schw.,"Mutter
 M36
 ISO4032
 5.2
 schwarz"
-1970167,Servomotor 1FK71035AF711AH3Z,"Servomotor
+169,Servomotor 1FK71035AF711AH3Z,"Servomotor
 Hersteller SIEMENS
 Typbezeichnung 1FK71035AF711AH3Z
 Antriebsdrehzahl N1 3.000,00 1/min
 Antriebsmoment 36,00 NM
 Isolierklasse F
 Schutzart IP64"
-1970279,"O-Ring 33,3 x 2 x 4 mm NBR70 0009632319 LINDE","O-Ring
+170,"O-Ring 33,3 x 2 x 4 mm NBR70 0009632319 LINDE","O-Ring
 33,3 x 2 x 4 mm
 NBR70
 0009632319
 LINDE"
-1970221,Wellendichtring 35 x 62 x 7 B1,"Wellendichtring
+171,Wellendichtring 35 x 62 x 7 B1,"Wellendichtring
 35 x 62 x 7
 B1"
-1970346,GT-Motor KH77DRN100LS4BE5KCCTF,"Getriebemotor
+172,GT-Motor KH77DRN100LS4BE5KCCTF,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: KH77DRN100LS4BE5KCCTF
 Leistung [kW]: 2,200 kW
@@ -1149,24 +1149,24 @@ Motor-Bremse: Ja
 Bremsgroesse: 415VAC 28NM
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1904111,Lager YAT203 SKF,"Lager
+173,Lager YAT203 SKF,"Lager
 YAT203
 SKF"
-1970126,Mutter M36x2 DIN 439-04 verzinkt.,"Hexagonmutter niedrig
+174,Mutter M36x2 DIN 439-04 verzinkt.,"Hexagonmutter niedrig
 M36 x 2
 DIN 439-04
 verzinkt"
-1806172,Servomotor 1FT7105-5SF70-1CA0,"Servomotor
+175,Servomotor 1FT7105-5SF70-1CA0,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1FT7105-5SF70-1CA0
 N1 Antriebsdrehzahl:            3.000,00 1/min
 Antriebsmoment:                 48,00 NM
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser"
-1893380,Lager NJ 2203 ECP SKF,"Zylinderrollenlager
+176,Lager NJ 2203 ECP SKF,"Zylinderrollenlager
 NJ2203ECP
 SKF"
-1970202,Servomotor 1PH7133-2HF03-0BB3,"Servomotor 1PH7133-2HF03-0BB3
+177,Servomotor 1PH7133-2HF03-0BB3,"Servomotor 1PH7133-2HF03-0BB3
 1.Leistung 15,00 kW
 1.Antr.Drehzahl 1.780,0 1/min
 Bauform Fuß-/Flanschausführung B35
@@ -1174,10 +1174,10 @@ Spannung 400D
 Frequenz 60 Hz
 Isolierklasse Iso-Kl.:F (tmax=155°C)
 Schutzart IP54-Staubablag./Spritzwasser"
-1970268,Lager 23230 CCW33C3 SKF,"Lager
+178,Lager 23230 CCW33C3 SKF,"Lager
 23230 CCW33C3
 SKF"
-1970096,Servomotor AM8052-1J21-9000,"Servomotor
+179,Servomotor AM8052-1J21-9000,"Servomotor
 Hersteller BECKHOFF
 Typbezeichnung AM8052-1J21-9000
 N1 Antriebsdrehzahl 4,000.00 1/min
@@ -1186,7 +1186,7 @@ Bauform B5
 Isolierklasse F
 Schutzart IP54
 Art.Nr.: 10779584"
-1970359,GT-Motor R67DRN112M4TFAL,"Getriebemotor
+180,GT-Motor R67DRN112M4TFAL,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: R67DRN112M4TFAL
 Leistung [kW]: 4,000 kW
@@ -1204,18 +1204,18 @@ Fremdlüfter: Nein
 Motor-Bremse: Nein
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1330663,"Kette 08A-2 12,7 1/2”x7,85mm DIN8188","Kette
+181,"Kette 08A-2 12,7 1/2”x7,85mm DIN8188","Kette
 08A-2
 Teilung: 12,7
 Teilung: 1/2""
 Innere breite: 7,85mm
 DIN 8188
 ASA40"
-1602710,"O-Ring 34,00x3,00mm NBR 90 Shore A","O-Ring
+182,"O-Ring 34,00x3,00mm NBR 90 Shore A","O-Ring
 34,00 x 3,00 mm
 WST: NBR
 90° Shore A"
-1525406,Servomotor AM8043-0H20-0000,"Servomotor
+183,Servomotor AM8043-0H20-0000,"Servomotor
 Hersteller                     BECKHOFF
 Typbezeichnung                 AM8043-0H20-0000
 N1 Antriebsdrehzahl            5,000.00 1/min
@@ -1224,7 +1224,7 @@ Bauform                        B5
 Isolierklasse                  F
 Schutzart                      IP54
 Art.Nr.:                       10802980"
-1970068,Servomotor 373E45402022050FG,"Servomotor
+184,Servomotor 373E45402022050FG,"Servomotor
 Hersteller BAELZ
 Typbezeichnung 373.220V
 373.E45-40-20-220-50-Fg
@@ -1235,30 +1235,30 @@ Bedienung Manuell
 Potentiometer 200 Ohm
 Ventil Hub 12mm
 Art.Nr.: 00.373-E40-40-20-001"
-1912980,Lager 6203 2RS1 VQ658 SKF,"Rillenkugellager
+185,Lager 6203 2RS1 VQ658 SKF,"Rillenkugellager
 6203-2RS1-VQ658
 SKF"
-1970150,Schraube M12x60 DIN 603 8.8 verzinkt.,"Flachrundschraube mit Vierkantansatz
+186,Schraube M12x60 DIN 603 8.8 verzinkt.,"Flachrundschraube mit Vierkantansatz
 DIN 603
 M12x60
 8.8
 verzinkt"
-1970421,"Kette 08A-1 12,70 1/2"" x 7,85 mm DIN 8188","Einfach Rollenkette
+187,"Kette 08A-1 12,70 1/2"" x 7,85 mm DIN 8188","Einfach Rollenkette
 08A-1
 Teilung: 12,70 mm (1/2"")
 Innere Breite: 7,85 mm
 DIN 8188
 40R5MT_HITACHI
 L85AANSI40_IWIS"
-1970056,Schraube M12x30 DIN 933 5.6 verzinkt.,"Hexagonschraube mit Gewinde bis Kopf
+188,Schraube M12x30 DIN 933 5.6 verzinkt.,"Hexagonschraube mit Gewinde bis Kopf
 DIN 933
 M12x30
 5.6
 verzinkt"
-1904434,Lager 23230 CCW33C3 SKF,"Lager
+189,Lager 23230 CCW33C3 SKF,"Lager
 23230 CCW33C3
 SKF"
-1970342,GT-Motor KH77DRN100L4KCCTF,"Getriebemotor
+190,GT-Motor KH77DRN100L4KCCTF,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: KH77DRN100L4KCCTF
 Leistung [kW]: 3,000 kW
@@ -1274,48 +1274,48 @@ Isolierklasse: Iso-Kl.:F (tmax=155°C)
 Schutzart: IP54-Staubablage/Spritzwasser
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970252,Lager 22316 EKC3W33 SKF,"Lager
+191,Lager 22316 EKC3W33 SKF,"Lager
 22316 EKC3W33
 SKF"
-1970423,Wellendichtring 35 x 65 x 10 BASL,"Wellendichtring
+192,Wellendichtring 35 x 65 x 10 BASL,"Wellendichtring
 35 x 65 x 10
 BASL"
-1970243,Lager 180 x 225 x 22 mm 61836 SKF,"Lager
+193,Lager 180 x 225 x 22 mm 61836 SKF,"Lager
 180 x 225 x 22 mm
 61836
 SKF"
-1970154,Schraube M12x40 DIN 603 8.8 verzinkt.,"Flachrundschraube mit Vierkantansatz
+194,Schraube M12x40 DIN 603 8.8 verzinkt.,"Flachrundschraube mit Vierkantansatz
 M12x40
 DIN 603
 8.8
 verzinkt"
-1970272,Lager 6313/C4 SKF,"Lager
+195,Lager 6313/C4 SKF,"Lager
 6313/C4
 SKF"
-105767,Schraube M6x30 DIN933 5.6 verz.,"Sechskantschraube mit Gewinde bis Kopf
+196,Schraube M6x30 DIN933 5.6 verz.,"Sechskantschraube mit Gewinde bis Kopf
 DIN 933
 M6x30
 5.6
 verzinkt"
-1970338,Lager 61840 SKF,"Rillenkugellager
+197,Lager 61840 SKF,"Rillenkugellager
 61840 SKF
 61840 FAG"
-1970241,"O-Ring 34,00 x 3,00 mm EPDM 70Sh pero x","O-Ring
+198,"O-Ring 34,00 x 3,00 mm EPDM 70Sh pero x","O-Ring
 34,00 x 3,00 mm
 EPDM 70Sh pero x 900060128
 KRONES"
-1970149,Schraube M12 x 60 DIN 603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
+199,Schraube M12 x 60 DIN 603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
 DIN 603
 M12 x 60
 8.8
 verzinkt"
-831460,Servomotor AB8 AM40 SCHIEBEL,"Servomotor
+200,Servomotor AB8 AM40 SCHIEBEL,"Servomotor
 Hersteller                     SCHIEBEL
 Typbezeichnung                 AB8 AM40 2WER 2WEL H AK40 K2
 Motorleistung                  0,750 kW
 Antriebsdrehzahl N1            40,00 1/min
 Antriebsmoment                 90,00 NM"
-165212,Servomotor 373E45402022050FG,"Servomotor
+201,Servomotor 373E45402022050FG,"Servomotor
 Hersteller                   BAELZ
 Typbezeichnung               373.220V
                              373.E45-40-20-220-50-Fg
@@ -1326,7 +1326,7 @@ Bedienung                    Manuell
 Potentiometer                200 Ohm
 Ventil Hub                   12mm
 Art.Nr.:                     00.373-E40-40-20-001"
-1970363,GT-Motor R103DV160M4,"Getriebemotor
+202,GT-Motor R103DV160M4,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: R103DV160M4
 Leistung [kW]: 11,000 kW
@@ -1335,7 +1335,7 @@ Abt.drehzahl pol-schaltbar N2: 42,00 1/min
 Bauform: B3
 Isolierklasse: Iso-Kl.:B (tma x =130°C)
 Schutzart: IP54-Staubablage/Spritzwasser"
-1963347,GT-Motor 404157,"Getriebemotor
+203,GT-Motor 404157,"Getriebemotor
 Hersteller:                     OTT
 Typbezeichnung:                 404157
 Antriebsmoment (max):           4,00 NM
@@ -1347,13 +1347,13 @@ Fremdlüfter:                    Nein
 Motor-Bremse:                   Nein
 Energieeffizienzklasse:         Unbekannt
 Motorvollschutz (Thermofühler): Nein"
-1970315,"O-Ring 33,2 x 2,4 mm NBR70 0009632318 LINDE","O-Ring
+204,"O-Ring 33,2 x 2,4 mm NBR70 0009632318 LINDE","O-Ring
 33,2 x 2,4 mm
 WST: NBR
 70 Shore A
 0009632318
 LINDE"
-1970344,GT-Motor KH77DRN112M4KCCTF,"Getriebemotor
+205,GT-Motor KH77DRN112M4KCCTF,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: KH77DRN112M4KCCTF
 Leistung [kW]: 4,000 kW
@@ -1369,7 +1369,7 @@ Isolierklasse: Iso-Kl.:F (tmax=155°C)
 Schutzart: IP54-Staubablage/Spritzwasser
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970040,GT-Motor KH77TDRN100LS4BE5TH,"Getriebemotor
+206,GT-Motor KH77TDRN100LS4BE5TH,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 KH77TDRN100LS4BE5TH
 Leistung [kW]:                  2,200 kW
@@ -1387,7 +1387,7 @@ Motor-Bremse:                   Ja
 Bremsgroesse:                   230VAC 55NM
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970375,GT-Motor R77DRN100L4TFEK8R,"Getriebemotor
+207,GT-Motor R77DRN100L4TFEK8R,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: R77DRN100L4TFEK8R
 Leistung [kW]: 3,000 kW
@@ -1405,16 +1405,16 @@ Fremdlüfter: Nein
 Motor-Bremse: Nein
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-973456,"O-Ring 33,50x2,00mm N 01095200 KSB","O-Ring
+208,"O-Ring 33,50x2,00mm N 01095200 KSB","O-Ring
 33,5 x 2,0mm
 N
 01095200
 KSB"
-1082236,"O-Ring 339,30x5,70mm NBR70 Shore","O-Ring
+209,"O-Ring 339,30x5,70mm NBR70 Shore","O-Ring
 339,3 x 5,7mm
 WST: NBR
 70 Shore"
-1818152,Servomotor 1FT6086-8AH71-1EB0,"Servomotor
+210,Servomotor 1FT6086-8AH71-1EB0,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1FT6086-8AH71-1EB0
 N1 Antriebsdrehzahl:            4.500,00 1/min
@@ -1423,12 +1423,12 @@ Spannung [50Hz]:                333V
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP64-Staubdicht/Spritzwasser
 Motor-Bremse:                   Nein"
-1060050,Schraube M30x240 DIN912 12.9 schw.,"Zylinderschraube mit Innensechskant
+211,Schraube M30x240 DIN912 12.9 schw.,"Zylinderschraube mit Innensechskant
 M30 x 240
 DIN 912
 12.9
 schwarz"
-1965581,GT-Motor RF37DRN80M4TH,"Getriebemotor
+212,GT-Motor RF37DRN80M4TH,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 RF37DRN80M4TH
 Leistung [kW]:                  0,750 kW
@@ -1444,20 +1444,20 @@ Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970086,"ORing 33,0x5,0mm Viton FPM 80 Shore","ORing
+213,"ORing 33,0x5,0mm Viton FPM 80 Shore","ORing
 33,00 x 5,00mm
 WST: Viton FPM
 80° Shore"
-185876,"Kette 081 12,70 1/2""x3,30mm DIN8187","Rollenkette
+214,"Kette 081 12,70 1/2""x3,30mm DIN8187","Rollenkette
 081
 Teilung: 12,70mm (1/2"")
 Innere Breite: 3,30mm
 DIN 8187"
-1731540,"O-Ring 330,30x5,70mm FPM 70 Shore A","O-Ring
+215,"O-Ring 330,30x5,70mm FPM 70 Shore A","O-Ring
 330,30 х 5,70 mm
 WST: FPM
 70° Shore A"
-1970371,Servomotor AM8052-0L20-0000,"Servomotor
+216,Servomotor AM8052-0L20-0000,"Servomotor
 Herstellerteilenummer: 105061_BECKHOFF
 Hersteller: Beckhoff
 Typbezeichnung: AM8052-0L20-0000
@@ -1467,7 +1467,7 @@ Spannung [50Hz]: 400V
 Bauform: B5
 Isolierklasse: Iso-Kl.:F (tma x =155°C)
 Schutzart: IP54-Staubablage/Spritzwasser"
-185854,"Kette 08A-1 12,70 1/2""x7,85mm DIN8188","Einfach Rollenkette
+217,"Kette 08A-1 12,70 1/2""x7,85mm DIN8188","Einfach Rollenkette
 08A-1
 Teilung: 12,70mm (1/2"")
 Innere Breite: 7,85mm
@@ -1475,11 +1475,11 @@ DIN 8188
 
 40R5MT_HITACHI
 L85AANSI40_IWIS"
-1970182,"ORing 33,30x2,40mm Viton FPM 85 Shore","ORing
+218,"ORing 33,30x2,40mm Viton FPM 85 Shore","ORing
 33,30 x 2,40mm
 WST: Viton FKM/FPM
 85° Shore"
-1970123,"Getriebe R47A i=12,54","Getriebe
+219,"Getriebe R47A i=12,54","Getriebe
 Hersteller: SEW
 Typbezeichnung: R87/A
 N1 Antriebsdrehzahl: 1.400,00 1/min
@@ -1488,20 +1488,20 @@ Drehmoment: 520,00 NM
 Getriebeübersetzung i: 19,100
 Bauform: M1
 Getriebeausführung: Stirnradgetriebe"
-1970088,Servomotor AB8 AM40 SCHIEBEL,"Servomotor
+220,Servomotor AB8 AM40 SCHIEBEL,"Servomotor
 Hersteller SCHIEBEL
 Typbezeichnung AB8 AM40 2WER 2WEL H AK40 K2
 Motorleistung 0,750 kW
 Antriebsdrehzahl N1 40,00 1/min
 Antriebsmoment 90,00 NM"
-1970132,"Kettenrad B-2 1 1/4"" Z25 TLB 3030","Kettenraeder fuer Zweifach-Rollenkette
+221,"Kettenrad B-2 1 1/4"" Z25 TLB 3030","Kettenraeder fuer Zweifach-Rollenkette
 1 1/4"" Z25 fuer TL 3030"
-1557420,Schraube M6x50 DIN835 8.8 verz.,"Stiftschraube mit Einschraubende
+222,Schraube M6x50 DIN835 8.8 verz.,"Stiftschraube mit Einschraubende
 M6 x 50
 DIN 835
 8.8
 verzinkt"
-1970207,Kettenrad KR90D100 Z10 d=90H7,"Kettenrad
+223,Kettenrad KR90D100 Z10 d=90H7,"Kettenrad
 KR90D100
 Z = 10
 10 Zähne, Zahnbreite 11 mm, nach oben verlängert
@@ -1509,18 +1509,18 @@ Rollendurchmesser 45 mm
 Nabengesamtlänge 71 mm, einseitig
 Nabendurchmesser 130 mm
 aus S152-3, ungehärtet, mit Bohrung 90H7 ohne Nut"
-155947,Schraube M8x30 DIN912 10.9 schw.,"Zylinderschraube mit Innensechskant
+224,Schraube M8x30 DIN912 10.9 schw.,"Zylinderschraube mit Innensechskant
 M8 x 30
 DIN 912
 10.9
 schwarz"
-1876618,Lager NU 214 ECJ/C3 SKF,"Zylinderrollenlager
+225,Lager NU 214 ECJ/C3 SKF,"Zylinderrollenlager
 NU 214 ECJ/C3
 SKF"
-1970050,Radialwellendichtring 35x62x5 BASL,"Radialwellendichtring
+226,Radialwellendichtring 35x62x5 BASL,"Radialwellendichtring
 35 x 62 x 5mm
 BASL"
-1958379,GT-Motor KA97TR57DRN80MK4TFEK8RAL,"Getriebemotor
+227,GT-Motor KA97TR57DRN80MK4TFEK8RAL,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 KA97TR57DRN80MK4TFEK8RAL
 Leistung [kW]:                  0,550 kW
@@ -1536,10 +1536,10 @@ Isolierklasse:                  Iso-Kl.: F (tmax=155°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-109464,"O-Ring 34,00x3,00mm 70 Shore","O-Ring
+228,"O-Ring 34,00x3,00mm 70 Shore","O-Ring
 34,00 x 3,00 mm
 70° Shore"
-1970205,Kettenrad KR90D100 Z10 d=85H7,"Kettenrad
+229,Kettenrad KR90D100 Z10 d=85H7,"Kettenrad
 KR90D100
 Z = 10
 10 Zähne, Zahnbreite 11 mm, nach oben verlängert
@@ -1547,7 +1547,7 @@ Rollendurchmesser 45 mm
 Nabengesamtlänge 71 mm, einseitig
 Nabendurchmesser 130 mm
 aus S152-3, ungehärtet, mit Bohrung 85H7 ohne Nut"
-1970373,GT-Motor R97DRN132S4TFV,"Getriebemotor
+230,GT-Motor R97DRN132S4TFV,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: R97DRN132S4TFV
 Leistung [kW]: 5,500 kW
@@ -1564,7 +1564,7 @@ Schutzart: IP55-Staubablage/Strahlwasser
 Fremdlüfter: 400V
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970348,GT-Motor KH67DRN100LS4BE5KCCTFEI7C,"Getriebemotor
+231,GT-Motor KH67DRN100LS4BE5KCCTFEI7C,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: KH67DRN100LS4BE5KCCTFEI7C
 Leistung [kW]: 2,200 kW
@@ -1582,7 +1582,7 @@ Motor-Bremse: Ja
 Bremsgroesse: 415VAC 20NM
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1968299,GT-Motor RF37DRN90L2TH,"Getriebemotor
+232,GT-Motor RF37DRN90L2TH,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 RF37 DRN90L2/TH
 Leistung [kW]:                  2,200 kW
@@ -1599,10 +1599,10 @@ Isolierklasse:                  Iso-Kl.: F (tmax=155°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-191195,Lager 2217 KC3 SKF,"Lager
+233,Lager 2217 KC3 SKF,"Lager
 2217 KC3
 SKF"
-1813952,Servomotor 1PH7167-7HG33-0BB3-Z M39,"Servomotor
+234,Servomotor 1PH7167-7HG33-0BB3-Z M39,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1PH7167-7HG33-0BB3-Z M39
 Leistung [kW]:                  40,000 kW
@@ -1611,20 +1611,20 @@ Spannung [50Hz]:                400Y
 Bauform:                        B35
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser"
-1937200,Lager YAR 215-2F SKF,"Spannlager
+235,Lager YAR 215-2F SKF,"Spannlager
 YAR 215-2F
 SKF"
-1970054,"ORing 33,30x2,40mm Viton FPM","ORing
+236,"ORing 33,30x2,40mm Viton FPM","ORing
 33,30x2,40mm
 Viton FKM/FPM"
-1970216,"ORing 339,30x5,70mm NBR70 Shore","ORing
+237,"ORing 339,30x5,70mm NBR70 Shore","ORing
 339,3 x 5,7mm
 WST: NBR
 70 Shore"
-1970259,Lager 23130CCK SKF,"Lager
+238,Lager 23130CCK SKF,"Lager
 23130CCK
 SKF"
-196043,GT-Motor FA77DV100L4,"Getriebemotor
+239,GT-Motor FA77DV100L4,"Getriebemotor
 Hersteller                     SEW
 Typbezeichnung                 FA77DV100L4
 Motorleistung                  3,000 kW
@@ -1634,7 +1634,7 @@ Spannung                       230D/400Y
 Bauform                        M1
 Isolierklasse                  F
 Schutzart                      IP54"
-1970407,Servomotor 1FT6086-8AH71-1EB0,"Servomotor
+240,Servomotor 1FT6086-8AH71-1EB0,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1FT6086-8AH71-1EB0
 N1 Antriebsdrehzahl: 4.500,00 1/min
@@ -1643,38 +1643,38 @@ Spannung [50Hz]: 333V
 Isolierklasse: Iso-Kl.:F (tma x =155°C)
 Schutzart: IP64-Staubdicht/Spritzwasser
 Motor-Bremse: Nein"
-880349,Wellendichtring 35x62x8 BAUMSL Viton,"Wellendichtring
+241,Wellendichtring 35x62x8 BAUMSL Viton,"Wellendichtring
 35x62x8
 BAUMSL Viton"
-1970248,Lager YAR214 SKF,"Lager
+242,Lager YAR214 SKF,"Lager
 YAR214
 SKF"
-790948,"Kettenrad B-2 1"" Z16 d=75mm","Kettenrad
+243,"Kettenrad B-2 1"" Z16 d=75mm","Kettenrad
 B-2 1""
 Z = 16
 geb.75mm
 DIN 8187"
-1970419,Servomotor 1FT7105-5AF71-CB0-Z,"Servomotor
+244,Servomotor 1FT7105-5AF71-CB0-Z,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1FT7105-5AF71-CB0-Z
 N1 Antriebsdrehzahl: 3.000,00 1/min
 Antriebsmoment: 28,00 NM
 Isolierklasse: Iso-Kl.:F (tma x =155°C)
 Schutzart: IP55-Staubablage/Strahlwasser"
-1970432,Lager 1210 SKF,"Lager
+245,Lager 1210 SKF,"Lager
 1210
 SKF"
-1970387,"Kette 08A-3 12,7 1/2"" x 7,85 mm DIN 8188","Kette
+246,"Kette 08A-3 12,7 1/2"" x 7,85 mm DIN 8188","Kette
 08A-3
 Teilung: 12,7
 Teilung: 1/2""
 Innere breite: 7,85 mm
 DIN 8188
 ASA 40-3"
-1521517,Modul 3SU1400-1AA10-3HA0 SIEMENS,"Kontaktmodul
+247,Modul 3SU1400-1AA10-3HA0 SIEMENS,"Kontaktmodul
 3SU1400-1AA10-3HA0
 SIEMENS"
-1970102,Servomotor AM8043-0E20-0000,"Servomotor
+248,Servomotor AM8043-0E20-0000,"Servomotor
 Hersteller BECKHOFF
 Typbezeichnung AM8043-0E20-0000
 N1 Antriebsdrehzahl 2,500.00 1/min
@@ -1683,11 +1683,11 @@ Bauform B5
 Isolierklasse F
 Schutzart IP54
 Art.Nr.: 10765906"
-1835317,Touch Panel 6AV2128-3MB06-0AX1 SIEMENS,"Touch Panel
+249,Touch Panel 6AV2128-3MB06-0AX1 SIEMENS,"Touch Panel
 12""
 6AV2128-3MB06-0AX1
 SIEMENS"
-1970288,GT-Motor KA19BTDRN80MK4EK8SPK,"Getriebemotor
+250,GT-Motor KA19BTDRN80MK4EK8SPK,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: KA19BTDRN80MK4EK8SPK
 Leistung [kW]: 0,550 kW
@@ -1701,17 +1701,17 @@ Isolierklasse: Iso-Kl.:B (tmax=130°C)
 Schutzart: IP54-Staubablage/Spritzwasser
 Bremsgroesse: NM30/24
 Energieeffizienzklasse: IE3 Premium Efficiency"
-1939471,"O-Ring 33,2x2,4mm NBR70 0009632318 LINDE","O-Ring
+251,"O-Ring 33,2x2,4mm NBR70 0009632318 LINDE","O-Ring
 33,2 x 2,4 mm
 WST: NBR
 70 Shore A
 0009632318
 LINDE"
-790955,"Kettenrad B-1 5/8"" Z13 K 9183-4.2.3","Kettenrad
+252,"Kettenrad B-1 5/8"" Z13 K 9183-4.2.3","Kettenrad
 B-1 5/8"" Z13
 K 9183-4.2.3
 DIN 8187"
-1970349,GT-Motor RF37DRN80M4TH,"Getriebemotor
+253,GT-Motor RF37DRN80M4TH,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: RF37DRN80M4TH
 Leistung [kW]: 0,750 kW
@@ -1727,12 +1727,12 @@ Isolierklasse: Iso-Kl.:F (tma x =155°C)
 Schutzart: IP54-Staubablage/Spritzwasser
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1874255,Mutter M36 ISO4032 5.2 schw.,"Mutter
+254,Mutter M36 ISO4032 5.2 schw.,"Mutter
 M36
 ISO4032
 5.2
 schwarz"
-1970383,GT-Motor R87DRN132M4,"Getriebemotor
+255,GT-Motor R87DRN132M4,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: R87DRN132M4
 Leistung [kW]: 7,500 kW
@@ -1746,20 +1746,20 @@ Bauform: M1
 Isolierklasse: Iso-Kl.:F (tma x =155°C)
 Schutzart: IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse: IE3 Premium Efficiency"
-1970282,"Mutter M36x1,5 DIN 935-1 Stahl schwarz.","Kronenmutter
+256,"Mutter M36x1,5 DIN 935-1 Stahl schwarz.","Kronenmutter
 M36 x 1,5
 DIN 935-1
 6 Automatenstahl
 schwarz"
-113596,Wellendichtring 35x62x5 BASL,"Wellendichtring
+257,Wellendichtring 35x62x5 BASL,"Wellendichtring
 35 x 62 x 5mm
 BASL"
-1357597,O-Ring 330x7mm 70 Shore 15610.0019 JAUDT,"O-Ring
+258,O-Ring 330x7mm 70 Shore 15610.0019 JAUDT,"O-Ring
 330,00 x 7,00mm
 70° Shore
 15610.0019
 JAUDT"
-1970109,Servomotor 1FK71055AY811YY3Z,"Servomotor
+259,Servomotor 1FK71055AY811YY3Z,"Servomotor
 Hersteller KUKA
 Typbezeichnung 1FK7105-5AY81-1YY3-Z
 Leistung 4,300 kW
@@ -1770,7 +1770,7 @@ Nennstrom 15,5 A
 Isolierklasse F
 Schutzart IP65
 Art.Nr.: 131491"
-1970366,GT-Motor KH77TDRN100LS4BE5TH,"Getriebemotor
+260,GT-Motor KH77TDRN100LS4BE5TH,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: KH77TDRN100LS4BE5TH
 Leistung [kW]: 2,200 kW
@@ -1788,7 +1788,7 @@ Motor-Bremse: Ja
 Bremsgroesse: 230VAC 55NM
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1965542,GT-Motor KH67DRN100LS4BE5KCCTFEI7C,"Getriebemotor
+261,GT-Motor KH67DRN100LS4BE5KCCTFEI7C,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 KH67DRN100LS4BE5KCCTFEI7C
 Leistung [kW]:                  2,200 kW
@@ -1806,7 +1806,7 @@ Motor-Bremse:                   Ja
 Bremsgroesse:                   415VAC 20NM
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970198,Servomotor 1PH71072HF030BB3,"Servomotor
+262,Servomotor 1PH71072HF030BB3,"Servomotor
 Typbezeichnung 1PH7107-2HF03-0BB3
 Motorleistung 9,000 kW
 Antriebsdrehzahl N1 1.780,00 1/min
@@ -1818,18 +1818,18 @@ Schutzart IP54
 Motorbremse keine Bremse
 Motorgeber rel HTL 1024 INKU
 mit zusätzlichem Radialwellendichtring im Lagerdeckel versehen"
-1970043,Mutter M36 x 2 DIN 934-8 Feinge.schw,"Sechskantmutter
+263,Mutter M36 x 2 DIN 934-8 Feinge.schw,"Sechskantmutter
 M36X2 DIN 934-8 Feinge.schw"
-1970143,"Mutter M36 x 1,5 DIN 439-04 verz.","Sechskantmutter niedrig
+264,"Mutter M36 x 1,5 DIN 439-04 verz.","Sechskantmutter niedrig
 M30 x 1,5
 DIN 439-04
 verzinkt"
-1970263,Lager 16010 SKF,"Lager
+265,Lager 16010 SKF,"Lager
 16010
 SKF"
-1970130,"Kettenrad B-3 1 1/2"" Z20 vorg.gehae.","Kettenrad B-3 1 1/2"" Z20
+266,"Kettenrad B-3 1 1/2"" Z20 vorg.gehae.","Kettenrad B-3 1 1/2"" Z20
 Vorgebohrt gehaertet"
-1970408,Servomotor 1FT6086-8AH71-1EB0,"Servomotor
+267,Servomotor 1FT6086-8AH71-1EB0,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1FT6086-8AH71-1EB0
 N1 Antriebsdrehzahl: 4.500,00 1/min
@@ -1838,10 +1838,10 @@ Spannung [50Hz]: 333V
 Isolierklasse: Iso-Kl.:F (tmax=155°C)
 Schutzart: IP64-Staubdicht/Spritzwasser
 Motor-Bremse: Nein"
-1939189,Lager BC1-0313 SKF,"Lager
+268,Lager BC1-0313 SKF,"Lager
 BC1-0313
 SKF"
-1957018,GT-Motor R103DV160M4,"Getriebemotor
+269,GT-Motor R103DV160M4,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 R103DV160M4
 Leistung [kW]:                  11,000 kW
@@ -1850,10 +1850,10 @@ Abt.drehzahl pol-schaltbar N2:  42,00 1/min
 Bauform:                        B3
 Isolierklasse:                  Iso-Kl.:B (tmax=130°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser"
-1970108,Modul 3SU1400-1AA10-3HA0 SIEMENS,"Kontaktmodul
+270,Modul 3SU1400-1AA10-3HA0 SIEMENS,"Kontaktmodul
 3SU1400-1AA10-3HA0
 SIEMENS"
-1970378,GT-Motor K77DRN112M4TFAL,"Getriebemotor
+271,GT-Motor K77DRN112M4TFAL,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: K77 DRN112M4/TF/AL
 Leistung [kW]: 4,000 kW
@@ -1871,11 +1871,11 @@ Fremdlüfter: Nein
 Motor-Bremse: Nein
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970121,Relais 3RU2126-4DB1 20-25A SIEMENS,"Überlastrelais
+272,Relais 3RU2126-4DB1 20-25A SIEMENS,"Überlastrelais
 3RU2126-4DB1
 20-25A
 SIEMENS"
-1188016,Servomotor AM80520J210000,"Servomotor
+273,Servomotor AM80520J210000,"Servomotor
 Hersteller                     BECKHOFF
 Typbezeichnung                 AM8052-0J21-0000
 Leistung                       2,890 kW
@@ -1888,15 +1888,15 @@ Schutzart                      IP54
 Motor-Bremse                   24V DC 18W
 Thermo KTY                     Ja
 Art.Nr.:                       138325"
-1970307,Lager BC1-0313 SKF,"Lager
+274,Lager BC1-0313 SKF,"Lager
 BC1-0313
 SKF"
-1970226,Mutter M8 DIN 6923 8.8 verzinkt.,"Mutter
+275,Mutter M8 DIN 6923 8.8 verzinkt.,"Mutter
 M8
 DIN 6923
 8.8
 verzinkt"
-1970177,GT-Motor KA37DRS80S4TH,"Getriebemotor
+276,GT-Motor KA37DRS80S4TH,"Getriebemotor
 Hersteller SEW
 Typbezeichnung KA37DRS80S4/TH
 Motorleistung 0,750 kW
@@ -1908,24 +1908,24 @@ Isolierklasse F
 Schutzart IP54
 Ausführungsart Hohlwelle
 Hohlwelle d = 30 mm"
-1910471,"Mutter M36x1,5 DIN935-1 Stahl schw.","Kronenmutter
+277,"Mutter M36x1,5 DIN935-1 Stahl schw.","Kronenmutter
 M36 x 1,5
 DIN 935-1
 6 Automatenstahl
 schwarz"
-1970309,"Mutter M36 x 1,5 10007871 WEINIG","Mutter
+278,"Mutter M36 x 1,5 10007871 WEINIG","Mutter
 M36 x 1,5
 DA58 LG.7
 10007871
 WEINIG"
-1970255,Lager 22228CCK SKF,"Lager
+279,Lager 22228CCK SKF,"Lager
 22228CCK
 SKF"
-1970428,Lager E1K C3 23152 SKF,"Lager
+280,Lager E1K C3 23152 SKF,"Lager
 E1K C3
 23152
 SKF"
-1610187,"Getriebe  R47A i=12,54","Getriebe
+281,"Getriebe  R47A i=12,54","Getriebe
 Hersteller:                     SEW
 Typbezeichnung:                 R87/A
 N1 Antriebsdrehzahl:            1.400,00 1/min
@@ -1934,16 +1934,16 @@ Drehmoment:                     520,00 NM
 Getriebeübersetzung i:          19,100
 Bauform:                        M1
 Getriebeausführung:             Stirnradgetriebe"
-1970337,Lager 61840 SKF,"Rillenkugellager
+282,Lager 61840 SKF,"Rillenkugellager
 61840 SKF
 61840 FAG"
-1970129,"Kettenrad B-3 1 1/2"" Z20 vorg.gehae.","Kettenrad B-3 1 1/2"" Z20
+283,"Kettenrad B-3 1 1/2"" Z20 vorg.gehae.","Kettenrad B-3 1 1/2"" Z20
 Vorgebohrt gehaertet"
-1970299,Touch Panel 6AV2128-3MB06-0AX1 SIEMENS,"Touch Panel
+284,Touch Panel 6AV2128-3MB06-0AX1 SIEMENS,"Touch Panel
 12""
 6AV2128-3MB06-0AX1
 SIEMENS"
-1970414,Servomotor 1FK7105-2AF71-1RB0-Z,"Servomotor
+285,Servomotor 1FK7105-2AF71-1RB0-Z,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1FK7105-2AF71-1RB0-Z
 N1 Antriebsdrehzahl: 3.000,00 1/min
@@ -1952,7 +1952,7 @@ Antriebsmoment: 26,00 NM
 Isolierklasse: Iso-Kl.:F (tmax=155°C)
 Schutzart: IP64-Staubdicht/Spritzwasser
 Motor-Bremse: 24DC"
-1970098,Servomotor AM8043-0H20-0000,"Servomotor
+286,Servomotor AM8043-0H20-0000,"Servomotor
 Hersteller BECKHOFF
 Typbezeichnung AM8043-0H20-0000
 N1 Antriebsdrehzahl 5,000.00 1/min
@@ -1961,17 +1961,17 @@ Bauform B5
 Isolierklasse F
 Schutzart IP54
 Art.Nr.: 10802980"
-1970085,"O-Ring 33,0 x 5,0 mm Viton FPM 80 Shore","O-Ring
+287,"O-Ring 33,0 x 5,0 mm Viton FPM 80 Shore","O-Ring
 33,00 x 5,00 mm
 WST: Viton FPM
 80° Shore"
-1970159,Kettenrad 3-518-11-0150 HOMAG,"Kettenrad gehärtet
+288,Kettenrad 3-518-11-0150 HOMAG,"Kettenrad gehärtet
 10B-1
 Z = 14
 D35+K 1:12
 3-518-11-0150
 HOMAG"
-1970197,Servomotor 1PH71072HF030BB3,"Servomotor
+289,Servomotor 1PH71072HF030BB3,"Servomotor
 Typbezeichnung 1PH7107-2HF03-0BB3
 Motorleistung 9,000 kW
 Antriebsdrehzahl N1 1.780,00 1/min
@@ -1983,26 +1983,26 @@ Schutzart IP54
 Motorbremse keine Bremse
 Motorgeber rel HTL 1024 INKU
 mit zusätzlichem Wellendichtring im Lagerdeckel versehen"
-1898164,Lager 3305 A SKF,"Schrägkugellager 2-reihig
+290,Lager 3305 A SKF,"Schrägkugellager 2-reihig
 3305 A
 SKF"
-1970188,Mutter M8 DIN 928 schwarz.,"Anschweißmutter
+291,Mutter M8 DIN 928 schwarz.,"Anschweißmutter
 M8
 DIN 928 schwarz"
-1970118,Servomotor 5/2.720.001.002,"Servomotor
+292,Servomotor 5/2.720.001.002,"Servomotor
 Herstellerteilenummer: XXX_ESITRON
 Hersteller: ESITRON
 Typbezeichnung: 5/2.720.001.002
 N1 Antriebsdrehzahl: 3.000,00 1/min
 Antriebsmoment: 0,50 NM
 Spannung: 48V DC"
-1970262,Lager YAT203 SKF,"Lager
+293,Lager YAT203 SKF,"Lager
 YAT203
 SKF"
-1904527,Lager 16010 SKF,"Lager
+294,Lager 16010 SKF,"Lager
 16010
 SKF"
-1965539,GT-Motor KH77DRN112M4KCCTF,"Getriebemotor
+295,GT-Motor KH77DRN112M4KCCTF,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 KH77DRN112M4KCCTF
 Leistung [kW]:                  4,000 kW
@@ -2018,10 +2018,10 @@ Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970172,Thermistor 3RN1011-1BB00 SIEMENS,"Thermistor-Motorschutz
+296,Thermistor 3RN1011-1BB00 SIEMENS,"Thermistor-Motorschutz
 3RN1011-1BB00
 SIEMENS"
-420802,"Servomotor 1PH7103-2HF03  5,5kW  1500","Servomotor 1PH7103-2HF03-0BB3
+297,"Servomotor 1PH7103-2HF03  5,5kW  1500","Servomotor 1PH7103-2HF03-0BB3
 1.Leistung                      5,5 kW
 1.Antr.Drehzahl                 1.780,0  1/min
 Bauform                         Fuß-/Flanschausführung B35
@@ -2031,12 +2031,12 @@ Isolierklasse                   Iso-Kl.:F (tmax=155°C)
 Schutzart                       IP54-Staubablag./Spritzwasser
 Motorbremse                     keine Bremse
 Motorgeber                      rel HTL 1024 INKU"
-1970090,Schraube M6x30 DIN 835 8.8 verzinkt.,"Stiftschraube mit Einschraubende
+298,Schraube M6x30 DIN 835 8.8 verzinkt.,"Stiftschraube mit Einschraubende
 M6 x 30
 DIN 835
 8.8
 verzinkt"
-1970384,GT-Motor R87DRN132M4,"Getriebemotor
+299,GT-Motor R87DRN132M4,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: R87DRN132M4
 Leistung [kW]: 7,500 kW
@@ -2050,7 +2050,7 @@ Bauform: M1
 Isolierklasse: Iso-Kl.:F (tmax=155°C)
 Schutzart: IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse: IE3 Premium Efficiency"
-1970283,GT-Motor FH77DRU100L4TF,"Getriebemotor
+300,GT-Motor FH77DRU100L4TF,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: FH77DRU100L4TF
 Leistung [kW]: 2,200 kW
@@ -2066,7 +2066,7 @@ Fremdlüfter: Nein
 Motor-Bremse: Nein
 Energieeffizienzklasse: IE4 Super Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970354,GT-Motor RF37DRN90L2TH,"Getriebemotor
+301,GT-Motor RF37DRN90L2TH,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: RF37 DRN90L2/TH
 Leistung [kW]: 2,200 kW
@@ -2083,7 +2083,7 @@ Isolierklasse: Iso-Kl.: F (tmax=155°C)
 Schutzart: IP54-Staubablage/Spritzwasser
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970298,GT-Motor R60DT80K4TF,"Getriebemotor
+302,GT-Motor R60DT80K4TF,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: R60DT80K4TF
 Leistung [kW]: 0,550 kW
@@ -2095,16 +2095,16 @@ Bauform: B3
 Isolierklasse: Iso-Kl.:B (tmax=130°C)
 Schutzart: IP55-Staubablage/Strahlwasser
 Motorvollschutz (Thermofühler): Ja"
-1970245,Lager 215 x 170 x 22 mm 61834 SKF,"Lager
+303,Lager 215 x 170 x 22 mm 61834 SKF,"Lager
 215 x 170 x 22 mm
 61834
 SKF"
-1617605,Keilriemen SPA 2500 LW Red Power,"Keilriemen
+304,Keilriemen SPA 2500 LW Red Power,"Keilriemen
 SPA 2.500 mm LW Red Power
 Wirklänge ISO LW 2.500 mm
 Innenlänge LI 2.455 mm
 Außenlänge LA 2.518 mm"
-1970297,GT-Motor R60DT80K4TF,"Getriebemotor
+305,GT-Motor R60DT80K4TF,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: R60DT80K4TF
 Leistung [kW]: 0,550 kW
@@ -2116,23 +2116,23 @@ Bauform: B3
 Isolierklasse: Iso-Kl.:B (tma x =130°C)
 Schutzart: IP55-Staubablage/Strahlwasser
 Motorvollschutz (Thermofühler): Ja"
-1904131,Lager NU320ECJ SKF,"Lager
+306,Lager NU320ECJ SKF,"Lager
 NU320ECJ
 SKF"
-1970327,Lager 6203 2RS1 VQ658 SKF,"Rillenkugellager
+307,Lager 6203 2RS1 VQ658 SKF,"Rillenkugellager
 6203-2RS1-VQ658
 SKF"
-1970394,"Kette 08A-2 12,7 1/2”x7,85mm DIN 8188","Kette
+308,"Kette 08A-2 12,7 1/2”x7,85mm DIN 8188","Kette
 08A-2
 Teilung: 12,7
 Teilung: 1/2""
 Innere breite: 7,85mm
 DIN 8188
 ASA40"
-1970046,"ORing 34,00x3,00mm 70 Shore","ORing
+309,"ORing 34,00x3,00mm 70 Shore","ORing
 34,00 x 3,00 mm
 70° Shore"
-1970200,"Servomotor 1PH7103-2HF03 5,5kW 1500","Servomotor 1PH7103-2HF03-0BB3
+310,"Servomotor 1PH7103-2HF03 5,5kW 1500","Servomotor 1PH7103-2HF03-0BB3
 1.Leistung 5,5 kW
 1.Antr.Drehzahl 1.780,0 1/min
 Bauform Fuß-/Flanschausführung B35
@@ -2142,13 +2142,13 @@ Isolierklasse Iso-Kl.:F (tmax=155°C)
 Schutzart IP54-Staubablag./Spritzwasser
 Motorbremse keine Bremse
 Motorgeber rel HTL 1024 INKU"
-1970087,Servomotor AB8 AM40 SCHIEBEL,"Servomotor
+311,Servomotor AB8 AM40 SCHIEBEL,"Servomotor
 Hersteller SCHIEBEL
 Typbezeichnung AB8 AM40 2WER 2WEL H AK40 K2
 Motorleistung 0,750 kW
 Antriebsdrehzahl N1 40,00 1/min
 Antriebsmoment 90,00 NM"
-1970201,Servomotor 1PH7133-2HF03-0BB3,"Servomotor 1PH7133-2HF03-0BB3
+312,Servomotor 1PH7133-2HF03-0BB3,"Servomotor 1PH7133-2HF03-0BB3
 1.Leistung 15,00 kW
 1.Antr.Drehzahl 1.780,0 1/min
 Bauform Fuß-/Flanschausführung B35
@@ -2156,11 +2156,11 @@ Spannung 400D
 Frequenz 60 Hz
 Isolierklasse Iso-Kl.:F (tma x =155°C)
 Schutzart IP54-Staubablag./Spritzwasser"
-1970192,PN-Zylinder ADN-25-50-A-P-A 536258 FESTO,"Kompaktzylinder
+313,PN-Zylinder ADN-25-50-A-P-A 536258 FESTO,"Kompaktzylinder
 ADN-25-50-A-P-A
 536258
 FESTO"
-1124393,Servomotor 1FT60616AF713TA0,"Servomotor 		
+314,Servomotor 1FT60616AF713TA0,"Servomotor 		
 Hersteller               Siemens		
 Typenbezeichnung         1FT6061-6AF71-3TA0		
 Motorleistung            1,100 kW		
@@ -2171,7 +2171,7 @@ Isolierklasse            F
 Schutzart                IP64		
 Leistungs-Signalstecker  Axial BS		
 Resolver                 2-polig P=1"
-1970379,GT-Motor R27DRN80M4TFAL,"Getriebemotor
+315,GT-Motor R27DRN80M4TFAL,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: R27 DRN80M4/TF/AL
 Leistung [kW]: 0,750 kW
@@ -2189,18 +2189,18 @@ Fremdlüfter: Nein
 Motor-Bremse: Nein
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-791463,Kettenrad 12B-1 Z13 d=18 m.Nut gehae.,"Kettenrad gehärtet
+316,Kettenrad 12B-1 Z13 d=18 m.Nut gehae.,"Kettenrad gehärtet
 12B-1
 Z = 13
 D = 18mm
 mit Nut
 M6"
-105755,Schraube M12x30 DIN933 5.6 verz.,"Sechskantschraube mit Gewinde bis Kopf
+317,Schraube M12x30 DIN933 5.6 verz.,"Sechskantschraube mit Gewinde bis Kopf
 DIN 933
 M12x30
 5.6
 verzinkt"
-1970199,"Servomotor 1PH7103-2HF03 5,5kW 1500","Servomotor 1PH7103-2HF03-0BB3
+318,"Servomotor 1PH7103-2HF03 5,5kW 1500","Servomotor 1PH7103-2HF03-0BB3
 1.Leistung 5,5 kW
 1.Antr.Drehzahl 1.780,0 1/min
 Bauform Fuß-/Flanschausführung B35
@@ -2210,20 +2210,20 @@ Isolierklasse Iso-Kl.:F (tma x =155°C)
 Schutzart IP54-Staubablag./Spritzwasser
 Motorbremse keine Bremse
 Motorgeber rel HTL 1024 INKU"
-1970439,Keilriemen SPA 2500 LW Red Power,"Keilriemen
+319,Keilriemen SPA 2500 LW Red Power,"Keilriemen
 SPA 2.500 mm LW Red Power
 Wirklänge ISO LW 2.500 mm
 Innenlänge LI 2.455 mm
 Außenlänge LA 2.518 mm"
-1970179,"Kette 081 12,70 1/2"" x 3,30 mm DIN 8187","Rollenkette
+320,"Kette 081 12,70 1/2"" x 3,30 mm DIN 8187","Rollenkette
 081
 Teilung: 12,70 mm (1/2"")
 Innere Breite: 3,30 mm
 DIN 8187"
-1970247,Lager YAR214 SKF,"Lager
+321,Lager YAR214 SKF,"Lager
 YAR214
 SKF"
-1970067,Servomotor 373E45402022050FG,"Servomotor
+322,Servomotor 373E45402022050FG,"Servomotor
 Hersteller BAELZ
 Typbezeichnung 373.220V
 373.E45-40-20-220-50-Fg
@@ -2234,14 +2234,14 @@ Bedienung Manuell
 Potentiometer 200 Ohm
 Ventil Hub 12 mm
 Art.Nr.: 00.373-E40-40-20-001"
-1679593,Servomotor 5/2.720.001.002,"Servomotor
+323,Servomotor 5/2.720.001.002,"Servomotor
 Herstellerteilenummer:          XXX_ESITRON
 Hersteller:                     ESITRON
 Typbezeichnung:                 5/2.720.001.002
 N1 Antriebsdrehzahl:            3.000,00 1/min
 Antriebsmoment:                 0,50 NM
 Spannung:                       48V DC"
-1970174,Servomotor 373E11Z2006S21,"Servomotor
+324,Servomotor 373E11Z2006S21,"Servomotor
 Hersteller BAELZ
 Typbezeichnung 373 E11 Z-20-06-S21
 Antriebsmoment 2000 Nm
@@ -2249,21 +2249,21 @@ Antriebsdrehzahl 6mm/min
 Spannung 230 V - 115 V
 Isolierklasse 0-50°C - 0-75°C
 Schutzart IP44"
-1970077,"Kettenrad B-1 5/8"" Z13 K 9183-4.2.3","Kettenrad
+325,"Kettenrad B-1 5/8"" Z13 K 9183-4.2.3","Kettenrad
 B-1 5/8"" Z13
 K 9183-4.2.3
 DIN 8187"
-1970213,Schraube M10 x 60H DIN 444B 8.8,"Augenschraube
+326,Schraube M10 x 60H DIN 444B 8.8,"Augenschraube
 M10 x 60H
 DIN 444B
 10001815
 VARISCO"
-1057364,Schraube M12x40 DIN6912 10.9 schw.,"Zylinderschraube mit Innensechskant
+327,Schraube M12x40 DIN6912 10.9 schw.,"Zylinderschraube mit Innensechskant
 M12 x 40
 DIN 6912
 10.9
 schwarz"
-1970409,Servomotor 1FT6105-8AF71-1EB0,"Servomotor
+328,Servomotor 1FT6105-8AF71-1EB0,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1FT6105-8AF71-1EB0
 N1 Antriebsdrehzahl: 3.000,00 1/min
@@ -2271,28 +2271,28 @@ Antriebsmoment: 28,00 NM
 Spannung [50Hz]: 297V
 Schutzart: IP64-Staubdicht/Spritzwasser
 Motor-Bremse: Ja"
-1970392,Keilriemen SPZ 2500 LW OPTIBELT,"Keilriemen
+329,Keilriemen SPZ 2500 LW OPTIBELT,"Keilriemen
 SPZ-2500
 Wirklänge 2.500,0 mm
 Außenlänge 2.513,0 mm
 Innenlänge 2.462,0 mm
 OPTIBELT"
-1970070,Mutter M36 DIN 982-8 verzinkt.,"Hexagonmutter mit Polyamidklemmteil
+330,Mutter M36 DIN 982-8 verzinkt.,"Hexagonmutter mit Polyamidklemmteil
 hohe Form
 M36
 DIN 982-8
 verzinkt"
-1970308,Lager BC1-0313 SKF,"Lager
+331,Lager BC1-0313 SKF,"Lager
 BC1-0313
 SKF"
-1970191,PN-Zylinder ADN-25-50-A-P-A 536258 FESTO,"Kompaktzylinder
+332,PN-Zylinder ADN-25-50-A-P-A 536258 FESTO,"Kompaktzylinder
 ADN-25-50-A-P-A
 536258
 FESTO"
-114625,Wellendichtring 35x62x8 BASL,"Wellendichtring
+333,Wellendichtring 35x62x8 BASL,"Wellendichtring
 35x62x8
 BASL"
-1970398,Servomotor 1PH7101-7JF03-0BB3-Z M39,"Servomotor
+334,Servomotor 1PH7101-7JF03-0BB3-Z M39,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1PH7101-7JF03-0BB3-Z M39
 Leistung [kW]: 3,800 kW
@@ -2301,12 +2301,12 @@ Spannung [50Hz]: 398Y
 Baugröße: B35
 Isolierklasse: Iso-Kl.:F (tmax=155°C)
 Schutzart: IP54-Staubablage/Spritzwasser"
-1061069,Schraube M12x100 DIN603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
+335,Schraube M12x100 DIN603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
 DIN 603
 M12x100
 8.8
 verzinkt"
-1970350,GT-Motor RF37DRN80M4TH,"Getriebemotor
+336,GT-Motor RF37DRN80M4TH,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: RF37DRN80M4TH
 Leistung [kW]: 0,750 kW
@@ -2322,21 +2322,21 @@ Isolierklasse: Iso-Kl.:F (tmax=155°C)
 Schutzart: IP54-Staubablage/Spritzwasser
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970047,Wellendichtring 35 x 62 x 12 BASL,"Wellendichtring
+337,Wellendichtring 35 x 62 x 12 BASL,"Wellendichtring
 35 x 62 x 12
 BASL"
-1552839,PN-Schlauch PUN-8-BL-400-HA FESTO,"Kunststoffschlauch
+338,PN-Schlauch PUN-8-BL-400-HA FESTO,"Kunststoffschlauch
 PUN-8-BL-400-HA
 553573
 FESTO"
-949599,"O-Ring 33,05x1,78mm NBR70 Shore","O-Ring
+339,"O-Ring 33,05x1,78mm NBR70 Shore","O-Ring
 33,05 x 1,78
 70 Shore
 NBR"
-1970171,Thermistor 3RN1011-1BB00 SIEMENS,"Thermistor-Motorschutz
+340,Thermistor 3RN1011-1BB00 SIEMENS,"Thermistor-Motorschutz
 3RN1011-1BB00
 SIEMENS"
-1970175,Servomotor 1FT60621AH713AH1,"Synchron-Servomotor Drehantrieb
+341,Servomotor 1FT60621AH713AH1,"Synchron-Servomotor Drehantrieb
 Hersteller SIEMENS
 Typbezeichnung 1FT6062-1AH71-3AH1
 Mo: 5,0 / 6,0Nm
@@ -2344,20 +2344,20 @@ Mh: 3,6Nm
 Antriebsdrehzahl N1 4.500,00 1/min
 Spannung 288V
 Motorbremse 24V / 17W"
-1970424,Radialwellendichtring 35x65x10 BASL,"Radialwellendichtring
+342,Radialwellendichtring 35x65x10 BASL,"Radialwellendichtring
 35x65x10
 BASL"
-1970319,Lager YAR 215-2F SKF,"Spannlager
+343,Lager YAR 215-2F SKF,"Spannlager
 YAR 215-2F
 SKF"
-1970051,Mutter M36 DIN 934-8 verz.,"Sechskantmutter
+344,Mutter M36 DIN 934-8 verz.,"Sechskantmutter
 M36 DIN 934-8 verz."
-1970242,"ORing 34,00x3,00mm EPDM 70Sh perox","ORing
+345,"ORing 34,00x3,00mm EPDM 70Sh perox","ORing
 34,00x3,00mm
 EPDM 70Sh perox
 900060128
 KRONES"
-1814145,Servomotor 1PH8186-1HF132BD1-Z,"Servomotor
+346,Servomotor 1PH8186-1HF132BD1-Z,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1PH8186-1HF132BD1-Z
 Leistung [kW]:                  94,000 kW
@@ -2365,7 +2365,7 @@ N1 Antriebsdrehzahl:            2.200,00 1/min
 Bauform:                        B35
 Isolierklasse:                  Iso-Kl.:H (tmax=180°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser"
-1970410,Servomotor 1FT6105-8AF71-1EB0,"Servomotor
+347,Servomotor 1FT6105-8AF71-1EB0,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1FT6105-8AF71-1EB0
 N1 Antriebsdrehzahl: 3.000,00 1/min
@@ -2373,10 +2373,10 @@ Antriebsmoment: 28,00 NM
 Spannung [50Hz]: 297V
 Schutzart: IP64-Staubdicht/Spritzwasser
 Motor-Bremse: Ja"
-1970249,Lager BS222222RS5VT143 SKF,"Lager
+348,Lager BS222222RS5VT143 SKF,"Lager
 BS222222RS5VT143
 SKF"
-793260,Kettenrad KR16B-1 Z20 G-35/60SK,"Kettenrad KR16B-1 Z=20G-35/60SK
+349,Kettenrad KR16B-1 Z20 G-35/60SK,"Kettenrad KR16B-1 Z=20G-35/60SK
 1"" x 17,02 x 15,88mm
 DIN 8187, z=20
 passend zur Einfach-Rollenkette DIN 8187,
@@ -2388,20 +2388,20 @@ Nabendurchmesser 85 mm, Bohrungsdurchmesser 35 mm H7
 30 mm tief für Ringspannelement 3560, einteilig,
 Zähne gehärtet
 FB KETTEN"
-791945,"Kettenrad B-1 1 1/2"" Z34 TLB 3030 gehae.","Kettenrad einfach
+350,"Kettenrad B-1 1 1/2"" Z34 TLB 3030 gehae.","Kettenrad einfach
 1 1/2"" Z34 TL3030 vorbereitet
 Nabenüberstand 25/27
 Zahnkranz gehärtet"
-372397,Wellendichtring 35x62x10 BASL Viton,"Wellendichtring
+351,Wellendichtring 35x62x10 BASL Viton,"Wellendichtring
 35x62x10
 BASL Viton"
-1970049,Wellendichtring 35 x 62 x 5 BASL,"Wellendichtring
+352,Wellendichtring 35 x 62 x 5 BASL,"Wellendichtring
 35 x 62 x 5 mm
 BASL"
-1970195,Lager 2217 KC3 SKF,"Lager
+353,Lager 2217 KC3 SKF,"Lager
 2217 KC3
 SKF"
-1963334,GT-Motor DRN71M4BE05FTTH,"Getriebemotor
+354,GT-Motor DRN71M4BE05FTTH,"Getriebemotor
 Herstellerteilenummer:          XXXX_SIEMPELKAMP
 Hersteller:                     SEW
 Typbezeichnung:                 DRN71M4BE05FTTH
@@ -2414,7 +2414,7 @@ Schutzart:                      IP55-Staubablage/Strahlwasser
 Bremsgroesse:                   24 DC
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970083,Servomotor AM80330E210000,"Servomotor
+355,Servomotor AM80330E210000,"Servomotor
 Hersteller BECKHOFF
 Typbezeichnung AM8033-0E21-0000
 Leistung 0,940 kW
@@ -2427,37 +2427,37 @@ Schutzart IP54
 Motor-Bremse 24V DC 12W
 Thermo KTY Ja
 Art.Nr.: 139774"
-1970136,Kettenrad 12B-1 Z13 d=18 m.Nut gehae.,"Kettenrad gehärtet
+356,Kettenrad 12B-1 Z13 d=18 m.Nut gehae.,"Kettenrad gehärtet
 12B-1
 Z = 13
 D = 18mm
 mit Nut
 M6"
-1970133,Wellendichtring 35 x 62 x 10 NBR/VA B,"Wellendichtring
+357,Wellendichtring 35 x 62 x 10 NBR/VA B,"Wellendichtring
 35 x 62 x 10
 Form B
 NBR/VA
 DOMSEL"
-1970361,Lager 3305 A SKF,"Schrägkugellager 2-reihig
+358,Lager 3305 A SKF,"Schrägkugellager 2-reihig
 3305 A
 SKF"
-1970240,Lager 23224 CC/W33-C4 SKF,"Lager
+359,Lager 23224 CC/W33-C4 SKF,"Lager
 23224
 CC/W33-C4
 SKF"
-1904125,Lager 23130CCK SKF,"Lager
+360,Lager 23130CCK SKF,"Lager
 23130CCK
 SKF"
-1970256,Lager 22228CCK SKF,"Lager
+361,Lager 22228CCK SKF,"Lager
 22228CCK
 SKF"
-1970183,"Kettenrad B-2 5/8"" Z30 vorg.gehae.","Kettenrad
+362,"Kettenrad B-2 5/8"" Z30 vorg.gehae.","Kettenrad
 für Zweifach-Rollenkette B-2
 5/8""
 Z = 30
 vorgebohrt
 Zahnkranz gehärtet"
-1970357,GT-Motor KH67DRN112M4BE5KCCTF,"Getriebemotor
+363,GT-Motor KH67DRN112M4BE5KCCTF,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: KH67 DRN112M4/BE5/KCC/TF
 Leistung [kW]: 4,000 kW
@@ -2473,7 +2473,7 @@ Motor-Bremse: BE5
 Bremsgroesse: 400V AC 55Nm
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1963315,GT-Motor FH77DRU100L4TF,"Getriebemotor
+364,GT-Motor FH77DRU100L4TF,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 FH77DRU100L4TF
 Leistung [kW]:                  2,200 kW
@@ -2489,14 +2489,14 @@ Fremdlüfter:                    Nein
 Motor-Bremse:                   Nein
 Energieeffizienzklasse:         IE4 Super Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970104,PN-Schlauch PUN-8-BL-400-HA FESTO,"Kunststoffschlauch
+365,PN-Schlauch PUN-8-BL-400-HA FESTO,"Kunststoffschlauch
 PUN-8-BL-400-HA
 553573
 FESTO"
-1970238,Radialwellendichtring 35x62x8 BASL,"Radialwellendichtring
+366,Radialwellendichtring 35x62x8 BASL,"Radialwellendichtring
 35x62x8
 BASL"
-1959044,GT-Motor R27DRN80M4TFAL,"Getriebemotor
+367,GT-Motor R27DRN80M4TFAL,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 R27 DRN80M4/TF/AL
 Leistung [kW]:                  0,750 kW
@@ -2514,10 +2514,10 @@ Fremdlüfter:                    Nein
 Motor-Bremse:                   Nein
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-790947,"Kettenrad B-2 1"" Z16 d=50mm","Kettenrad
+368,"Kettenrad B-2 1"" Z16 d=50mm","Kettenrad
 B-2 1"" Z16 geb.50mm
 DIN 8187"
-1384853,Servomotor 1FK71055AY811YY3Z,"Servomotor
+369,Servomotor 1FK71055AY811YY3Z,"Servomotor
 Hersteller                     KUKA
 Typbezeichnung                 1FK7105-5AY81-1YY3-Z
 Leistung                       4,300 kW
@@ -2528,15 +2528,15 @@ Nennstrom                      15,5 A
 Isolierklasse                  F
 Schutzart                      IP65
 Art.Nr.:                       131491"
-1970218,Schraube M36x3x240 DIN 912 12.9 schwarz.,"Zylinderschraube mit Innensechskant
+370,Schraube M36x3x240 DIN 912 12.9 schwarz.,"Zylinderschraube mit Innensechskant
 M36 x 3 x 240
 DIN 912
 12.9
 schwarz"
-1970429,Lager NU320ECJ SKF,"Lager
+371,Lager NU320ECJ SKF,"Lager
 NU320ECJ
 SKF"
-1970364,GT-Motor R103DV160M4,"Getriebemotor
+372,GT-Motor R103DV160M4,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: R103DV160M4
 Leistung [kW]: 11,000 kW
@@ -2545,10 +2545,10 @@ Abt.drehzahl pol-schaltbar N2: 42,00 1/min
 Bauform: B3
 Isolierklasse: Iso-Kl.:B (tmax=130°C)
 Schutzart: IP54-Staubablage/Spritzwasser"
-1970203,"Kettenrad B-2 1 1/4"" Z23 TLB 3030 gehae.","Kettenrad für Zweifach-Rollenkette
+373,"Kettenrad B-2 1 1/4"" Z23 TLB 3030 gehae.","Kettenrad für Zweifach-Rollenkette
 1 1/4"", Z23, für TL 3030
 Zahnflanken gehärtet"
-1412376,Servomotor 1FK71035AY711SY3Z,"Servomotor
+374,Servomotor 1FK71035AY711SY3Z,"Servomotor
 Hersteller                     KUKA
 Typbezeichnung                 1FK7103-5AY71-1SY3-Z
 Leistung                       6,600 kW
@@ -2556,13 +2556,13 @@ N1 Antriebsdrehzahl            3.000,00 1/min
 Spannung                       209V
 Isolierklasse                  F
 Schutzart                      IP65"
-113592,Wellendichtring 35x62x12 BASL,"Wellendichtring
+375,Wellendichtring 35x62x12 BASL,"Wellendichtring
 35x62x12
 BASL"
-1970339,Lager NJ 2203 ECP SKF,"Zylinderrollenlager
+376,Lager NJ 2203 ECP SKF,"Zylinderrollenlager
 NJ2203ECP
 SKF"
-1970380,GT-Motor R27DRN80M4TFAL,"Getriebemotor
+377,GT-Motor R27DRN80M4TFAL,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: R27 DRN80M4/TF/AL
 Leistung [kW]: 0,750 kW
@@ -2580,39 +2580,39 @@ Fremdlüfter: Nein
 Motor-Bremse: Nein
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1910244,"Mutter M36x1,5-17H 9218201324 LINDE","Mutter
+378,"Mutter M36x1,5-17H 9218201324 LINDE","Mutter
 M36x1,5-17H
 9218201324
 LINDE"
-1970316,"ORing 33,2x2,4mm NBR70 0009632318 LINDE","ORing
+379,"ORing 33,2x2,4mm NBR70 0009632318 LINDE","ORing
 33,2 x 2,4 mm
 WST: NBR
 70 Shore A
 0009632318
 LINDE"
-1970142,"ORing 33,05x1,78mm NBR70 Shore","ORing
+380,"ORing 33,05x1,78mm NBR70 Shore","ORing
 33,05 x 1,78
 70 Shore
 NBR"
-106075,Schraube 12x180 DIN571 4.6 verz.,"Sechskant - Holzschraube
+381,Schraube 12x180 DIN571 4.6 verz.,"Sechskant - Holzschraube
 DIN 571
 12x180
 4.6
 galvanisch verzinkt"
-1326130,"Kette 08A-3 12,7 1/2""x7,85mm DIN8188","Kette
+382,"Kette 08A-3 12,7 1/2""x7,85mm DIN8188","Kette
 08A-3
 Teilung: 12,7
 Teilung: 1/2""
 Innere breite: 7,85mm
 DIN 8188
 ASA 40-3"
-1970323,Lager NU 214 ECJ/C3 SKF,"Zylinderrollenlager
+383,Lager NU 214 ECJ/C3 SKF,"Zylinderrollenlager
 NU 214 ECJ/C3
 SKF"
-1904489,Lager 6313/C4 SKF,"Lager
+384,Lager 6313/C4 SKF,"Lager
 6313/C4
 SKF"
-1970351,"Getriebe R77A i=7,74 SEW","Getriebe
+385,"Getriebe R77A i=7,74 SEW","Getriebe
 Hersteller: SEW
 Typbezeichnung: R77A
 N1 Antriebsdrehzahl: 1.400,00 1/min
@@ -2621,7 +2621,7 @@ Drehmoment: 610,00 NM
 Getriebeübersetzung i: 7,740
 Bauform: M1
 Getriebeausführung: Stirnradgetriebe"
-785291,Getriebe  K2L30080WP71111LUR,"Getriebe
+386,Getriebe  K2L30080WP71111LUR,"Getriebe
 Getriebehersteller             NOVENTAS
 Getriebetyp                    K2L30080WP71111LUR
 Herstellerserialnummer         01991249
@@ -2670,7 +2670,7 @@ No: W11351
 Ident.Nr.:01991249
 Auftragsnummer: 7070360/V8223801
 Siempelkamp Teilenummer1: 01991249"
-1970072,Servomotor 30PM068,"Servomotor
+387,Servomotor 30PM068,"Servomotor
 Hersteller SIBONI
 Typbezeichnung 30PM068
 Leistung [kW] 45,000 W
@@ -2679,12 +2679,12 @@ Antriebsmoment 0,22 NM
 Spannung [50Hz] 24
 Isolierklasse F
 Schutzart IP44"
-1970105,Schraube M20 x 100 DIN 931 8.8 schw.,"Sechskantschraube mit Schaft
+388,Schraube M20 x 100 DIN 931 8.8 schw.,"Sechskantschraube mit Schaft
 M20 x 100
 DIN 931
 8.8
 schwarz"
-1970369,GT-Motor KA87DRN180L4TF,"Getriebemotor
+389,GT-Motor KA87DRN180L4TF,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: KA87 DRN180L4/TF
 Leistung [kW]: 22,000 kW
@@ -2700,10 +2700,10 @@ Isolierklasse: Iso-Kl.: F (tma x =155°C)
 Schutzart: IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970278,Lager 61903 2Z SKF,"Rillenkugellager
+390,Lager 61903 2Z SKF,"Rillenkugellager
 61903 2Z
 SKF"
-1970368,GT-Motor R97DRN132M4TF,"Getriebemotor
+391,GT-Motor R97DRN132M4TF,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: R97DRN132M4TF
 Leistung [kW]: 7,500 kW
@@ -2719,13 +2719,13 @@ Fremdlüfter: Nein
 Motor-Bremse: Nein
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970184,"Kettenrad B-2 5/8"" Z30 vorg.gehae.","Kettenrad
+392,"Kettenrad B-2 5/8"" Z30 vorg.gehae.","Kettenrad
 für Zweifach-Rollenkette B-2
 5/8""
 Z = 30
 vorgebohrt
 Zahnkranz gehärtet"
-1970341,GT-Motor KH77DRN100L4KCCTF,"Getriebemotor
+393,GT-Motor KH77DRN100L4KCCTF,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: KH77DRN100L4KCCTF
 Leistung [kW]: 3,000 kW
@@ -2741,7 +2741,7 @@ Isolierklasse: Iso-Kl.:F (tma x =155°C)
 Schutzart: IP54-Staubablage/Spritzwasser
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970411,Servomotor 1FT7108-5SF71-1CB0-Z,"Servomotor
+394,Servomotor 1FT7108-5SF71-1CB0-Z,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1FT7108-5SF71-1CB0-Z
 N1 Antriebsdrehzahl: 6.000,00 1/min
@@ -2749,7 +2749,7 @@ Antriebsmoment: 60,00 NM
 Isolierklasse: Iso-Kl.:F (tma x =155°C)
 Schutzart: IP55-Staubablage/Strahlwasser
 Motor-Bremse: 24DC"
-1970206,Kettenrad KR90D100 Z10 d=85H7,"Kettenrad
+395,Kettenrad KR90D100 Z10 d=85H7,"Kettenrad
 KR90D100
 Z = 10
 10 Zähne, Zahnbreite 11 mm, nach oben verlängert
@@ -2757,16 +2757,16 @@ Rollendurchmesser 45mm
 Nabengesamtlänge 71 mm, einseitig
 Nabendurchmesser 130mm
 aus S152-3, ungehärtet, mit Bohrung 85H7 ohne Nut"
-1892208,Lager 215x170x22mm 61834 SKF,"Lager
+396,Lager 215x170x22mm 61834 SKF,"Lager
 215x170x22mm
 61834
 SKF"
-1970194,Schraube M8x30 DIN 912 10.9 schwarz.,"Zylinderschraube mit Innensechskant
+397,Schraube M8x30 DIN 912 10.9 schwarz.,"Zylinderschraube mit Innensechskant
 M8 x 30
 DIN 912
 10.9
 schwarz"
-1970382,GT-Motor KA97TR57DRN80MK4TFEK8RAL,"Getriebemotor
+398,GT-Motor KA97TR57DRN80MK4TFEK8RAL,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: KA97TR57DRN80MK4TFEK8RAL
 Leistung [kW]: 0,550 kW
@@ -2782,7 +2782,7 @@ Isolierklasse: Iso-Kl.: F (tmax=155°C)
 Schutzart: IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970334,Servomotor 1FL60421AF612AA1,"Servomotor
+399,Servomotor 1FL60421AF612AA1,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1FL6042-1AF61-2AA1
 Leistung [kW]: 0,400 kW
@@ -2795,22 +2795,22 @@ Spannung [50Hz]: 400 V
 Bauform: B5
 Isolierklasse: Iso-Kl.: B (tmax=130°C)
 Schutzart: IP65-Staubdicht/Strahlwasser"
-1970275,"Mutter M36 x 1,5-17H 9218201324 LINDE","Mutter
+400,"Mutter M36 x 1,5-17H 9218201324 LINDE","Mutter
 M36 x 1,5-17H
 9218201324
 LINDE"
-1904133,Lager 23134 E1AM SKF,"Lager
+401,Lager 23134 E1AM SKF,"Lager
 23134 E1AM
 SKF"
-1970325,Lager 22328 CCKC3W33 SKF,"Pendelrollenlager
+402,Lager 22328 CCKC3W33 SKF,"Pendelrollenlager
 22328 CCK/C3W33
 SKF"
-1970151,Schraube M12 x 100 DIN 603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
+403,Schraube M12 x 100 DIN 603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
 DIN 603
 M12 x 100
 8.8
 verzinkt"
-1970318,Servomotor AKM32E-ACCNC-00,"Servomotor
+404,Servomotor AKM32E-ACCNC-00,"Servomotor
 Hersteller: KOLLMORGEN
 Typbezeichnung: AKM32E-ACCNC-00
 Leistung [kW]: 0,100 kW
@@ -2818,18 +2818,18 @@ N1 Antriebsdrehzahl: 8.000,00 1/min
 Antriebsmoment: 2,04 NM
 Spannung [50Hz]: 400V
 Schutzart: IP54-Staubablage/Spritzwasser"
-1885479,Lager 61832 2RSMW SKF,"Rillenkugellager
+405,Lager 61832 2RSMW SKF,"Rillenkugellager
 61832 2RS-MW
 SKF"
-1041380,Servomotor 21586-088.34-3233-1 BUETTNER,"Servomotor
+406,Servomotor 21586-088.34-3233-1 BUETTNER,"Servomotor
 21586-088.34-3233-1
 BUETTNER"
-1970438,Mutter M8 DIN 6334 L=24mm verzinkt.,"Verlängerungsmutter 3d hoch
+407,Mutter M8 DIN 6334 L=24mm verzinkt.,"Verlängerungsmutter 3d hoch
 M8 L = 24mm
 DIN 6334
 Automatenstahl
 verzinkt"
-1970084,Servomotor AM80330E210000,"Servomotor
+408,Servomotor AM80330E210000,"Servomotor
 Hersteller BECKHOFF
 Typbezeichnung AM8033-0E21-0000
 Leistung 0,940 kW
@@ -2842,7 +2842,7 @@ Schutzart IP54
 Motor-Bremse 24V DC 12W
 Thermo KTY Ja
 Art.Nr.: 139774"
-1970178,GT-Motor KA37DRS80S4TH,"Getriebemotor
+409,GT-Motor KA37DRS80S4TH,"Getriebemotor
 Hersteller SEW
 Typbezeichnung KA37DRS80S4/TH
 Motorleistung 0,750 kW
@@ -2854,16 +2854,16 @@ Isolierklasse F
 Schutzart IP54
 Ausführungsart Hohlwelle
 Hohlwelle d = 30mm"
-1163299,Thermistor 3RN1011-1BB00 SIEMENS,"Thermistor-Motorschutz
+410,Thermistor 3RN1011-1BB00 SIEMENS,"Thermistor-Motorschutz
 3RN1011-1BB00
 SIEMENS"
-948139,Wellendichtring 35x62x7 B1SL,"Wellendichtring
+411,Wellendichtring 35x62x7 B1SL,"Wellendichtring
 35x62x7
 B1SL"
-1970233,Wellendichtring 35 x 65 x 12 BASL,"Wellendichtring
+412,Wellendichtring 35 x 65 x 12 BASL,"Wellendichtring
 35 x 65 x 12
 BASL"
-1970113,Servomotor 1FK71035AY711SY3Z,"Servomotor
+413,Servomotor 1FK71035AY711SY3Z,"Servomotor
 Hersteller KUKA
 Typbezeichnung 1FK7103-5AY71-1SY3-Z
 Leistung 6,600 kW
@@ -2871,7 +2871,7 @@ N1 Antriebsdrehzahl 3.000,00 1/min
 Spannung 209V
 Isolierklasse F
 Schutzart IP65"
-1970385,GT-Motor FA47GDRN90S4TFAL,"Getriebemotor
+414,GT-Motor FA47GDRN90S4TFAL,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: FA47/G DRN90S4/TF/AL
 Leistung [kW]: 1,100 kW
@@ -2889,7 +2889,7 @@ Fremdlüfter: Nein
 Motor-Bremse: Nein
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1384893,Servomotor 1FK71035AF811YY3Z,"Servomotor
+415,Servomotor 1FK71035AF811YY3Z,"Servomotor
 Hersteller                     KUKA
 Typbezeichnung                 1FK7103-5AF81 1YY3-Z
 Leistung                       6,900 kW
@@ -2900,28 +2900,28 @@ Nennstrom                      17 A
 Isolierklasse                  F
 Schutzart                      IP65
 Art.Nr.:                       131492"
-1970089,Schraube M6 x 30 DIN 835 8.8 verz.,"Stiftschraube mit Einschraubende
+416,Schraube M6 x 30 DIN 835 8.8 verz.,"Stiftschraube mit Einschraubende
 M6 x 30
 DIN 835
 8.8
 verzinkt"
-1970215,"O-Ring 339,30 x 5,70 mm NBR70 Shore","O-Ring
+417,"O-Ring 339,30 x 5,70 mm NBR70 Shore","O-Ring
 339,3 x 5,7 mm
 WST: NBR
 70 Shore"
-1492093,Mutter M36 DIN982-8 A2,"Sechskantmutter mit Klemmteil
+418,Mutter M36 DIN982-8 A2,"Sechskantmutter mit Klemmteil
 hohe Form
 M36
 DIN 982-8
 A2
 Edelstahl"
-1348000,Relais 3RU2126-4DB1 20-25A SIEMENS,"Überlastrelais
+419,Relais 3RU2126-4DB1 20-25A SIEMENS,"Überlastrelais
 3RU2126-4DB1
 20-25A
 SIEMENS"
-1970131,"Kettenrad B-2 1 1/4"" Z25 TLB 3030","Kettenraeder fuer Zweifach-Rollenkette
+420,"Kettenrad B-2 1 1/4"" Z25 TLB 3030","Kettenraeder fuer Zweifach-Rollenkette
 1 1/4"" Z25 fuer TL 3030"
-1963324,GT-Motor KA19BTDRN80MK4EK8SPK,"Getriebemotor
+421,GT-Motor KA19BTDRN80MK4EK8SPK,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 KA19BTDRN80MK4EK8SPK
 Leistung [kW]:                  0,550 kW
@@ -2935,7 +2935,7 @@ Isolierklasse:                  Iso-Kl.:B (tmax=130°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser
 Bremsgroesse:                   NM30/24
 Energieeffizienzklasse:         IE3 Premium Efficiency"
-1525446,Servomotor AM8051-1G21-9000,"Servomotor
+422,Servomotor AM8051-1G21-9000,"Servomotor
 Hersteller                     BECKHOFF
 Typbezeichnung                 AM8051-1G21-9000
 N1 Antriebsdrehzahl            5,000.00 1/min
@@ -2944,7 +2944,7 @@ Bauform                        B5
 Isolierklasse                  F
 Schutzart                      IP54
 Art.Nr.:                       10802210"
-1963319,GT-Motor R147DRN180M4,"Getriebemotor
+423,GT-Motor R147DRN180M4,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 R147DRN180M4
 Leistung [kW]:                  18,500 kW
@@ -2958,7 +2958,7 @@ Bauform:                        M1
 Isolierklasse:                  Iso-Kl.:B (tmax=130°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser
 Energieeffizienzklasse:         IE3 Premium Efficiency"
-1960713,GT-Motor FA67DRN100LS4TF,"Getriebemotor
+424,GT-Motor FA67DRN100LS4TF,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 FA67 DRN100LS4/TF
 Leistung [kW]:                  2,200 kW
@@ -2975,21 +2975,21 @@ Schutzart:                      IP55-Staubablage/Strahlwasser
 Fremdlüfter:                    Nein
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970254,Lager 23940 CC/W33 SKF,"Lager
+425,Lager 23940 CC/W33 SKF,"Lager
 23940 CC/W33
 SKF"
-1970340,Lager NJ 2203 ECP SKF,"Zylinderrollenlager
+426,Lager NJ 2203 ECP SKF,"Zylinderrollenlager
 NJ2203ECP
 SKF"
-1970302,Lager 7306 BE-2RZP SKF,"Schrägkugellager
+427,Lager 7306 BE-2RZP SKF,"Schrägkugellager
 7306 BE-2RZP
 SKF"
-106064,Schraube M10x120 DIN603 4.6 verz.,"Flachrundschraube mit Vierkantansatz
+428,Schraube M10x120 DIN603 4.6 verz.,"Flachrundschraube mit Vierkantansatz
 DIN 603
 M10x120
 4.6
 verzinkt"
-1970374,GT-Motor R97DRN132S4TFV,"Getriebemotor
+429,GT-Motor R97DRN132S4TFV,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: R97DRN132S4TFV
 Leistung [kW]: 5,500 kW
@@ -3006,7 +3006,7 @@ Schutzart: IP55-Staubablage/Strahlwasser
 Fremdlüfter: 400V
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1860374,Servomotor AM8052-0L20-0000,"Servomotor
+430,Servomotor AM8052-0L20-0000,"Servomotor
 Herstellerteilenummer:          105061_BECKHOFF
 Hersteller:                     Beckhoff
 Typbezeichnung:                 AM8052-0L20-0000
@@ -3016,15 +3016,15 @@ Spannung [50Hz]:                400V
 Bauform:                        B5
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser"
-1970147,Schraube M30 x 240 DIN 912 12.9 schw.,"Zylinderschraube mit Innensechskant
+431,Schraube M30 x 240 DIN 912 12.9 schw.,"Zylinderschraube mit Innensechskant
 M30 x 240
 DIN 912
 12.9
 schwarz"
-108511,"O-Ring 34,00x3,50mm 70 Shore","O-Ring
+432,"O-Ring 34,00x3,50mm 70 Shore","O-Ring
 34,00 x 3,50 mm
 70° Shore"
-1970353,GT-Motor RF37DRN90L2TH,"Getriebemotor
+433,GT-Motor RF37DRN90L2TH,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: RF37 DRN90L2/TH
 Leistung [kW]: 2,200 kW
@@ -3041,11 +3041,11 @@ Isolierklasse: Iso-Kl.: F (tma x =155°C)
 Schutzart: IP54-Staubablage/Spritzwasser
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970239,Lager 23224 CC/W33-C4 SKF,"Lager
+434,Lager 23224 CC/W33-C4 SKF,"Lager
 23224
 CC/W33-C4
 SKF"
-1970370,GT-Motor KA87DRN180L4TF,"Getriebemotor
+435,GT-Motor KA87DRN180L4TF,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: KA87 DRN180L4/TF
 Leistung [kW]: 22,000 kW
@@ -3061,7 +3061,7 @@ Isolierklasse: Iso-Kl.: F (tmax=155°C)
 Schutzart: IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-680363,Kettenrad KR90D100 Z10 d=85H7,"Kettenrad
+436,Kettenrad KR90D100 Z10 d=85H7,"Kettenrad
 KR90D100
 Z = 10
 10 Zähne, Zahnbreite 11 mm, nach oben verlängert
@@ -3069,7 +3069,7 @@ Rollendurchmesser 45mm
 Nabengesamtlänge 71 mm, einseitig
 Nabendurchmesser 130mm
 aus S152-3, ungehärtet, mit Bohrung 85H7 ohne Nut"
-1970291,GT-Motor 404157,"Getriebemotor
+437,GT-Motor 404157,"Getriebemotor
 Hersteller: OTT
 Typbezeichnung: 404157
 Antriebsmoment (ma x ): 4,00 NM
@@ -3081,24 +3081,24 @@ Fremdlüfter: Nein
 Motor-Bremse: Nein
 Energieeffizienzklasse: Unbekannt
 Motorvollschutz (Thermofühler): Nein"
-175254,Wellendichtring 35x65x10 BASL,"Wellendichtring
+438,Wellendichtring 35x65x10 BASL,"Wellendichtring
 35x65x10
 BASL"
-1970330,Mutter M36 ISO4032 5.2 schwarz.,"Mutter
+439,Mutter M36 ISO4032 5.2 schwarz.,"Mutter
 M36
 ISO4032
 5.2
 schwarz"
-1892207,Lager 180x225x22mm 61836 SKF,"Lager
+440,Lager 180x225x22mm 61836 SKF,"Lager
 180x225x22mm
 61836
 SKF"
-1970152,Schraube M12x100 DIN 603 8.8 verzinkt.,"Flachrundschraube mit Vierkantansatz
+441,Schraube M12x100 DIN 603 8.8 verzinkt.,"Flachrundschraube mit Vierkantansatz
 DIN 603
 M12x100
 8.8
 verzinkt"
-1970295,GT-Motor WAF30DRN80MK4TH,"Getriebemotor
+442,GT-Motor WAF30DRN80MK4TH,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: WAF30DRN80MK4TH
 Leistung [kW]: 0,550 kW
@@ -3111,17 +3111,17 @@ Isolierklasse: Iso-Kl.:F (tma x =155°C)
 Schutzart: IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970168,Servomotor 1FK71035AF711AH3Z,"Servomotor
+443,Servomotor 1FK71035AF711AH3Z,"Servomotor
 Hersteller SIEMENS
 Typbezeichnung 1FK71035AF711AH3Z
 Antriebsdrehzahl N1 3.000,00 1/min
 Antriebsmoment 36,00 NM
 Isolierklasse F
 Schutzart IP64"
-1970271,Lager 6313/C4 SKF,"Lager
+444,Lager 6313/C4 SKF,"Lager
 6313/C4
 SKF"
-1965541,GT-Motor KH77DRN100LS4BE5KCCTF,"Getriebemotor
+445,GT-Motor KH77DRN100LS4BE5KCCTF,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 KH77DRN100LS4BE5KCCTF
 Leistung [kW]:                  2,200 kW
@@ -3139,12 +3139,12 @@ Motor-Bremse:                   Ja
 Bremsgroesse:                   415VAC 28NM
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970161,Schraube M12 x 70 DIN 603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
+446,Schraube M12 x 70 DIN 603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
 DIN 603
 M12 x 70
 8.8
 verzinkt"
-1970286,GT-Motor R147DRN180M4,"Getriebemotor
+447,GT-Motor R147DRN180M4,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: R147DRN180M4
 Leistung [kW]: 18,500 kW
@@ -3158,12 +3158,12 @@ Bauform: M1
 Isolierklasse: Iso-Kl.:B (tmax=130°C)
 Schutzart: IP54-Staubablage/Spritzwasser
 Energieeffizienzklasse: IE3 Premium Efficiency"
-1060906,Schraube M12x60 DIN603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
+448,Schraube M12x60 DIN603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
 DIN 603
 M12x60
 8.8
 verzinkt"
-1970100,Servomotor AM8051-1G21-9000,"Servomotor
+449,Servomotor AM8051-1G21-9000,"Servomotor
 Hersteller BECKHOFF
 Typbezeichnung AM8051-1G21-9000
 N1 Antriebsdrehzahl 5,000.00 1/min
@@ -3172,16 +3172,16 @@ Bauform B5
 Isolierklasse F
 Schutzart IP54
 Art.Nr.: 10802210"
-1058976,Schraube M20x130 DIN938 8.8 schw.,"Stiftschraube
+450,Schraube M20x130 DIN938 8.8 schw.,"Stiftschraube
 M20 x 130
 DIN 938
 8.8
 schwarz"
-1970231,PN-Zylinder ADN-25-40-I-P-A 536265 FESTO,"Kompaktzylinder
+451,PN-Zylinder ADN-25-40-I-P-A 536265 FESTO,"Kompaktzylinder
 ADN-25-40-I-P-A
 536265
 FESTO"
-1970097,Servomotor AM8043-0H20-0000,"Servomotor
+452,Servomotor AM8043-0H20-0000,"Servomotor
 Hersteller BECKHOFF
 Typbezeichnung AM8043-0H20-0000
 N1 Antriebsdrehzahl 5,000.00 1/min
@@ -3190,7 +3190,7 @@ Bauform B5
 Isolierklasse F
 Schutzart IP54
 Art.Nr.: 10802980"
-1970347,GT-Motor KH67DRN100LS4BE5KCCTFEI7C,"Getriebemotor
+453,GT-Motor KH67DRN100LS4BE5KCCTFEI7C,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: KH67DRN100LS4BE5KCCTFEI7C
 Leistung [kW]: 2,200 kW
@@ -3208,10 +3208,10 @@ Motor-Bremse: Ja
 Bremsgroesse: 415VAC 20NM
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970209,Servomotor 21586-088.34-3233-1 BUETTNER,"Servomotor
+454,Servomotor 21586-088.34-3233-1 BUETTNER,"Servomotor
 21586-088.34-3233-1
 BUETTNER"
-1970289,GT-Motor DRN71M4BE05FTTH,"Getriebemotor
+455,GT-Motor DRN71M4BE05FTTH,"Getriebemotor
 Herstellerteilenummer: XXXX_SIEMPELKAMP
 Hersteller: SEW
 Typbezeichnung: DRN71M4BE05FTTH
@@ -3224,21 +3224,21 @@ Schutzart: IP55-Staubablage/Strahlwasser
 Bremsgroesse: 24 DC
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970312,Lager 61832 2RSMW SKF,"Rillenkugellager
+456,Lager 61832 2RSMW SKF,"Rillenkugellager
 61832 2RS-MW
 SKF"
-135816,Mutter M36x2 DIN934-8 Feinge.schw,"Sechskantmutter
+457,Mutter M36x2 DIN934-8 Feinge.schw,"Sechskantmutter
 M36X2 DIN 934-8 Feinge.schw"
-1970073,"Kettenrad B-2 1"" Z16 d=50 mm","Kettenrad
+458,"Kettenrad B-2 1"" Z16 d=50 mm","Kettenrad
 B-2 1"" Z16 geb.50 mm
 DIN 8187"
-1970396,Modul 6SN1123-1AA00-0CA1 SIEMENS,Modul 6SN1123-1AA00-0CA1 SIEMENS
-1970063,Schraube M6 x 30 DIN 933 5.6 verz.,"Sechskantschraube mit Gewinde bis Kopf
+459,Modul 6SN1123-1AA00-0CA1 SIEMENS,Modul 6SN1123-1AA00-0CA1 SIEMENS
+460,Schraube M6 x 30 DIN 933 5.6 verz.,"Sechskantschraube mit Gewinde bis Kopf
 DIN 933
 M6 x 30
 5.6
 verzinkt"
-1965457,GT-Motor KH77DRN100L4KCCTF,"Getriebemotor
+461,GT-Motor KH77DRN100L4KCCTF,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 KH77DRN100L4KCCTF
 Leistung [kW]:                  3,000 kW
@@ -3254,7 +3254,7 @@ Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970367,GT-Motor R97DRN132M4TF,"Getriebemotor
+462,GT-Motor R97DRN132M4TF,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: R97DRN132M4TF
 Leistung [kW]: 7,500 kW
@@ -3270,28 +3270,28 @@ Fremdlüfter: Nein
 Motor-Bremse: Nein
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1810552,Wellendichtring 35x62x7 HMS5RG SKF,"Wellendichtring
+463,Wellendichtring 35x62x7 HMS5RG SKF,"Wellendichtring
 35x62x7
 HMS5RG
 SKF"
-1970169,Wellendichtring 35 x 62 x 7 B1SL,"Wellendichtring
+464,Wellendichtring 35 x 62 x 7 B1SL,"Wellendichtring
 35 x 62 x 7
 B1SL"
-1970234,Radialwellendichtring 35x65x12 BASL,"Radialwellendichtring
+465,Radialwellendichtring 35x65x12 BASL,"Radialwellendichtring
 35x65x12
 BASL"
-1934173,Lager NJ2322ECML SKF,"Radial-Zylinderrollenlager
+466,Lager NJ2322ECML SKF,"Radial-Zylinderrollenlager
 NJ-2322-ECML
 SKF"
-1970225,Mutter M8 DIN 6923 8.8 verz.,"Mutter
+467,Mutter M8 DIN 6923 8.8 verz.,"Mutter
 M8
 DIN 6923
 8.8
 verzinkt"
-1970362,Lager 3305 A SKF,"Schrägkugellager 2-reihig
+468,Lager 3305 A SKF,"Schrägkugellager 2-reihig
 3305 A
 SKF"
-1970294,GT-Motor SA47DRE90M4,"Getriebemotor
+469,GT-Motor SA47DRE90M4,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: SA47DRE90M4
 Leistung [kW]: 1,100 kW
@@ -3304,26 +3304,26 @@ Bauform: M1A
 Isolierklasse: Iso-Kl.:F (tmax=155°C)
 Schutzart: IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse: IE2 High Efficiency"
-1970190,PN-Zylinder ADN-25-30-A-P-A 536256 FESTO,"Kompaktzylinder
+470,PN-Zylinder ADN-25-30-A-P-A 536256 FESTO,"Kompaktzylinder
 ADN-25-30-A-P-A
 536256
 FESTO"
-1357632,PN-Zylinder ADN-25-40-A-P-A 536257 FESTO,"Kompaktzylinder
+471,PN-Zylinder ADN-25-40-A-P-A 536257 FESTO,"Kompaktzylinder
 ADN-25-40-A-P-A
 536257
 FESTO"
-1970210,Servomotor 21586-088.34-3233-1 BUETTNER,"Servomotor
+472,Servomotor 21586-088.34-3233-1 BUETTNER,"Servomotor
 21586-088.34-3233-1
 BUETTNER"
-1970326,Lager 22328 CCKC3W33 SKF,"Pendelrollenlager
+473,Lager 22328 CCKC3W33 SKF,"Pendelrollenlager
 22328 CCK/C3W33
 SKF"
-123911,Mutter M36 DIN934-8 verz.,"Sechskantmutter
+474,Mutter M36 DIN934-8 verz.,"Sechskantmutter
 M36 DIN 934-8 verz."
-1970332,Lager 21311 EC3 SKF,"Pendelrollenlager
+475,Lager 21311 EC3 SKF,"Pendelrollenlager
 21311 E C3
 SKF"
-1970124,"Getriebe R47A i=12,54","Getriebe
+476,"Getriebe R47A i=12,54","Getriebe
 Hersteller: SEW
 Typbezeichnung: R87/A
 N1 Antriebsdrehzahl: 1.400,00 1/min
@@ -3332,7 +3332,7 @@ Drehmoment: 520,00 NM
 Getriebeübersetzung i: 19,100
 Bauform: M1
 Getriebeausführung: Stirnradgetriebe"
-1963351,GT-Motor R60DT80K4TF,"Getriebemotor
+477,GT-Motor R60DT80K4TF,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 R60DT80K4TF
 Leistung [kW]:                  0,550 kW
@@ -3344,7 +3344,7 @@ Bauform:                        B3
 Isolierklasse:                  Iso-Kl.:B (tmax=130°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser
 Motorvollschutz (Thermofühler): Ja"
-1970402,Servomotor 1PH7167-7HG33-0BB3-Z M39,"Servomotor
+478,Servomotor 1PH7167-7HG33-0BB3-Z M39,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1PH7167-7HG33-0BB3-Z M39
 Leistung [kW]: 40,000 kW
@@ -3353,20 +3353,20 @@ Spannung [50Hz]: 400Y
 Bauform: B35
 Isolierklasse: Iso-Kl.:F (tmax=155°C)
 Schutzart: IP54-Staubablage/Spritzwasser"
-1970080,"ORing 34,00x3,00mm NBR 90 Shore A","ORing
+479,"ORing 34,00x3,00mm NBR 90 Shore A","ORing
 34,00 x 3,00 mm
 WST: NBR
 90° Shore A"
-1970324,Lager NU 214 ECJ/C3 SKF,"Zylinderrollenlager
+480,Lager NU 214 ECJ/C3 SKF,"Zylinderrollenlager
 NU 214 ECJ/C3
 SKF"
-1904507,Lager 1210 SKF,"Lager
+481,Lager 1210 SKF,"Lager
 1210
 SKF"
-108665,Wellendichtring 35x62x7 BASL,"Wellendichtring
+482,Wellendichtring 35x62x7 BASL,"Wellendichtring
 35x62x7
 BASL"
-1970365,GT-Motor KH77TDRN100LS4BE5TH,"Getriebemotor
+483,GT-Motor KH77TDRN100LS4BE5TH,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: KH77TDRN100LS4BE5TH
 Leistung [kW]: 2,200 kW
@@ -3384,12 +3384,12 @@ Motor-Bremse: Ja
 Bremsgroesse: 230VAC 55NM
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970146,"ORing 33,50x2,00mm N 01095200 KSB","ORing
+484,"ORing 33,50x2,00mm N 01095200 KSB","ORing
 33,5 x 2,0mm
 N
 01095200
 KSB"
-1970360,GT-Motor R67DRN112M4TFAL,"Getriebemotor
+485,GT-Motor R67DRN112M4TFAL,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: R67DRN112M4TFAL
 Leistung [kW]: 4,000 kW
@@ -3407,7 +3407,7 @@ Fremdlüfter: Nein
 Motor-Bremse: Nein
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970413,Servomotor 1FK7105-2AF71-1RB0-Z,"Servomotor
+486,Servomotor 1FK7105-2AF71-1RB0-Z,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1FK7105-2AF71-1RB0-Z
 N1 Antriebsdrehzahl: 3.000,00 1/min
@@ -3416,7 +3416,7 @@ Antriebsmoment: 26,00 NM
 Isolierklasse: Iso-Kl.:F (tma x =155°C)
 Schutzart: IP64-Staubdicht/Spritzwasser
 Motor-Bremse: 24DC"
-1970356,GT-Motor FA67DRN100LS4TF,"Getriebemotor
+487,GT-Motor FA67DRN100LS4TF,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: FA67 DRN100LS4/TF
 Leistung [kW]: 2,200 kW
@@ -3433,19 +3433,19 @@ Schutzart: IP55-Staubablage/Strahlwasser
 Fremdlüfter: Nein
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970388,"Kette 08A-3 12,7 1/2""x7,85mm DIN 8188","Kette
+488,"Kette 08A-3 12,7 1/2""x7,85mm DIN 8188","Kette
 08A-3
 Teilung: 12,7
 Teilung: 1/2""
 Innere breite: 7,85mm
 DIN 8188
 ASA 40-3"
-1970162,Schraube M12x70 DIN 603 8.8 verzinkt.,"Flachrundschraube mit Vierkantansatz
+489,Schraube M12x70 DIN 603 8.8 verzinkt.,"Flachrundschraube mit Vierkantansatz
 DIN 603
 M12x70
 8.8
 verzinkt"
-420800,Servomotor 1PH71072HF030BB3,"Servomotor
+490,Servomotor 1PH71072HF030BB3,"Servomotor
 Typbezeichnung                  1PH7107-2HF03-0BB3
 Motorleistung                   9,000 kW
 Antriebsdrehzahl N1             1.780,00  1/min
@@ -3457,38 +3457,38 @@ Schutzart                       IP54
 Motorbremse                     keine Bremse
 Motorgeber                      rel HTL 1024 INKU
 mit zusätzlichem Wellendichtring im Lagerdeckel versehen"
-1061095,Schraube M12x40 DIN603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
+491,Schraube M12x40 DIN603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
 M12x40
 DIN 603
 8.8
 verzinkt"
-1970281,"Mutter M36 x 1,5 DIN 935-1 Stahl schw.","Kronenmutter
+492,"Mutter M36 x 1,5 DIN 935-1 Stahl schw.","Kronenmutter
 M36 x 1,5
 DIN 935-1
 6 Automatenstahl
 schwarz"
-1557024,Schraube M6x30 DIN835 8.8 verz.,"Stiftschraube mit Einschraubende
+493,Schraube M6x30 DIN835 8.8 verz.,"Stiftschraube mit Einschraubende
 M6 x 30
 DIN 835
 8.8
 verzinkt"
-1970227,Schraube M12 x 40 DIN 6912 10.9 schw.,"Zylinderschraube mit Innensechskant
+494,Schraube M12 x 40 DIN 6912 10.9 schw.,"Zylinderschraube mit Innensechskant
 M12 x 40
 DIN 6912
 10.9
 schwarz"
-1970391,Keilriemen SPZ 2500 LW OPTIBELT,"Keilriemen
+495,Keilriemen SPZ 2500 LW OPTIBELT,"Keilriemen
 SPZ-2500
 Wirklänge 2.500,0 mm
 Außenlänge 2.513,0 mm
 Innenlänge 2.462,0 mm
 OPTIBELT"
-1970093,Schraube M6 x 50 DIN 835 8.8 verz.,"Stiftschraube mit Einschraubende
+496,Schraube M6 x 50 DIN 835 8.8 verz.,"Stiftschraube mit Einschraubende
 M6 x 50
 DIN 835
 8.8
 verzinkt"
-1970101,Servomotor AM8043-0E20-0000,"Servomotor
+497,Servomotor AM8043-0E20-0000,"Servomotor
 Hersteller BECKHOFF
 Typbezeichnung AM8043-0E20-0000
 N1 Antriebsdrehzahl 2,500.00 1/min
@@ -3497,14 +3497,14 @@ Bauform B5
 Isolierklasse F
 Schutzart IP54
 Art.Nr.: 10765906"
-234932,"O-Ring 33,30x2,40mm Viton FPM 85 Shore","O-Ring
+498,"O-Ring 33,30x2,40mm Viton FPM 85 Shore","O-Ring
 33,30 x 2,40mm
 WST: Viton FKM/FPM
 85° Shore"
-1904501,Lager 2208EKTN9C3 SKF,"Lager
+499,Lager 2208EKTN9C3 SKF,"Lager
 2208EKTN9C3
 SKF"
-1806163,Servomotor 1FT7108-5SF71-1CB0-Z,"Servomotor
+500,Servomotor 1FT7108-5SF71-1CB0-Z,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1FT7108-5SF71-1CB0-Z
 N1 Antriebsdrehzahl:            6.000,00 1/min
@@ -3512,10 +3512,10 @@ Antriebsmoment:                 60,00 NM
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser
 Motor-Bremse:                   24DC"
-1970045,"O-Ring 34,00 x 3,00 mm 70 Shore","O-Ring
+501,"O-Ring 34,00 x 3,00 mm 70 Shore","O-Ring
 34,00 x 3,00 mm
 70° Shore"
-1970139,Kettenrad KR16B-1 Z20 G-35/60SK,"Kettenrad KR16B-1 Z=20G-35/60SK
+502,Kettenrad KR16B-1 Z20 G-35/60SK,"Kettenrad KR16B-1 Z=20G-35/60SK
 1"" x 17,02 x 15,88 mm
 DIN 8187, z=20
 passend zur Einfach-Rollenkette DIN 8187,
@@ -3527,7 +3527,7 @@ Nabendurchmesser 85 mm, Bohrungsdurchmesser 35 mm H7
 30 mm tief für Ringspannelement 3560, einteilig,
 Zähne gehärtet
 FB KETTEN"
-1970418,Servomotor 1PH7133-7HF03-0BB3-ZNOYF,"Servomotor
+503,Servomotor 1PH7133-7HF03-0BB3-ZNOYF,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1PH7133-7HF03-0BB3-ZNOYF
 Leistung [kW]: 13,500 kW
@@ -3535,12 +3535,12 @@ N1 Antriebsdrehzahl: 1.500,00 1/min
 Bauform: B35
 Isolierklasse: Iso-Kl.:F (tmax=155°C)
 Schutzart: IP55-Staubablage/Strahlwasser"
-1970060,Schraube M10x120 DIN 603 4.6 verzinkt.,"Flachrundschraube mit Vierkantansatz
+504,Schraube M10x120 DIN 603 4.6 verzinkt.,"Flachrundschraube mit Vierkantansatz
 DIN 603
 M10x120
 4.6
 verzinkt"
-1970140,Kettenrad KR16B-1 Z20 G-35/60SK,"Kettenrad KR16B-1 Z=20G-35/60SK
+505,Kettenrad KR16B-1 Z20 G-35/60SK,"Kettenrad KR16B-1 Z=20G-35/60SK
 1"" x 17,02 x 15,88mm
 DIN 8187, z=20
 passend zur Einfach-Rollenkette DIN 8187,
@@ -3552,31 +3552,31 @@ Nabendurchmesser 85 mm, Bohrungsdurchmesser 35 mm H7
 30 mm tief für Ringspannelement 3560, einteilig,
 Zähne gehärtet
 FB KETTEN"
-1970223,Schraube M20 x 130 DIN 938 8.8 schw.,"Stiftschraube
+506,Schraube M20 x 130 DIN 938 8.8 schw.,"Stiftschraube
 M20 x 130
 DIN 938
 8.8
 schwarz"
-1874669,"Mutter M36x1,5 10007871 WEINIG","Mutter
+507,"Mutter M36x1,5 10007871 WEINIG","Mutter
 M36 x 1,5
 DA58 LG.7
 10007871
 WEINIG"
-1970116,ORing 330x7mm 70 Shore 15610.0019 JAUDT,"ORing
+508,ORing 330x7mm 70 Shore 15610.0019 JAUDT,"ORing
 330,00 x 7,00mm
 70° Shore
 15610.0019
 JAUDT"
-1970128,Mutter M36 DIN 982-8 A2,"Hexagonmutter mit Klemmteil
+509,Mutter M36 DIN 982-8 A2,"Hexagonmutter mit Klemmteil
 hohe Form
 M36
 DIN 982-8
 A2
 Edelstahl"
-1970222,Radialwellendichtring 35x62x7 B1,"Radialwellendichtring
+510,Radialwellendichtring 35x62x7 B1,"Radialwellendichtring
 35x62x7
 B1"
-1963354,GT-Motor SA47DRE90M4,"Getriebemotor
+511,GT-Motor SA47DRE90M4,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 SA47DRE90M4
 Leistung [kW]:                  1,100 kW
@@ -3589,10 +3589,10 @@ Bauform:                        M1A
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse:         IE2 High Efficiency"
-1970435,Wellendichtring 35 x 62 x 7 BASL,"Wellendichtring
+512,Wellendichtring 35 x 62 x 7 BASL,"Wellendichtring
 35 x 62 x 7
 BASL"
-1970112,Servomotor 1FK71035AF811YY3Z,"Servomotor
+513,Servomotor 1FK71035AF811YY3Z,"Servomotor
 Hersteller KUKA
 Typbezeichnung 1FK7103-5AF81 1YY3-Z
 Leistung 6,900 kW
@@ -3603,7 +3603,7 @@ Nennstrom 17 A
 Isolierklasse F
 Schutzart IP65
 Art.Nr.: 131492"
-1788726,Servomotor 1FL60421AF612AA1,"Servomotor
+514,Servomotor 1FL60421AF612AA1,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1FL6042-1AF61-2AA1
 Leistung [kW]:                  0,400 kW
@@ -3616,16 +3616,16 @@ Spannung [50Hz]:                400 V
 Bauform:                        B5
 Isolierklasse:                  Iso-Kl.: B (tmax=130°C)
 Schutzart:                      IP65-Staubdicht/Strahlwasser"
-1970310,"Mutter M36x1,5 10007871 WEINIG","Mutter
+515,"Mutter M36x1,5 10007871 WEINIG","Mutter
 M36 x 1,5
 DA58 LG.7
 10007871
 WEINIG"
-1970246,Lager 215x170x22mm 61834 SKF,"Lager
+516,Lager 215x170x22mm 61834 SKF,"Lager
 215x170x22mm
 61834
 SKF"
-1970352,"Getriebe R77A i=7,74 SEW","Getriebe
+517,"Getriebe R77A i=7,74 SEW","Getriebe
 Hersteller: SEW
 Typbezeichnung: R77A
 N1 Antriebsdrehzahl: 1.400,00 1/min
@@ -3634,12 +3634,12 @@ Drehmoment: 610,00 NM
 Getriebeübersetzung i: 7,740
 Bauform: M1
 Getriebeausführung: Stirnradgetriebe"
-1970058,Schraube M6x25 DIN 933 5.6 verzinkt.,"Hexagonschraube mit Gewinde bis Kopf
+518,Schraube M6x25 DIN 933 5.6 verzinkt.,"Hexagonschraube mit Gewinde bis Kopf
 DIN 933
 M6x25
 5.6
 verzinkt"
-1970163,Getriebe K2L30080WP71111LUR,"Getriebe
+519,Getriebe K2L30080WP71111LUR,"Getriebe
 Getriebehersteller NOVENTAS
 Getriebetyp K2L30080WP71111LUR
 Herstellerserialnummer 01991249
@@ -3688,12 +3688,12 @@ No: W11351
 Ident.Nr.:01991249
 Auftragsnummer: 7070360/V8223801
 Siempelkamp Teilenummer1: 01991249"
-1970057,Schraube M6 x 25 DIN 933 5.6 verz.,"Sechskantschraube mit Gewinde bis Kopf
+520,Schraube M6 x 25 DIN 933 5.6 verz.,"Sechskantschraube mit Gewinde bis Kopf
 DIN 933
 M6 x 25
 5.6
 verzinkt"
-195604,Servomotor 1FT60621AH713AH1,"Synchron-Servomotor Drehantrieb
+521,Servomotor 1FT60621AH713AH1,"Synchron-Servomotor Drehantrieb
 Hersteller                     SIEMENS
 Typbezeichnung                 1FT6062-1AH71-3AH1
 Mo:                            5,0 / 6,0Nm
@@ -3701,15 +3701,15 @@ Mh:                            3,6Nm
 Antriebsdrehzahl N1            4.500,00 1/min
 Spannung                       288V
 Motorbremse                    24V / 17W"
-1970115,O-Ring 330 x 7 mm 70 Shore 15610.0019 JAUDT,"O-Ring
+522,O-Ring 330 x 7 mm 70 Shore 15610.0019 JAUDT,"O-Ring
 330,00 x 7,00 mm
 70° Shore
 15610.0019
 JAUDT"
-1970251,Lager 22316 EKC3W33 SKF,"Lager
+523,Lager 22316 EKC3W33 SKF,"Lager
 22316 EKC3W33
 SKF"
-1970164,Getriebe K2L30080WP71111LUR,"Getriebe
+524,Getriebe K2L30080WP71111LUR,"Getriebe
 Getriebehersteller NOVENTAS
 Getriebetyp K2L30080WP71111LUR
 Herstellerserialnummer 01991249
@@ -3758,19 +3758,19 @@ No: W11351
 Ident.Nr.:01991249
 Auftragsnummer: 7070360/V8223801
 Siempelkamp Teilenummer1: 01991249"
-1970430,Lager NU320ECJ SKF,"Lager
+525,Lager NU320ECJ SKF,"Lager
 NU320ECJ
 SKF"
-1970075,"Kettenrad B-2 1"" Z16 d=75 mm","Kettenrad
+526,"Kettenrad B-2 1"" Z16 d=75 mm","Kettenrad
 B-2 1""
 Z = 16
 geb.75 mm
 DIN 8187"
-1067934,PN-Zylinder ADN-25-25-I-P-A 536263 FESTO,"Kompaktzylinder
+527,PN-Zylinder ADN-25-25-I-P-A 536263 FESTO,"Kompaktzylinder
 ADN-25-25-I-P-A
 536263
 FESTO"
-1970173,Servomotor 373E11Z2006S21,"Servomotor
+528,Servomotor 373E11Z2006S21,"Servomotor
 Hersteller BAELZ
 Typbezeichnung 373 E11 Z-20-06-S21
 Antriebsmoment 2000 Nm
@@ -3778,28 +3778,28 @@ Antriebsdrehzahl 6 mm/min
 Spannung 230 V - 115 V
 Isolierklasse 0-50°C - 0-75°C
 Schutzart IP44"
-1970065,Schraube M20 x 260 DIN 931 8.8 verz.,"Sechskantschraube mit Schaft
+529,Schraube M20 x 260 DIN 931 8.8 verz.,"Sechskantschraube mit Schaft
 M20 x 260
 DIN 931
 8.8
 verzinkt"
-1970117,Servomotor 5/2.720.001.002,"Servomotor
+530,Servomotor 5/2.720.001.002,"Servomotor
 Herstellerteilenummer: XXX_ESITRON
 Hersteller: ESITRON
 Typbezeichnung: 5/2.720.001.002
 N1 Antriebsdrehzahl: 3.000,00 1/min
 Antriebsmoment: 0,50 NM
 Spannung: 48V DC"
-1970229,Servomotor AG04B,"Servomotor
+531,Servomotor AG04B,"Servomotor
 Hersteller PSE
 Typbezeichnung AG04B
 Leistung 0,160 kW
 Spannung [50Hz] 24V DC
 Strom 6,6 A"
-1970314,Lager NJ2322ECML SKF,"Radial-Zylinderrollenlager
+532,Lager NJ2322ECML SKF,"Radial-Zylinderrollenlager
 NJ-2322-ECML
 SKF"
-1959031,GT-Motor R77DRN100L4TFEK8R,"Getriebemotor
+533,GT-Motor R77DRN100L4TFEK8R,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 R77DRN100L4TFEK8R
 Leistung [kW]:                  3,000 kW
@@ -3817,21 +3817,21 @@ Fremdlüfter:                    Nein
 Motor-Bremse:                   Nein
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970437,Mutter M8 DIN 6334 L=24 mm verz.,"Verlängerungsmutter 3d hoch
+534,Mutter M8 DIN 6334 L=24 mm verz.,"Verlängerungsmutter 3d hoch
 M8 L = 24 mm
 DIN 6334
 Automatenstahl
 verzinkt"
-1330560,Keilriemen SPZ 2500 LW OPTIBELT,"Keilriemen
+535,Keilriemen SPZ 2500 LW OPTIBELT,"Keilriemen
 SPZ-2500
 Wirklänge                      2.500,0 mm
 Außenlänge                     2.513,0 mm
 Innenlänge                     2.462,0 mm
 OPTIBELT"
-242080,Mutter M8 DIN928 schw.,"Anschweißmutter
+536,Mutter M8 DIN928 schw.,"Anschweißmutter
 M8
 DIN 928 schwarz"
-1970114,Servomotor 1FK71035AY711SY3Z,"Servomotor
+537,Servomotor 1FK71035AY711SY3Z,"Servomotor
 Hersteller KUKA
 Typbezeichnung 1FK7103-5AY71-1SY3-Z
 Leistung 6,600 kW
@@ -3839,20 +3839,20 @@ N1 Antriebsdrehzahl 3.000,00 1/min
 Spannung 209V
 Isolierklasse F
 Schutzart IP65"
-1970055,Schraube M12 x 30 DIN 933 5.6 verz.,"Sechskantschraube mit Gewinde bis Kopf
+538,Schraube M12 x 30 DIN 933 5.6 verz.,"Sechskantschraube mit Gewinde bis Kopf
 DIN 933
 M12 x 30
 5.6
 verzinkt"
-1970204,"Kettenrad B-2 1 1/4"" Z23 TLB 3030 gehae.","Kettenrad für Zweifach-Rollenkette
+539,"Kettenrad B-2 1 1/4"" Z23 TLB 3030 gehae.","Kettenrad für Zweifach-Rollenkette
 1 1/4"", Z23, für TL 3030
 Zahnflanken gehärtet"
-1970220,Mutter M36 LH 00746249 SIEMPELKAMP,"Hexagonmutter
+540,Mutter M36 LH 00746249 SIEMPELKAMP,"Hexagonmutter
 M36 LH
 Pos. 31
 00746249
 SIEMPELKAMP"
-1960662,GT-Motor R97DRN132S4TFV,"Getriebemotor
+541,GT-Motor R97DRN132S4TFV,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 R97DRN132S4TFV
 Leistung [kW]:                  5,500 kW
@@ -3869,15 +3869,15 @@ Schutzart:                      IP55-Staubablage/Strahlwasser
 Fremdlüfter:                    400V
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970214,Schraube M10x60H DIN 444B 8.8,"Augenschraube
+542,Schraube M10x60H DIN 444B 8.8,"Augenschraube
 M10 x 60H
 DIN 444B
 10001815
 VARISCO"
-1970305,Lager NCF 2932 V SKF,"Zylinderrollenlager
+543,Lager NCF 2932 V SKF,"Zylinderrollenlager
 NCF 2932 V
 SKF"
-1970412,Servomotor 1FT7108-5SF71-1CB0-Z,"Servomotor
+544,Servomotor 1FT7108-5SF71-1CB0-Z,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1FT7108-5SF71-1CB0-Z
 N1 Antriebsdrehzahl: 6.000,00 1/min
@@ -3885,39 +3885,39 @@ Antriebsmoment: 60,00 NM
 Isolierklasse: Iso-Kl.:F (tmax=155°C)
 Schutzart: IP55-Staubablage/Strahlwasser
 Motor-Bremse: 24DC"
-1970406,Radialwellendichtring 35x62x10 BASL,"Radialwellendichtring
+545,Radialwellendichtring 35x62x10 BASL,"Radialwellendichtring
 35x62x10
 BASL"
-1904110,Lager YAR214 SKF,"Lager
+546,Lager YAR214 SKF,"Lager
 YAR214
 SKF"
-1970426,Keilriemen SPA 2532 LW,"Keilriemen
+547,Keilriemen SPA 2532 LW,"Keilriemen
 SPA 2532mm LW
 Wirklänge ISO LW 2532mm
 Innenlänge LI 2487mm
 Außenlänge LA 2550mm"
-675608,"Kettenrad B-2 1 1/4"" Z23 TLB 3030 gehae.","Kettenrad für Zweifach-Rollenkette
+548,"Kettenrad B-2 1 1/4"" Z23 TLB 3030 gehae.","Kettenrad für Zweifach-Rollenkette
 1 1/4"", Z23, für TL 3030
 Zahnflanken gehärtet"
-1970137,"Kettenrad B-1 1 1/2"" Z34 TLB 3030 gehae.","Kettenrad einfach
+549,"Kettenrad B-1 1 1/2"" Z34 TLB 3030 gehae.","Kettenrad einfach
 1 1/2"" Z34 TL3030 vorbereitet
 Nabenüberstand 25/27
 Zahnkranz gehärtet"
-1970074,"Kettenrad B-2 1"" Z16 d=50mm","Kettenrad
+550,"Kettenrad B-2 1"" Z16 d=50mm","Kettenrad
 B-2 1"" Z16 geb.50mm
 DIN 8187"
-320240,Wellendichtring 35x62x10 NBR/VA B,"Wellendichtring
+551,Wellendichtring 35x62x10 NBR/VA B,"Wellendichtring
 35x62x10
 Form B
 NBR/VA
 DOMSEL"
-680283,"Kettenrad B-2 5/8"" Z30 vorg.gehae.","Kettenrad
+552,"Kettenrad B-2 5/8"" Z30 vorg.gehae.","Kettenrad
 für Zweifach-Rollenkette B-2
 5/8""
 Z = 30
 vorgebohrt
 Zahnkranz gehärtet"
-1960351,GT-Motor SA57DRN90L4,"Getriebemotor
+553,GT-Motor SA57DRN90L4,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 SA57DRN90L4
 Leistung [kW]:                  1,500 kW
@@ -3931,7 +3931,7 @@ Klemmkastenlage:                270 NORMAL
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse:         IE3 Premium Efficiency"
-1970211,Servomotor 1FT60616AF713TA0,"Servomotor
+554,Servomotor 1FT60616AF713TA0,"Servomotor
 Hersteller Siemens
 Typenbezeichnung 1FT6061-6AF71-3TA0
 Motorleistung 1,100 kW
@@ -3942,11 +3942,11 @@ Isolierklasse F
 Schutzart IP64
 Leistungs-Signalstecker A x ial BS
 Resolver 2-polig P=1"
-1970141,"O-Ring 33,05 x 1,78 mm NBR70 Shore","O-Ring
+555,"O-Ring 33,05 x 1,78 mm NBR70 Shore","O-Ring
 33,05 x 1,78
 70 Shore
 NBR"
-420764,Servomotor 1PH7133-2HF03-0BB3,"Servomotor 1PH7133-2HF03-0BB3
+556,Servomotor 1PH7133-2HF03-0BB3,"Servomotor 1PH7133-2HF03-0BB3
 1.Leistung                      15,00 kW
 1.Antr.Drehzahl                 1.780,0  1/min
 Bauform                         Fuß-/Flanschausführung B35
@@ -3954,12 +3954,12 @@ Spannung                        400D
 Frequenz                        60 Hz
 Isolierklasse                   Iso-Kl.:F (tmax=155°C)
 Schutzart                       IP54-Staubablag./Spritzwasser"
-1970228,Schraube M12x40 DIN 6912 10.9 schwarz.,"Zylinderschraube mit Innensechskant
+557,Schraube M12x40 DIN 6912 10.9 schwarz.,"Zylinderschraube mit Innensechskant
 M12 x 40
 DIN 6912
 10.9
 schwarz"
-1963323,GT-Motor WAF30DRN80MK4TH,"Getriebemotor
+558,GT-Motor WAF30DRN80MK4TH,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 WAF30DRN80MK4TH
 Leistung [kW]:                  0,550 kW
@@ -3972,16 +3972,16 @@ Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970390,Radialwellendichtring 35x62x7 HMS5RG SKF,"Radialwellendichtring
+559,Radialwellendichtring 35x62x7 HMS5RG SKF,"Radialwellendichtring
 35x62x7
 HMS5RG
 SKF"
-1970311,Lager 61832 2RSMW SKF,"Rillenkugellager
+560,Lager 61832 2RSMW SKF,"Rillenkugellager
 61832 2RS-MW
 SKF"
-790444,"Kettenrad B-3 1 1/2"" Z20 vorg.gehae.","Kettenrad B-3 1 1/2"" Z20
+561,"Kettenrad B-3 1 1/2"" Z20 vorg.gehae.","Kettenrad B-3 1 1/2"" Z20
 Vorgebohrt gehaertet"
-1970111,Servomotor 1FK71035AF811YY3Z,"Servomotor
+562,Servomotor 1FK71035AF811YY3Z,"Servomotor
 Hersteller KUKA
 Typbezeichnung 1FK7103-5AF81 1YY3-Z
 Leistung 6,900 kW
@@ -3992,12 +3992,12 @@ Nennstrom 17 A
 Isolierklasse F
 Schutzart IP65
 Art.Nr.: 131492"
-1970193,Schraube M8 x 30 DIN 912 10.9 schw.,"Zylinderschraube mit Innensechskant
+563,Schraube M8 x 30 DIN 912 10.9 schw.,"Zylinderschraube mit Innensechskant
 M8 x 30
 DIN 912
 10.9
 schwarz"
-1970208,Kettenrad KR90D100 Z10 d=90H7,"Kettenrad
+564,Kettenrad KR90D100 Z10 d=90H7,"Kettenrad
 KR90D100
 Z = 10
 10 Zähne, Zahnbreite 11 mm, nach oben verlängert
@@ -4005,23 +4005,23 @@ Rollendurchmesser 45mm
 Nabengesamtlänge 71 mm, einseitig
 Nabendurchmesser 130mm
 aus S152-3, ungehärtet, mit Bohrung 90H7 ohne Nut"
-1908674,Lager 23224 CC/W33-C4 SKF,"Lager
+565,Lager 23224 CC/W33-C4 SKF,"Lager
 23224
 CC/W33-C4
 SKF"
-1970230,Servomotor AG04B,"Servomotor
+566,Servomotor AG04B,"Servomotor
 Hersteller PSE
 Typbezeichnung AG04B
 Leistung 0,160 kW
 Spannung [50Hz] 24V DC
 Strom 6,6 A"
-1539074,Servomotor AG04B,"Servomotor
+567,Servomotor AG04B,"Servomotor
 Hersteller                     PSE
 Typbezeichnung                 AG04B
 Leistung                       0,160 kW
 Spannung [50Hz]                24V DC
 Strom                          6,6 A"
-1970434,GT-Motor SA57DRN90L4,"Getriebemotor
+568,GT-Motor SA57DRN90L4,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: SA57DRN90L4
 Leistung [kW]: 1,500 kW
@@ -4035,7 +4035,7 @@ Klemmkastenlage: 270 NORMAL
 Isolierklasse: Iso-Kl.:F (tmax=155°C)
 Schutzart: IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse: IE3 Premium Efficiency"
-1970185,GT-Motor FA77DV100L4,"Getriebemotor
+569,GT-Motor FA77DV100L4,"Getriebemotor
 Hersteller SEW
 Typbezeichnung FA77DV100L4
 Motorleistung 3,000 kW
@@ -4045,12 +4045,12 @@ Spannung 230D/400Y
 Bauform M1
 Isolierklasse F
 Schutzart IP54"
-1970061,Schraube 12 x 180 DIN 571 4.6 verz.,"Sechskant - Holzschraube
+570,Schraube 12 x 180 DIN 571 4.6 verz.,"Sechskant - Holzschraube
 DIN 571
 12 x 180
 4.6
 galvanisch verzinkt"
-1959041,GT-Motor R67DRN112M4TFAL,"Getriebemotor
+571,GT-Motor R67DRN112M4TFAL,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 R67DRN112M4TFAL
 Leistung [kW]:                  4,000 kW
@@ -4068,7 +4068,7 @@ Fremdlüfter:                    Nein
 Motor-Bremse:                   Nein
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970417,Servomotor 1PH7133-7HF03-0BB3-ZNOYF,"Servomotor
+572,Servomotor 1PH7133-7HF03-0BB3-ZNOYF,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1PH7133-7HF03-0BB3-ZNOYF
 Leistung [kW]: 13,500 kW
@@ -4076,14 +4076,14 @@ N1 Antriebsdrehzahl: 1.500,00 1/min
 Bauform: B35
 Isolierklasse: Iso-Kl.:F (tma x =155°C)
 Schutzart: IP55-Staubablage/Strahlwasser"
-1970189,PN-Zylinder ADN-25-30-A-P-A 536256 FESTO,"Kompaktzylinder
+573,PN-Zylinder ADN-25-30-A-P-A 536256 FESTO,"Kompaktzylinder
 ADN-25-30-A-P-A
 536256
 FESTO"
-1970431,Lager 1210 SKF,"Lager
+574,Lager 1210 SKF,"Lager
 1210
 SKF"
-1964138,GT-Motor R97DRN132M4TF,"Getriebemotor
+575,GT-Motor R97DRN132M4TF,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 R97DRN132M4TF
 Leistung [kW]:                  7,500 kW
@@ -4099,27 +4099,27 @@ Fremdlüfter:                    Nein
 Motor-Bremse:                   Nein
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-516718,"O-Ring 33,30x2,40mm Viton FPM","O-Ring
+576,"O-Ring 33,30x2,40mm Viton FPM","O-Ring
 33,30x2,40mm
 Viton FKM/FPM"
-1970125,Mutter M36 x 2 DIN 439-04 verz.,"Sechskantmutter niedrig
+577,Mutter M36 x 2 DIN 439-04 verz.,"Sechskantmutter niedrig
 M36 x 2
 DIN 439-04
 verzinkt"
-1970300,Touch Panel 6AV2128-3MB06-0AX1 SIEMENS,"Touch Panel
+578,Touch Panel 6AV2128-3MB06-0AX1 SIEMENS,"Touch Panel
 12""
 6AV2128-3MB06-0AX1
 SIEMENS"
-1970066,Schraube M20x260 DIN 931 8.8 verzinkt.,"Hexagonschraube mit Schaft
+579,Schraube M20x260 DIN 931 8.8 verzinkt.,"Hexagonschraube mit Schaft
 M20x260
 DIN 931
 8.8
 verzinkt"
-1970270,"ORing 33,3mm 90Sh FKM NBR","ORing
+580,"ORing 33,3mm 90Sh FKM NBR","ORing
 33,3mm
 90Sh
 FKM NBR"
-1970433,GT-Motor SA57DRN90L4,"Getriebemotor
+581,GT-Motor SA57DRN90L4,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: SA57DRN90L4
 Leistung [kW]: 1,500 kW
@@ -4133,16 +4133,16 @@ Klemmkastenlage: 270 NORMAL
 Isolierklasse: Iso-Kl.:F (tma x =155°C)
 Schutzart: IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse: IE3 Premium Efficiency"
-1970044,Mutter M36x2 DIN 934-8 Feingewindeschwarz,"Hexagonmutter
+582,Mutter M36x2 DIN 934-8 Feingewindeschwarz,"Hexagonmutter
 M36X2 DIN 934-8 Feingewindeschwarz"
-1970415,Servomotor 1FT7105-5SF70-1CA0,"Servomotor
+583,Servomotor 1FT7105-5SF70-1CA0,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1FT7105-5SF70-1CA0
 N1 Antriebsdrehzahl: 3.000,00 1/min
 Antriebsmoment: 48,00 NM
 Isolierklasse: Iso-Kl.:F (tma x =155°C)
 Schutzart: IP55-Staubablage/Strahlwasser"
-1525379,Servomotor AM8052-1J21-9000,"Servomotor
+584,Servomotor AM8052-1J21-9000,"Servomotor
 Hersteller                     BECKHOFF
 Typbezeichnung                 AM8052-1J21-9000
 N1 Antriebsdrehzahl            4,000.00 1/min
@@ -4151,7 +4151,7 @@ Bauform                        B5
 Isolierklasse                  F
 Schutzart                      IP54
 Art.Nr.:                       10779584"
-1970358,GT-Motor KH67DRN112M4BE5KCCTF,"Getriebemotor
+585,GT-Motor KH67DRN112M4BE5KCCTF,"Getriebemotor
 Hersteller: SEW
 Typbezeichnung: KH67 DRN112M4/BE5/KCC/TF
 Leistung [kW]: 4,000 kW
@@ -4167,20 +4167,20 @@ Motor-Bremse: BE5
 Bremsgroesse: 400V AC 55Nm
 Energieeffizienzklasse: IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1970079,"O-Ring 34,00 x 3,00 mm NBR 90 Shore A","O-Ring
+586,"O-Ring 34,00 x 3,00 mm NBR 90 Shore A","O-Ring
 34,00 x 3,00 mm
 WST: NBR
 90° Shore A"
-1970064,Schraube M6x30 DIN 933 5.6 verzinkt.,"Hexagonschraube mit Gewinde bis Kopf
+587,Schraube M6x30 DIN 933 5.6 verzinkt.,"Hexagonschraube mit Gewinde bis Kopf
 DIN 933
 M6x30
 5.6
 verzinkt"
-1609205,PN-Zylinder ADN-25-40-I-P-A 536265 FESTO,"Kompaktzylinder
+588,PN-Zylinder ADN-25-40-I-P-A 536265 FESTO,"Kompaktzylinder
 ADN-25-40-I-P-A
 536265
 FESTO"
-1525455,Servomotor AM8043-0E20-0000,"Servomotor
+589,Servomotor AM8043-0E20-0000,"Servomotor
 Hersteller                     BECKHOFF
 Typbezeichnung                 AM8043-0E20-0000
 N1 Antriebsdrehzahl            2,500.00 1/min
@@ -4189,21 +4189,21 @@ Bauform                        B5
 Isolierklasse                  F
 Schutzart                      IP54
 Art.Nr.:                       10765906"
-1559995,Schraube M20x100 DIN931 8.8 schw.,"Sechskantschraube mit Schaft
+590,Schraube M20x100 DIN931 8.8 schw.,"Sechskantschraube mit Schaft
 M20 x 100
 DIN 931
 8.8
 schwarz"
-1970273,O-Ring 33 x 2-FKM80 0009632305 LINDE,"O-Ring
+591,O-Ring 33 x 2-FKM80 0009632305 LINDE,"O-Ring
 33 x 2-FKM80
 0009632305
 LINDE"
-1779278,Mutter M36 LH 00746249 SIEMPELKAMP,"Sechskantmutter
+592,Mutter M36 LH 00746249 SIEMPELKAMP,"Sechskantmutter
 M36 LH
 Pos. 31
 00746249
 SIEMPELKAMP"
-1970399,Servomotor 1PH7163-7HF33-0BB3-Z M39,"Servomotor
+593,Servomotor 1PH7163-7HF33-0BB3-Z M39,"Servomotor
 Hersteller: Siemens
 Typbezeichnung: 1PH7163-7HF33-0BB3-Z M39
 Leistung [kW]: 31,000 kW
@@ -4212,85 +4212,85 @@ Spannung [50Hz]: 364Y
 Bauform: B35
 Isolierklasse: Iso-Kl.:F (tma x =155°C)
 Schutzart: IP54-Staubablage/Spritzwasser"
-1904114,Lager BS222222RS5VT143 SKF,"Lager
+594,Lager BS222222RS5VT143 SKF,"Lager
 BS222222RS5VT143
 SKF"
-1913640,Lager 22328 CCKC3W33 SKF,"Pendelrollenlager
+595,Lager 22328 CCKC3W33 SKF,"Pendelrollenlager
 22328 CCK/C3W33
 SKF"
-1970069,Mutter M36 DIN 982-8 verz.,"Sechskantmutter mit Polyamidklemmteil
+596,Mutter M36 DIN 982-8 verz.,"Sechskantmutter mit Polyamidklemmteil
 hohe Form
 M36
 DIN 982-8
 verzinkt"
-1970091,Schraube M6 x 35 DIN 835 8.8 verz.,"Stiftschraube mit Einschraubende
+597,Schraube M6 x 35 DIN 835 8.8 verz.,"Stiftschraube mit Einschraubende
 M6 x 35
 DIN 835
 8.8
 verzinkt"
-1970122,Relais 3RU2126-4DB1 20-25A SIEMENS,"Überlastrelais
+598,Relais 3RU2126-4DB1 20-25A SIEMENS,"Überlastrelais
 3RU2126-4DB1
 20-25A
 SIEMENS"
-1557333,Schraube M6x35 DIN835 8.8 verz.,"Stiftschraube mit Einschraubende
+599,Schraube M6x35 DIN835 8.8 verz.,"Stiftschraube mit Einschraubende
 M6 x 35
 DIN 835
 8.8
 verzinkt"
-1904371,"O-Ring 33,3mm 90Sh FKM NBR","O-Ring
+600,"O-Ring 33,3mm 90Sh FKM NBR","O-Ring
 33,3mm
 90Sh
 FKM NBR"
-108511,"O-Ring 34,00x3,50mm 70 Shore","O-Ring
+601,"O-Ring 34,00x3,50mm 70 Shore","O-Ring
 34,00 x 3,50 mm
 70° Shore"
-135816,Mutter M36x2 DIN934-8 Feinge.schw,"Sechskantmutter
+602,Mutter M36x2 DIN934-8 Feinge.schw,"Sechskantmutter
 M36X2 DIN 934-8 Feinge.schw"
-109464,"O-Ring 34,00x3,00mm 70 Shore","O-Ring
+603,"O-Ring 34,00x3,00mm 70 Shore","O-Ring
 34,00 x 3,00 mm
 70° Shore"
-113592,Wellendichtring 35x62x12 BASL,"Wellendichtring
+604,Wellendichtring 35x62x12 BASL,"Wellendichtring
 35x62x12
 BASL"
-113596,Wellendichtring 35x62x5 BASL,"Wellendichtring
+605,Wellendichtring 35x62x5 BASL,"Wellendichtring
 35 x 62 x 5mm
 BASL"
-123911,Mutter M36 DIN934-8 verz.,"Sechskantmutter
+606,Mutter M36 DIN934-8 verz.,"Sechskantmutter
 M36 DIN 934-8 verz."
-516718,"O-Ring 33,30x2,40mm Viton FPM","O-Ring
+607,"O-Ring 33,30x2,40mm Viton FPM","O-Ring
 33,30x2,40mm
 Viton FKM/FPM"
-105755,Schraube M12x30 DIN933 5.6 verz.,"Sechskantschraube mit Gewinde bis Kopf
+608,Schraube M12x30 DIN933 5.6 verz.,"Sechskantschraube mit Gewinde bis Kopf
 DIN 933
 M12x30
 5.6
 verzinkt"
-105772,Schraube M6x25 DIN933 5.6 verz.,"Sechskantschraube mit Gewinde bis Kopf
+609,Schraube M6x25 DIN933 5.6 verz.,"Sechskantschraube mit Gewinde bis Kopf
 DIN 933
 M6x25
 5.6
 verzinkt"
-106064,Schraube M10x120 DIN603 4.6 verz.,"Flachrundschraube mit Vierkantansatz
+610,Schraube M10x120 DIN603 4.6 verz.,"Flachrundschraube mit Vierkantansatz
 DIN 603
 M10x120
 4.6
 verzinkt"
-106075,Schraube 12x180 DIN571 4.6 verz.,"Sechskant - Holzschraube
+611,Schraube 12x180 DIN571 4.6 verz.,"Sechskant - Holzschraube
 DIN 571
 12x180
 4.6
 galvanisch verzinkt"
-105767,Schraube M6x30 DIN933 5.6 verz.,"Sechskantschraube mit Gewinde bis Kopf
+612,Schraube M6x30 DIN933 5.6 verz.,"Sechskantschraube mit Gewinde bis Kopf
 DIN 933
 M6x30
 5.6
 verzinkt"
-106060,Schraube M20x260 DIN931 8.8 verz.,"Sechskantschraube mit Schaft
+613,Schraube M20x260 DIN931 8.8 verz.,"Sechskantschraube mit Schaft
 M20x260
 DIN 931
 8.8
 verzinkt"
-165212,Servomotor 373E45402022050FG,"Servomotor
+614,Servomotor 373E45402022050FG,"Servomotor
 Hersteller                   BAELZ
 Typbezeichnung               373.220V
                              373.E45-40-20-220-50-Fg
@@ -4301,12 +4301,12 @@ Bedienung                    Manuell
 Potentiometer                200 Ohm
 Ventil Hub                   12mm
 Art.Nr.:                     00.373-E40-40-20-001"
-380433,Mutter M36 DIN982-8 verz.,"Sechskantmutter mit Polyamidklemmteil
+615,Mutter M36 DIN982-8 verz.,"Sechskantmutter mit Polyamidklemmteil
 hohe Form
 M36
 DIN 982-8
 verzinkt"
-1536696,Servomotor 30PM068,"Servomotor
+616,Servomotor 30PM068,"Servomotor
 Hersteller                     SIBONI
 Typbezeichnung                 30PM068
 Leistung [kW]                  45,000 W
@@ -4315,23 +4315,23 @@ Antriebsmoment                 0,22 NM
 Spannung [50Hz]                24
 Isolierklasse                  F
 Schutzart                      IP44"
-790947,"Kettenrad B-2 1"" Z16 d=50mm","Kettenrad
+617,"Kettenrad B-2 1"" Z16 d=50mm","Kettenrad
 B-2 1"" Z16 geb.50mm
 DIN 8187"
-790948,"Kettenrad B-2 1"" Z16 d=75mm","Kettenrad
+618,"Kettenrad B-2 1"" Z16 d=75mm","Kettenrad
 B-2 1""
 Z = 16
 geb.75mm
 DIN 8187"
-790955,"Kettenrad B-1 5/8"" Z13 K 9183-4.2.3","Kettenrad
+619,"Kettenrad B-1 5/8"" Z13 K 9183-4.2.3","Kettenrad
 B-1 5/8"" Z13
 K 9183-4.2.3
 DIN 8187"
-1602710,"O-Ring 34,00x3,00mm NBR 90 Shore A","O-Ring
+620,"O-Ring 34,00x3,00mm NBR 90 Shore A","O-Ring
 34,00 x 3,00 mm
 WST: NBR
 90° Shore A"
-1188016,Servomotor AM80520J210000,"Servomotor
+621,Servomotor AM80520J210000,"Servomotor
 Hersteller                     BECKHOFF
 Typbezeichnung                 AM8052-0J21-0000
 Leistung                       2,890 kW
@@ -4344,7 +4344,7 @@ Schutzart                      IP54
 Motor-Bremse                   24V DC 18W
 Thermo KTY                     Ja
 Art.Nr.:                       138325"
-1188127,Servomotor AM80330E210000,"Servomotor
+622,Servomotor AM80330E210000,"Servomotor
 Hersteller                     BECKHOFF
 Typbezeichnung                 AM8033-0E21-0000
 Leistung                       0,940 kW
@@ -4357,32 +4357,32 @@ Schutzart                      IP54
 Motor-Bremse                   24V DC 12W
 Thermo KTY                     Ja
 Art.Nr.:                       139774"
-1194011,"O-Ring 33,0x5,0mm Viton FPM 80 Shore","O-Ring
+623,"O-Ring 33,0x5,0mm Viton FPM 80 Shore","O-Ring
 33,00 x 5,00mm
 WST: Viton FPM
 80° Shore"
-831460,Servomotor AB8 AM40 SCHIEBEL,"Servomotor
+624,Servomotor AB8 AM40 SCHIEBEL,"Servomotor
 Hersteller                     SCHIEBEL
 Typbezeichnung                 AB8 AM40 2WER 2WEL H AK40 K2
 Motorleistung                  0,750 kW
 Antriebsdrehzahl N1            40,00 1/min
 Antriebsmoment                 90,00 NM"
-1557024,Schraube M6x30 DIN835 8.8 verz.,"Stiftschraube mit Einschraubende
+625,Schraube M6x30 DIN835 8.8 verz.,"Stiftschraube mit Einschraubende
 M6 x 30
 DIN 835
 8.8
 verzinkt"
-1557333,Schraube M6x35 DIN835 8.8 verz.,"Stiftschraube mit Einschraubende
+626,Schraube M6x35 DIN835 8.8 verz.,"Stiftschraube mit Einschraubende
 M6 x 35
 DIN 835
 8.8
 verzinkt"
-1557420,Schraube M6x50 DIN835 8.8 verz.,"Stiftschraube mit Einschraubende
+627,Schraube M6x50 DIN835 8.8 verz.,"Stiftschraube mit Einschraubende
 M6 x 50
 DIN 835
 8.8
 verzinkt"
-1525379,Servomotor AM8052-1J21-9000,"Servomotor
+628,Servomotor AM8052-1J21-9000,"Servomotor
 Hersteller                     BECKHOFF
 Typbezeichnung                 AM8052-1J21-9000
 N1 Antriebsdrehzahl            4,000.00 1/min
@@ -4391,7 +4391,7 @@ Bauform                        B5
 Isolierklasse                  F
 Schutzart                      IP54
 Art.Nr.:                       10779584"
-1525406,Servomotor AM8043-0H20-0000,"Servomotor
+629,Servomotor AM8043-0H20-0000,"Servomotor
 Hersteller                     BECKHOFF
 Typbezeichnung                 AM8043-0H20-0000
 N1 Antriebsdrehzahl            5,000.00 1/min
@@ -4400,7 +4400,7 @@ Bauform                        B5
 Isolierklasse                  F
 Schutzart                      IP54
 Art.Nr.:                       10802980"
-1525446,Servomotor AM8051-1G21-9000,"Servomotor
+630,Servomotor AM8051-1G21-9000,"Servomotor
 Hersteller                     BECKHOFF
 Typbezeichnung                 AM8051-1G21-9000
 N1 Antriebsdrehzahl            5,000.00 1/min
@@ -4409,7 +4409,7 @@ Bauform                        B5
 Isolierklasse                  F
 Schutzart                      IP54
 Art.Nr.:                       10802210"
-1525455,Servomotor AM8043-0E20-0000,"Servomotor
+631,Servomotor AM8043-0E20-0000,"Servomotor
 Hersteller                     BECKHOFF
 Typbezeichnung                 AM8043-0E20-0000
 N1 Antriebsdrehzahl            2,500.00 1/min
@@ -4418,19 +4418,19 @@ Bauform                        B5
 Isolierklasse                  F
 Schutzart                      IP54
 Art.Nr.:                       10765906"
-1552839,PN-Schlauch PUN-8-BL-400-HA FESTO,"Kunststoffschlauch
+632,PN-Schlauch PUN-8-BL-400-HA FESTO,"Kunststoffschlauch
 PUN-8-BL-400-HA
 553573
 FESTO"
-1559995,Schraube M20x100 DIN931 8.8 schw.,"Sechskantschraube mit Schaft
+633,Schraube M20x100 DIN931 8.8 schw.,"Sechskantschraube mit Schaft
 M20 x 100
 DIN 931
 8.8
 schwarz"
-1521517,Modul 3SU1400-1AA10-3HA0 SIEMENS,"Kontaktmodul
+634,Modul 3SU1400-1AA10-3HA0 SIEMENS,"Kontaktmodul
 3SU1400-1AA10-3HA0
 SIEMENS"
-1384853,Servomotor 1FK71055AY811YY3Z,"Servomotor
+635,Servomotor 1FK71055AY811YY3Z,"Servomotor
 Hersteller                     KUKA
 Typbezeichnung                 1FK7105-5AY81-1YY3-Z
 Leistung                       4,300 kW
@@ -4441,7 +4441,7 @@ Nennstrom                      15,5 A
 Isolierklasse                  F
 Schutzart                      IP65
 Art.Nr.:                       131491"
-1384893,Servomotor 1FK71035AF811YY3Z,"Servomotor
+636,Servomotor 1FK71035AF811YY3Z,"Servomotor
 Hersteller                     KUKA
 Typbezeichnung                 1FK7103-5AF81 1YY3-Z
 Leistung                       6,900 kW
@@ -4452,7 +4452,7 @@ Nennstrom                      17 A
 Isolierklasse                  F
 Schutzart                      IP65
 Art.Nr.:                       131492"
-1412376,Servomotor 1FK71035AY711SY3Z,"Servomotor
+637,Servomotor 1FK71035AY711SY3Z,"Servomotor
 Hersteller                     KUKA
 Typbezeichnung                 1FK7103-5AY71-1SY3-Z
 Leistung                       6,600 kW
@@ -4460,27 +4460,27 @@ N1 Antriebsdrehzahl            3.000,00 1/min
 Spannung                       209V
 Isolierklasse                  F
 Schutzart                      IP65"
-1357597,O-Ring 330x7mm 70 Shore 15610.0019 JAUDT,"O-Ring
+638,O-Ring 330x7mm 70 Shore 15610.0019 JAUDT,"O-Ring
 330,00 x 7,00mm
 70° Shore
 15610.0019
 JAUDT"
-1679593,Servomotor 5/2.720.001.002,"Servomotor
+639,Servomotor 5/2.720.001.002,"Servomotor
 Herstellerteilenummer:          XXX_ESITRON
 Hersteller:                     ESITRON
 Typbezeichnung:                 5/2.720.001.002
 N1 Antriebsdrehzahl:            3.000,00 1/min
 Antriebsmoment:                 0,50 NM
 Spannung:                       48V DC"
-1731540,"O-Ring 330,30x5,70mm FPM 70 Shore A","O-Ring
+640,"O-Ring 330,30x5,70mm FPM 70 Shore A","O-Ring
 330,30 х 5,70 mm
 WST: FPM
 70° Shore A"
-1348000,Relais 3RU2126-4DB1 20-25A SIEMENS,"Überlastrelais
+641,Relais 3RU2126-4DB1 20-25A SIEMENS,"Überlastrelais
 3RU2126-4DB1
 20-25A
 SIEMENS"
-1610187,"Getriebe  R47A i=12,54","Getriebe
+642,"Getriebe  R47A i=12,54","Getriebe
 Hersteller:                     SEW
 Typbezeichnung:                 R87/A
 N1 Antriebsdrehzahl:            1.400,00 1/min
@@ -4489,36 +4489,36 @@ Drehmoment:                     520,00 NM
 Getriebeübersetzung i:          19,100
 Bauform:                        M1
 Getriebeausführung:             Stirnradgetriebe"
-1619853,Mutter M36x2 DIN439-04 verz.,"Sechskantmutter niedrig
+643,Mutter M36x2 DIN439-04 verz.,"Sechskantmutter niedrig
 M36 x 2
 DIN 439-04
 verzinkt"
-1492093,Mutter M36 DIN982-8 A2,"Sechskantmutter mit Klemmteil
+644,Mutter M36 DIN982-8 A2,"Sechskantmutter mit Klemmteil
 hohe Form
 M36
 DIN 982-8
 A2
 Edelstahl"
-790444,"Kettenrad B-3 1 1/2"" Z20 vorg.gehae.","Kettenrad B-3 1 1/2"" Z20
+645,"Kettenrad B-3 1 1/2"" Z20 vorg.gehae.","Kettenrad B-3 1 1/2"" Z20
 Vorgebohrt gehaertet"
-682544,"Kettenrad B-2 1 1/4"" Z25 TLB 3030","Kettenraeder fuer Zweifach-Rollenkette
+646,"Kettenrad B-2 1 1/4"" Z25 TLB 3030","Kettenraeder fuer Zweifach-Rollenkette
 1 1/4"" Z25 fuer TL 3030"
-320240,Wellendichtring 35x62x10 NBR/VA B,"Wellendichtring
+647,Wellendichtring 35x62x10 NBR/VA B,"Wellendichtring
 35x62x10
 Form B
 NBR/VA
 DOMSEL"
-791463,Kettenrad 12B-1 Z13 d=18 m.Nut gehae.,"Kettenrad gehärtet
+648,Kettenrad 12B-1 Z13 d=18 m.Nut gehae.,"Kettenrad gehärtet
 12B-1
 Z = 13
 D = 18mm
 mit Nut
 M6"
-791945,"Kettenrad B-1 1 1/2"" Z34 TLB 3030 gehae.","Kettenrad einfach
+649,"Kettenrad B-1 1 1/2"" Z34 TLB 3030 gehae.","Kettenrad einfach
 1 1/2"" Z34 TL3030 vorbereitet
 Nabenüberstand 25/27
 Zahnkranz gehärtet"
-793260,Kettenrad KR16B-1 Z20 G-35/60SK,"Kettenrad KR16B-1 Z=20G-35/60SK
+650,Kettenrad KR16B-1 Z20 G-35/60SK,"Kettenrad KR16B-1 Z=20G-35/60SK
 1"" x 17,02 x 15,88mm
 DIN 8187, z=20
 passend zur Einfach-Rollenkette DIN 8187,
@@ -4530,59 +4530,59 @@ Nabendurchmesser 85 mm, Bohrungsdurchmesser 35 mm H7
 30 mm tief für Ringspannelement 3560, einteilig,
 Zähne gehärtet
 FB KETTEN"
-949599,"O-Ring 33,05x1,78mm NBR70 Shore","O-Ring
+651,"O-Ring 33,05x1,78mm NBR70 Shore","O-Ring
 33,05 x 1,78
 70 Shore
 NBR"
-994445,"Mutter M36x1,5 DIN439-04 verz.","Sechskantmutter niedrig
+652,"Mutter M36x1,5 DIN439-04 verz.","Sechskantmutter niedrig
 M30 x 1,5
 DIN 439-04
 verzinkt"
-973456,"O-Ring 33,50x2,00mm N 01095200 KSB","O-Ring
+653,"O-Ring 33,50x2,00mm N 01095200 KSB","O-Ring
 33,5 x 2,0mm
 N
 01095200
 KSB"
-1060050,Schraube M30x240 DIN912 12.9 schw.,"Zylinderschraube mit Innensechskant
+654,Schraube M30x240 DIN912 12.9 schw.,"Zylinderschraube mit Innensechskant
 M30 x 240
 DIN 912
 12.9
 schwarz"
-1060906,Schraube M12x60 DIN603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
+655,Schraube M12x60 DIN603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
 DIN 603
 M12x60
 8.8
 verzinkt"
-1061069,Schraube M12x100 DIN603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
+656,Schraube M12x100 DIN603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
 DIN 603
 M12x100
 8.8
 verzinkt"
-1061095,Schraube M12x40 DIN603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
+657,Schraube M12x40 DIN603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
 M12x40
 DIN 603
 8.8
 verzinkt"
-1067934,PN-Zylinder ADN-25-25-I-P-A 536263 FESTO,"Kompaktzylinder
+658,PN-Zylinder ADN-25-25-I-P-A 536263 FESTO,"Kompaktzylinder
 ADN-25-25-I-P-A
 536263
 FESTO"
-1357632,PN-Zylinder ADN-25-40-A-P-A 536257 FESTO,"Kompaktzylinder
+659,PN-Zylinder ADN-25-40-A-P-A 536257 FESTO,"Kompaktzylinder
 ADN-25-40-A-P-A
 536257
 FESTO"
-791559,Kettenrad 3-518-11-0150 HOMAG,"Kettenrad gehärtet
+660,Kettenrad 3-518-11-0150 HOMAG,"Kettenrad gehärtet
 10B-1
 Z = 14
 D35+K 1:12
 3-518-11-0150
 HOMAG"
-1061094,Schraube M12x70 DIN603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
+661,Schraube M12x70 DIN603 8.8 verz.,"Flachrundschraube mit Vierkantansatz
 DIN 603
 M12x70
 8.8
 verzinkt"
-785291,Getriebe  K2L30080WP71111LUR,"Getriebe
+662,Getriebe  K2L30080WP71111LUR,"Getriebe
 Getriebehersteller             NOVENTAS
 Getriebetyp                    K2L30080WP71111LUR
 Herstellerserialnummer         01991249
@@ -4631,23 +4631,23 @@ No: W11351
 Ident.Nr.:01991249
 Auftragsnummer: 7070360/V8223801
 Siempelkamp Teilenummer1: 01991249"
-880349,Wellendichtring 35x62x8 BAUMSL Viton,"Wellendichtring
+663,Wellendichtring 35x62x8 BAUMSL Viton,"Wellendichtring
 35x62x8
 BAUMSL Viton"
-969889,Servomotor 1FK71035AF711AH3Z,"Servomotor
+664,Servomotor 1FK71035AF711AH3Z,"Servomotor
 Hersteller                     SIEMENS
 Typbezeichnung                 1FK71035AF711AH3Z
 Antriebsdrehzahl N1            3.000,00 1/min
 Antriebsmoment                 36,00 NM
 Isolierklasse                  F
 Schutzart                      IP64"
-948139,Wellendichtring 35x62x7 B1SL,"Wellendichtring
+665,Wellendichtring 35x62x7 B1SL,"Wellendichtring
 35x62x7
 B1SL"
-1163299,Thermistor 3RN1011-1BB00 SIEMENS,"Thermistor-Motorschutz
+666,Thermistor 3RN1011-1BB00 SIEMENS,"Thermistor-Motorschutz
 3RN1011-1BB00
 SIEMENS"
-194655,Servomotor 373E11Z2006S21,"Servomotor
+667,Servomotor 373E11Z2006S21,"Servomotor
 Hersteller                BAELZ
 Typbezeichnung            373 E11 Z-20-06-S21
 Antriebsmoment            2000 Nm
@@ -4655,7 +4655,7 @@ Antriebsdrehzahl          6mm/min
 Spannung                  230 V - 115 V
 Isolierklasse             0-50°C - 0-75°C
 Schutzart                 IP44"
-195604,Servomotor 1FT60621AH713AH1,"Synchron-Servomotor Drehantrieb
+668,Servomotor 1FT60621AH713AH1,"Synchron-Servomotor Drehantrieb
 Hersteller                     SIEMENS
 Typbezeichnung                 1FT6062-1AH71-3AH1
 Mo:                            5,0 / 6,0Nm
@@ -4663,7 +4663,7 @@ Mh:                            3,6Nm
 Antriebsdrehzahl N1            4.500,00 1/min
 Spannung                       288V
 Motorbremse                    24V / 17W"
-195609,GT-Motor KA37DRS80S4TH,"Getriebemotor
+669,GT-Motor KA37DRS80S4TH,"Getriebemotor
 Hersteller                     SEW
 Typbezeichnung                 KA37DRS80S4/TH
 Motorleistung                  0,750 kW
@@ -4675,22 +4675,22 @@ Isolierklasse                  F
 Schutzart                      IP54
 Ausführungsart                 Hohlwelle
 Hohlwelle                      d = 30mm"
-185876,"Kette 081 12,70 1/2""x3,30mm DIN8187","Rollenkette
+670,"Kette 081 12,70 1/2""x3,30mm DIN8187","Rollenkette
 081
 Teilung: 12,70mm (1/2"")
 Innere Breite: 3,30mm
 DIN 8187"
-234932,"O-Ring 33,30x2,40mm Viton FPM 85 Shore","O-Ring
+671,"O-Ring 33,30x2,40mm Viton FPM 85 Shore","O-Ring
 33,30 x 2,40mm
 WST: Viton FKM/FPM
 85° Shore"
-680283,"Kettenrad B-2 5/8"" Z30 vorg.gehae.","Kettenrad
+672,"Kettenrad B-2 5/8"" Z30 vorg.gehae.","Kettenrad
 für Zweifach-Rollenkette B-2
 5/8""
 Z = 30
 vorgebohrt
 Zahnkranz gehärtet"
-196043,GT-Motor FA77DV100L4,"Getriebemotor
+673,GT-Motor FA77DV100L4,"Getriebemotor
 Hersteller                     SEW
 Typbezeichnung                 FA77DV100L4
 Motorleistung                  3,000 kW
@@ -4700,26 +4700,26 @@ Spannung                       230D/400Y
 Bauform                        M1
 Isolierklasse                  F
 Schutzart                      IP54"
-242080,Mutter M8 DIN928 schw.,"Anschweißmutter
+674,Mutter M8 DIN928 schw.,"Anschweißmutter
 M8
 DIN 928 schwarz"
-319064,PN-Zylinder ADN-25-30-A-P-A 536256 FESTO,"Kompaktzylinder
+675,PN-Zylinder ADN-25-30-A-P-A 536256 FESTO,"Kompaktzylinder
 ADN-25-30-A-P-A
 536256
 FESTO"
-319065,PN-Zylinder ADN-25-50-A-P-A 536258 FESTO,"Kompaktzylinder
+676,PN-Zylinder ADN-25-50-A-P-A 536258 FESTO,"Kompaktzylinder
 ADN-25-50-A-P-A
 536258
 FESTO"
-155947,Schraube M8x30 DIN912 10.9 schw.,"Zylinderschraube mit Innensechskant
+677,Schraube M8x30 DIN912 10.9 schw.,"Zylinderschraube mit Innensechskant
 M8 x 30
 DIN 912
 10.9
 schwarz"
-191195,Lager 2217 KC3 SKF,"Lager
+678,Lager 2217 KC3 SKF,"Lager
 2217 KC3
 SKF"
-420800,Servomotor 1PH71072HF030BB3,"Servomotor
+679,Servomotor 1PH71072HF030BB3,"Servomotor
 Typbezeichnung                  1PH7107-2HF03-0BB3
 Motorleistung                   9,000 kW
 Antriebsdrehzahl N1             1.780,00  1/min
@@ -4731,7 +4731,7 @@ Schutzart                       IP54
 Motorbremse                     keine Bremse
 Motorgeber                      rel HTL 1024 INKU
 mit zusätzlichem Wellendichtring im Lagerdeckel versehen"
-420802,"Servomotor 1PH7103-2HF03  5,5kW  1500","Servomotor 1PH7103-2HF03-0BB3
+680,"Servomotor 1PH7103-2HF03  5,5kW  1500","Servomotor 1PH7103-2HF03-0BB3
 1.Leistung                      5,5 kW
 1.Antr.Drehzahl                 1.780,0  1/min
 Bauform                         Fuß-/Flanschausführung B35
@@ -4741,7 +4741,7 @@ Isolierklasse                   Iso-Kl.:F (tmax=155°C)
 Schutzart                       IP54-Staubablag./Spritzwasser
 Motorbremse                     keine Bremse
 Motorgeber                      rel HTL 1024 INKU"
-420764,Servomotor 1PH7133-2HF03-0BB3,"Servomotor 1PH7133-2HF03-0BB3
+681,Servomotor 1PH7133-2HF03-0BB3,"Servomotor 1PH7133-2HF03-0BB3
 1.Leistung                      15,00 kW
 1.Antr.Drehzahl                 1.780,0  1/min
 Bauform                         Fuß-/Flanschausführung B35
@@ -4749,10 +4749,10 @@ Spannung                        400D
 Frequenz                        60 Hz
 Isolierklasse                   Iso-Kl.:F (tmax=155°C)
 Schutzart                       IP54-Staubablag./Spritzwasser"
-675608,"Kettenrad B-2 1 1/4"" Z23 TLB 3030 gehae.","Kettenrad für Zweifach-Rollenkette
+682,"Kettenrad B-2 1 1/4"" Z23 TLB 3030 gehae.","Kettenrad für Zweifach-Rollenkette
 1 1/4"", Z23, für TL 3030
 Zahnflanken gehärtet"
-680363,Kettenrad KR90D100 Z10 d=85H7,"Kettenrad
+683,Kettenrad KR90D100 Z10 d=85H7,"Kettenrad
 KR90D100
 Z = 10
 10 Zähne, Zahnbreite 11 mm, nach oben verlängert
@@ -4760,7 +4760,7 @@ Rollendurchmesser 45mm
 Nabengesamtlänge 71 mm, einseitig
 Nabendurchmesser 130mm
 aus S152-3, ungehärtet, mit Bohrung 85H7 ohne Nut"
-680364,Kettenrad KR90D100 Z10 d=90H7,"Kettenrad
+684,Kettenrad KR90D100 Z10 d=90H7,"Kettenrad
 KR90D100
 Z = 10
 10 Zähne, Zahnbreite 11 mm, nach oben verlängert
@@ -4768,10 +4768,10 @@ Rollendurchmesser 45mm
 Nabengesamtlänge 71 mm, einseitig
 Nabendurchmesser 130mm
 aus S152-3, ungehärtet, mit Bohrung 90H7 ohne Nut"
-1041380,Servomotor 21586-088.34-3233-1 BUETTNER,"Servomotor
+685,Servomotor 21586-088.34-3233-1 BUETTNER,"Servomotor
 21586-088.34-3233-1
 BUETTNER"
-1124393,Servomotor 1FT60616AF713TA0,"Servomotor 		
+686,Servomotor 1FT60616AF713TA0,"Servomotor 		
 Hersteller               Siemens		
 Typenbezeichnung         1FT6061-6AF71-3TA0		
 Motorleistung            1,100 kW		
@@ -4782,141 +4782,141 @@ Isolierklasse            F
 Schutzart                IP64		
 Leistungs-Signalstecker  Axial BS		
 Resolver                 2-polig P=1"
-1060266,Schraube M10x60H DIN444B 8.8,"Augenschraube
+687,Schraube M10x60H DIN444B 8.8,"Augenschraube
 M10 x 60H
 DIN 444B
 10001815
 VARISCO"
-1082236,"O-Ring 339,30x5,70mm NBR70 Shore","O-Ring
+688,"O-Ring 339,30x5,70mm NBR70 Shore","O-Ring
 339,3 x 5,7mm
 WST: NBR
 70 Shore"
-1059959,Schraube M36x3x240 DIN912 12.9 schw.,"Zylinderschraube mit Innensechskant
+689,Schraube M36x3x240 DIN912 12.9 schw.,"Zylinderschraube mit Innensechskant
 M36 x 3 x 240
 DIN 912
 12.9
 schwarz"
-1779278,Mutter M36 LH 00746249 SIEMPELKAMP,"Sechskantmutter
+690,Mutter M36 LH 00746249 SIEMPELKAMP,"Sechskantmutter
 M36 LH
 Pos. 31
 00746249
 SIEMPELKAMP"
-542920,Wellendichtring 35x62x7 B1,"Wellendichtring
+691,Wellendichtring 35x62x7 B1,"Wellendichtring
 35x62x7
 B1"
-1058976,Schraube M20x130 DIN938 8.8 schw.,"Stiftschraube
+692,Schraube M20x130 DIN938 8.8 schw.,"Stiftschraube
 M20 x 130
 DIN 938
 8.8
 schwarz"
-944480,Mutter M8 DIN6923 8.8 verz.,"Mutter
+693,Mutter M8 DIN6923 8.8 verz.,"Mutter
 M8
 DIN 6923
 8.8
 verzinkt"
-1057364,Schraube M12x40 DIN6912 10.9 schw.,"Zylinderschraube mit Innensechskant
+694,Schraube M12x40 DIN6912 10.9 schw.,"Zylinderschraube mit Innensechskant
 M12 x 40
 DIN 6912
 10.9
 schwarz"
-1539074,Servomotor AG04B,"Servomotor
+695,Servomotor AG04B,"Servomotor
 Hersteller                     PSE
 Typbezeichnung                 AG04B
 Leistung                       0,160 kW
 Spannung [50Hz]                24V DC
 Strom                          6,6 A"
-1609205,PN-Zylinder ADN-25-40-I-P-A 536265 FESTO,"Kompaktzylinder
+696,PN-Zylinder ADN-25-40-I-P-A 536265 FESTO,"Kompaktzylinder
 ADN-25-40-I-P-A
 536265
 FESTO"
-145475,Wellendichtring 35x65x12 BASL,"Wellendichtring
+697,Wellendichtring 35x65x12 BASL,"Wellendichtring
 35x65x12
 BASL"
-372397,Wellendichtring 35x62x10 BASL Viton,"Wellendichtring
+698,Wellendichtring 35x62x10 BASL Viton,"Wellendichtring
 35x62x10
 BASL Viton"
-114625,Wellendichtring 35x62x8 BASL,"Wellendichtring
+699,Wellendichtring 35x62x8 BASL,"Wellendichtring
 35x62x8
 BASL"
-1908674,Lager 23224 CC/W33-C4 SKF,"Lager
+700,Lager 23224 CC/W33-C4 SKF,"Lager
 23224
 CC/W33-C4
 SKF"
-1891990,"O-Ring 34,00x3,00mm EPDM 70Sh perox","O-Ring
+701,"O-Ring 34,00x3,00mm EPDM 70Sh perox","O-Ring
 34,00x3,00mm
 EPDM 70Sh perox
 900060128
 KRONES"
-1892207,Lager 180x225x22mm 61836 SKF,"Lager
+702,Lager 180x225x22mm 61836 SKF,"Lager
 180x225x22mm
 61836
 SKF"
-1892208,Lager 215x170x22mm 61834 SKF,"Lager
+703,Lager 215x170x22mm 61834 SKF,"Lager
 215x170x22mm
 61834
 SKF"
-1904110,Lager YAR214 SKF,"Lager
+704,Lager YAR214 SKF,"Lager
 YAR214
 SKF"
-1904114,Lager BS222222RS5VT143 SKF,"Lager
+705,Lager BS222222RS5VT143 SKF,"Lager
 BS222222RS5VT143
 SKF"
-1904384,Lager 22316 EKC3W33 SKF,"Lager
+706,Lager 22316 EKC3W33 SKF,"Lager
 22316 EKC3W33
 SKF"
-1904317,Lager 23940 CC/W33 SKF,"Lager
+707,Lager 23940 CC/W33 SKF,"Lager
 23940 CC/W33
 SKF"
-1904136,Lager 22228CCK SKF,"Lager
+708,Lager 22228CCK SKF,"Lager
 22228CCK
 SKF"
-1904133,Lager 23134 E1AM SKF,"Lager
+709,Lager 23134 E1AM SKF,"Lager
 23134 E1AM
 SKF"
-1904125,Lager 23130CCK SKF,"Lager
+710,Lager 23130CCK SKF,"Lager
 23130CCK
 SKF"
-1904111,Lager YAT203 SKF,"Lager
+711,Lager YAT203 SKF,"Lager
 YAT203
 SKF"
-1904527,Lager 16010 SKF,"Lager
+712,Lager 16010 SKF,"Lager
 16010
 SKF"
-1904501,Lager 2208EKTN9C3 SKF,"Lager
+713,Lager 2208EKTN9C3 SKF,"Lager
 2208EKTN9C3
 SKF"
-1904434,Lager 23230 CCW33C3 SKF,"Lager
+714,Lager 23230 CCW33C3 SKF,"Lager
 23230 CCW33C3
 SKF"
-1904371,"O-Ring 33,3mm 90Sh FKM NBR","O-Ring
+715,"O-Ring 33,3mm 90Sh FKM NBR","O-Ring
 33,3mm
 90Sh
 FKM NBR"
-1904489,Lager 6313/C4 SKF,"Lager
+716,Lager 6313/C4 SKF,"Lager
 6313/C4
 SKF"
-1909946,O-Ring 33x2-FKM80 0009632305 LINDE,"O-Ring
+717,O-Ring 33x2-FKM80 0009632305 LINDE,"O-Ring
 33x2-FKM80
 0009632305
 LINDE"
-1910244,"Mutter M36x1,5-17H 9218201324 LINDE","Mutter
+718,"Mutter M36x1,5-17H 9218201324 LINDE","Mutter
 M36x1,5-17H
 9218201324
 LINDE"
-1870121,Lager 61903 2Z SKF,"Rillenkugellager
+719,Lager 61903 2Z SKF,"Rillenkugellager
 61903 2Z
 SKF"
-1890173,"O-Ring 33,3x2x4mm NBR70 0009632319 LINDE","O-Ring
+720,"O-Ring 33,3x2x4mm NBR70 0009632319 LINDE","O-Ring
 33,3 x 2 x 4 mm
 NBR70
 0009632319
 LINDE"
-1910471,"Mutter M36x1,5 DIN935-1 Stahl schw.","Kronenmutter
+721,"Mutter M36x1,5 DIN935-1 Stahl schw.","Kronenmutter
 M36 x 1,5
 DIN 935-1
 6 Automatenstahl
 schwarz"
-1963315,GT-Motor FH77DRU100L4TF,"Getriebemotor
+722,GT-Motor FH77DRU100L4TF,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 FH77DRU100L4TF
 Leistung [kW]:                  2,200 kW
@@ -4932,7 +4932,7 @@ Fremdlüfter:                    Nein
 Motor-Bremse:                   Nein
 Energieeffizienzklasse:         IE4 Super Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1963319,GT-Motor R147DRN180M4,"Getriebemotor
+723,GT-Motor R147DRN180M4,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 R147DRN180M4
 Leistung [kW]:                  18,500 kW
@@ -4946,7 +4946,7 @@ Bauform:                        M1
 Isolierklasse:                  Iso-Kl.:B (tmax=130°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser
 Energieeffizienzklasse:         IE3 Premium Efficiency"
-1963324,GT-Motor KA19BTDRN80MK4EK8SPK,"Getriebemotor
+724,GT-Motor KA19BTDRN80MK4EK8SPK,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 KA19BTDRN80MK4EK8SPK
 Leistung [kW]:                  0,550 kW
@@ -4960,7 +4960,7 @@ Isolierklasse:                  Iso-Kl.:B (tmax=130°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser
 Bremsgroesse:                   NM30/24
 Energieeffizienzklasse:         IE3 Premium Efficiency"
-1963334,GT-Motor DRN71M4BE05FTTH,"Getriebemotor
+725,GT-Motor DRN71M4BE05FTTH,"Getriebemotor
 Herstellerteilenummer:          XXXX_SIEMPELKAMP
 Hersteller:                     SEW
 Typbezeichnung:                 DRN71M4BE05FTTH
@@ -4973,7 +4973,7 @@ Schutzart:                      IP55-Staubablage/Strahlwasser
 Bremsgroesse:                   24 DC
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1963347,GT-Motor 404157,"Getriebemotor
+726,GT-Motor 404157,"Getriebemotor
 Hersteller:                     OTT
 Typbezeichnung:                 404157
 Antriebsmoment (max):           4,00 NM
@@ -4985,7 +4985,7 @@ Fremdlüfter:                    Nein
 Motor-Bremse:                   Nein
 Energieeffizienzklasse:         Unbekannt
 Motorvollschutz (Thermofühler): Nein"
-1963354,GT-Motor SA47DRE90M4,"Getriebemotor
+727,GT-Motor SA47DRE90M4,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 SA47DRE90M4
 Leistung [kW]:                  1,100 kW
@@ -4998,7 +4998,7 @@ Bauform:                        M1A
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse:         IE2 High Efficiency"
-1963323,GT-Motor WAF30DRN80MK4TH,"Getriebemotor
+728,GT-Motor WAF30DRN80MK4TH,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 WAF30DRN80MK4TH
 Leistung [kW]:                  0,550 kW
@@ -5011,7 +5011,7 @@ Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1963351,GT-Motor R60DT80K4TF,"Getriebemotor
+729,GT-Motor R60DT80K4TF,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 R60DT80K4TF
 Leistung [kW]:                  0,550 kW
@@ -5023,14 +5023,14 @@ Bauform:                        B3
 Isolierklasse:                  Iso-Kl.:B (tmax=130°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser
 Motorvollschutz (Thermofühler): Ja"
-1835317,Touch Panel 6AV2128-3MB06-0AX1 SIEMENS,"Touch Panel
+730,Touch Panel 6AV2128-3MB06-0AX1 SIEMENS,"Touch Panel
 12""
 6AV2128-3MB06-0AX1
 SIEMENS"
-1895328,Lager 7306 BE-2RZP SKF,"Schrägkugellager
+731,Lager 7306 BE-2RZP SKF,"Schrägkugellager
 7306 BE-2RZP
 SKF"
-1957734,GT-Motor S37DRN63M4TH,"Getriebemotor
+732,GT-Motor S37DRN63M4TH,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 S37 DRN63M4/TH
 Leistung [kW]:                  0,180 kW
@@ -5044,30 +5044,30 @@ Schutzart:                      IP54-Staubablage/Spritzwasser
 Fremdlüfter:                    Nein
 Motor-Bremse:                   Nein
 Motorvollschutz (Thermofühler): Ja"
-1870635,Lager NCF 2932 V SKF,"Zylinderrollenlager
+733,Lager NCF 2932 V SKF,"Zylinderrollenlager
 NCF 2932 V
 SKF"
-1939189,Lager BC1-0313 SKF,"Lager
+734,Lager BC1-0313 SKF,"Lager
 BC1-0313
 SKF"
-1874669,"Mutter M36x1,5 10007871 WEINIG","Mutter
+735,"Mutter M36x1,5 10007871 WEINIG","Mutter
 M36 x 1,5
 DA58 LG.7
 10007871
 WEINIG"
-1885479,Lager 61832 2RSMW SKF,"Rillenkugellager
+736,Lager 61832 2RSMW SKF,"Rillenkugellager
 61832 2RS-MW
 SKF"
-1934173,Lager NJ2322ECML SKF,"Radial-Zylinderrollenlager
+737,Lager NJ2322ECML SKF,"Radial-Zylinderrollenlager
 NJ-2322-ECML
 SKF"
-1939471,"O-Ring 33,2x2,4mm NBR70 0009632318 LINDE","O-Ring
+738,"O-Ring 33,2x2,4mm NBR70 0009632318 LINDE","O-Ring
 33,2 x 2,4 mm
 WST: NBR
 70 Shore A
 0009632318
 LINDE"
-1842833,Servomotor AKM32E-ACCNC-00,"Servomotor
+739,Servomotor AKM32E-ACCNC-00,"Servomotor
 Hersteller:                     KOLLMORGEN
 Typbezeichnung:                 AKM32E-ACCNC-00
 Leistung [kW]:                  0,100 kW
@@ -5075,30 +5075,30 @@ N1 Antriebsdrehzahl:            8.000,00 1/min
 Antriebsmoment:                 2,04 NM
 Spannung [50Hz]:                400V
 Schutzart:                      IP54-Staubablage/Spritzwasser"
-1937200,Lager YAR 215-2F SKF,"Spannlager
+740,Lager YAR 215-2F SKF,"Spannlager
 YAR 215-2F
 SKF"
-1921356,Lager 61907 2RZ SKF,"Rillenkugellager
+741,Lager 61907 2RZ SKF,"Rillenkugellager
 61907 2RZ
 SKF"
-1876618,Lager NU 214 ECJ/C3 SKF,"Zylinderrollenlager
+742,Lager NU 214 ECJ/C3 SKF,"Zylinderrollenlager
 NU 214 ECJ/C3
 SKF"
-1913640,Lager 22328 CCKC3W33 SKF,"Pendelrollenlager
+743,Lager 22328 CCKC3W33 SKF,"Pendelrollenlager
 22328 CCK/C3W33
 SKF"
-1912980,Lager 6203 2RS1 VQ658 SKF,"Rillenkugellager
+744,Lager 6203 2RS1 VQ658 SKF,"Rillenkugellager
 6203-2RS1-VQ658
 SKF"
-1874255,Mutter M36 ISO4032 5.2 schw.,"Mutter
+745,Mutter M36 ISO4032 5.2 schw.,"Mutter
 M36
 ISO4032
 5.2
 schwarz"
-1880042,Lager 21311 EC3 SKF,"Pendelrollenlager
+746,Lager 21311 EC3 SKF,"Pendelrollenlager
 21311 E C3
 SKF"
-1788726,Servomotor 1FL60421AF612AA1,"Servomotor
+747,Servomotor 1FL60421AF612AA1,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1FL6042-1AF61-2AA1
 Leistung [kW]:                  0,400 kW
@@ -5111,7 +5111,7 @@ Spannung [50Hz]:                400 V
 Bauform:                        B5
 Isolierklasse:                  Iso-Kl.: B (tmax=130°C)
 Schutzart:                      IP65-Staubdicht/Strahlwasser"
-1958998,GT-Motor KH107TDRN160M4TF,"Getriebemotor
+748,GT-Motor KH107TDRN160M4TF,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 KH107TDRN160M4TF
 Leistung [kW]:                  11,000 kW
@@ -5126,13 +5126,13 @@ Fremdlüfter:                    Nein
 Motor-Bremse:                   Nein
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1902494,Lager 61840 SKF,"Rillenkugellager
+749,Lager 61840 SKF,"Rillenkugellager
 61840 SKF
 61840 FAG"
-1893380,Lager NJ 2203 ECP SKF,"Zylinderrollenlager
+750,Lager NJ 2203 ECP SKF,"Zylinderrollenlager
 NJ2203ECP
 SKF"
-1965457,GT-Motor KH77DRN100L4KCCTF,"Getriebemotor
+751,GT-Motor KH77DRN100L4KCCTF,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 KH77DRN100L4KCCTF
 Leistung [kW]:                  3,000 kW
@@ -5148,7 +5148,7 @@ Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1965539,GT-Motor KH77DRN112M4KCCTF,"Getriebemotor
+752,GT-Motor KH77DRN112M4KCCTF,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 KH77DRN112M4KCCTF
 Leistung [kW]:                  4,000 kW
@@ -5164,7 +5164,7 @@ Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1965541,GT-Motor KH77DRN100LS4BE5KCCTF,"Getriebemotor
+753,GT-Motor KH77DRN100LS4BE5KCCTF,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 KH77DRN100LS4BE5KCCTF
 Leistung [kW]:                  2,200 kW
@@ -5182,7 +5182,7 @@ Motor-Bremse:                   Ja
 Bremsgroesse:                   415VAC 28NM
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1965542,GT-Motor KH67DRN100LS4BE5KCCTFEI7C,"Getriebemotor
+754,GT-Motor KH67DRN100LS4BE5KCCTFEI7C,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 KH67DRN100LS4BE5KCCTFEI7C
 Leistung [kW]:                  2,200 kW
@@ -5200,7 +5200,7 @@ Motor-Bremse:                   Ja
 Bremsgroesse:                   415VAC 20NM
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1965581,GT-Motor RF37DRN80M4TH,"Getriebemotor
+755,GT-Motor RF37DRN80M4TH,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 RF37DRN80M4TH
 Leistung [kW]:                  0,750 kW
@@ -5216,7 +5216,7 @@ Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1958083,"Getriebe  R77A i=7,74 SEW","Getriebe
+756,"Getriebe  R77A i=7,74 SEW","Getriebe
 Hersteller:                     SEW
 Typbezeichnung:                 R77A
 N1 Antriebsdrehzahl:            1.400,00 1/min
@@ -5225,7 +5225,7 @@ Drehmoment:                     610,00 NM
 Getriebeübersetzung i:          7,740
 Bauform:                        M1
 Getriebeausführung:             Stirnradgetriebe"
-1968299,GT-Motor RF37DRN90L2TH,"Getriebemotor
+757,GT-Motor RF37DRN90L2TH,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 RF37 DRN90L2/TH
 Leistung [kW]:                  2,200 kW
@@ -5242,7 +5242,7 @@ Isolierklasse:                  Iso-Kl.: F (tmax=155°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1960713,GT-Motor FA67DRN100LS4TF,"Getriebemotor
+758,GT-Motor FA67DRN100LS4TF,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 FA67 DRN100LS4/TF
 Leistung [kW]:                  2,200 kW
@@ -5259,7 +5259,7 @@ Schutzart:                      IP55-Staubablage/Strahlwasser
 Fremdlüfter:                    Nein
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1958404,GT-Motor KH67DRN112M4BE5KCCTF,"Getriebemotor
+759,GT-Motor KH67DRN112M4BE5KCCTF,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 KH67 DRN112M4/BE5/KCC/TF
 Leistung [kW]:                  4,000 kW
@@ -5275,7 +5275,7 @@ Motor-Bremse:                   BE5
 Bremsgroesse:                   400V AC 55Nm
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1959041,GT-Motor R67DRN112M4TFAL,"Getriebemotor
+760,GT-Motor R67DRN112M4TFAL,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 R67DRN112M4TFAL
 Leistung [kW]:                  4,000 kW
@@ -5293,10 +5293,10 @@ Fremdlüfter:                    Nein
 Motor-Bremse:                   Nein
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1898164,Lager 3305 A SKF,"Schrägkugellager 2-reihig
+761,Lager 3305 A SKF,"Schrägkugellager 2-reihig
 3305 A
 SKF"
-1957018,GT-Motor R103DV160M4,"Getriebemotor
+762,GT-Motor R103DV160M4,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 R103DV160M4
 Leistung [kW]:                  11,000 kW
@@ -5305,7 +5305,7 @@ Abt.drehzahl pol-schaltbar N2:  42,00 1/min
 Bauform:                        B3
 Isolierklasse:                  Iso-Kl.:B (tmax=130°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser"
-1970040,GT-Motor KH77TDRN100LS4BE5TH,"Getriebemotor
+763,GT-Motor KH77TDRN100LS4BE5TH,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 KH77TDRN100LS4BE5TH
 Leistung [kW]:                  2,200 kW
@@ -5323,7 +5323,7 @@ Motor-Bremse:                   Ja
 Bremsgroesse:                   230VAC 55NM
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1964138,GT-Motor R97DRN132M4TF,"Getriebemotor
+764,GT-Motor R97DRN132M4TF,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 R97DRN132M4TF
 Leistung [kW]:                  7,500 kW
@@ -5339,7 +5339,7 @@ Fremdlüfter:                    Nein
 Motor-Bremse:                   Nein
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1958358,GT-Motor KA87DRN180L4TF,"Getriebemotor
+765,GT-Motor KA87DRN180L4TF,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 KA87 DRN180L4/TF
 Leistung [kW]:                  22,000 kW
@@ -5355,7 +5355,7 @@ Isolierklasse:                  Iso-Kl.: F (tmax=155°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1860374,Servomotor AM8052-0L20-0000,"Servomotor
+766,Servomotor AM8052-0L20-0000,"Servomotor
 Herstellerteilenummer:          105061_BECKHOFF
 Hersteller:                     Beckhoff
 Typbezeichnung:                 AM8052-0L20-0000
@@ -5365,7 +5365,7 @@ Spannung [50Hz]:                400V
 Bauform:                        B5
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser"
-1960662,GT-Motor R97DRN132S4TFV,"Getriebemotor
+767,GT-Motor R97DRN132S4TFV,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 R97DRN132S4TFV
 Leistung [kW]:                  5,500 kW
@@ -5382,7 +5382,7 @@ Schutzart:                      IP55-Staubablage/Strahlwasser
 Fremdlüfter:                    400V
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1959031,GT-Motor R77DRN100L4TFEK8R,"Getriebemotor
+768,GT-Motor R77DRN100L4TFEK8R,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 R77DRN100L4TFEK8R
 Leistung [kW]:                  3,000 kW
@@ -5400,7 +5400,7 @@ Fremdlüfter:                    Nein
 Motor-Bremse:                   Nein
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1958383,GT-Motor K77DRN112M4TFAL,"Getriebemotor
+769,GT-Motor K77DRN112M4TFAL,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 K77 DRN112M4/TF/AL
 Leistung [kW]:                  4,000 kW
@@ -5418,7 +5418,7 @@ Fremdlüfter:                    Nein
 Motor-Bremse:                   Nein
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1959044,GT-Motor R27DRN80M4TFAL,"Getriebemotor
+770,GT-Motor R27DRN80M4TFAL,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 R27 DRN80M4/TF/AL
 Leistung [kW]:                  0,750 kW
@@ -5436,7 +5436,7 @@ Fremdlüfter:                    Nein
 Motor-Bremse:                   Nein
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1958379,GT-Motor KA97TR57DRN80MK4TFEK8RAL,"Getriebemotor
+771,GT-Motor KA97TR57DRN80MK4TFEK8RAL,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 KA97TR57DRN80MK4TFEK8RAL
 Leistung [kW]:                  0,550 kW
@@ -5452,7 +5452,7 @@ Isolierklasse:                  Iso-Kl.: F (tmax=155°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1961121,GT-Motor R87DRN132M4,"Getriebemotor
+772,GT-Motor R87DRN132M4,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 R87DRN132M4
 Leistung [kW]:                  7,500 kW
@@ -5466,7 +5466,7 @@ Bauform:                        M1
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse:         IE3 Premium Efficiency"
-1958384,GT-Motor FA47GDRN90S4TFAL,"Getriebemotor
+773,GT-Motor FA47GDRN90S4TFAL,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 FA47/G DRN90S4/TF/AL
 Leistung [kW]:                  1,100 kW
@@ -5484,32 +5484,32 @@ Fremdlüfter:                    Nein
 Motor-Bremse:                   Nein
 Energieeffizienzklasse:         IE3 Premium Efficiency
 Motorvollschutz (Thermofühler): Ja"
-1326130,"Kette 08A-3 12,7 1/2""x7,85mm DIN8188","Kette
+774,"Kette 08A-3 12,7 1/2""x7,85mm DIN8188","Kette
 08A-3
 Teilung: 12,7
 Teilung: 1/2""
 Innere breite: 7,85mm
 DIN 8188
 ASA 40-3"
-1810552,Wellendichtring 35x62x7 HMS5RG SKF,"Wellendichtring
+775,Wellendichtring 35x62x7 HMS5RG SKF,"Wellendichtring
 35x62x7
 HMS5RG
 SKF"
-1330560,Keilriemen SPZ 2500 LW OPTIBELT,"Keilriemen
+776,Keilriemen SPZ 2500 LW OPTIBELT,"Keilriemen
 SPZ-2500
 Wirklänge                      2.500,0 mm
 Außenlänge                     2.513,0 mm
 Innenlänge                     2.462,0 mm
 OPTIBELT"
-1330663,"Kette 08A-2 12,7 1/2”x7,85mm DIN8188","Kette
+777,"Kette 08A-2 12,7 1/2”x7,85mm DIN8188","Kette
 08A-2
 Teilung: 12,7
 Teilung: 1/2""
 Innere breite: 7,85mm
 DIN 8188
 ASA40"
-1820982,Modul 6SN1123-1AA00-0CA1 SIEMENS,Modul 6SN1123-1AA00-0CA1 SIEMENS
-1813919,Servomotor 1PH7101-7JF03-0BB3-Z M39,"Servomotor
+778,Modul 6SN1123-1AA00-0CA1 SIEMENS,Modul 6SN1123-1AA00-0CA1 SIEMENS
+779,Servomotor 1PH7101-7JF03-0BB3-Z M39,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1PH7101-7JF03-0BB3-Z M39
 Leistung [kW]:                  3,800 kW
@@ -5518,7 +5518,7 @@ Spannung [50Hz]:                398Y
 Baugröße:                       B35
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser"
-1813928,Servomotor 1PH7163-7HF33-0BB3-Z M39,"Servomotor
+780,Servomotor 1PH7163-7HF33-0BB3-Z M39,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1PH7163-7HF33-0BB3-Z M39
 Leistung [kW]:                  31,000 kW
@@ -5527,7 +5527,7 @@ Spannung [50Hz]:                364Y
 Bauform:                        B35
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser"
-1813952,Servomotor 1PH7167-7HG33-0BB3-Z M39,"Servomotor
+781,Servomotor 1PH7167-7HG33-0BB3-Z M39,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1PH7167-7HG33-0BB3-Z M39
 Leistung [kW]:                  40,000 kW
@@ -5536,7 +5536,7 @@ Spannung [50Hz]:                400Y
 Bauform:                        B35
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP54-Staubablage/Spritzwasser"
-1814145,Servomotor 1PH8186-1HF132BD1-Z,"Servomotor
+782,Servomotor 1PH8186-1HF132BD1-Z,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1PH8186-1HF132BD1-Z
 Leistung [kW]:                  94,000 kW
@@ -5544,10 +5544,10 @@ N1 Antriebsdrehzahl:            2.200,00 1/min
 Bauform:                        B35
 Isolierklasse:                  Iso-Kl.:H (tmax=180°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser"
-139088,Wellendichtring 35x62x10 BASL,"Wellendichtring
+783,Wellendichtring 35x62x10 BASL,"Wellendichtring
 35x62x10
 BASL"
-1818152,Servomotor 1FT6086-8AH71-1EB0,"Servomotor
+784,Servomotor 1FT6086-8AH71-1EB0,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1FT6086-8AH71-1EB0
 N1 Antriebsdrehzahl:            4.500,00 1/min
@@ -5556,7 +5556,7 @@ Spannung [50Hz]:                333V
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP64-Staubdicht/Spritzwasser
 Motor-Bremse:                   Nein"
-1818172,Servomotor 1FT6105-8AF71-1EB0,"Servomotor
+785,Servomotor 1FT6105-8AF71-1EB0,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1FT6105-8AF71-1EB0
 N1 Antriebsdrehzahl:            3.000,00 1/min
@@ -5564,7 +5564,7 @@ Antriebsmoment:                 28,00 NM
 Spannung [50Hz]:                297V
 Schutzart:                      IP64-Staubdicht/Spritzwasser
 Motor-Bremse:                   Ja"
-1806163,Servomotor 1FT7108-5SF71-1CB0-Z,"Servomotor
+786,Servomotor 1FT7108-5SF71-1CB0-Z,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1FT7108-5SF71-1CB0-Z
 N1 Antriebsdrehzahl:            6.000,00 1/min
@@ -5572,7 +5572,7 @@ Antriebsmoment:                 60,00 NM
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser
 Motor-Bremse:                   24DC"
-1806170,Servomotor 1FK7105-2AF71-1RB0-Z,"Servomotor
+787,Servomotor 1FK7105-2AF71-1RB0-Z,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1FK7105-2AF71-1RB0-Z
 N1 Antriebsdrehzahl:            3.000,00 1/min
@@ -5581,14 +5581,14 @@ Antriebsmoment:                 26,00 NM
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP64-Staubdicht/Spritzwasser
 Motor-Bremse:                   24DC"
-1806172,Servomotor 1FT7105-5SF70-1CA0,"Servomotor
+788,Servomotor 1FT7105-5SF70-1CA0,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1FT7105-5SF70-1CA0
 N1 Antriebsdrehzahl:            3.000,00 1/min
 Antriebsmoment:                 48,00 NM
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser"
-1806200,Servomotor 1PH7133-7HF03-0BB3-ZNOYF,"Servomotor
+789,Servomotor 1PH7133-7HF03-0BB3-ZNOYF,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1PH7133-7HF03-0BB3-ZNOYF
 Leistung [kW]:                  13,500 kW
@@ -5596,14 +5596,14 @@ N1 Antriebsdrehzahl:            1.500,00 1/min
 Bauform:                        B35
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser"
-1805162,Servomotor 1FT7105-5AF71-CB0-Z,"Servomotor
+790,Servomotor 1FT7105-5AF71-CB0-Z,"Servomotor
 Hersteller:                     Siemens
 Typbezeichnung:                 1FT7105-5AF71-CB0-Z
 N1 Antriebsdrehzahl:            3.000,00 1/min
 Antriebsmoment:                 28,00 NM
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser"
-185854,"Kette 08A-1 12,70 1/2""x7,85mm DIN8188","Einfach Rollenkette
+791,"Kette 08A-1 12,70 1/2""x7,85mm DIN8188","Einfach Rollenkette
 08A-1
 Teilung: 12,70mm (1/2"")
 Innere Breite: 7,85mm
@@ -5611,25 +5611,25 @@ DIN 8188
 
 40R5MT_HITACHI
 L85AANSI40_IWIS"
-175254,Wellendichtring 35x65x10 BASL,"Wellendichtring
+792,Wellendichtring 35x65x10 BASL,"Wellendichtring
 35x65x10
 BASL"
-826630,Keilriemen SPA 2532 LW,"Keilriemen
+793,Keilriemen SPA 2532 LW,"Keilriemen
 SPA 2532mm LW
 Wirklänge ISO LW 2532mm
 Innenlänge LI 2487mm
 Außenlänge LA 2550mm"
-1908717,Lager E1K C3 23152 SKF,"Lager
+794,Lager E1K C3 23152 SKF,"Lager
 E1K C3
 23152
 SKF"
-1904131,Lager NU320ECJ SKF,"Lager
+795,Lager NU320ECJ SKF,"Lager
 NU320ECJ
 SKF"
-1904507,Lager 1210 SKF,"Lager
+796,Lager 1210 SKF,"Lager
 1210
 SKF"
-1960351,GT-Motor SA57DRN90L4,"Getriebemotor
+797,GT-Motor SA57DRN90L4,"Getriebemotor
 Hersteller:                     SEW
 Typbezeichnung:                 SA57DRN90L4
 Leistung [kW]:                  1,500 kW
@@ -5643,15 +5643,15 @@ Klemmkastenlage:                270 NORMAL
 Isolierklasse:                  Iso-Kl.:F (tmax=155°C)
 Schutzart:                      IP55-Staubablage/Strahlwasser
 Energieeffizienzklasse:         IE3 Premium Efficiency"
-108665,Wellendichtring 35x62x7 BASL,"Wellendichtring
+798,Wellendichtring 35x62x7 BASL,"Wellendichtring
 35x62x7
 BASL"
-469489,Mutter M8 DIN6334 L=24mm verz.,"Verlängerungsmutter 3d hoch
+799,Mutter M8 DIN6334 L=24mm verz.,"Verlängerungsmutter 3d hoch
 M8 L = 24mm
 DIN 6334
 Automatenstahl
 verzinkt"
-1617605,Keilriemen SPA 2500 LW Red Power,"Keilriemen
+800,Keilriemen SPA 2500 LW Red Power,"Keilriemen
 SPA 2.500 mm LW Red Power
 Wirklänge ISO LW 2.500 mm
 Innenlänge LI 2.455 mm
