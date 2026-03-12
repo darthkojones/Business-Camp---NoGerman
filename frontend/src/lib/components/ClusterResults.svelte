@@ -8,8 +8,12 @@
     RefreshCw,
   } from "lucide-svelte";
 
+  import { createEventDispatcher } from 'svelte';
+
   export let clusters: any[] = [];
   export let loading: boolean = false;
+
+  const dispatch = createEventDispatcher();
 
   const API_URL = "http://localhost:8000";
 
@@ -65,6 +69,8 @@
       return;
     }
 
+    // note: dispatch progress after successful confirmation below
+
     try {
       const response = await fetch(`${API_URL}/confirmations`, {
         method: "POST",
@@ -90,6 +96,9 @@
       // Add to confirmed items
       confirmedItems.add(key);
       confirmedItems = new Set(confirmedItems); // Trigger reactivity by creating new Set
+
+      // notify parent that something has been confirmed
+      dispatch('progress', { confirmedItems: confirmedItems.size });
     } catch (error) {
       console.error("Error confirming item:", error);
       alert(
@@ -175,6 +184,9 @@
         // Add to confirmed items
         confirmedItems.add(key);
 
+      // dispatch progress event for each item confirmation
+      dispatch('progress', { confirmedItems: confirmedItems.size });
+
         return response.json();
       });
 
@@ -185,6 +197,9 @@
       confirmedClusters = new Set(confirmedClusters); // Force Svelte reactivity
       confirmedItems = new Set(confirmedItems);
       itemSelections = { ...itemSelections };
+
+      // dispatch progress event so parent can update nav state
+      dispatch('progress', { confirmedClusters: confirmedClusters.size });
 
       // Auto-collapse the cluster after confirmation
       expandedClusters.delete(clusterId);

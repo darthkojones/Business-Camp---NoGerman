@@ -443,11 +443,13 @@ def confirm_material_assignment(
             tariff = db.query(TariffCode).filter(
                 TariffCode.goods_code == confirmation.assigned_tariff_code
             ).first()
-            if tariff:
-                material.tariff_code_id = tariff.id
-            else:
-                # supply a warning in the log if the code didn't match
-                print(f"Warning: assigned tariff code {confirmation.assigned_tariff_code} not found in table")
+            if not tariff:
+                # if user assigned a code that isn't yet in our table, create it
+                tariff = TariffCode(goods_code=confirmation.assigned_tariff_code, description=None)
+                db.add(tariff)
+                db.flush()  # assign id
+                print(f"Info: created new tariff code row for {confirmation.assigned_tariff_code}")
+            material.tariff_code_id = tariff.id
         
         db.commit()
         

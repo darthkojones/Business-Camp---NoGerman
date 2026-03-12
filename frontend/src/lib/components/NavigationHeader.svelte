@@ -19,8 +19,9 @@
       class="flex items-center space-x-2 text-sm font-medium focus:outline-none disabled:opacity-50"
       class:text-[#BB1E38]={currentStep === step.number}
       class:text-gray-500={currentStep !== step.number}
-      disabled={currentStep < step.number}
-      on:click={() => currentStep >= step.number && go(step.path)}
+      disabled={step.number !== 3 && currentStep < step.number}
+      on:click={() =>
+        (step.number === 3 || currentStep >= step.number) && go(step.path)}
     >
       <span
         class="w-6 h-6 flex items-center justify-center rounded-full border"

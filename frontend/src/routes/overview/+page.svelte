@@ -6,6 +6,7 @@
 
 <script lang="ts">
   import { onMount, onDestroy } from "svelte";
+  import { afterNavigate } from "$app/navigation";
   import { goto } from "$app/navigation";
   import {
     Chart as ChartJS,
@@ -226,6 +227,12 @@
     await fetchConfirmedItems();
   });
 
+  // refresh when navigating back to the page (SPA) so chart stays up‑to‑date
+  afterNavigate(async () => {
+    await fetchDistribution();
+    await fetchConfirmedItems();
+  });
+
   async function fetchDistribution() {
     loadingDistribution = true;
     try {
@@ -256,8 +263,9 @@
     itemInfo: DistributionItem,
   ) {
     if (tariff_code_id === null) {
-      // Redirect to main page for unclassified
-      goto("/");
+      // user clicked the "Unclassified" bar – send them to the
+      // assignment/results page so they can handle the remaining data.
+      goto("/results");
       return;
     }
 
@@ -361,10 +369,27 @@
     responsive: true,
     maintainAspectRatio: false,
     onClick: (e: any, activeEls: any[]) => {
+      let index: number | null = null;
       if (activeEls.length > 0) {
-        const index = activeEls[0].index;
+        index = activeEls[0].index;
+      } else if (chartInstance) {
+        // possibly clicked on the label area; compute index from pixel
+        const xScale: any = chartInstance.scales['x'];
+        if (xScale) {
+          const value = xScale.getValueForPixel(e.x);
+          if (value !== undefined && value !== null) {
+            index = Math.round(value);
+          }
+        }
+      }
+
+      if (index !== null && index >= 0 && index < distributionData.length) {
         const item = distributionData[index];
-        loadMaterials(item.tariff_code_id, item);
+        if (item.tariff_code_id === null) {
+          goto("/results");
+        } else {
+          loadMaterials(item.tariff_code_id, item);
+        }
       }
     },
     plugins: {

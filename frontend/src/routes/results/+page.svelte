@@ -13,6 +13,13 @@
   let loading = true;
   let errorMsg = "";
 
+  // cache of confirmed material numbers loaded from backend
+  let confirmedMaterials: Set<string> = new Set();
+
+  // whether we can already jump to overview/export
+  let canAdvance = false;
+  $: navStep = canAdvance ? 3 : 2;
+
   const API_URL = "http://localhost:8000";
 
   async function fetchClusters() {
@@ -23,8 +30,20 @@
         `${API_URL}/clusters/enriched?auto_generate=true`,
       );
       if (!res.ok) throw new Error("Failed to load clusters");
-      clusters = await res.json();
-      console.log("Loaded clusters:", clusters);
+      let data = await res.json();
+      console.log("Loaded clusters:", data);
+
+      // filter out clusters where all items have been confirmed already
+      if (confirmedMaterials.size > 0) {
+        data = data.filter((c: any) => {
+          if (!c.items || c.items.length === 0) return true;
+          // keep cluster if at least one item is unconfirmed
+          return c.items.some(
+            (item: any) => !confirmedMaterials.has(item.item_id),
+          );
+        });
+      }
+      clusters = data;
     } catch (err) {
       console.error("Error fetching clusters:", err);
       errorMsg =
@@ -34,8 +53,21 @@
     }
   }
 
-  onMount(() => {
-    fetchClusters();
+  async function fetchConfirmedMaterials() {
+    try {
+      const res = await fetch(`${API_URL}/confirmations`);
+      if (!res.ok) return;
+      const items = await res.json();
+      confirmedMaterials = new Set(items.map((i: any) => i.material_number));
+      console.log("Confirmed materials loaded:", confirmedMaterials);
+    } catch (e) {
+      console.error("Error fetching confirmed materials", e);
+    }
+  }
+
+  onMount(async () => {
+    await fetchConfirmedMaterials();
+    await fetchClusters();
   });
 
   // Calculate stats from clusters for overview components
@@ -46,7 +78,7 @@
 <div class="min-h-screen bg-white">
   <div class="max-w-7xl mx-auto px-8 py-12">
     <!-- Step navigation header -->
-    <NavigationHeader currentStep={2} />
+    <NavigationHeader currentStep={navStep} />
 
     <!-- Page title -->
     <div class="mb-12">
@@ -100,7 +132,11 @@
       {/if}
 
       <!-- Cluster Results -->
-      <ClusterResults {clusters} {loading} />
+      <ClusterResults
+        {clusters}
+        {loading}
+        on:progress={() => (canAdvance = true)}
+      />
     </div>
   </div>
 </div>
