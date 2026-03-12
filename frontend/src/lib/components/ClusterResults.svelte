@@ -88,7 +88,7 @@
 
       // Add to confirmed items
       confirmedItems.add(key);
-      confirmedItems = confirmedItems; // Trigger reactivity
+      confirmedItems = new Set(confirmedItems); // Trigger reactivity by creating new Set
     } catch (error) {
       console.error("Error confirming item:", error);
       alert(
@@ -205,16 +205,35 @@
   }
 
   function isClusterConfirmed(clusterId: string): boolean {
-    // Check VISUAL state first for immediate feedback
-    const confirmed =
+    // immediate visual or backend confirmation wins
+    if (
       visuallyConfirmedClusters.has(clusterId) ||
-      confirmedClusters.has(clusterId);
-    if (confirmed) {
+      confirmedClusters.has(clusterId)
+    ) {
       console.log(
-        `✅ isClusterConfirmed(${clusterId}) = TRUE (visual: ${visuallyConfirmedClusters.has(clusterId)}, confirmed: ${confirmedClusters.has(clusterId)})`,
+        `✅ isClusterConfirmed(${clusterId}) = TRUE (visual/backend)`,
       );
+      return true;
     }
-    return confirmed;
+
+    // also consider a cluster fully confirmed if every item within it has
+    // been individually confirmed. this allows removing a cluster after the
+    // last item is marked, not only when the user uses the "confirm whole
+    // cluster" button.
+    const cluster = clusters.find((c) => c.cluster_id === clusterId);
+    if (cluster && cluster.items && cluster.items.length > 0) {
+      const allItemsConfirmed = cluster.items.every((item: any) =>
+        confirmedItems.has(`${clusterId}-${item.item_id}`),
+      );
+      if (allItemsConfirmed) {
+        console.log(
+          `✅ isClusterConfirmed(${clusterId}) = TRUE (all items confirmed)`,
+        );
+        return true;
+      }
+    }
+
+    return false;
   }
 
   function isClusterConfirming(clusterId: string): boolean {
@@ -268,13 +287,22 @@
     totalClusters > 0 ? (visuallyConfirmedCount / totalClusters) * 100 : 0;
 
   // Create reactive map of confirmed statuses - this forces Svelte to re-render when confirmation state changes
-  $: clusterConfirmedMap = clusters.reduce(
-    (map, c) => {
-      map[c.cluster_id] = isClusterConfirmed(c.cluster_id);
-      return map;
-    },
-    {} as Record<string, boolean>,
-  );
+  // we include a dummy reference to confirmedItems.size so that the map updates when
+  // individual item confirmations modify the set
+  $: clusterConfirmedMap = (() => {
+    // add dummy references so that this reactive statement re‑runs when any of the
+    // confirmation-related sets change
+    const _watchItems = confirmedItems.size; // eslint-disable-line no-unused-vars
+    const _watchVisual = visuallyConfirmedClusters.size; // eslint-disable-line no-unused-vars
+    const _watchClusters = confirmedClusters.size; // eslint-disable-line no-unused-vars
+    return clusters.reduce(
+      (map, c) => {
+        map[c.cluster_id] = isClusterConfirmed(c.cluster_id);
+        return map;
+      },
+      {} as Record<string, boolean>,
+    );
+  })();
 
   // derive the list of clusters that are still unconfirmed
   $: unconfirmedClusters = clusters.filter(
