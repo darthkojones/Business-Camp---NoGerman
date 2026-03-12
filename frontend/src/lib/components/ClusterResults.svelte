@@ -103,20 +103,28 @@
     tariffCode?: string,
     confidenceScore?: number,
   ) {
-    if (
-      !cluster.tariff_suggestions ||
-      cluster.tariff_suggestions.length === 0
-    ) {
-      alert("Keine Zollnummern-Vorschläge für diesen Cluster vorhanden.");
-      return;
+    // If a manual tariffCode was provided we skip the usual suggestion check
+    if (!tariffCode) {
+      if (
+        !cluster.tariff_suggestions ||
+        cluster.tariff_suggestions.length === 0
+      ) {
+        alert("Keine Zollnummern-Vorschläge für diesen Cluster vorhanden.");
+        return;
+      }
     }
 
-    // Use provided tariff or default to top suggestion
-    const suggestion = tariffCode
-      ? cluster.tariff_suggestions.find(
-          (s: any) => s.tariff_code === tariffCode,
-        ) || cluster.tariff_suggestions[0]
-      : cluster.tariff_suggestions[0];
+    // Determine which suggestion to use (manual override or top suggestion)
+    let suggestion: any;
+    if (tariffCode) {
+      // build a lightweight suggestion-like object from manual input
+      suggestion = {
+        tariff_code: tariffCode,
+        confidence_score: confidenceScore ?? null,
+      };
+    } else {
+      suggestion = cluster.tariff_suggestions[0];
+    }
 
     const clusterId = cluster.cluster_id;
 
