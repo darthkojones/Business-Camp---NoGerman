@@ -1,19 +1,38 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
-  import { Upload, FileText, Database, Sparkles, ArrowRight, AlertCircle } from "lucide-svelte";
+  import { onMount } from "svelte";
+  import {
+    Upload,
+    FileText,
+    Database,
+    Sparkles,
+    ArrowRight,
+    AlertCircle,
+  } from "lucide-svelte";
   import { Alert } from "flowbite-svelte";
 
   const API_URL = "http://localhost:8000";
 
   let materialsFile: File | null = null;
-  let customsFile: File | null = null;
   let uploading = false;
   let processing = false;
   let uploadSuccess = false;
   let errorMsg = "";
   let statusMsg = "";
   let materialsCount = 0;
-  let tariffsCount = 0;
+  let tariffsCount = 0; // will reflect current loaded tariff count (pre-seeded)
+
+  onMount(async () => {
+    try {
+      const res = await fetch(`${API_URL}/tariffs/count`);
+      if (res.ok) {
+        const data = await res.json();
+        tariffsCount = data.count || 0;
+      }
+    } catch (err) {
+      console.error("Failed to fetch tariff count", err);
+    }
+  });
 
   function handleMaterialsFileChange(event: Event) {
     const target = event.target as HTMLInputElement;
@@ -22,16 +41,9 @@
     }
   }
 
-  function handleCustomsFileChange(event: Event) {
-    const target = event.target as HTMLInputElement;
-    if (target.files && target.files.length > 0) {
-      customsFile = target.files[0];
-    }
-  }
-
   async function uploadFiles() {
-    if (!materialsFile && !customsFile) {
-      errorMsg = "Bitte wählen Sie mindestens eine Datei aus.";
+    if (!materialsFile) {
+      errorMsg = "Bitte wählen Sie mindestens eine Material-Datei aus.";
       return;
     }
 
@@ -42,7 +54,7 @@
     try {
       const formData = new FormData();
       if (materialsFile) formData.append("materials_file", materialsFile);
-      if (customsFile) formData.append("customs_file", customsFile);
+      // customs_file is no longer required; tariff codes are seeded from the built-in CSV
 
       const res = await fetch(`${API_URL}/upload`, {
         method: "POST",
@@ -84,7 +96,7 @@
 
       const result = await res.json();
       statusMsg = `Analyse abgeschlossen! ${result.clusters_count || 0} Cluster erstellt.`;
-      
+
       // Navigate to results page after a short delay
       setTimeout(() => {
         goto("/results");
@@ -119,18 +131,22 @@
     <!-- Upload Section -->
     <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
       <div class="mb-8">
-        <h2 class="text-2xl font-semibold text-[#272425] mb-2 flex items-center gap-2">
+        <h2
+          class="text-2xl font-semibold text-[#272425] mb-2 flex items-center gap-2"
+        >
           <Upload class="h-6 w-6 text-[#BB1E38]" />
           Schritt 1: Dateien hochladen
         </h2>
         <p class="text-[#6b6b6b]">
-          Laden Sie Ihre Materialien und Zolldaten hoch (CSV-Format)
+          Laden Sie Ihre Materialien hoch (Zolldaten bereits vorinstalliert)
         </p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
         <!-- Materials File Upload -->
-        <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 hover:border-[#BB1E38] transition-colors">
+        <div
+          class="border-2 border-dashed border-gray-300 rounded-lg p-6 hover:border-[#BB1E38] transition-colors"
+        >
           <div class="text-center">
             <FileText class="mx-auto h-12 w-12 text-gray-400 mb-4" />
             <h3 class="text-lg font-medium text-[#272425] mb-2">
@@ -160,48 +176,18 @@
             {/if}
           </div>
         </div>
-
-        <!-- Customs File Upload -->
-        <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 hover:border-[#BB1E38] transition-colors">
-          <div class="text-center">
-            <Database class="mx-auto h-12 w-12 text-gray-400 mb-4" />
-            <h3 class="text-lg font-medium text-[#272425] mb-2">
-              Zolldaten-Datei
-            </h3>
-            <p class="text-sm text-[#6b6b6b] mb-4">
-              CSV-Datei mit HS-Codes und Beschreibungen
-            </p>
-            <input
-              type="file"
-              accept=".csv"
-              on:change={handleCustomsFileChange}
-              class="hidden"
-              id="customs-upload"
-              disabled={uploading || processing}
-            />
-            <label
-              for="customs-upload"
-              class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 cursor-pointer disabled:opacity-50"
-            >
-              Datei auswählen
-            </label>
-            {#if customsFile}
-              <p class="mt-3 text-sm font-medium text-green-600">
-                ✓ {customsFile.name}
-              </p>
-            {/if}
-          </div>
-        </div>
       </div>
 
       <div class="mt-6">
         <button
           on:click={uploadFiles}
-          disabled={(!materialsFile && !customsFile) || uploading || processing}
+          disabled={!materialsFile || uploading || processing}
           class="w-full bg-[#BB1E38] hover:bg-[#9a1830] disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
         >
           {#if uploading}
-            <div class="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+            <div
+              class="animate-spin rounded-full h-5 w-5 border-b-2 border-white"
+            ></div>
             Hochladen...
           {:else}
             <Upload class="h-5 w-5" />
@@ -215,10 +201,13 @@
           <div class="flex items-start gap-3">
             <AlertCircle class="h-5 w-5 text-green-600 mt-0.5" />
             <div>
-              <h4 class="text-sm font-semibold text-green-900">Upload erfolgreich!</h4>
+              <h4 class="text-sm font-semibold text-green-900">
+                Upload erfolgreich!
+              </h4>
               <p class="text-sm text-green-800 mt-1">
                 {materialsCount > 0 && `${materialsCount} Materialien geladen.`}
-                {tariffsCount > 0 && ` ${tariffsCount} Zollcodes geladen.`}
+                {tariffsCount > 0 &&
+                  `Tarifdaten im System: ${tariffsCount} Einträge.`}
               </p>
             </div>
           </div>
@@ -229,7 +218,9 @@
     <!-- Analysis Section -->
     <div class="bg-white rounded-xl shadow-lg p-8">
       <div class="mb-8">
-        <h2 class="text-2xl font-semibold text-[#272425] mb-2 flex items-center gap-2">
+        <h2
+          class="text-2xl font-semibold text-[#272425] mb-2 flex items-center gap-2"
+        >
           <Sparkles class="h-6 w-6 text-[#BB1E38]" />
           Schritt 2: Analyse starten
         </h2>
@@ -239,7 +230,9 @@
       </div>
 
       <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-        <h3 class="text-sm font-semibold text-blue-900 mb-2">Was passiert bei der Analyse?</h3>
+        <h3 class="text-sm font-semibold text-blue-900 mb-2">
+          Was passiert bei der Analyse?
+        </h3>
         <ul class="text-sm text-blue-800 space-y-2">
           <li class="flex items-start gap-2">
             <span class="text-blue-600 font-bold">1.</span>
@@ -247,7 +240,9 @@
           </li>
           <li class="flex items-start gap-2">
             <span class="text-blue-600 font-bold">2.</span>
-            <span>LLM analysiert jeden Cluster und schlägt passende HS-Codes vor</span>
+            <span
+              >LLM analysiert jeden Cluster und schlägt passende HS-Codes vor</span
+            >
           </li>
           <li class="flex items-start gap-2">
             <span class="text-blue-600 font-bold">3.</span>
@@ -262,7 +257,9 @@
         class="w-full bg-gradient-to-r from-[#BB1E38] to-[#9a1830] hover:from-[#9a1830] hover:to-[#BB1E38] disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-3 text-lg"
       >
         {#if processing}
-          <div class="animate-spin rounded-full h-6 w-6 border-b-2 border-white"></div>
+          <div
+            class="animate-spin rounded-full h-6 w-6 border-b-2 border-white"
+          ></div>
           Analyse läuft...
         {:else}
           <Sparkles class="h-6 w-6" />
@@ -280,7 +277,10 @@
 
     <!-- Info Footer -->
     <div class="mt-8 text-center text-sm text-[#6b6b6b]">
-      <p>Nach der Analyse werden Sie automatisch zu den Ergebnissen weitergeleitet</p>
+      <p>
+        Nach der Analyse werden Sie automatisch zu den Ergebnissen
+        weitergeleitet
+      </p>
     </div>
   </div>
 </div>

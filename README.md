@@ -6,9 +6,9 @@ This project provides an internal tool for viewing unmatched SAP export material
 
 ## Features
 - **Frontend**: SvelteKit application using TailwindCSS and Flowbite-Svelte. Currently displays a table with all products available in database.
-- **Backend**: FastAPI Python backend, supplying basic data endpoints (`/materials`, `/tariffs`, `/clusters`).
+- **Backend**: FastAPI Python backend, supplying basic data endpoints (`/materials`, `/tariffs`, `/clusters`). The `/upload` endpoint accepts material files and optionally customs files, but customs data is seeded automatically from `data/CostumsData.csv`.
 - **Database**: Containerized PostgreSQL database.
-- **Data Seeding**: Automatically populates the PostgreSQL database from `data/Export_SAP_200MM.csv` and `data/CostumsData.csv` on startup.
+- **Data Seeding**: Automatically populates the PostgreSQL database from `data/Export_SAP_200MM.csv` (materials) and `data/CostumsData.csv` (customs/tariff codes) on startup. No manual upload of customs data is required; the system comes preloaded with tariff codes.
 - **AI-Powered Tariff Matching**: LLM-assisted cluster-to-tariff code matching using OpenAI API for intelligent classification suggestions.
 
 ## Getting Started
@@ -52,6 +52,7 @@ To use the AI-powered tariff matching feature, you need to set up your OpenAI AP
 Once configured, you can use the tariff matching endpoint:
 
 1. **Get all clusters**: `GET http://localhost:8000/clusters`
+1. **Get tariff count**: `GET http://localhost:8000/tariffs/count` (useful for verifying the seeded dataset)
 2. **Get tariff suggestions for a cluster**: `POST http://localhost:8000/clusters/{cluster_id}/suggest-tariffs`
 
 Example using curl:

@@ -36,6 +36,12 @@ def get_tariffs(skip: int = 0, limit: int = 200, search: Optional[str] = None, d
     tariffs = query.offset(skip).limit(limit).all()
     return tariffs
 
+@app.get("/tariffs/count")
+def get_tariffs_count(db: Session = Depends(get_db)):
+    """Return the total number of tariff codes in the database."""
+    total = db.query(TariffCode).count()
+    return {"count": total}
+
 @app.get("/clusters", response_model=List[ClusterSchema])
 def get_clusters(db: Session = Depends(get_db)):
     """
@@ -157,7 +163,12 @@ async def upload_files(
 ):
     """
     Upload CSV files for materials and/or customs data.
-    Processes and stores them in the database.
+    
+    *Materials* file is required for clustering.
+    *Tariff/customs* file is optional since a default dataset (`data/CostumsData.csv`) is seeded
+    into the database on startup; uploading new tariff data will replace the existing entries.
+
+    Processes and stores the provided files in the database.
     """
     materials_count = 0
     tariffs_count = 0
@@ -194,7 +205,7 @@ async def upload_files(
             materials_count = len(materials_to_insert)
             print(f"Uploaded {materials_count} materials")
         
-        # Process customs/tariff file
+        # Process customs/tariff file if one is provided
         if customs_file:
             if not customs_file.filename.endswith('.csv'):
                 raise HTTPException(status_code=400, detail="Customs file must be a CSV file")
@@ -203,10 +214,9 @@ async def upload_files(
             df_tariffs = pd.read_csv(io.BytesIO(content), dtype=str)
             df_tariffs = df_tariffs.fillna("")
             
-            # Clear existing tariff codes
+            # Clear existing tariff codes and insert new ones
             db.query(TariffCode).delete()
             
-            # Insert new tariff codes
             tariffs_to_insert = []
             for _, row in df_tariffs.iterrows():
                 tariffs_to_insert.append(TariffCode(
@@ -221,6 +231,9 @@ async def upload_files(
             db.commit()
             tariffs_count = len(tariffs_to_insert)
             print(f"Uploaded {tariffs_count} tariff codes")
+        else:
+            # no customs file uploaded, report existing tariff count from DB
+            tariffs_count = db.query(TariffCode).count()
         
         return {
             "message": "Files uploaded successfully",
