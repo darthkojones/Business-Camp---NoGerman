@@ -117,11 +117,8 @@
     <!-- Header -->
     <div class="text-center mb-12">
       <h1 class="text-5xl font-bold text-[#BB1E38] mb-4">
-        HS-Code Klassifizierung
+        Zollnummern Zuordnungs Werkzeug
       </h1>
-      <p class="text-xl text-[#6b6b6b]">
-        Automatische Zollnummern-Zuordnung mit KI-Unterstützung
-      </p>
     </div>
 
     {#if errorMsg}
@@ -134,22 +131,10 @@
 
     <!-- Upload Section -->
     <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
-      <div class="mb-8">
-        <h2
-          class="text-2xl font-semibold text-[#272425] mb-2 flex items-center gap-2"
-        >
-          <Upload class="h-6 w-6 text-[#BB1E38]" />
-          Schritt 1: Dateien hochladen
-        </h2>
-        <p class="text-[#6b6b6b]">
-          Laden Sie Ihre Materialien hoch (Zolldaten bereits vorinstalliert)
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-6">
+      <div class="grid gap-6 justify-center">
         <!-- Materials File Upload -->
         <div
-          class="border-2 border-dashed border-gray-300 rounded-lg p-6 hover:border-[#BB1E38] transition-colors"
+          class="border-2 border-dashed border-gray-300 rounded-lg p-6 hover:border-[#BB1E38] transition-colors mx-auto justify-center"
         >
           <div class="text-center">
             <FileText class="mx-auto h-12 w-12 text-gray-400 mb-4" />
@@ -204,10 +189,6 @@
         </button>
       </div>
 
-      <p class="text-sm text-[#6b6b6b] mt-4">
-        Die Analyse startet automatisch nachdem der Upload abgeschlossen ist.
-      </p>
-
       {#if uploadSuccess}
         <div class="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
           <div class="flex items-start gap-3">
@@ -225,14 +206,6 @@
           </div>
         </div>
       {/if}
-    </div>
-
-    <!-- Info Footer -->
-    <div class="mt-8 text-center text-sm text-[#6b6b6b]">
-      <p>
-        Nach der Analyse werden Sie automatisch zu den Ergebnissen
-        weitergeleitet
-      </p>
     </div>
   </div>
 </div>
