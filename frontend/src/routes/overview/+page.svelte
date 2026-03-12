@@ -19,6 +19,8 @@
     type ChartConfiguration,
   } from "chart.js";
   import { Search, CheckCircle, RefreshCw } from "lucide-svelte";
+  import NavigationHeader from "$lib/components/NavigationHeader.svelte";
+  import { Alert } from "flowbite-svelte";
 
   ChartJS.register(
     Title,
@@ -55,6 +57,12 @@
   let distributionData: DistributionItem[] = [];
   let loadingDistribution = true;
 
+  // export / summary state
+  const API_URL = "http://localhost:8000";
+  let exportItems: any[] = [];
+  let loadingExport = true;
+  let errorExport = "";
+
   let selectedCodeId: number | null = null;
   let selectedCodeInfo: DistributionItem | null = null;
 
@@ -65,9 +73,8 @@
   let tariffSearchQuery = "";
 
   // Hierarchical selection state
-  let hierarchyLevels: { items: TariffCode[]; selected: TariffCode | null }[] = [
-    { items: [], selected: null },
-  ];
+  let hierarchyLevels: { items: TariffCode[]; selected: TariffCode | null }[] =
+    [{ items: [], selected: null }];
   let loadingHierarchy = false;
 
   // Selection state
@@ -78,7 +85,7 @@
   async function fetchLevel(parentId: number | null, levelIndex: number) {
     loadingHierarchy = true;
     try {
-      const url = parentId 
+      const url = parentId
         ? `http://localhost:8000/tariffs/hierarchy?parent_id=${parentId}`
         : "http://localhost:8000/tariffs/hierarchy";
       const res = await fetch(url);
@@ -94,30 +101,129 @@
     }
   }
 
-  async function handleHierarchySelect(levelIndex: number, item: TariffCode | null) {
-      // Clear all levels below this one
-      hierarchyLevels = hierarchyLevels.slice(0, levelIndex + 1);
-      hierarchyLevels[levelIndex].selected = item;
-      
-      if (item) {
-          targetTariffCodeId = item.id;
-          // Pre-emptively add next level
-          hierarchyLevels.push({ items: [], selected: null });
-          await fetchLevel(item.id, levelIndex + 1);
-          // If the new level has no items, it means we reached a leaf
-          if (hierarchyLevels[levelIndex + 1].items.length === 0) {
-              hierarchyLevels = hierarchyLevels.slice(0, levelIndex + 1);
-          }
-      } else {
-          targetTariffCodeId = levelIndex > 0 ? hierarchyLevels[levelIndex - 1].selected?.id || null : null;
+  async function handleHierarchySelect(
+    levelIndex: number,
+    item: TariffCode | null,
+  ) {
+    // Clear all levels below this one
+    hierarchyLevels = hierarchyLevels.slice(0, levelIndex + 1);
+    hierarchyLevels[levelIndex].selected = item;
+
+    if (item) {
+      targetTariffCodeId = item.id;
+      // Pre-emptively add next level
+      hierarchyLevels.push({ items: [], selected: null });
+      await fetchLevel(item.id, levelIndex + 1);
+      // If the new level has no items, it means we reached a leaf
+      if (hierarchyLevels[levelIndex + 1].items.length === 0) {
+        hierarchyLevels = hierarchyLevels.slice(0, levelIndex + 1);
       }
-      hierarchyLevels = [...hierarchyLevels];
+    } else {
+      targetTariffCodeId =
+        levelIndex > 0
+          ? hierarchyLevels[levelIndex - 1].selected?.id || null
+          : null;
+    }
+    hierarchyLevels = [...hierarchyLevels];
   }
+
+  // --- export helpers --------------------------------------------------
+  async function fetchConfirmedItems() {
+    loadingExport = true;
+    errorExport = "";
+    try {
+      const res = await fetch(`${API_URL}/confirmations`);
+      if (!res.ok) throw new Error("Failed to load confirmed items");
+      exportItems = await res.json();
+    } catch (err) {
+      console.error("Error fetching confirmed items:", err);
+      errorExport = "Fehler beim Laden der bestätigten Zuordnungen.";
+    } finally {
+      loadingExport = false;
+    }
+  }
+
+  function exportToCSV() {
+    if (exportItems.length === 0) {
+      alert("Keine bestätigten Einträge zum Exportieren vorhanden.");
+      return;
+    }
+
+    const headers = [
+      "Material-Nr.",
+      "Kurzbeschreibung",
+      "Bestelltext",
+      "Cluster ID",
+      "Cluster Name",
+      "Zugewiesene Zollnummer",
+      "Konfidenz",
+      "Bestätigt am",
+    ];
+
+    const rows = exportItems.map((item) => [
+      item.material_number,
+      item.short_text || "",
+      (item.purchase_order_text || "").replace(/\n/g, " "),
+      item.cluster_id,
+      item.cluster_name,
+      item.assigned_tariff_code,
+      item.confidence_score
+        ? (item.confidence_score * 100).toFixed(1) + "%"
+        : "N/A",
+      new Date(item.confirmed_at).toLocaleString("de-DE"),
+    ]);
+
+    const csvContent = [
+      headers.join(","),
+      ...rows.map((row) => row.map((cell) => `"${cell}"`).join(",")),
+    ].join("\n");
+
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(blob);
+    link.setAttribute("href", url);
+    link.setAttribute(
+      "download",
+      `hs_code_export_${new Date().toISOString().split("T")[0]}.csv`,
+    );
+    link.style.visibility = "hidden";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  function exportToJSON() {
+    if (exportItems.length === 0) {
+      alert("Keine bestätigten Einträge zum Exportieren vorhanden.");
+      return;
+    }
+
+    const jsonContent = JSON.stringify(exportItems, null, 2);
+    const blob = new Blob([jsonContent], {
+      type: "application/json;charset=utf-8;",
+    });
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(blob);
+    link.setAttribute("href", url);
+    link.setAttribute(
+      "download",
+      `hs_code_export_${new Date().toISOString().split("T")[0]}.json`,
+    );
+    link.style.visibility = "hidden";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  $: totalItemsExport = exportItems.length;
+  $: uniqueClustersExport = new Set(exportItems.map((item) => item.cluster_id))
+    .size;
 
   onMount(async () => {
     await fetchDistribution();
     // Fetch initial top level
     await fetchLevel(null, 0);
+    await fetchConfirmedItems();
   });
 
   async function fetchDistribution() {
@@ -308,6 +414,8 @@
   class="h-screen flex flex-col bg-gray-50 text-gray-900 font-sans p-6 overflow-auto"
 >
   <div class="max-w-7xl mx-auto w-full space-y-6">
+    <!-- step navigation -->
+    <NavigationHeader currentStep={3} />
     <div class="flex items-center justify-between">
       <div>
         <h1 class="text-3xl font-bold tracking-tight">
@@ -373,31 +481,52 @@
               </div>
 
               <div class="space-y-3">
-                <p class="text-[11px] text-blue-700 font-bold uppercase tracking-wider mb-1">Hierarchy Browser</p>
-                
-                <div class="space-y-2 max-h-64 overflow-y-auto pr-1 custom-scrollbar">
+                <p
+                  class="text-[11px] text-blue-700 font-bold uppercase tracking-wider mb-1"
+                >
+                  Hierarchy Browser
+                </p>
+
+                <div
+                  class="space-y-2 max-h-64 overflow-y-auto pr-1 custom-scrollbar"
+                >
                   {#each hierarchyLevels as level, i}
                     <div class="flex flex-col space-y-1">
-                      <label class="text-[9px] uppercase tracking-wider text-gray-400 font-bold">
-                        {i === 0 ? 'Category' : i === 1 ? 'Sub-Category' : i === 2 ? 'Heading' : `Level ${i + 1}`}
+                      <label
+                        class="text-[9px] uppercase tracking-wider text-gray-400 font-bold"
+                      >
+                        {i === 0
+                          ? "Category"
+                          : i === 1
+                            ? "Sub-Category"
+                            : i === 2
+                              ? "Heading"
+                              : `Level ${i + 1}`}
                       </label>
-                      <select 
+                      <select
                         class="w-full py-1.5 px-3 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white shadow-sm"
                         value={level.selected?.id || ""}
                         on:change={(e) => {
                           const id = parseInt(e.currentTarget.value);
-                          const item = level.items.find(it => it.id === id) || null;
+                          const item =
+                            level.items.find((it) => it.id === id) || null;
                           handleHierarchySelect(i, item);
                         }}
                       >
                         <option value="">Select...</option>
                         {#each level.items as t}
-                          <option value={t.id}>{t.goods_code} - {t.description ? (t.description.length > 50 ? t.description.substring(0, 50) + '...' : t.description) : ''}</option>
+                          <option value={t.id}
+                            >{t.goods_code} - {t.description
+                              ? t.description.length > 50
+                                ? t.description.substring(0, 50) + "..."
+                                : t.description
+                              : ""}</option
+                          >
                         {/each}
                       </select>
                     </div>
                   {/each}
-                  
+
                   {#if loadingHierarchy}
                     <div class="flex items-center justify-center p-2">
                       <RefreshCw class="w-4 h-4 text-blue-400 animate-spin" />
@@ -407,14 +536,22 @@
 
                 <div class="pt-2 border-t border-blue-100 mt-2">
                   {#if targetTariffCodeId}
-                    <div class="mb-3 p-2 bg-white/60 rounded-lg border border-blue-200 text-[11px] shadow-inner text-blue-900">
+                    <div
+                      class="mb-3 p-2 bg-white/60 rounded-lg border border-blue-200 text-[11px] shadow-inner text-blue-900"
+                    >
                       <div class="flex items-center space-x-2 mb-1">
-                        <span class="px-1.5 py-0.5 bg-blue-600 text-white rounded font-mono font-bold text-[10px]">
-                          {hierarchyLevels[hierarchyLevels.length - 1].selected?.goods_code}
+                        <span
+                          class="px-1.5 py-0.5 bg-blue-600 text-white rounded font-mono font-bold text-[10px]"
+                        >
+                          {hierarchyLevels[hierarchyLevels.length - 1].selected
+                            ?.goods_code}
                         </span>
                         <span class="font-bold">Target Selection</span>
                       </div>
-                      <p class="opacity-80 italic line-clamp-2">{hierarchyLevels[hierarchyLevels.length - 1].selected?.description || 'No description'}</p>
+                      <p class="opacity-80 italic line-clamp-2">
+                        {hierarchyLevels[hierarchyLevels.length - 1].selected
+                          ?.description || "No description"}
+                      </p>
                     </div>
                   {/if}
                   <button
@@ -513,4 +650,142 @@
       </div>
     {/if}
   </div>
+</div>
+
+<!-- export section (merged) -->
+<div class="max-w-7xl mx-auto px-8 py-12">
+  <div class="mb-12">
+    <h2 class="text-4xl text-[#BB1E38] font-bold mb-2">Export & Abschluss</h2>
+    <p class="text-base text-[#6b6b6b]">
+      Bestätigte HS-Code-Zuordnungen exportieren
+    </p>
+  </div>
+
+  {#if errorExport}
+    <Alert color="red" class="mb-8">{errorExport}</Alert>
+  {/if}
+
+  {#if loadingExport}
+    <div class="flex justify-center items-center py-20">
+      <div
+        class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-[#BB1E38]"
+      ></div>
+    </div>
+  {:else}
+    <!-- Summary Stats -->
+    <div class="grid md:grid-cols-3 gap-6 mb-8">
+      <div
+        class="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500"
+      >
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-sm text-gray-600 font-medium">Bestätigte Artikel</p>
+            <p class="text-3xl font-bold text-[#272425] mt-1">
+              {totalItemsExport}
+            </p>
+          </div>
+          <CheckCircle class="h-12 w-12 text-green-500 opacity-80" />
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-500">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-sm text-gray-600 font-medium">Cluster</p>
+            <p class="text-3xl font-bold text-[#272425] mt-1">
+              {uniqueClustersExport}
+            </p>
+          </div>
+          <div
+            class="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center"
+          >
+            <span class="text-2xl font-bold text-blue-600">C</span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-white rounded-lg shadow-md p-6 border-l-4 border-[#BB1E38]"
+      >
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-sm text-gray-600 font-medium">Bereit zum Export</p>
+            <p class="text-3xl font-bold text-[#272425] mt-1">✓</p>
+          </div>
+          <span class="h-12 w-12 text-[#BB1E38] opacity-80">
+            <!-- icon placeholder -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              class="h-12 w-12"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 17v-6a2 2 0 012-2h2a2 2 0 012 2v6m-4 0v4m0-4h4m-4 0H5"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Export Options -->
+    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+      <h3 class="text-2xl font-semibold text-[#272425] mb-6">
+        Export-Optionen
+      </h3>
+      {#if totalItemsExport === 0}
+        <div class="text-center py-12">
+          <span class="mx-auto h-16 w-16 text-gray-300 mb-4 block">📄</span>
+          <p class="text-gray-500 text-lg mb-2">
+            Keine bestätigten Einträge vorhanden
+          </p>
+          <p class="text-gray-400 text-sm mb-6">
+            Bitte bestätigen Sie zunächst einige Zuordnungen auf der
+            Ergebnisseite.
+          </p>
+        </div>
+      {:else}
+        <div class="grid md:grid-cols-2 gap-6">
+          <button
+            on:click={exportToCSV}
+            class="group relative overflow-hidden border-2 border-gray-200 rounded-lg p-8 hover:border-[#BB1E38] hover:shadow-lg transition-all"
+          >
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-4">
+                <span class="h-12 w-12 text-green-600">📄</span>
+                <span
+                  class="h-8 w-8 text-gray-400 group-hover:text-[#BB1E38] transition-colors"
+                  >⬇️</span
+                >
+              </div>
+              <p class="text-lg font-semibold">CSV herunterladen</p>
+              <p class="text-sm text-gray-500 mt-1">Komma-separierte Werte</p>
+            </div>
+          </button>
+
+          <button
+            on:click={exportToJSON}
+            class="group relative overflow-hidden border-2 border-gray-200 rounded-lg p-8 hover:border-[#BB1E38] hover:shadow-lg transition-all"
+          >
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-4">
+                <span class="h-12 w-12 text-indigo-600">🗂️</span>
+                <span
+                  class="h-8 w-8 text-gray-400 group-hover:text-[#BB1E38] transition-colors"
+                  >⬇️</span
+                >
+              </div>
+              <p class="text-lg font-semibold">JSON herunterladen</p>
+              <p class="text-sm text-gray-500 mt-1">Strukturierte Daten</p>
+            </div>
+          </button>
+        </div>
+      {/if}
+    </div>
+  {/if}
 </div>

@@ -10,6 +10,7 @@
     AlertCircle,
   } from "lucide-svelte";
   import { Alert } from "flowbite-svelte";
+  import NavigationHeader from "$lib/components/NavigationHeader.svelte";
 
   const API_URL = "http://localhost:8000";
 
@@ -110,6 +111,8 @@
 
 <div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
   <div class="max-w-5xl mx-auto px-8 py-12">
+    <NavigationHeader currentStep={1} />
+
     <!-- Header -->
     <div class="text-center mb-12">
       <h1 class="text-5xl font-bold text-[#BB1E38] mb-4">

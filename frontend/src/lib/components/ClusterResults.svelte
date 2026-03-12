@@ -5,6 +5,7 @@
     CheckCircle,
     AlertTriangle,
     HelpCircle,
+    RefreshCw,
   } from "lucide-svelte";
 
   export let clusters: any[] = [];
@@ -276,6 +277,102 @@
   // Get top N tariff suggestions
   function getTopSuggestions(suggestions: any[], count: number) {
     return suggestions ? suggestions.slice(0, count) : [];
+  }
+
+  /**
+   * --- Custom assignment support (hierarchical picker) ---
+   * We reuse the same hierarchy approach from overview/+page.svelte but
+   * keep state per-cluster so users can assign any code to a cluster.
+   */
+  interface TariffCode {
+    id: number;
+    goods_code: string;
+    description: string | null;
+  }
+
+  // track which clusters currently have the custom picker expanded
+  let clusterSelectingCustom: Set<string> = new Set();
+
+  // per-cluster hierarchy state
+  let clusterHierarchy: Record<
+    string,
+    {
+      levels: { items: TariffCode[]; selected: TariffCode | null }[];
+      loading: boolean;
+      targetCode: TariffCode | null;
+    }
+  > = {};
+
+  async function fetchClusterLevel(
+    clusterId: string,
+    parentId: number | null,
+    levelIndex: number,
+  ) {
+    const state = clusterHierarchy[clusterId];
+    if (!state) return;
+    state.loading = true;
+    try {
+      const url = parentId
+        ? `http://localhost:8000/tariffs/hierarchy?parent_id=${parentId}`
+        : "http://localhost:8000/tariffs/hierarchy";
+      const res = await fetch(url);
+      if (res.ok) {
+        const items = await res.json();
+        state.levels[levelIndex].items = items;
+        // trigger reactivity
+        clusterHierarchy = { ...clusterHierarchy };
+      }
+    } catch (e) {
+      console.error("Failed to fetch hierarchy for cluster", clusterId, e);
+    } finally {
+      state.loading = false;
+    }
+  }
+
+  async function handleClusterHierarchySelect(
+    clusterId: string,
+    levelIndex: number,
+    item: TariffCode | null,
+  ) {
+    const state = clusterHierarchy[clusterId];
+    if (!state) return;
+
+    state.levels = state.levels.slice(0, levelIndex + 1);
+    state.levels[levelIndex].selected = item;
+
+    if (item) {
+      state.targetCode = item;
+      // prepare next level
+      state.levels.push({ items: [], selected: null });
+      await fetchClusterLevel(clusterId, item.id, levelIndex + 1);
+      if (state.levels[levelIndex + 1].items.length === 0) {
+        state.levels = state.levels.slice(0, levelIndex + 1);
+      }
+    } else {
+      state.targetCode =
+        levelIndex > 0 ? state.levels[levelIndex - 1].selected : null;
+    }
+    // reassign so Svelte updates
+    clusterHierarchy = { ...clusterHierarchy };
+  }
+
+  function startCustomAssign(clusterId: string) {
+    clusterSelectingCustom.add(clusterId);
+    clusterSelectingCustom = new Set(clusterSelectingCustom);
+    clusterHierarchy[clusterId] = {
+      levels: [{ items: [], selected: null }],
+      loading: false,
+      targetCode: null,
+    };
+    // fetch first level
+    fetchClusterLevel(clusterId, null, 0);
+  }
+
+  function cancelCustomAssign(clusterId: string) {
+    clusterSelectingCustom.delete(clusterId);
+    clusterSelectingCustom = new Set(clusterSelectingCustom);
+    delete clusterHierarchy[clusterId];
+    clusterHierarchy = { ...clusterHierarchy };
   }
 
   // Calculate confirmation progress
@@ -667,6 +764,109 @@
                       </div>
                     {/each}
                   </div>
+                </div>
+              {/if}
+
+              <!-- custom assignment section -->
+              {#if !isConfirmed}
+                <div class="mb-6 px-4">
+                  <button
+                    class="text-sm text-[#BB1E38] underline hover:text-[#9a1830]"
+                    on:click={() => {
+                      if (clusterSelectingCustom.has(cluster.cluster_id)) {
+                        cancelCustomAssign(cluster.cluster_id);
+                      } else {
+                        startCustomAssign(cluster.cluster_id);
+                      }
+                    }}
+                  >
+                    {clusterSelectingCustom.has(cluster.cluster_id)
+                      ? "Abbrechen"
+                      : "Andere Zollnummer zuweisen"}
+                  </button>
+
+                  {#if clusterSelectingCustom.has(cluster.cluster_id)}
+                    <div
+                      class="mt-4 bg-gray-50 p-4 rounded-lg border border-gray-200"
+                    >
+                      <p class="text-sm font-medium mb-2">
+                        Wähle eine Zollnummer aus der Hierarchie
+                      </p>
+                      <div class="space-y-3">
+                        {#each clusterHierarchy[cluster.cluster_id].levels as level, li}
+                          <div class="flex flex-col space-y-1">
+                            <label
+                              class="text-[9px] uppercase tracking-wider text-gray-400 font-bold"
+                            >
+                              {li === 0
+                                ? "Kategorie"
+                                : li === 1
+                                  ? "Unterkategorie"
+                                  : li === 2
+                                    ? "Head"
+                                    : `Ebene ${li + 1}`}
+                            </label>
+                            <select
+                              class="w-full py-1.5 px-3 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white shadow-sm"
+                              value={level.selected?.id || ""}
+                              on:change={(e) => {
+                                const id = parseInt(e.currentTarget.value);
+                                const item =
+                                  level.items.find((it) => it.id === id) ||
+                                  null;
+                                handleClusterHierarchySelect(
+                                  cluster.cluster_id,
+                                  li,
+                                  item,
+                                );
+                              }}
+                            >
+                              <option value="">Select...</option>
+                              {#each level.items as t}
+                                <option value={t.id}>
+                                  {t.goods_code} - {t.description
+                                    ? t.description.length > 50
+                                      ? t.description.substring(0, 50) + "..."
+                                      : t.description
+                                    : ""}
+                                </option>
+                              {/each}
+                            </select>
+                          </div>
+                        {/each}
+
+                        {#if clusterHierarchy[cluster.cluster_id].loading}
+                          <div class="flex items-center justify-center p-2">
+                            <RefreshCw
+                              class="w-4 h-4 text-blue-400 animate-spin"
+                            />
+                          </div>
+                        {/if}
+                      </div>
+
+                      <div class="mt-4 flex items-center gap-2">
+                        <button
+                          class="px-4 py-2 bg-[#BB1E38] text-white rounded-lg text-sm font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                          disabled={!clusterHierarchy[cluster.cluster_id]
+                            .targetCode}
+                          on:click={async () => {
+                            const codeObj =
+                              clusterHierarchy[cluster.cluster_id].targetCode;
+                            if (codeObj) {
+                              await confirmWholeCluster(
+                                cluster,
+                                codeObj.goods_code,
+                                null,
+                              );
+                              cancelCustomAssign(cluster.cluster_id);
+                            }
+                          }}
+                        >
+                          Bestätige benutzerdefinierte Zollnummer
+                        </button>
+                      </div>
+                    </div>
+                  {/if}
                 </div>
               {/if}
 
