@@ -106,6 +106,7 @@ def generate_clusters(db: Session = None) -> List[ClusterSchema]:
         item = ClusterItemSchema(
             item_id=mat.material_number,
             raw_description=text.replace('\n', ' ')[:100],  # Shorten for display
+            purchase_order_text=text,  # Full text for details view
             parsed_data=parsed_data
         )
         clusters_dict[family].append(item)
