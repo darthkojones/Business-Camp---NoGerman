@@ -41,8 +41,8 @@
 
   function handleConfirmAndProceed() {
     if (isConfirmed) {
-      console.log("Bestätigen und fortfahren clicked");
-      // TODO: Export data or navigate to next step
+      console.log("Navigating to export page");
+      goto("/export");
     }
   }
 

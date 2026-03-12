@@ -60,3 +60,31 @@ class EnrichedClusterSchema(BaseModel):
     tariff_suggestions: Optional[List[TariffMatchSchema]] = None
     suggestion_timestamp: Optional[str] = None
     status: str = "pending"  # pending, processing, completed, error
+
+
+class ConfirmationRequest(BaseModel):
+    """Request to confirm a tariff code assignment for a material"""
+    material_number: str
+    cluster_id: str
+    assigned_tariff_code: str
+    confidence_score: Optional[float] = None
+
+
+class ConfirmationResponse(BaseModel):
+    """Response after confirming a material assignment"""
+    material_number: str
+    assigned_tariff_code: str
+    confirmed: bool
+    message: str
+
+
+class ExportItemSchema(BaseModel):
+    """Schema for export data"""
+    material_number: str
+    short_text: str
+    purchase_order_text: Optional[str] = None
+    cluster_id: str
+    cluster_name: str
+    assigned_tariff_code: str
+    confidence_score: Optional[float] = None
+    confirmed_at: str

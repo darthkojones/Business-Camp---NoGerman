@@ -2,12 +2,14 @@ from fastapi import FastAPI, Depends, HTTPException, Query, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from database import get_db, Base, engine
-from models import Material, TariffCode
-from schemas import MaterialSchema, TariffCodeSchema, ClusterSchema, TariffSuggestionResponse, EnrichedClusterSchema
+from models import Material, TariffCode, UserConfirmation
+from schemas import MaterialSchema, TariffCodeSchema, ClusterSchema, TariffSuggestionResponse, EnrichedClusterSchema, ConfirmationRequest, ConfirmationResponse, ExportItemSchema
 from clustering import generate_clusters
 from tariff_matcher import match_cluster_to_tariff, clear_cache
 from typing import List, Optional
 import pandas as pd
+import io
+from datetime import datetime
 import io
 
 app = FastAPI(title="Harmonized Tariff Codes Classification API")
@@ -269,4 +271,124 @@ def process_and_analyze(db: Session = Depends(get_db)):
     except Exception as e:
         print(f"Error during processing: {e}")
         raise HTTPException(status_code=500, detail=f"Error during processing: {str(e)}")
+
+
+@app.post("/confirmations", response_model=ConfirmationResponse)
+def confirm_material_assignment(
+    confirmation: ConfirmationRequest,
+    db: Session = Depends(get_db)
+):
+    """
+    Confirm and save a tariff code assignment for a material.
+    This creates a permanent record of the user's selection.
+    """
+    try:
+        # Find the material
+        material = db.query(Material).filter(
+            Material.material_number == confirmation.material_number
+        ).first()
+        
+        if not material:
+            raise HTTPException(
+                status_code=404,
+                detail=f"Material {confirmation.material_number} not found"
+            )
+        
+        # Check if there's already a confirmation for this material
+        existing = db.query(UserConfirmation).filter(
+            UserConfirmation.material_number == confirmation.material_number
+        ).first()
+        
+        if existing:
+            # Update existing confirmation
+            existing.assigned_tariff_code = confirmation.assigned_tariff_code
+            existing.cluster_id = confirmation.cluster_id
+            existing.confidence_score = confirmation.confidence_score
+            existing.confirmed_at = datetime.utcnow()
+        else:
+            # Create new confirmation
+            new_confirmation = UserConfirmation(
+                material_id=material.id,
+                material_number=confirmation.material_number,
+                cluster_id=confirmation.cluster_id,
+                assigned_tariff_code=confirmation.assigned_tariff_code,
+                confidence_score=confirmation.confidence_score
+            )
+            db.add(new_confirmation)
+        
+        # Mark material as classified
+        material.is_classified = True
+        
+        db.commit()
+        
+        return ConfirmationResponse(
+            material_number=confirmation.material_number,
+            assigned_tariff_code=confirmation.assigned_tariff_code,
+            confirmed=True,
+            message="Tariff assignment confirmed successfully"
+        )
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        db.rollback()
+        print(f"Error confirming assignment: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error confirming assignment: {str(e)}"
+        )
+
+
+@app.get("/confirmations", response_model=List[ExportItemSchema])
+def get_confirmed_items(db: Session = Depends(get_db)):
+    """
+    Get all confirmed material-tariff assignments.
+    Returns data ready for export.
+    """
+    try:
+        confirmations = db.query(UserConfirmation).all()
+        
+        export_items = []
+        for conf in confirmations:
+            material = db.query(Material).filter(Material.id == conf.material_id).first()
+            if material:
+                # Find cluster name by re-generating clusters
+                clusters = generate_clusters(db)
+                cluster_name = ""
+                for cluster in clusters:
+                    if cluster.cluster_id == conf.cluster_id:
+                        cluster_name = cluster.cluster_name
+                        break
+                
+                export_items.append(ExportItemSchema(
+                    material_number=conf.material_number,
+                    short_text=material.short_text or "",
+                    purchase_order_text=material.purchase_order_text,
+                    cluster_id=conf.cluster_id,
+                    cluster_name=cluster_name,
+                    assigned_tariff_code=conf.assigned_tariff_code,
+                    confidence_score=conf.confidence_score,
+                    confirmed_at=conf.confirmed_at.isoformat()
+                ))
+        
+        return export_items
+    
+    except Exception as e:
+        print(f"Error retrieving confirmations: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error retrieving confirmations: {str(e)}"
+        )
+
+
+@app.delete("/confirmations")
+def clear_all_confirmations(db: Session = Depends(get_db)):
+    """Clear all confirmed assignments (for testing/reset purposes)"""
+    try:
+        db.query(UserConfirmation).delete()
+        db.commit()
+        return {"message": "All confirmations cleared"}
+    except Exception as e:
+        db.rollback()
+        raise HTTPException(status_code=500, detail=str(e))
 

@@ -4,6 +4,8 @@
   export let clusters: any[] = [];
   export let loading: boolean = false;
 
+  const API_URL = "http://localhost:8000";
+
   let expandedClusters: Set<string> = new Set();
   
   // Track user selections and confirmations for each item
@@ -12,6 +14,13 @@
   
   // Format: Set of "clusterId-itemId" for confirmed items
   let confirmedItems: Set<string> = new Set();
+
+  // Track confidence scores for selections
+  let itemConfidenceScores: Record<string, number> = {};
+
+  // Track cluster-level confirmations
+  let confirmedClusters: Set<string> = new Set();
+  let confirmingClusters: Set<string> = new Set();
 
   function toggleCluster(clusterId: string) {
     if (expandedClusters.has(clusterId)) {
@@ -22,19 +31,117 @@
     expandedClusters = expandedClusters; // Trigger reactivity
   }
 
-  function selectTariffForItem(clusterId: string, itemId: string, tariffCode: string) {
+  function selectTariffForItem(clusterId: string, itemId: string, tariffCode: string, confidenceScore: number) {
     const key = `${clusterId}-${itemId}`;
     itemSelections[key] = tariffCode;
+    itemConfidenceScores[key] = confidenceScore;
     itemSelections = itemSelections; // Trigger reactivity
   }
 
-  function confirmItem(clusterId: string, itemId: string) {
+  async function confirmItem(clusterId: string, itemId: string) {
     const key = `${clusterId}-${itemId}`;
-    if (itemSelections[key]) {
+    const selectedTariff = itemSelections[key];
+    
+    if (!selectedTariff) {
+      console.error("No tariff selected for item", itemId);
+      return;
+    }
+
+    try {
+      const response = await fetch(`${API_URL}/confirmations`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          material_number: itemId,
+          cluster_id: clusterId,
+          assigned_tariff_code: selectedTariff,
+          confidence_score: itemConfidenceScores[key] || null
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to confirm assignment");
+      }
+
+      const result = await response.json();
+      console.log(`Confirmed: Material ${itemId} with HS code ${selectedTariff}`, result);
+      
+      // Add to confirmed items
       confirmedItems.add(key);
       confirmedItems = confirmedItems; // Trigger reactivity
-      console.log(`Confirmed: Material ${itemId} with HS code ${itemSelections[key]}`);
+    } catch (error) {
+      console.error("Error confirming item:", error);
+      alert("Fehler beim Speichern der Bestätigung. Bitte versuchen Sie es erneut.");
     }
+  }
+
+  async function confirmWholeCluster(cluster: any) {
+    if (!cluster.tariff_suggestions || cluster.tariff_suggestions.length === 0) {
+      alert("Keine Zollnummern-Vorschläge für diesen Cluster vorhanden.");
+      return;
+    }
+
+    const topSuggestion = cluster.tariff_suggestions[0];
+    const clusterId = cluster.cluster_id;
+
+    confirmingClusters.add(clusterId);
+    confirmingClusters = confirmingClusters;
+
+    try {
+      // Confirm all items in the cluster with the top suggestion
+      const confirmPromises = cluster.items.map(async (item: any) => {
+        const key = `${clusterId}-${item.item_id}`;
+        
+        // Set the selection for this item
+        itemSelections[key] = topSuggestion.tariff_code;
+        itemConfidenceScores[key] = topSuggestion.confidence_score;
+        
+        // Confirm via API
+        const response = await fetch(`${API_URL}/confirmations`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            material_number: item.item_id,
+            cluster_id: clusterId,
+            assigned_tariff_code: topSuggestion.tariff_code,
+            confidence_score: topSuggestion.confidence_score
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error(`Failed to confirm ${item.item_id}`);
+        }
+
+        // Add to confirmed items
+        confirmedItems.add(key);
+        
+        return response.json();
+      });
+
+      await Promise.all(confirmPromises);
+      
+      // Mark cluster as confirmed
+      confirmedClusters.add(clusterId);
+      confirmedClusters = confirmedClusters;
+      confirmedItems = confirmedItems;
+      itemSelections = itemSelections;
+
+      console.log(`Confirmed entire cluster ${clusterId} with ${cluster.items.length} items using HS code ${topSuggestion.tariff_code}`);
+    } catch (error) {
+      console.error("Error confirming cluster:", error);
+      alert("Fehler beim Bestätigen des Clusters. Bitte versuchen Sie es erneut.");
+    } finally {
+      confirmingClusters.delete(clusterId);
+      confirmingClusters = confirmingClusters;
+    }
+  }
+
+  function isClusterConfirmed(clusterId: string): boolean {
+    return confirmedClusters.has(clusterId);
+  }
+
+  function isClusterConfirming(clusterId: string): boolean {
+    return confirmingClusters.has(clusterId);
   }
 
   function isItemConfirmed(clusterId: string, itemId: string): boolean {
@@ -82,6 +189,12 @@
     <p class="text-sm text-[#6b6b6b] mt-1">
       Vollständige Übersicht aller analysierten Produkte mit zugeteilten 8-stelligen Zollnummern
     </p>
+    <div class="mt-3 bg-blue-50 border border-blue-200 rounded-md p-3">
+      <p class="text-xs text-blue-800">
+        <strong>Tipp:</strong> Sie können entweder alle Artikel eines Clusters auf einmal mit dem Top-Vorschlag bestätigen, 
+        oder jeden Artikel einzeln mit Ihrer Wahl bestätigen.
+      </p>
+    </div>
   </div>
 
   {#if loading}
@@ -97,7 +210,8 @@
   {:else}
     <div class="divide-y divide-gray-200">
       {#each clusters as cluster (cluster.cluster_id)}
-        <div class="hover:bg-gray-50 transition-colors">
+        {@const clusterConfirmed = isClusterConfirmed(cluster.cluster_id)}
+        <div class="hover:bg-gray-50 transition-colors {clusterConfirmed ? 'bg-green-50/30' : ''}">
           <!-- Cluster Header -->
           <button
             on:click={() => toggleCluster(cluster.cluster_id)}
@@ -121,6 +235,12 @@
                   <span class="px-2.5 py-0.5 rounded-full text-xs font-medium {getStatusBadge(cluster.status).class}">
                     {getStatusBadge(cluster.status).label}
                   </span>
+                  {#if clusterConfirmed}
+                    <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 flex items-center gap-1">
+                      <CheckCircle class="h-3 w-3" />
+                      Bestätigt
+                    </span>
+                  {/if}
                 </div>
                 
                 {#if cluster.tariff_suggestions && cluster.tariff_suggestions.length > 0}
@@ -144,10 +264,35 @@
               <!-- Tariff Suggestions -->
               {#if cluster.tariff_suggestions && cluster.tariff_suggestions.length > 0}
                 <div class="mb-6 bg-white rounded-lg border border-gray-200 p-4">
-                  <h4 class="font-semibold text-[#272425] mb-3 flex items-center gap-2">
-                    <CheckCircle class="h-5 w-5 text-green-600" />
-                    LLM-Vorschläge für Zollnummern (Top 3)
-                  </h4>
+                  <div class="flex items-center justify-between mb-3">
+                    <h4 class="font-semibold text-[#272425] flex items-center gap-2">
+                      <CheckCircle class="h-5 w-5 text-green-600" />
+                      LLM-Vorschläge für Zollnummern (Top 3)
+                    </h4>
+                    
+                    {#if isClusterConfirmed(cluster.cluster_id)}
+                      <div class="flex items-center gap-2 px-4 py-2 bg-green-100 text-green-800 rounded-md">
+                        <CheckCircle class="h-5 w-5" />
+                        <span class="font-semibold text-sm">Cluster bestätigt ({cluster.item_count} Artikel)</span>
+                      </div>
+                    {:else}
+                      <button
+                        on:click={() => confirmWholeCluster(cluster)}
+                        disabled={isClusterConfirming(cluster.cluster_id)}
+                        class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-md
+                               bg-[#BB1E38] hover:bg-[#9a1830] text-white
+                               disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                      >
+                        {#if isClusterConfirming(cluster.cluster_id)}
+                          <div class="inline-block animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                          Bestätige...
+                        {:else}
+                          <CheckCircle class="h-4 w-4 mr-2" />
+                          Alle Artikel mit Top-Vorschlag bestätigen
+                        {/if}
+                      </button>
+                    {/if}
+                  </div>
                   
                   <div class="space-y-3">
                     {#each getTopSuggestions(cluster.tariff_suggestions, 3) as suggestion, idx}
@@ -233,7 +378,7 @@
                                       name="tariff-{itemKey}"
                                       value={suggestion.tariff_code}
                                       disabled={isConfirmed}
-                                      on:change={() => selectTariffForItem(cluster.cluster_id, item.item_id, suggestion.tariff_code)}
+                                      on:change={() => selectTariffForItem(cluster.cluster_id, item.item_id, suggestion.tariff_code, suggestion.confidence_score)}
                                       checked={selectedTariff === suggestion.tariff_code}
                                       class="mt-1 h-4 w-4 text-[#BB1E38] focus:ring-[#BB1E38] disabled:opacity-50"
                                     />
