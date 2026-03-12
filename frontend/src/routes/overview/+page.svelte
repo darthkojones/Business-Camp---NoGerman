@@ -374,7 +374,7 @@
         index = activeEls[0].index;
       } else if (chartInstance) {
         // possibly clicked on the label area; compute index from pixel
-        const xScale: any = chartInstance.scales['x'];
+        const xScale: any = chartInstance.scales["x"];
         if (xScale) {
           const value = xScale.getValueForPixel(e.x);
           if (value !== undefined && value !== null) {

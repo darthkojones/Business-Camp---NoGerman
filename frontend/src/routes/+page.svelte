@@ -1,14 +1,7 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
   import { onMount } from "svelte";
-  import {
-    Upload,
-    FileText,
-    Database,
-    Sparkles,
-    ArrowRight,
-    AlertCircle,
-  } from "lucide-svelte";
+  import { Upload, FileText, AlertCircle } from "lucide-svelte";
   import { Alert } from "flowbite-svelte";
   import NavigationHeader from "$lib/components/NavigationHeader.svelte";
 
@@ -77,6 +70,14 @@
       uploadSuccess = false;
     } finally {
       uploading = false;
+    }
+  }
+
+  // helper that performs upload and, on success, immediately kicks off analysis
+  async function uploadAndAnalyze() {
+    await uploadFiles();
+    if (uploadSuccess) {
+      await startAnalysis();
     }
   }
 
@@ -183,21 +184,29 @@
 
       <div class="mt-6">
         <button
-          on:click={uploadFiles}
+          on:click={uploadAndAnalyze}
           disabled={!materialsFile || uploading || processing}
           class="w-full bg-[#BB1E38] hover:bg-[#9a1830] disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
         >
-          {#if uploading}
+          {#if uploading || processing}
             <div
               class="animate-spin rounded-full h-5 w-5 border-b-2 border-white"
             ></div>
-            Hochladen...
+            {#if uploading}
+              Hochladen...
+            {:else}
+              Analyse läuft...
+            {/if}
           {:else}
             <Upload class="h-5 w-5" />
-            Dateien hochladen
+            Dateien hochladen & Analyse starten
           {/if}
         </button>
       </div>
+
+      <p class="text-sm text-[#6b6b6b] mt-4">
+        Die Analyse startet automatisch nachdem der Upload abgeschlossen ist.
+      </p>
 
       {#if uploadSuccess}
         <div class="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
@@ -215,66 +224,6 @@
             </div>
           </div>
         </div>
-      {/if}
-    </div>
-
-    <!-- Analysis Section -->
-    <div class="bg-white rounded-xl shadow-lg p-8">
-      <div class="mb-8">
-        <h2
-          class="text-2xl font-semibold text-[#272425] mb-2 flex items-center gap-2"
-        >
-          <Sparkles class="h-6 w-6 text-[#BB1E38]" />
-          Schritt 2: Analyse starten
-        </h2>
-        <p class="text-[#6b6b6b]">
-          Clustering und KI-gestützte HS-Code-Zuordnung durchführen
-        </p>
-      </div>
-
-      <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-        <h3 class="text-sm font-semibold text-blue-900 mb-2">
-          Was passiert bei der Analyse?
-        </h3>
-        <ul class="text-sm text-blue-800 space-y-2">
-          <li class="flex items-start gap-2">
-            <span class="text-blue-600 font-bold">1.</span>
-            <span>Materialien werden nach Produktfamilien geclustert</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="text-blue-600 font-bold">2.</span>
-            <span
-              >LLM analysiert jeden Cluster und schlägt passende HS-Codes vor</span
-            >
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="text-blue-600 font-bold">3.</span>
-            <span>Konfidenz-Scores werden berechnet für jede Zuordnung</span>
-          </li>
-        </ul>
-      </div>
-
-      <button
-        on:click={startAnalysis}
-        disabled={!uploadSuccess || processing}
-        class="w-full bg-gradient-to-r from-[#BB1E38] to-[#9a1830] hover:from-[#9a1830] hover:to-[#BB1E38] disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-3 text-lg"
-      >
-        {#if processing}
-          <div
-            class="animate-spin rounded-full h-6 w-6 border-b-2 border-white"
-          ></div>
-          Analyse läuft...
-        {:else}
-          <Sparkles class="h-6 w-6" />
-          Analyse starten
-          <ArrowRight class="h-6 w-6" />
-        {/if}
-      </button>
-
-      {#if !uploadSuccess}
-        <p class="text-center text-sm text-[#6b6b6b] mt-4">
-          Bitte laden Sie zuerst Ihre Dateien hoch
-        </p>
       {/if}
     </div>
 
