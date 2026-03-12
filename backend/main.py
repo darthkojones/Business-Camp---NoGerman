@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Depends, HTTPException, Query
+from fastapi import FastAPI, Depends, HTTPException, Query, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from database import get_db, Base, engine
@@ -7,6 +7,8 @@ from schemas import MaterialSchema, TariffCodeSchema, ClusterSchema, TariffSugge
 from clustering import generate_clusters
 from tariff_matcher import match_cluster_to_tariff, clear_cache
 from typing import List, Optional
+import pandas as pd
+import io
 
 app = FastAPI(title="Harmonized Tariff Codes Classification API")
 
@@ -143,4 +145,128 @@ def clear_matching_cache():
     """
     clear_cache()
     return {"message": "Cache cleared successfully"}
+
+
+@app.post("/upload")
+async def upload_files(
+    materials_file: Optional[UploadFile] = File(None),
+    customs_file: Optional[UploadFile] = File(None),
+    db: Session = Depends(get_db)
+):
+    """
+    Upload CSV files for materials and/or customs data.
+    Processes and stores them in the database.
+    """
+    materials_count = 0
+    tariffs_count = 0
+    
+    try:
+        # Process materials file
+        if materials_file:
+            if not materials_file.filename.endswith('.csv'):
+                raise HTTPException(status_code=400, detail="Materials file must be a CSV file")
+            
+            content = await materials_file.read()
+            df_materials = pd.read_csv(io.BytesIO(content), dtype=str)
+            df_materials = df_materials.fillna("")
+            
+            # Clear existing materials
+            db.query(Material).delete()
+            
+            # Insert new materials
+            materials_to_insert = []
+            for _, row in df_materials.iterrows():
+                material_number = row.get('Material number', row.get('Materialnummer', ''))
+                short_text = row.get('Short text', row.get('Kurztext', ''))
+                po_text = row.get('Purchase order text', row.get('Bestelltext', ''))
+                
+                materials_to_insert.append(Material(
+                    material_number=material_number,
+                    short_text=short_text,
+                    purchase_order_text=po_text,
+                    is_classified=False
+                ))
+            
+            db.bulk_save_objects(materials_to_insert)
+            db.commit()
+            materials_count = len(materials_to_insert)
+            print(f"Uploaded {materials_count} materials")
+        
+        # Process customs/tariff file
+        if customs_file:
+            if not customs_file.filename.endswith('.csv'):
+                raise HTTPException(status_code=400, detail="Customs file must be a CSV file")
+            
+            content = await customs_file.read()
+            df_tariffs = pd.read_csv(io.BytesIO(content), dtype=str)
+            df_tariffs = df_tariffs.fillna("")
+            
+            # Clear existing tariff codes
+            db.query(TariffCode).delete()
+            
+            # Insert new tariff codes
+            tariffs_to_insert = []
+            for _, row in df_tariffs.iterrows():
+                tariffs_to_insert.append(TariffCode(
+                    goods_code=row.get('Goods code', row.get('goods_code', '')),
+                    description=row.get('Description', row.get('description', '')),
+                    language=row.get('Language', row.get('language', 'EN')),
+                    start_date=row.get('Start date', row.get('start_date', '')),
+                    end_date=row.get('End date', row.get('end_date', ''))
+                ))
+            
+            db.bulk_save_objects(tariffs_to_insert)
+            db.commit()
+            tariffs_count = len(tariffs_to_insert)
+            print(f"Uploaded {tariffs_count} tariff codes")
+        
+        return {
+            "message": "Files uploaded successfully",
+            "materials_count": materials_count,
+            "tariffs_count": tariffs_count
+        }
+    
+    except Exception as e:
+        db.rollback()
+        print(f"Error uploading files: {e}")
+        raise HTTPException(status_code=500, detail=f"Error uploading files: {str(e)}")
+
+
+@app.post("/process")
+def process_and_analyze(db: Session = Depends(get_db)):
+    """
+    Trigger the clustering and LLM analysis process.
+    This generates clusters from materials and creates tariff suggestions.
+    """
+    try:
+        # Generate clusters
+        clusters = generate_clusters(db)
+        
+        if not clusters:
+            raise HTTPException(status_code=400, detail="No materials found to cluster. Please upload materials first.")
+        
+        # Generate tariff suggestions for all clusters
+        analyzed_count = 0
+        for cluster in clusters:
+            try:
+                match_cluster_to_tariff(
+                    cluster=cluster,
+                    db=db,
+                    use_cache=True,
+                    model="gpt-4o-mini"
+                )
+                analyzed_count += 1
+            except Exception as e:
+                print(f"Error analyzing cluster {cluster.cluster_id}: {e}")
+                # Continue with next cluster even if one fails
+        
+        return {
+            "message": "Processing completed",
+            "clusters_count": len(clusters),
+            "analyzed_count": analyzed_count
+        }
+    
+    except Exception as e:
+        print(f"Error during processing: {e}")
+        raise HTTPException(status_code=500, detail=f"Error during processing: {str(e)}")
 
