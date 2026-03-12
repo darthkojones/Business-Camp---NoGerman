@@ -1,3 +1,3 @@
-// since there's no dynamic data here, we can prerender
-// it so that it gets served as a static asset in production
-export const prerender = true;
+// Disable prerendering since this page fetches data from the API on mount
+export const prerender = false;
+export const ssr = false; // Also disable server-side rendering
