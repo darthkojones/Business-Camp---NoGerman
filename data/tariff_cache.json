@@ -552,5 +552,1967 @@
     "cluster_name": "Touch",
     "matches": [],
     "timestamp": "2026-03-12T10:19:26.436889"
+  },
+  "CL-007_Servomotor": {
+    "cluster_id": "CL-007",
+    "cluster_name": "Servomotor",
+    "matches": [
+      {
+        "tariff_code": "8501000000",
+        "confidence_score": 0.95,
+        "reasoning": "Servomotors are a type of electric motor, and this code specifically covers electric motors and generators, excluding power generation sets, making it highly relevant.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501100000",
+        "confidence_score": 0.9,
+        "reasoning": "This code includes electric motors, which encompasses servomotors, and is more specific than the previous code, focusing on motors and generators.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501101090",
+        "confidence_score": 0.85,
+        "reasoning": "This code covers 'other' electric motors, which can include servomotors that do not fit into more specific categories, thus making it a suitable option.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109900",
+        "confidence_score": 0.8,
+        "reasoning": "This code is for direct current motors, which can also include servomotors, especially if they are designed for specific applications.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109930",
+        "confidence_score": 0.75,
+        "reasoning": "This code is for linear drives, which may include certain types of servomotors used in specific applications, making it a relevant option.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:02:09.476012"
+  },
+  "CL-006_Schraube": {
+    "cluster_id": "CL-006",
+    "cluster_name": "Schraube",
+    "matches": [
+      {
+        "tariff_code": "7300000000 80",
+        "confidence_score": 0.95,
+        "reasoning": "This code encompasses goods made from iron or steel, which includes screws (Schrauben) as they are typically made from these materials.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7301000000 80",
+        "confidence_score": 0.9,
+        "reasoning": "This code specifically covers products made from iron or steel, including fasteners like screws that may be welded or made from composite elements.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7302900000 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code is for other articles of iron or steel not specifically mentioned, which can include various types of screws.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7304000000 80",
+        "confidence_score": 0.8,
+        "reasoning": "This code covers seamless pipes and hollow profiles made of iron or steel, which may relate to certain types of screws depending on their design and application.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7303000000 80",
+        "confidence_score": 0.75,
+        "reasoning": "This code includes pipes and hollow profiles made of cast iron, which may not be directly related to screws but indicates the broader category of iron and steel products.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:02:17.774382"
+  },
+  "CL-004_Wellendichtring": {
+    "cluster_id": "CL-004",
+    "cluster_name": "Wellendichtring",
+    "matches": [
+      {
+        "tariff_code": "4002510000 80",
+        "confidence_score": 0.95,
+        "reasoning": "The products are wellendichtringe (oil seals) made from NBR (Nitrile Butadiene Rubber), which is specifically classified under this tariff code for its use in seals and gaskets.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002000000 80",
+        "confidence_score": 0.9,
+        "reasoning": "This code covers synthetic rubber, which includes various types of elastomers used in the manufacturing of seals, making it relevant for the wellendichtringe.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002190000 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code includes other types of synthetic rubber, which may apply to various formulations of the wellendichtringe that are not specifically NBR but still fall under synthetic rubber categories.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002410000 80",
+        "confidence_score": 0.8,
+        "reasoning": "Chloroprene rubber (CR) is sometimes used in seals and gaskets, making this code a potential match for some variants of wellendichtringe.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002700000 80",
+        "confidence_score": 0.75,
+        "reasoning": "Ethylen-Propylen-Dien-Terpolymer (EPDM) is another type of synthetic rubber that can be used in sealing applications, thus relevant for certain wellendichtringe.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:02:27.503706"
+  },
+  "CL-005_Kettenrad": {
+    "cluster_id": "CL-005",
+    "cluster_name": "Kettenrad",
+    "matches": [
+      {
+        "tariff_code": "7300000000 80",
+        "confidence_score": 0.9,
+        "reasoning": "The products are made of iron or steel, and the term 'Kettenrad' refers to sprockets which are typically used in machinery and vehicles, fitting under general iron or steel products.",
+        "section_info": "Section 73 - Articles of iron or steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7301000000 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code covers iron or steel products that may include components like sprockets, especially if they are manufactured or assembled from multiple elements.",
+        "section_info": "Section 73 - Articles of iron or steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7302900000 80",
+        "confidence_score": 0.8,
+        "reasoning": "This code is for other iron or steel articles, which may include various components not specifically categorized, including sprockets.",
+        "section_info": "Section 73 - Articles of iron or steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7302400000 80",
+        "confidence_score": 0.75,
+        "reasoning": "This code covers plates and brackets which may be related to the mounting or assembly of sprockets, thus relevant to the product cluster.",
+        "section_info": "Section 73 - Articles of iron or steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7303000000 80",
+        "confidence_score": 0.7,
+        "reasoning": "While primarily for pipes, this code may apply if the sprockets are part of a larger assembly that includes hollow profiles or tubes.",
+        "section_info": "Section 73 - Articles of iron or steel",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:02:36.217545"
+  },
+  "CL-003_PN-Zylinder": {
+    "cluster_id": "CL-003",
+    "cluster_name": "PN-Zylinder",
+    "matches": [
+      {
+        "tariff_code": "8404000000",
+        "confidence_score": 0.85,
+        "reasoning": "The PN-Zylinder products are pneumatic cylinders, which are components used in various machinery and apparatus. This code covers auxiliary apparatus for boilers and similar equipment, which can include pneumatic systems.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8402900000",
+        "confidence_score": 0.8,
+        "reasoning": "This code refers to parts of boilers and machinery, which aligns with the PN-Zylinder's function as a component in mechanical systems.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8403100000",
+        "confidence_score": 0.75,
+        "reasoning": "While primarily focused on heating boilers, this code may apply as pneumatic cylinders can be part of heating systems or machinery that involve thermal processes.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8403900000",
+        "confidence_score": 0.7,
+        "reasoning": "This code covers parts of central heating boilers, which may include pneumatic cylinders used in various heating applications.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8402900090",
+        "confidence_score": 0.65,
+        "reasoning": "This code is for other parts of machinery, which can encompass various mechanical components, including pneumatic cylinders.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:02:44.042622"
+  },
+  "CL-011_Getriebe": {
+    "cluster_id": "CL-011",
+    "cluster_name": "Getriebe",
+    "matches": [],
+    "timestamp": "2026-03-12T12:02:44.599213"
+  },
+  "CL-009_Modul": {
+    "cluster_id": "CL-009",
+    "cluster_name": "Modul",
+    "matches": [],
+    "timestamp": "2026-03-12T12:02:45.192540"
+  },
+  "CL-008_Others": {
+    "cluster_id": "CL-008",
+    "cluster_name": "Others",
+    "matches": [
+      {
+        "tariff_code": "0100000000",
+        "confidence_score": 0.1,
+        "reasoning": "This code represents live animals, which is not directly applicable to the product description provided.",
+        "section_info": "Section 1 - Live Animals",
+        "description": null
+      },
+      {
+        "tariff_code": "0101000000",
+        "confidence_score": 0.1,
+        "reasoning": "This code is specific to live horses, donkeys, mules, and hinnies, which does not relate to the product description.",
+        "section_info": "Section 1 - Live Animals",
+        "description": null
+      },
+      {
+        "tariff_code": "0101210000",
+        "confidence_score": 0.1,
+        "reasoning": "This code refers to live horses, which is not relevant to the provided product description.",
+        "section_info": "Section 1 - Live Animals",
+        "description": null
+      },
+      {
+        "tariff_code": "0102210000",
+        "confidence_score": 0.1,
+        "reasoning": "This code pertains to live cattle, which does not match the product description.",
+        "section_info": "Section 1 - Live Animals",
+        "description": null
+      },
+      {
+        "tariff_code": "0102290000",
+        "confidence_score": 0.1,
+        "reasoning": "This code is for other live cattle, which is not applicable to the product description provided.",
+        "section_info": "Section 1 - Live Animals",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:02:52.568442"
+  },
+  "CL-013_Lager": {
+    "cluster_id": "CL-013",
+    "cluster_name": "Lager",
+    "matches": [
+      {
+        "tariff_code": "8402900000",
+        "confidence_score": 0.9,
+        "reasoning": "The products listed are likely components or parts used in machinery, and this code covers parts for various machinery and apparatus, which aligns with the descriptions of the lager items.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8404000000",
+        "confidence_score": 0.85,
+        "reasoning": "This code pertains to auxiliary apparatus for boilers, which may include components related to the machinery described in the product cluster, indicating a close relationship.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8403900000",
+        "confidence_score": 0.8,
+        "reasoning": "This code covers parts of central heating boilers, which may be relevant if the lagers are used in heating applications or similar machinery.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8403000000",
+        "confidence_score": 0.75,
+        "reasoning": "This code relates to central heating boilers, which may be relevant if the lagers are part of heating systems or machinery, although it is less specific than the previous codes.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8401000000",
+        "confidence_score": 0.7,
+        "reasoning": "This code covers nuclear reactors and related machinery, which may be a broader category that includes some of the machinery associated with the lager products.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:02:56.404413"
+  },
+  "CL-010_Relais": {
+    "cluster_id": "CL-010",
+    "cluster_name": "Relais",
+    "matches": [
+      {
+        "tariff_code": "8536.10.00",
+        "confidence_score": 0.95,
+        "reasoning": "The product 'Relais' is an electrical relay, which falls under the category of electrical apparatus for switching or protecting electrical circuits. This code specifically covers relays and is the most relevant for the described item.",
+        "section_info": "Section 16 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8536.90.00",
+        "confidence_score": 0.9,
+        "reasoning": "This code covers other electrical apparatus not specified elsewhere, which may include various types of relays and similar devices. It is a broader category that still applies to the product.",
+        "section_info": "Section 16 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8535.90.00",
+        "confidence_score": 0.85,
+        "reasoning": "This code pertains to electrical switches and devices, which can include relays as part of their function. While less specific than the first two codes, it still relates to the product's functionality.",
+        "section_info": "Section 16 - Electrical machinery and equipment",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:02:59.661499"
+  },
+  "CL-011_GT-Motor": {
+    "cluster_id": "CL-011",
+    "cluster_name": "GT-Motor",
+    "matches": [
+      {
+        "tariff_code": "8501000000 80",
+        "confidence_score": 0.95,
+        "reasoning": "This code covers electric motors and generators, which aligns with the product cluster GT-Motor, indicating that these items are likely electric motors used in various applications.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109900 80",
+        "confidence_score": 0.9,
+        "reasoning": "This code specifically refers to direct current (DC) motors, which is appropriate given the product descriptions that suggest they are electric motors, likely DC motors used in various machinery.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109300 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code pertains to alternating current (AC) motors, which may also be relevant if any of the products fall under this category. The product descriptions do not specify AC or DC, so this code is included for broader coverage.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501101090 80",
+        "confidence_score": 0.8,
+        "reasoning": "This code is for other types of motors not specifically classified elsewhere, which may apply to the diverse range of motors in the GT-Motor cluster.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109950 80",
+        "confidence_score": 0.75,
+        "reasoning": "This code is for electric motors designed for specific applications, such as vehicle parts, which could be relevant if the GT-Motor products are intended for automotive use.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:03:16.557866"
+  },
+  "CL-008_Schraube": {
+    "cluster_id": "CL-008",
+    "cluster_name": "Schraube",
+    "matches": [
+      {
+        "tariff_code": "7300000000 80",
+        "confidence_score": 0.95,
+        "reasoning": "The products are screws made of iron or steel, which falls under the general category of goods made from iron or steel.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7301000000 80",
+        "confidence_score": 0.9,
+        "reasoning": "This code covers products made from iron or steel, including fasteners like screws, which are often categorized under spundwanderzeugnisse.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7302900000 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code is for other articles made of iron or steel, which can include various types of screws not specifically categorized elsewhere.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7304000000 80",
+        "confidence_score": 0.8,
+        "reasoning": "This code pertains to seamless tubes and hollow profiles made of iron or steel, which may relate to certain types of screws and fasteners.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7303000000 80",
+        "confidence_score": 0.75,
+        "reasoning": "This code is for pipes and hollow profiles made from cast iron, which may include some specialized screws or fasteners.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:03:27.786007"
+  },
+  "CL-002_O-Ring": {
+    "cluster_id": "CL-002",
+    "cluster_name": "O-Ring",
+    "matches": [
+      {
+        "tariff_code": "4002510000 80",
+        "confidence_score": 0.95,
+        "reasoning": "The O-Rings described are primarily made from Nitrile Rubber (NBR), which is specifically classified under this tariff code. The products exhibit characteristics typical of NBR O-Rings, such as resistance to oils and fuels.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002000000 80",
+        "confidence_score": 0.9,
+        "reasoning": "This code covers synthetic rubber in primary forms, which includes various types of elastomers used in O-Rings. Given that some O-Rings can be made from synthetic materials, this code is relevant.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002700000 80",
+        "confidence_score": 0.85,
+        "reasoning": "Ethylene-Propylene-Diene Terpolymer (EPDM) is another type of synthetic rubber that can be used for O-Rings, especially in applications requiring high temperature and weather resistance.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002190000 80",
+        "confidence_score": 0.8,
+        "reasoning": "This code encompasses other types of synthetic rubber, which may include various formulations used in O-Rings. It is a broader category that can cover additional materials used in the product cluster.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002410000 80",
+        "confidence_score": 0.75,
+        "reasoning": "Chloroprene rubber (CR) is sometimes used in O-Rings for its durability and resistance to various chemicals. This code is relevant for specific applications of O-Rings made from this material.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:03:37.159754"
+  },
+  "CL-005_Mutter": {
+    "cluster_id": "CL-005",
+    "cluster_name": "Mutter",
+    "matches": [
+      {
+        "tariff_code": "7300000000 80",
+        "confidence_score": 0.95,
+        "reasoning": "The products in the cluster are nuts (Mutter) made from iron or steel, which directly corresponds to the general category for goods made of these materials.",
+        "section_info": "Section XV - Base Metals and Articles of Base Metal",
+        "description": null
+      },
+      {
+        "tariff_code": "7301000000 80",
+        "confidence_score": 0.9,
+        "reasoning": "This code covers products made from iron or steel that may include fasteners like nuts, which aligns with the product descriptions provided.",
+        "section_info": "Section XV - Base Metals and Articles of Base Metal",
+        "description": null
+      },
+      {
+        "tariff_code": "7302000000 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code includes various materials for fastening and joining, which is relevant to the use of nuts in construction and machinery.",
+        "section_info": "Section XV - Base Metals and Articles of Base Metal",
+        "description": null
+      },
+      {
+        "tariff_code": "7303000000 80",
+        "confidence_score": 0.8,
+        "reasoning": "While this code primarily addresses pipes and hollow profiles, it may be relevant if the nuts are part of a larger assembly involving these items.",
+        "section_info": "Section XV - Base Metals and Articles of Base Metal",
+        "description": null
+      },
+      {
+        "tariff_code": "7304000000 80",
+        "confidence_score": 0.75,
+        "reasoning": "This code pertains to seamless pipes and hollow profiles, which could be related to the application of nuts in various mechanical contexts.",
+        "section_info": "Section XV - Base Metals and Articles of Base Metal",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:03:44.290030"
+  },
+  "CL-007_Wellendichtring": {
+    "cluster_id": "CL-007",
+    "cluster_name": "Wellendichtring",
+    "matches": [
+      {
+        "tariff_code": "4002510000 80",
+        "confidence_score": 0.95,
+        "reasoning": "The products are wellendichtringe (oil seals) made from NBR (Nitrile Butadiene Rubber), which is specifically classified under this code for Acrylnitril-Butadien-Kautschuk (NBR).",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002000000 80",
+        "confidence_score": 0.9,
+        "reasoning": "This code covers synthetic rubber in primary forms, which includes various types of elastomers used in manufacturing seals, making it a suitable alternative.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002190000 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code encompasses other types of synthetic rubber, which may include variations used in oil seals, providing a broader classification.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002410000 80",
+        "confidence_score": 0.8,
+        "reasoning": "Chloroprene rubber (CR) is sometimes used in seals, and this code represents that material, making it relevant for certain types of wellendichtringe.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002700000 80",
+        "confidence_score": 0.75,
+        "reasoning": "Ethylen-Propylen-Dien-Terpolymer-Kautschuk (EPDM) is another type of synthetic rubber that can be used in seals, providing a relevant classification.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:03:54.689979"
+  },
+  "CL-009_PN-Zylinder": {
+    "cluster_id": "CL-009",
+    "cluster_name": "PN-Zylinder",
+    "matches": [
+      {
+        "tariff_code": "8404000000",
+        "confidence_score": 0.85,
+        "reasoning": "The PN-Zylinder products are likely components used in pneumatic systems, which can be categorized under auxiliary apparatus for boilers and similar devices. This code encompasses parts that are integral to machinery, which aligns with the function of PN-Zylinder.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8402900000",
+        "confidence_score": 0.8,
+        "reasoning": "This code covers parts of boilers and similar machinery, which could include pneumatic cylinders as they are often used in conjunction with such systems. The specificity of this code allows for a broader range of mechanical components.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8403100000",
+        "confidence_score": 0.7,
+        "reasoning": "This code refers to heating boilers, which may not directly apply to PN-Zylinder but indicates the type of machinery they might be associated with. The connection to heating systems suggests a relationship to the functionality of the cylinders.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8402900010",
+        "confidence_score": 0.65,
+        "reasoning": "This code specifies pre-assembled process modules, which may include pneumatic components like PN-Zylinder. While it is more specific, it reflects the potential use of these cylinders in larger machinery setups.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8403900000",
+        "confidence_score": 0.6,
+        "reasoning": "This code pertains to parts of central heating boilers, which may not be a direct match but indicates a category where pneumatic cylinders could be relevant as auxiliary components.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:04:07.163848"
+  },
+  "CL-012_Kette": {
+    "cluster_id": "CL-012",
+    "cluster_name": "Kette",
+    "matches": [
+      {
+        "tariff_code": "8484.10.00",
+        "confidence_score": 0.95,
+        "reasoning": "The products are chains (Kette) used in machinery or for mechanical purposes, which aligns with the classification for mechanical chains.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances",
+        "description": null
+      },
+      {
+        "tariff_code": "7315.11.00",
+        "confidence_score": 0.9,
+        "reasoning": "These products may also be classified under iron or steel chains, which fits the description of the items as they are likely made from metal.",
+        "section_info": "Section 73 - Articles of iron or steel",
+        "description": null
+      },
+      {
+        "tariff_code": "8484.20.00",
+        "confidence_score": 0.85,
+        "reasoning": "This code covers parts and accessories for machinery, which could include specialized chains used in specific machinery applications.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances",
+        "description": null
+      },
+      {
+        "tariff_code": "7315.90.00",
+        "confidence_score": 0.8,
+        "reasoning": "This code encompasses other chains made of iron or steel, which may apply if the specific type of chain does not fit into the more specific categories.",
+        "section_info": "Section 73 - Articles of iron or steel",
+        "description": null
+      },
+      {
+        "tariff_code": "8484.99.00",
+        "confidence_score": 0.75,
+        "reasoning": "This code is for other machinery parts not specified elsewhere, which could be relevant if the chains have unique characteristics not captured by other codes.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:04:14.598916"
+  },
+  "CL-004_Getriebe": {
+    "cluster_id": "CL-004",
+    "cluster_name": "Getriebe",
+    "matches": [],
+    "timestamp": "2026-03-12T12:04:15.968465"
+  },
+  "CL-015_Keilriemen": {
+    "cluster_id": "CL-015",
+    "cluster_name": "Keilriemen",
+    "matches": [
+      {
+        "tariff_code": "8484.10.00",
+        "confidence_score": 0.95,
+        "reasoning": "Keilriemen (wedge belts) are used in machinery and are classified under mechanical parts, specifically under belts and pulleys.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances",
+        "description": null
+      },
+      {
+        "tariff_code": "8484.20.00",
+        "confidence_score": 0.9,
+        "reasoning": "This code covers transmission belts and other mechanical belts, which includes wedge belts used in various machinery.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances",
+        "description": null
+      },
+      {
+        "tariff_code": "8484.90.00",
+        "confidence_score": 0.85,
+        "reasoning": "This code is for parts of machinery and mechanical appliances, which can include components like Keilriemen.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances",
+        "description": null
+      },
+      {
+        "tariff_code": "8484.99.00",
+        "confidence_score": 0.8,
+        "reasoning": "This code is for other parts not specified elsewhere, which could encompass various types of belts including wedge belts.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances",
+        "description": null
+      },
+      {
+        "tariff_code": "8484.90.10",
+        "confidence_score": 0.75,
+        "reasoning": "This code is for specific parts of machinery, which may include specialized belts like Keilriemen.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:04:23.400057"
+  },
+  "CL-016_Modul": {
+    "cluster_id": "CL-016",
+    "cluster_name": "Modul",
+    "matches": [],
+    "timestamp": "2026-03-12T12:04:23.948160"
+  },
+  "CL-003_Relais": {
+    "cluster_id": "CL-003",
+    "cluster_name": "Relais",
+    "matches": [
+      {
+        "tariff_code": "8536.10.00",
+        "confidence_score": 0.95,
+        "reasoning": "The product 'Relais 3RU2126-4DB1 20-25A SIEMENS' is an electrical relay, which falls under the category of electrical apparatus for switching or protecting electrical circuits.",
+        "section_info": "Section 16 - Machinery and Mechanical Appliances",
+        "description": null
+      },
+      {
+        "tariff_code": "8536.90.00",
+        "confidence_score": 0.9,
+        "reasoning": "This code includes other electrical apparatus not specified elsewhere, which can encompass various types of relays and similar devices.",
+        "section_info": "Section 16 - Machinery and Mechanical Appliances",
+        "description": null
+      },
+      {
+        "tariff_code": "8535.90.00",
+        "confidence_score": 0.85,
+        "reasoning": "This code covers electrical switches and relays, which are essential components in electrical circuits, aligning closely with the product description.",
+        "section_info": "Section 16 - Machinery and Mechanical Appliances",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:04:29.110563"
+  },
+  "CL-010_Thermistor": {
+    "cluster_id": "CL-010",
+    "cluster_name": "Thermistor",
+    "matches": [],
+    "timestamp": "2026-03-12T12:04:29.752747"
+  },
+  "CL-014_Touch": {
+    "cluster_id": "CL-014",
+    "cluster_name": "Touch",
+    "matches": [],
+    "timestamp": "2026-03-12T12:04:30.223680"
+  },
+  "CL-017_Others": {
+    "cluster_id": "CL-017",
+    "cluster_name": "Others",
+    "matches": [
+      {
+        "tariff_code": "0100000000",
+        "confidence_score": 0.9,
+        "reasoning": "The product is categorized under 'Others' and could potentially relate to live animals or animal products, which are broadly covered under this tariff code.",
+        "section_info": "Section I - Live Animals",
+        "description": null
+      },
+      {
+        "tariff_code": "0101299000",
+        "confidence_score": 0.85,
+        "reasoning": "This code covers 'other' live animals, which may include various types not specifically classified elsewhere, aligning with the unspecified nature of the product.",
+        "section_info": "Section I - Live Animals",
+        "description": null
+      },
+      {
+        "tariff_code": "0101900000",
+        "confidence_score": 0.8,
+        "reasoning": "This code pertains to 'other' live animals, which could encompass a variety of species or types, fitting the general description of the product.",
+        "section_info": "Section I - Live Animals",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:04:33.783325"
+  },
+  "CL-014_GT-Motor": {
+    "cluster_id": "CL-014",
+    "cluster_name": "GT-Motor",
+    "matches": [
+      {
+        "tariff_code": "8501000000 80",
+        "confidence_score": 0.95,
+        "reasoning": "This code covers electric motors and generators, which aligns with the product descriptions indicating they are motors used in various applications.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501100000 80",
+        "confidence_score": 0.9,
+        "reasoning": "This code is more specific to electric motors, excluding generating sets, which fits the characteristics of the GT-Motor products as they are likely electric motors.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109900 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code pertains to DC motors, which may be applicable given the nature of the GT-Motor products, suggesting they are likely direct current motors.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109300 80",
+        "confidence_score": 0.8,
+        "reasoning": "This code refers to AC motors, which could also be relevant depending on the specific types of motors within the GT-Motor product cluster.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501101090 80",
+        "confidence_score": 0.75,
+        "reasoning": "This code is for other types of motors, which may include various unspecified motor types that could fit the diverse nature of the GT-Motor products.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:07:15.178043"
+  },
+  "CL-011_Kette": {
+    "cluster_id": "CL-011",
+    "cluster_name": "Kette",
+    "matches": [],
+    "timestamp": "2026-03-12T12:07:15.644070"
+  },
+  "CL-012_Touch": {
+    "cluster_id": "CL-012",
+    "cluster_name": "Touch",
+    "matches": [],
+    "timestamp": "2026-03-12T12:07:16.654872"
+  },
+  "CL-008_Lager": {
+    "cluster_id": "CL-008",
+    "cluster_name": "Lager",
+    "matches": [
+      {
+        "tariff_code": "8402900000",
+        "confidence_score": 0.85,
+        "reasoning": "The product descriptions indicate that these are parts or components likely used in machinery, which aligns with the classification of 'Parts' under the relevant section.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8404000000",
+        "confidence_score": 0.75,
+        "reasoning": "Given that the products are likely components for machinery, this code for auxiliary apparatus for boilers and similar machinery is relevant.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8403900000",
+        "confidence_score": 0.7,
+        "reasoning": "This code pertains to parts of central heating boilers, which may be applicable if the lagers are used in heating applications.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8403000000",
+        "confidence_score": 0.65,
+        "reasoning": "This code is for central heating boilers, which could be relevant if the lagers are part of heating systems.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8402900010",
+        "confidence_score": 0.6,
+        "reasoning": "This code specifies pre-assembled process modules, which could relate to the assembly of machinery where these lagers are used.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:15:45.593170"
+  },
+  "CL-009_GT-Motor": {
+    "cluster_id": "CL-009",
+    "cluster_name": "GT-Motor",
+    "matches": [
+      {
+        "tariff_code": "8501000000 80",
+        "confidence_score": 0.95,
+        "reasoning": "The products in the GT-Motor cluster are primarily electric motors, which fall under the category of electric motors and generators, excluding power generating sets. This code is broad enough to cover various types of electric motors used in different applications.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501100000 80",
+        "confidence_score": 0.9,
+        "reasoning": "This code specifically addresses electric motors and generators, which aligns well with the product descriptions that indicate they are motors. It is a more specific classification than the previous code, focusing on motors rather than generators.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109900 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code is for direct current motors, which is likely applicable given the nature of the GT-Motor products. Many of the sample descriptions suggest they are likely DC motors, making this a suitable classification.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109300 80",
+        "confidence_score": 0.8,
+        "reasoning": "This code covers alternating current motors, which may also be relevant depending on the specific types of motors included in the GT-Motor cluster. It provides an alternative classification for products that may not be direct current motors.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501101090 80",
+        "confidence_score": 0.75,
+        "reasoning": "This code is for 'other' motors, which can include a variety of motor types not specifically classified elsewhere. Given the diversity in the GT-Motor cluster, this code provides flexibility for any unique motor types present.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:15:46.819398"
+  },
+  "CL-014_O-Ring": {
+    "cluster_id": "CL-014",
+    "cluster_name": "O-Ring",
+    "matches": [
+      {
+        "tariff_code": "4002510000 80",
+        "confidence_score": 0.95,
+        "reasoning": "This code specifically covers Acrylnitril-Butadien-Kautschuk (NBR), which is a common material used for O-rings due to its excellent resistance to oils and fuels.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002700000 80",
+        "confidence_score": 0.9,
+        "reasoning": "This code pertains to Ethylen-Propylen-Dien-Terpolymer-Kautschuk (EPDM), another material frequently used in O-rings, especially for applications requiring resistance to heat and weather.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002200000 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code includes Synthetischer Kautschuk, which encompasses various synthetic rubbers that can be used for O-rings, providing flexibility and durability.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002000000 80",
+        "confidence_score": 0.8,
+        "reasoning": "This code covers synthetic rubber and mixtures, which can include various formulations used in O-rings, making it a relevant classification.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4001100000 80",
+        "confidence_score": 0.75,
+        "reasoning": "This code refers to natural rubber latex, which can also be used in the production of O-rings, although less common than synthetic options.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:15:52.639224"
+  },
+  "CL-013_Mutter": {
+    "cluster_id": "CL-013",
+    "cluster_name": "Mutter",
+    "matches": [
+      {
+        "tariff_code": "7301000000 80",
+        "confidence_score": 0.95,
+        "reasoning": "The products described are nuts (Mutter) made of iron or steel, which fits well under the category of spundwanderzeugnisse (fasteners) made from these materials.",
+        "section_info": "Section XV - Base Metals and Articles of Base Metal",
+        "description": null
+      },
+      {
+        "tariff_code": "7302900000 80",
+        "confidence_score": 0.9,
+        "reasoning": "This code covers other articles of iron or steel, which can include various types of nuts and fasteners that do not fall into more specific categories.",
+        "section_info": "Section XV - Base Metals and Articles of Base Metal",
+        "description": null
+      },
+      {
+        "tariff_code": "7303000000 80",
+        "confidence_score": 0.85,
+        "reasoning": "While this code primarily refers to pipes and hollow profiles, it is relevant due to the metal composition and potential manufacturing processes involved in producing nuts.",
+        "section_info": "Section XV - Base Metals and Articles of Base Metal",
+        "description": null
+      },
+      {
+        "tariff_code": "7304000000 80",
+        "confidence_score": 0.8,
+        "reasoning": "This code pertains to seamless pipes and hollow profiles made of iron or steel, which, while not directly related to nuts, shares the same material category.",
+        "section_info": "Section XV - Base Metals and Articles of Base Metal",
+        "description": null
+      },
+      {
+        "tariff_code": "7301100000 80",
+        "confidence_score": 0.75,
+        "reasoning": "This code specifically refers to spundwanderzeugnisse, which includes fasteners like nuts, making it a relevant classification for the product cluster.",
+        "section_info": "Section XV - Base Metals and Articles of Base Metal",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:15:57.449657"
+  },
+  "CL-011_Wellendichtring": {
+    "cluster_id": "CL-011",
+    "cluster_name": "Wellendichtring",
+    "matches": [
+      {
+        "tariff_code": "4002510000 80",
+        "confidence_score": 0.95,
+        "reasoning": "The products are made from NBR (Nitrile Butadiene Rubber), which is specifically classified under this code. The presence of NBR in the product descriptions indicates a strong match.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002000000 80",
+        "confidence_score": 0.9,
+        "reasoning": "This code covers synthetic rubber and products made from it, which includes various elastomers. Given that some wellendichtrings may use synthetic materials, this code is relevant.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002190000 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code includes other types of synthetic rubber, which may encompass variations of wellendichtrings made from different synthetic materials.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002410000 80",
+        "confidence_score": 0.8,
+        "reasoning": "Chloroprene rubber (CR) is used in some sealing applications. While not the primary material, it could apply to certain types of wellendichtrings.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002700000 80",
+        "confidence_score": 0.75,
+        "reasoning": "Ethylene-Propylene-Diene Terpolymer (EPDM) is another type of synthetic rubber that may be used in similar applications, making this code a potential match.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:16:04.088735"
+  },
+  "CL-012_Kettenrad": {
+    "cluster_id": "CL-012",
+    "cluster_name": "Kettenrad",
+    "matches": [
+      {
+        "tariff_code": "7300000000 80",
+        "confidence_score": 0.9,
+        "reasoning": "The product cluster 'Kettenrad' consists of items made from iron or steel, which aligns with the general classification for goods made of these materials.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7301000000 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code covers spundwanderzeugnisse (spindle products) made from iron or steel, which could be relevant given the mechanical nature of 'Kettenrad' items.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7302900000 80",
+        "confidence_score": 0.8,
+        "reasoning": "This code is for other articles made from iron or steel, which could encompass various mechanical components like 'Kettenrad' that do not fit neatly into more specific categories.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7302000000 80",
+        "confidence_score": 0.75,
+        "reasoning": "This code includes materials for railways made from iron or steel, which may relate to the mechanical applications of 'Kettenrad' in machinery or transport.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7303000000 80",
+        "confidence_score": 0.7,
+        "reasoning": "This code pertains to pipes and hollow profiles made from cast iron, which may be relevant if the 'Kettenrad' items have similar structural characteristics.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:16:12.213430"
+  },
+  "CL-010_PN-Zylinder": {
+    "cluster_id": "CL-010",
+    "cluster_name": "PN-Zylinder",
+    "matches": [
+      {
+        "tariff_code": "8404000000",
+        "confidence_score": 0.9,
+        "reasoning": "The PN-Zylinder products are pneumatic cylinders, which are often used in machinery and can be classified under auxiliary apparatus for boilers and machines. This code encompasses various auxiliary devices that support machinery operations.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8402900000",
+        "confidence_score": 0.85,
+        "reasoning": "This code covers parts of boilers and machinery, which aligns with the PN-Zylinder products as they are components used in various mechanical systems.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8403100000",
+        "confidence_score": 0.8,
+        "reasoning": "While primarily focused on heating boilers, this code may be relevant as pneumatic cylinders can be part of systems that involve heating and pressure management in industrial applications.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8403900000",
+        "confidence_score": 0.75,
+        "reasoning": "This code refers to parts of central heating boilers, which could include pneumatic cylinders if they are used in heating applications or systems.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8402900010",
+        "confidence_score": 0.7,
+        "reasoning": "This code specifies pre-assembled process modules that may include pneumatic components, making it relevant for certain applications of PN-Zylinder products.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:16:20.586743"
+  },
+  "CL-006_Kette": {
+    "cluster_id": "CL-006",
+    "cluster_name": "Kette",
+    "matches": [],
+    "timestamp": "2026-03-12T12:16:18.361664"
+  },
+  "CL-003_Getriebe": {
+    "cluster_id": "CL-003",
+    "cluster_name": "Getriebe",
+    "matches": [],
+    "timestamp": "2026-03-12T12:16:18.891335"
+  },
+  "CL-002_Relais": {
+    "cluster_id": "CL-002",
+    "cluster_name": "Relais",
+    "matches": [
+      {
+        "tariff_code": "8536.10.00",
+        "confidence_score": 0.95,
+        "reasoning": "The product 'Relais' is an electrical relay, which falls under the category of electrical apparatus for switching or protecting electrical circuits.",
+        "section_info": "Section 16 - Machinery and Mechanical Appliances",
+        "description": null
+      },
+      {
+        "tariff_code": "8536.90.00",
+        "confidence_score": 0.9,
+        "reasoning": "This code includes other electrical apparatus for switching or protecting electrical circuits, which may cover various types of relays.",
+        "section_info": "Section 16 - Machinery and Mechanical Appliances",
+        "description": null
+      },
+      {
+        "tariff_code": "8535.90.00",
+        "confidence_score": 0.85,
+        "reasoning": "This code pertains to electrical switches and may include relays as a type of switch used in electrical circuits.",
+        "section_info": "Section 16 - Machinery and Mechanical Appliances",
+        "description": null
+      },
+      {
+        "tariff_code": "8504.40.00",
+        "confidence_score": 0.8,
+        "reasoning": "This code is for electrical transformers and inductors, which may relate to the functionality of relays in electrical systems.",
+        "section_info": "Section 16 - Machinery and Mechanical Appliances",
+        "description": null
+      },
+      {
+        "tariff_code": "8537.10.00",
+        "confidence_score": 0.75,
+        "reasoning": "This code covers boards, panels, consoles, and other bases for electric control or distribution, which may include relay systems.",
+        "section_info": "Section 16 - Machinery and Mechanical Appliances",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:16:27.958788"
+  },
+  "CL-005_Thermistor": {
+    "cluster_id": "CL-005",
+    "cluster_name": "Thermistor",
+    "matches": [],
+    "timestamp": "2026-03-12T12:16:27.401443"
+  },
+  "CL-007_Touch": {
+    "cluster_id": "CL-007",
+    "cluster_name": "Touch",
+    "matches": [],
+    "timestamp": "2026-03-12T12:16:28.013541"
+  },
+  "CL-003_Servomotor": {
+    "cluster_id": "CL-003",
+    "cluster_name": "Servomotor",
+    "matches": [
+      {
+        "tariff_code": "8501000000",
+        "confidence_score": 0.95,
+        "reasoning": "This code covers electric motors and generators, which includes servomotors. The products in the cluster are specifically servomotors, making this the most relevant code.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109900",
+        "confidence_score": 0.9,
+        "reasoning": "This code pertains to direct current motors, which are often used in servomotor applications. Given that servomotors can be a type of DC motor, this code is highly relevant.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109930",
+        "confidence_score": 0.85,
+        "reasoning": "This code is specific to linear actuators, which can be closely related to servomotors used in applications requiring precise control of position. This makes it a suitable match.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501101090",
+        "confidence_score": 0.8,
+        "reasoning": "This code covers other types of electric motors not specified elsewhere, which could include various servomotor types that do not fit into the more specific categories.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109100",
+        "confidence_score": 0.75,
+        "reasoning": "This code refers to universal motors, which can also be applicable in servomotor contexts, particularly in applications requiring versatility in power supply.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:21:36.499000"
+  },
+  "CL-001_Lager": {
+    "cluster_id": "CL-001",
+    "cluster_name": "Lager",
+    "matches": [
+      {
+        "tariff_code": "8402900000",
+        "confidence_score": 0.9,
+        "reasoning": "The product cluster 'Lager' refers to bearings, which are components often used in machinery and can be classified under parts of machines. This code covers parts that are not specifically listed elsewhere.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8404000000",
+        "confidence_score": 0.85,
+        "reasoning": "This code encompasses auxiliary apparatus for boilers and machinery, which may include components like bearings that support machinery operations.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8403900000",
+        "confidence_score": 0.8,
+        "reasoning": "This code includes parts for central heating boilers and other machinery, which could relate to the function of the Lager products in mechanical systems.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8403000000",
+        "confidence_score": 0.75,
+        "reasoning": "This code refers to central heating boilers, which may share some mechanical similarities with the Lager products, although it is less specific than the previous codes.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8402900010",
+        "confidence_score": 0.7,
+        "reasoning": "This code specifies pre-assembled process modules, which may include components like bearings, but is more specific to certain industrial applications.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:21:44.244053"
+  },
+  "CL-004_GT-Motor": {
+    "cluster_id": "CL-004",
+    "cluster_name": "GT-Motor",
+    "matches": [
+      {
+        "tariff_code": "8501000000",
+        "confidence_score": 0.95,
+        "reasoning": "The products in the GT-Motor cluster are likely electric motors, and this code specifically covers electric motors and generators, excluding power generating sets, which fits the description of the items.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501100000",
+        "confidence_score": 0.9,
+        "reasoning": "This code is for motors with a power rating above 37.5 W, which is applicable to many of the motors in the GT-Motor cluster, indicating they are not low-power devices.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109900",
+        "confidence_score": 0.85,
+        "reasoning": "This code covers DC motors, which are likely to be part of the GT-Motor cluster, especially given the naming conventions that suggest they are designed for specific applications.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109930",
+        "confidence_score": 0.8,
+        "reasoning": "This code is for linear drives used in vehicle seat adjustments, which aligns with the potential applications of the GT-Motor products in automotive settings.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109950",
+        "confidence_score": 0.75,
+        "reasoning": "This code pertains to electric motors for height adjustment applications, which may be relevant if any of the GT-Motor products are intended for such uses.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:21:55.801376"
+  },
+  "CL-011_Schraube": {
+    "cluster_id": "CL-011",
+    "cluster_name": "Schraube",
+    "matches": [
+      {
+        "tariff_code": "7300000000 80",
+        "confidence_score": 0.95,
+        "reasoning": "This code covers goods made of iron or steel, which includes screws (Schrauben) as they are typically manufactured from these materials.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7301000000 80",
+        "confidence_score": 0.9,
+        "reasoning": "This code is for products made of iron or steel, including fasteners and screws, which aligns well with the product descriptions provided.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7302000000 80",
+        "confidence_score": 0.85,
+        "reasoning": "While this code primarily pertains to railway materials, it includes various fastening materials that could encompass screws used in construction and assembly.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7302900000 80",
+        "confidence_score": 0.8,
+        "reasoning": "This code is for other articles of iron or steel not specified elsewhere, which could include various types of screws.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7303000000 80",
+        "confidence_score": 0.75,
+        "reasoning": "This code relates to pipes and hollow profiles made of iron or steel, which may not be the primary category for screws but indicates the material type.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:22:03.786274"
+  },
+  "CL-010_O-Ring": {
+    "cluster_id": "CL-010",
+    "cluster_name": "O-Ring",
+    "matches": [
+      {
+        "tariff_code": "4002510000 80",
+        "confidence_score": 0.95,
+        "reasoning": "This code specifically covers Acrylnitril-Butadien-Kautschuk (NBR), which is commonly used for O-Rings due to its excellent resistance to oils and fuels. The descriptions provided indicate the use of NBR in some of the products.",
+        "section_info": "Section 40 - Rubber and Articles Thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002200000 80",
+        "confidence_score": 0.9,
+        "reasoning": "Butadien-Kautschuk (BR) is another type of synthetic rubber that can be used in the manufacturing of O-Rings. This code is relevant due to the synthetic nature of many O-Rings.",
+        "section_info": "Section 40 - Rubber and Articles Thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002000000 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code encompasses synthetic rubber and facts in primary forms, which includes various types of rubber used in O-Ring production. It is a broader category that captures the essence of the products.",
+        "section_info": "Section 40 - Rubber and Articles Thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002700000 80",
+        "confidence_score": 0.8,
+        "reasoning": "Ethylen-Propylen-Dien-Terpolymer-Kautschuk (EPDM) is another material that can be used for O-Rings, especially in applications requiring high resistance to heat and weathering.",
+        "section_info": "Section 40 - Rubber and Articles Thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002190000 80",
+        "confidence_score": 0.75,
+        "reasoning": "This code refers to other types of synthetic rubber, which may include various formulations used in O-Ring production, providing flexibility in classification.",
+        "section_info": "Section 40 - Rubber and Articles Thereof",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:22:10.743774"
+  },
+  "CL-015_PN-Zylinder": {
+    "cluster_id": "CL-015",
+    "cluster_name": "PN-Zylinder",
+    "matches": [
+      {
+        "tariff_code": "8402900000",
+        "confidence_score": 0.85,
+        "reasoning": "The PN-Zylinder products are pneumatic cylinders, which are components used in various machinery and apparatus. This code covers parts of machines and apparatus, making it a suitable match.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8404000000",
+        "confidence_score": 0.75,
+        "reasoning": "This code pertains to auxiliary apparatus for boilers, which can include components like pneumatic cylinders that assist in the operation of machinery. It is relevant due to the mechanical nature of the PN-Zylinder.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8403900000",
+        "confidence_score": 0.7,
+        "reasoning": "This code refers to parts of central heating boilers, which can include pneumatic components. While not a perfect match, it is relevant given the mechanical function of the PN-Zylinder.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8403000000",
+        "confidence_score": 0.65,
+        "reasoning": "This code covers central heating boilers, which may include pneumatic cylinders in their operation. It is less specific but still relevant to the product cluster.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8402900010",
+        "confidence_score": 0.6,
+        "reasoning": "This code refers to specific pre-assembled process modules which may include pneumatic components. It is a broader category but still applicable to the functionality of the PN-Zylinder.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:22:21.441934"
+  },
+  "CL-005_Getriebe": {
+    "cluster_id": "CL-005",
+    "cluster_name": "Getriebe",
+    "matches": [],
+    "timestamp": "2026-03-12T12:22:22.039778"
+  },
+  "CL-008_Keilriemen": {
+    "cluster_id": "CL-008",
+    "cluster_name": "Keilriemen",
+    "matches": [],
+    "timestamp": "2026-03-12T12:22:22.812367"
+  },
+  "CL-013_Others": {
+    "cluster_id": "CL-013",
+    "cluster_name": "Others",
+    "matches": [
+      {
+        "tariff_code": "0100000000",
+        "confidence_score": 0.1,
+        "reasoning": "The product description does not indicate that it is a living animal, thus this code is not relevant.",
+        "section_info": "Section 1 - Live Animals",
+        "description": null
+      },
+      {
+        "tariff_code": "0101000000",
+        "confidence_score": 0.1,
+        "reasoning": "This code pertains to live horses, donkeys, mules, and hinnies, which does not match the product description.",
+        "section_info": "Section 1 - Live Animals",
+        "description": null
+      },
+      {
+        "tariff_code": "0101210000",
+        "confidence_score": 0.1,
+        "reasoning": "This code is specific to live horses, which is not applicable to the product described.",
+        "section_info": "Section 1 - Live Animals",
+        "description": null
+      },
+      {
+        "tariff_code": "0102000000",
+        "confidence_score": 0.1,
+        "reasoning": "This code is for live cattle, which does not correspond to the product description provided.",
+        "section_info": "Section 1 - Live Animals",
+        "description": null
+      },
+      {
+        "tariff_code": "0102210000",
+        "confidence_score": 0.1,
+        "reasoning": "This code is for live cattle, specifically house cattle, which does not match the product description.",
+        "section_info": "Section 1 - Live Animals",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:22:28.482430"
+  },
+  "CL-014_Relais": {
+    "cluster_id": "CL-014",
+    "cluster_name": "Relais",
+    "matches": [],
+    "timestamp": "2026-03-12T12:22:29.197117"
+  },
+  "CL-016_Thermistor": {
+    "cluster_id": "CL-016",
+    "cluster_name": "Thermistor",
+    "matches": [],
+    "timestamp": "2026-03-12T12:22:29.969238"
+  },
+  "CL-017_Touch": {
+    "cluster_id": "CL-017",
+    "cluster_name": "Touch",
+    "matches": [],
+    "timestamp": "2026-03-12T12:22:30.671023"
+  },
+  "CL-004_Servomotor": {
+    "cluster_id": "CL-004",
+    "cluster_name": "Servomotor",
+    "matches": [
+      {
+        "tariff_code": "8501000000",
+        "confidence_score": 0.95,
+        "reasoning": "Servomotors are a type of electric motor, and this code specifically covers electric motors and generators, excluding power generating sets.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109900",
+        "confidence_score": 0.9,
+        "reasoning": "This code is for DC motors, which aligns with the characteristics of servomotors that typically operate on direct current.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109930",
+        "confidence_score": 0.85,
+        "reasoning": "This code is for linear drives, which can be a specific application of servomotors in various machinery, making it relevant.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501101090",
+        "confidence_score": 0.8,
+        "reasoning": "This code covers other types of electric motors, which may include various configurations of servomotors not specifically listed.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109100",
+        "confidence_score": 0.75,
+        "reasoning": "This code is for universal motors, which can also be applicable to certain types of servomotors, especially in variable speed applications.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:25:28.615772"
+  },
+  "CL-003_Lager": {
+    "cluster_id": "CL-003",
+    "cluster_name": "Lager",
+    "matches": [
+      {
+        "tariff_code": "8402900000",
+        "confidence_score": 0.9,
+        "reasoning": "The products described are likely components or parts used in machinery, specifically bearings (Lager in German). This code covers parts that are not specifically classified elsewhere, making it a suitable match for various types of machinery components.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8404000000",
+        "confidence_score": 0.85,
+        "reasoning": "This code pertains to auxiliary apparatus for boilers, which may include components that are relevant to the machinery described. Given that bearings are often used in conjunction with other machinery parts, this code is relevant.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8403900000",
+        "confidence_score": 0.8,
+        "reasoning": "This code is for parts of central heating boilers, which can include various mechanical components. While it is more specific to heating systems, it may still encompass some of the machinery parts described.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8402000000",
+        "confidence_score": 0.75,
+        "reasoning": "This code covers steam boilers, which may not directly relate to the bearings but could be relevant if the machinery is part of a larger system involving boilers. It is included for consideration due to potential overlap in machinery applications.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8403100000",
+        "confidence_score": 0.7,
+        "reasoning": "This code refers to heating boilers, which may include components that are relevant to the machinery described. While it is more specific to heating systems, it may still encompass some of the machinery parts described.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:25:35.439197"
+  },
+  "CL-002_GT-Motor": {
+    "cluster_id": "CL-002",
+    "cluster_name": "GT-Motor",
+    "matches": [
+      {
+        "tariff_code": "8501000000 80",
+        "confidence_score": 0.95,
+        "reasoning": "The products in the GT-Motor cluster are likely to be electric motors, which are specifically categorized under this code. This code encompasses a wide range of electric motors and generators, excluding power generation sets, making it a strong match.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501100000 80",
+        "confidence_score": 0.9,
+        "reasoning": "This code covers electric motors with a power output of 37.5W or less, which is relevant given the potential specifications of the GT-Motor products. It is a more specific classification under the broader category of electric motors.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109900 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code is for DC motors, which may be applicable to some of the products in the GT-Motor cluster, especially if they are designed for specific applications like automotive or industrial use.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109930 80",
+        "confidence_score": 0.8,
+        "reasoning": "This code pertains to linear drives for electric seat adjustments in vehicles, which aligns with potential applications of the GT-Motor products in automotive settings.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8501109950 80",
+        "confidence_score": 0.75,
+        "reasoning": "This code is for electric (DC) motors used in height adjustment applications, which could be relevant if any of the GT-Motor products are designed for similar functionalities in vehicles.",
+        "section_info": "Section 85 - Electrical machinery and equipment",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:25:42.801435"
+  },
+  "CL-016_Schraube": {
+    "cluster_id": "CL-016",
+    "cluster_name": "Schraube",
+    "matches": [
+      {
+        "tariff_code": "7300000000 80",
+        "confidence_score": 0.95,
+        "reasoning": "The products are screws made of iron or steel, which falls under the general category of goods made from these materials.",
+        "section_info": "Section XV - Base metals and articles of base metal",
+        "description": null
+      },
+      {
+        "tariff_code": "7301000000 80",
+        "confidence_score": 0.9,
+        "reasoning": "This code includes products made from iron or steel, specifically fasteners like screws that may be welded or assembled, which aligns with the nature of the items described.",
+        "section_info": "Section XV - Base metals and articles of base metal",
+        "description": null
+      },
+      {
+        "tariff_code": "7301200000 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code pertains to profiles made of iron or steel, which can include various forms of fasteners such as screws, making it relevant to the product cluster.",
+        "section_info": "Section XV - Base metals and articles of base metal",
+        "description": null
+      },
+      {
+        "tariff_code": "7302900000 80",
+        "confidence_score": 0.8,
+        "reasoning": "This code covers other articles made of iron or steel, which could include various types of screws not specifically categorized elsewhere.",
+        "section_info": "Section XV - Base metals and articles of base metal",
+        "description": null
+      },
+      {
+        "tariff_code": "7303000000 80",
+        "confidence_score": 0.75,
+        "reasoning": "While primarily for pipes and hollow profiles, this code may still be relevant as it encompasses iron and steel products, albeit less specifically than the other codes.",
+        "section_info": "Section XV - Base metals and articles of base metal",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:25:49.581361"
+  },
+  "CL-015_O-Ring": {
+    "cluster_id": "CL-015",
+    "cluster_name": "O-Ring",
+    "matches": [
+      {
+        "tariff_code": "4002510000 80",
+        "confidence_score": 0.95,
+        "reasoning": "The O-Rings are primarily made from Nitrile Butadiene Rubber (NBR), which falls under this category. This code specifically covers Acrylnitril-Butadien-Kautschuk (NBR) and its latex forms, making it highly relevant.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002000000 80",
+        "confidence_score": 0.9,
+        "reasoning": "This code encompasses synthetic rubber products, which includes various types of elastomers used in O-Rings. Given that some O-Rings may be made from synthetic materials, this code is a strong match.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002190000 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code covers other types of synthetic rubber, which may include various formulations used in O-Ring manufacturing. It is relevant for O-Rings made from materials like Styrol-Butadien-Kautschuk.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002700000 80",
+        "confidence_score": 0.8,
+        "reasoning": "This code refers to Ethylene-Propylene-Diene Terpolymer (EPDM), which is another type of rubber that can be used for O-Rings, especially in applications requiring high resistance to heat and weathering.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002200000 80",
+        "confidence_score": 0.75,
+        "reasoning": "This code includes Butadiene rubber, which can also be used in the production of O-Rings. While less common than NBR, it is still a viable material for certain applications.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:25:56.668304"
+  },
+  "CL-001_Wellendichtring": {
+    "cluster_id": "CL-001",
+    "cluster_name": "Wellendichtring",
+    "matches": [
+      {
+        "tariff_code": "4002000000 80",
+        "confidence_score": 0.95,
+        "reasoning": "The Wellendichtrings are likely made from synthetic rubber, which falls under the category of synthetic rubber and mixtures in primary forms. This is the most relevant code given the nature of the products.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002510000 80",
+        "confidence_score": 0.9,
+        "reasoning": "Acrylnitril-Butadien-Kautschuk (NBR) is commonly used for seals and gaskets, which aligns well with the function of Wellendichtrings. This code is specific to a type of synthetic rubber that is suitable for such applications.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002190000 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code covers other types of synthetic rubber, which may include variations used in Wellendichtrings. It is a broader category that still aligns with the product characteristics.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002410000 80",
+        "confidence_score": 0.8,
+        "reasoning": "Chloropren (CR) rubber is another material used in seals and gaskets. While it may not be the primary material for all Wellendichtrings, it is relevant for certain types that require specific properties.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4001300000 80",
+        "confidence_score": 0.75,
+        "reasoning": "This code refers to balata and similar natural rubber types, which may be used in some Wellendichtrings. However, it is less likely compared to synthetic options, hence a lower confidence score.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:26:06.256805"
+  },
+  "CL-011_Kettenrad": {
+    "cluster_id": "CL-011",
+    "cluster_name": "Kettenrad",
+    "matches": [
+      {
+        "tariff_code": "7300000000 80",
+        "confidence_score": 0.95,
+        "reasoning": "The products are made of iron or steel and fall under the general category of goods made from these materials. Kettenrad, being a type of gear or sprocket, is typically manufactured from metal.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7301000000 80",
+        "confidence_score": 0.9,
+        "reasoning": "This code covers products made from iron or steel that are manufactured through welding or are made of assembled elements, which could apply to the construction of Kettenrad.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7302900000 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code is for other articles made of iron or steel that do not fit into more specific categories, which may include various types of gears or sprockets like Kettenrad.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7302400000 80",
+        "confidence_score": 0.8,
+        "reasoning": "This code includes plates and brackets made of iron or steel, which could be relevant if the Kettenrad is used in conjunction with other structural components.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7303000000 80",
+        "confidence_score": 0.75,
+        "reasoning": "This code pertains to pipes and hollow profiles made of cast iron, which may not be a direct match but indicates the material type and manufacturing process relevant to Kettenrad.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:26:16.488265"
+  },
+  "CL-013_PN-Zylinder": {
+    "cluster_id": "CL-013",
+    "cluster_name": "PN-Zylinder",
+    "matches": [
+      {
+        "tariff_code": "8402900000",
+        "confidence_score": 0.85,
+        "reasoning": "The PN-Zylinder products are likely components used in machinery or mechanical devices, which aligns with the classification of parts under this tariff code.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8404000000",
+        "confidence_score": 0.75,
+        "reasoning": "This code covers auxiliary apparatus for boilers, which could include components like cylinders used in various machinery applications.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8403900000",
+        "confidence_score": 0.7,
+        "reasoning": "This code pertains to parts of central heating boilers, which may be relevant if the PN-Zylinder items are used in heating applications.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8403000000",
+        "confidence_score": 0.65,
+        "reasoning": "This code is for central heating boilers, which may apply if the PN-Zylinder products are part of a heating system.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "8402900010",
+        "confidence_score": 0.6,
+        "reasoning": "This code refers to specific pre-assembled process modules, which could relate if the PN-Zylinder is part of a complex machinery setup.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:26:24.202083"
+  },
+  "CL-007_Kette": {
+    "cluster_id": "CL-007",
+    "cluster_name": "Kette",
+    "matches": [
+      {
+        "tariff_code": "8482.10.00",
+        "confidence_score": 0.95,
+        "reasoning": "The products described are chains (Kette) that are likely used in machinery or mechanical applications, which falls under the category of mechanical parts.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances",
+        "description": null
+      },
+      {
+        "tariff_code": "7315.11.00",
+        "confidence_score": 0.9,
+        "reasoning": "These products may also be classified as iron or steel chains, which are specifically mentioned in the tariff code for chains and parts thereof.",
+        "section_info": "Section 73 - Articles of iron or steel",
+        "description": null
+      },
+      {
+        "tariff_code": "8482.99.00",
+        "confidence_score": 0.85,
+        "reasoning": "This code covers other parts and accessories for machinery, which could include specialized chains used in various mechanical systems.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances",
+        "description": null
+      },
+      {
+        "tariff_code": "7315.90.00",
+        "confidence_score": 0.8,
+        "reasoning": "This code includes other chains and parts thereof, which may encompass the specific types of chains listed in the product descriptions.",
+        "section_info": "Section 73 - Articles of iron or steel",
+        "description": null
+      },
+      {
+        "tariff_code": "8482.99.10",
+        "confidence_score": 0.75,
+        "reasoning": "This code is for other machinery parts, which may include chains used in various applications, though it is less specific than the previous codes.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:26:30.082212"
+  },
+  "CL-006_Getriebe": {
+    "cluster_id": "CL-006",
+    "cluster_name": "Getriebe",
+    "matches": [],
+    "timestamp": "2026-03-12T12:26:25.385520"
+  },
+  "CL-010_Others": {
+    "cluster_id": "CL-010",
+    "cluster_name": "Others",
+    "matches": [
+      {
+        "tariff_code": "0100000000",
+        "confidence_score": 0.1,
+        "reasoning": "The product is not a living animal, but the code is the only available option that broadly categorizes living animals.",
+        "section_info": "Section I - Live Animals",
+        "description": null
+      },
+      {
+        "tariff_code": "0101000000",
+        "confidence_score": 0.1,
+        "reasoning": "This code is specific to live horses, donkeys, mules, and hinnies, which does not apply to the product.",
+        "section_info": "Section I - Live Animals",
+        "description": null
+      },
+      {
+        "tariff_code": "0101210000",
+        "confidence_score": 0.1,
+        "reasoning": "This code pertains to live horses, which is not relevant to the product description.",
+        "section_info": "Section I - Live Animals",
+        "description": null
+      },
+      {
+        "tariff_code": "0102000000",
+        "confidence_score": 0.1,
+        "reasoning": "This code is for live cattle, which does not apply to the product.",
+        "section_info": "Section I - Live Animals",
+        "description": null
+      },
+      {
+        "tariff_code": "0102210000",
+        "confidence_score": 0.1,
+        "reasoning": "This code is for live cattle, specifically house cattle, which is not relevant to the product.",
+        "section_info": "Section I - Live Animals",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:26:36.380247"
+  },
+  "CL-012_Relais": {
+    "cluster_id": "CL-012",
+    "cluster_name": "Relais",
+    "matches": [
+      {
+        "tariff_code": "8536.10.00",
+        "confidence_score": 0.95,
+        "reasoning": "The product 'Relais' is an electrical relay, which falls under the category of electrical apparatus for switching or protecting electrical circuits.",
+        "section_info": "Section 16 - Electrical Machinery and Equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8536.90.00",
+        "confidence_score": 0.9,
+        "reasoning": "This code covers other electrical apparatus not specified elsewhere, which may include various types of relays.",
+        "section_info": "Section 16 - Electrical Machinery and Equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8535.90.00",
+        "confidence_score": 0.85,
+        "reasoning": "This code includes parts of electrical apparatus, which could apply if the relay is considered a component rather than a standalone device.",
+        "section_info": "Section 16 - Electrical Machinery and Equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8536.20.00",
+        "confidence_score": 0.8,
+        "reasoning": "This code is for relays specifically designed for switching, which aligns with the product description.",
+        "section_info": "Section 16 - Electrical Machinery and Equipment",
+        "description": null
+      },
+      {
+        "tariff_code": "8537.10.00",
+        "confidence_score": 0.75,
+        "reasoning": "This code pertains to boards, panels, consoles, and other devices that may include relays as part of their function.",
+        "section_info": "Section 16 - Electrical Machinery and Equipment",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:26:37.536273"
+  },
+  "CL-014_Thermistor": {
+    "cluster_id": "CL-014",
+    "cluster_name": "Thermistor",
+    "matches": [],
+    "timestamp": "2026-03-12T12:26:33.563786"
   }
 }

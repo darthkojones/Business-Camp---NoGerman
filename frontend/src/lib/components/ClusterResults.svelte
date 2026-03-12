@@ -21,6 +21,9 @@
   // Track cluster-level confirmations
   let confirmedClusters: Set<string> = new Set();
   let confirmingClusters: Set<string> = new Set();
+  
+  // Track which tariff code is actively selected for each cluster (before confirmation)
+  let clusterActiveSelections: Record<string, string> = {};
 
   function toggleCluster(clusterId: string) {
     if (expandedClusters.has(clusterId)) {
@@ -75,26 +78,34 @@
     }
   }
 
-  async function confirmWholeCluster(cluster: any) {
+  async function confirmWholeCluster(cluster: any, tariffCode?: string, confidenceScore?: number) {
     if (!cluster.tariff_suggestions || cluster.tariff_suggestions.length === 0) {
       alert("Keine Zollnummern-Vorschläge für diesen Cluster vorhanden.");
       return;
     }
 
-    const topSuggestion = cluster.tariff_suggestions[0];
+    // Use provided tariff or default to top suggestion
+    const suggestion = tariffCode 
+      ? cluster.tariff_suggestions.find((s: any) => s.tariff_code === tariffCode) || cluster.tariff_suggestions[0]
+      : cluster.tariff_suggestions[0];
+    
     const clusterId = cluster.cluster_id;
+    
+    // Mark this tariff as actively selected for visual feedback
+    clusterActiveSelections[clusterId] = suggestion.tariff_code;
+    clusterActiveSelections = clusterActiveSelections;
 
     confirmingClusters.add(clusterId);
     confirmingClusters = confirmingClusters;
 
     try {
-      // Confirm all items in the cluster with the top suggestion
+      // Confirm all items in the cluster with the selected suggestion
       const confirmPromises = cluster.items.map(async (item: any) => {
         const key = `${clusterId}-${item.item_id}`;
         
         // Set the selection for this item
-        itemSelections[key] = topSuggestion.tariff_code;
-        itemConfidenceScores[key] = topSuggestion.confidence_score;
+        itemSelections[key] = suggestion.tariff_code;
+        itemConfidenceScores[key] = suggestion.confidence_score;
         
         // Confirm via API
         const response = await fetch(`${API_URL}/confirmations`, {
@@ -103,8 +114,8 @@
           body: JSON.stringify({
             material_number: item.item_id,
             cluster_id: clusterId,
-            assigned_tariff_code: topSuggestion.tariff_code,
-            confidence_score: topSuggestion.confidence_score
+            assigned_tariff_code: suggestion.tariff_code,
+            confidence_score: suggestion.confidence_score
           })
         });
 
@@ -126,10 +137,14 @@
       confirmedItems = confirmedItems;
       itemSelections = itemSelections;
 
-      console.log(`Confirmed entire cluster ${clusterId} with ${cluster.items.length} items using HS code ${topSuggestion.tariff_code}`);
+      console.log(`Confirmed entire cluster ${clusterId} with ${cluster.items.length} items using HS code ${suggestion.tariff_code}`);
     } catch (error) {
       console.error("Error confirming cluster:", error);
       alert("Fehler beim Bestätigen des Clusters. Bitte versuchen Sie es erneut.");
+      
+      // Remove active selection on error
+      delete clusterActiveSelections[clusterId];
+      clusterActiveSelections = clusterActiveSelections;
     } finally {
       confirmingClusters.delete(clusterId);
       confirmingClusters = confirmingClusters;
@@ -213,11 +228,11 @@
         {@const clusterConfirmed = isClusterConfirmed(cluster.cluster_id)}
         <div class="hover:bg-gray-50 transition-colors {clusterConfirmed ? 'bg-green-50/30' : ''}">
           <!-- Cluster Header -->
-          <button
-            on:click={() => toggleCluster(cluster.cluster_id)}
-            class="w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none focus:bg-gray-100"
-          >
-            <div class="flex items-center gap-4 flex-1">
+          <div class="px-6 py-4 flex items-center justify-between">
+            <button
+              on:click={() => toggleCluster(cluster.cluster_id)}
+              class="flex items-center gap-4 flex-1 text-left focus:outline-none"
+            >
               <div class="flex-shrink-0">
                 {#if expandedClusters.has(cluster.cluster_id)}
                   <ChevronDown class="h-5 w-5 text-gray-500" />
@@ -255,8 +270,37 @@
                   </div>
                 {/if}
               </div>
-            </div>
-          </button>
+            </button>
+            
+            <!-- Cluster-wide Confirm Button (Collapsed View) -->
+            {#if cluster.tariff_suggestions && cluster.tariff_suggestions.length > 0}
+              {#if clusterConfirmed}
+                <div class="flex items-center gap-2 px-4 py-2 bg-green-100 text-green-800 rounded-md ml-4">
+                  <CheckCircle class="h-5 w-5" />
+                  <span class="font-semibold text-sm">Alle bestätigt</span>
+                </div>
+              {:else}
+                <button
+                  on:click={(e) => {
+                    e.stopPropagation();
+                    confirmWholeCluster(cluster);
+                  }}
+                  disabled={isClusterConfirming(cluster.cluster_id)}
+                  class="ml-4 inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-md
+                         bg-[#BB1E38] hover:bg-[#9a1830] text-white
+                         disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  {#if isClusterConfirming(cluster.cluster_id)}
+                    <div class="inline-block animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                    Bestätige...
+                  {:else}
+                    <CheckCircle class="h-4 w-4 mr-2" />
+                    Alle Artikel mit Top-Vorschlag bestätigen
+                  {/if}
+                </button>
+              {/if}
+            {/if}
+          </div>
 
           <!-- Expanded Content -->
           {#if expandedClusters.has(cluster.cluster_id)}
@@ -264,40 +308,17 @@
               <!-- Tariff Suggestions -->
               {#if cluster.tariff_suggestions && cluster.tariff_suggestions.length > 0}
                 <div class="mb-6 bg-white rounded-lg border border-gray-200 p-4">
-                  <div class="flex items-center justify-between mb-3">
+                  <div class="mb-3">
                     <h4 class="font-semibold text-[#272425] flex items-center gap-2">
                       <CheckCircle class="h-5 w-5 text-green-600" />
                       LLM-Vorschläge für Zollnummern (Top 3)
                     </h4>
-                    
-                    {#if isClusterConfirmed(cluster.cluster_id)}
-                      <div class="flex items-center gap-2 px-4 py-2 bg-green-100 text-green-800 rounded-md">
-                        <CheckCircle class="h-5 w-5" />
-                        <span class="font-semibold text-sm">Cluster bestätigt ({cluster.item_count} Artikel)</span>
-                      </div>
-                    {:else}
-                      <button
-                        on:click={() => confirmWholeCluster(cluster)}
-                        disabled={isClusterConfirming(cluster.cluster_id)}
-                        class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-md
-                               bg-[#BB1E38] hover:bg-[#9a1830] text-white
-                               disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                      >
-                        {#if isClusterConfirming(cluster.cluster_id)}
-                          <div class="inline-block animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                          Bestätige...
-                        {:else}
-                          <CheckCircle class="h-4 w-4 mr-2" />
-                          Alle Artikel mit Top-Vorschlag bestätigen
-                        {/if}
-                      </button>
-                    {/if}
                   </div>
                   
                   <div class="space-y-3">
                     {#each getTopSuggestions(cluster.tariff_suggestions, 3) as suggestion, idx}
                       <div class="border-l-4 {idx === 0 ? 'border-green-500' : 'border-gray-300'} pl-4 py-2">
-                        <div class="flex items-start justify-between">
+                        <div class="flex items-start justify-between gap-4">
                           <div class="flex-1">
                             <div class="flex items-center gap-3 mb-1">
                               <span class="font-mono text-lg font-bold text-[#272425]">
@@ -317,6 +338,41 @@
                             {/if}
                             <p class="text-sm text-[#272425]">{suggestion.reasoning}</p>
                           </div>
+                          
+                          <!-- Select Button for Each Recommendation -->
+                          {#if !isClusterConfirmed(cluster.cluster_id)}
+                            {@const isThisSelected = clusterActiveSelections[cluster.cluster_id] === suggestion.tariff_code}
+                            <button
+                              on:click={() => confirmWholeCluster(cluster, suggestion.tariff_code, suggestion.confidence_score)}
+                              disabled={isClusterConfirming(cluster.cluster_id)}
+                              class="flex-shrink-0 inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-md
+                                     transition-all duration-200
+                                     {isClusterConfirming(cluster.cluster_id)
+                                       ? 'bg-gray-400 cursor-wait'
+                                       : isThisSelected
+                                         ? 'bg-green-600 hover:bg-green-700 text-white'
+                                         : idx === 0 
+                                           ? 'bg-[#BB1E38] hover:bg-[#9a1830] text-white' 
+                                           : 'bg-gray-600 hover:bg-gray-700 text-white'
+                                     }
+                                     disabled:opacity-50 disabled:cursor-not-allowed"
+                            >
+                              {#if isClusterConfirming(cluster.cluster_id)}
+                                <div class="inline-block animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                                Bestätige...
+                              {:else if isThisSelected}
+                                <CheckCircle class="h-4 w-4 mr-1" />
+                                Selected
+                              {:else}
+                                Select
+                              {/if}
+                            </button>
+                          {:else}
+                            <div class="flex-shrink-0 inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-md bg-green-100 text-green-800 border border-green-300">
+                              <CheckCircle class="h-4 w-4 mr-1" />
+                              Bestätigt
+                            </div>
+                          {/if}
                         </div>
                       </div>
                     {/each}
@@ -372,18 +428,19 @@
                             {#if top2Suggestions.length > 0}
                               <div class="space-y-2">
                                 {#each top2Suggestions as suggestion, idx}
-                                  <label class="flex items-start gap-2 cursor-pointer hover:bg-gray-100 p-2 rounded {selectedTariff === suggestion.tariff_code ? 'bg-blue-50 border border-blue-300' : ''}">
+                                  {@const isSelected = selectedTariff === suggestion.tariff_code}
+                                  <label class="flex items-start gap-2 {isConfirmed ? 'cursor-not-allowed opacity-75' : 'cursor-pointer hover:bg-gray-100'} p-2 rounded transition-all {isSelected ? 'bg-blue-50 border-2 border-blue-400 shadow-sm' : 'border-2 border-transparent'}">
                                     <input
                                       type="radio"
                                       name="tariff-{itemKey}"
                                       value={suggestion.tariff_code}
                                       disabled={isConfirmed}
+                                      checked={isSelected}
                                       on:change={() => selectTariffForItem(cluster.cluster_id, item.item_id, suggestion.tariff_code, suggestion.confidence_score)}
-                                      checked={selectedTariff === suggestion.tariff_code}
-                                      class="mt-1 h-4 w-4 text-[#BB1E38] focus:ring-[#BB1E38] disabled:opacity-50"
+                                      class="mt-1 h-4 w-4 text-[#BB1E38] focus:ring-[#BB1E38] disabled:opacity-50 cursor-pointer"
                                     />
                                     <div class="flex-1">
-                                      <div class="flex items-center gap-2">
+                                      <div class="flex items-center gap-2 flex-wrap">
                                         <span class="font-mono font-semibold text-[#272425]">
                                           {suggestion.tariff_code}
                                         </span>
@@ -393,6 +450,12 @@
                                         {#if idx === 0}
                                           <span class="px-1.5 py-0.5 rounded text-xs bg-green-100 text-green-800">
                                             Empfohlen
+                                          </span>
+                                        {/if}
+                                        {#if isSelected && !isConfirmed}
+                                          <span class="px-1.5 py-0.5 rounded text-xs bg-blue-600 text-white flex items-center gap-1 animate-pulse">
+                                            <CheckCircle class="h-3 w-3" />
+                                            Selected
                                           </span>
                                         {/if}
                                       </div>
@@ -410,25 +473,28 @@
                             </div>
                           </td>
                           <td class="px-4 py-3 text-center">
-                            <button
-                              on:click={() => confirmItem(cluster.cluster_id, item.item_id)}
-                              disabled={isConfirmed || !selectedTariff}
-                              class="inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium rounded-md
-                                     {isConfirmed 
-                                       ? 'bg-green-600 text-white cursor-default' 
-                                       : selectedTariff
-                                         ? 'bg-[#BB1E38] hover:bg-[#9a1830] text-white'
-                                         : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                                     }
-                                     disabled:opacity-75 transition-colors"
-                            >
-                              {#if isConfirmed}
+                            {#if isConfirmed}
+                              <div class="inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium rounded-md bg-green-600 text-white">
                                 <CheckCircle class="h-4 w-4 mr-1" />
-                                Bestätigt
-                              {:else}
-                                Bestätigen
-                              {/if}
-                            </button>
+                                Confirmed
+                              </div>
+                            {:else if selectedTariff}
+                              <button
+                                on:click={() => confirmItem(cluster.cluster_id, item.item_id)}
+                                class="inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium rounded-md
+                                       transition-all duration-200 bg-[#BB1E38] hover:bg-[#9a1830] text-white hover:scale-105 active:scale-95"
+                              >
+                                Confirm Selection
+                              </button>
+                            {:else}
+                              <button
+                                disabled
+                                class="inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium rounded-md
+                                       bg-gray-300 text-gray-500 cursor-not-allowed"
+                              >
+                                Select Tariff First
+                              </button>
+                            {/if}
                           </td>
                         </tr>
                       {/each}
