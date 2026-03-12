@@ -5,30 +5,33 @@
   
   import AnalysisOverview from "$lib/components/AnalysisOverview.svelte";
   import ConfidenceOverview from "$lib/components/ConfidenceOverview.svelte";
-  import ResultsTable from "$lib/components/ResultsTable.svelte";
+  import ClusterResults from "$lib/components/ClusterResults.svelte";
 
-  let materials: any[] = [];
+  let clusters: any[] = [];
   let loading = true;
   let errorMsg = "";
   let isConfirmed = false;
 
   const API_URL = "http://localhost:8000";
 
-  async function fetchMaterials() {
+  async function fetchClusters() {
     loading = true;
+    errorMsg = "";
     try {
-      const res = await fetch(`${API_URL}/materials`);
-      if (!res.ok) throw new Error("Failed to load materials");
-      materials = await res.json();
+      const res = await fetch(`${API_URL}/clusters/enriched?auto_generate=true`);
+      if (!res.ok) throw new Error("Failed to load clusters");
+      clusters = await res.json();
+      console.log("Loaded clusters:", clusters);
     } catch (err) {
-      errorMsg = "Failed to load materials.";
+      console.error("Error fetching clusters:", err);
+      errorMsg = "Fehler beim Laden der Cluster-Daten. Bitte stellen Sie sicher, dass das Backend läuft.";
     } finally {
       loading = false;
     }
   }
 
   onMount(() => {
-    fetchMaterials();
+    fetchClusters();
   });
 
   function handleBack() {
@@ -41,6 +44,11 @@
       console.log("Bestätigen und fortfahren clicked");
     }
   }
+
+  // Calculate stats from clusters for overview components
+  $: totalItems = clusters.reduce((sum, c) => sum + c.item_count, 0);
+  $: analyzedClusters = clusters.filter(c => c.status === 'completed').length;
+
 </script>
 
 <div class="min-h-screen bg-white">
@@ -65,14 +73,29 @@
     {/if}
 
     <div class="space-y-8">
-      <!-- KPI Overview -->
-      <AnalysisOverview {materials} {loading} />
+      <!-- Info Banner -->
+      {#if !loading && clusters.length > 0}
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+          <div class="flex items-start gap-3">
+            <div class="flex-shrink-0">
+              <svg class="h-5 w-5 text-blue-600 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-sm font-semibold text-blue-900">Cluster-basierte Analyse</h3>
+              <p class="text-sm text-blue-800 mt-1">
+                Produkte wurden in <strong>{clusters.length} Cluster</strong> gruppiert mit insgesamt <strong>{totalItems} Artikeln</strong>. 
+                {analyzedClusters} Cluster wurden erfolgreich analysiert und haben LLM-Vorschläge für HS-Codes.
+              </p>
+            </div>
+          </div>
+        </div>
+      {/if}
 
-      <!-- Confidence Level Overview -->
-      <ConfidenceOverview />
+      <!-- Cluster Results -->
+      <ClusterResults {clusters} {loading} />
 
-      <!-- Results Table -->
-      <ResultsTable {materials} {loading} />
 
       <!-- Manual Confirmation Section -->
       <div class="border-2 border-[#BB1E38] bg-red-50/20 shadow-sm rounded-lg overflow-hidden">

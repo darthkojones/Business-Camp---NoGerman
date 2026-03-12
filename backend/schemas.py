@@ -47,3 +47,15 @@ class TariffSuggestionResponse(BaseModel):
     cluster_name: str
     matches: List[TariffMatchSchema]
     timestamp: str
+
+
+class EnrichedClusterSchema(BaseModel):
+    """Cluster data enriched with tariff suggestions from LLM"""
+    cluster_id: str
+    cluster_name: str
+    item_count: int
+    common_attributes: List[str]
+    items: List[ClusterItemSchema]
+    tariff_suggestions: Optional[List[TariffMatchSchema]] = None
+    suggestion_timestamp: Optional[str] = None
+    status: str = "pending"  # pending, processing, completed, error
