@@ -58,14 +58,60 @@
   let allTariffs: TariffCode[] = [];
   let tariffSearchQuery = "";
 
+  // Hierarchical selection state
+  let hierarchyLevels: { items: TariffCode[]; selected: TariffCode | null }[] = [
+    { items: [], selected: null },
+  ];
+  let loadingHierarchy = false;
+
   // Selection state
   let selectedMaterialIds: Set<number> = new Set();
   let targetTariffCodeId: number | null = null;
   let updating = false;
 
+  async function fetchLevel(parentId: number | null, levelIndex: number) {
+    loadingHierarchy = true;
+    try {
+      const url = parentId 
+        ? `http://localhost:8000/tariffs/hierarchy?parent_id=${parentId}`
+        : "http://localhost:8000/tariffs/hierarchy";
+      const res = await fetch(url);
+      if (res.ok) {
+        const items = await res.json();
+        hierarchyLevels[levelIndex].items = items;
+        hierarchyLevels = [...hierarchyLevels]; // trigger reactivity
+      }
+    } catch (e) {
+      console.error("Failed to fetch hierarchy:", e);
+    } finally {
+      loadingHierarchy = false;
+    }
+  }
+
+  async function handleHierarchySelect(levelIndex: number, item: TariffCode | null) {
+      // Clear all levels below this one
+      hierarchyLevels = hierarchyLevels.slice(0, levelIndex + 1);
+      hierarchyLevels[levelIndex].selected = item;
+      
+      if (item) {
+          targetTariffCodeId = item.id;
+          // Pre-emptively add next level
+          hierarchyLevels.push({ items: [], selected: null });
+          await fetchLevel(item.id, levelIndex + 1);
+          // If the new level has no items, it means we reached a leaf
+          if (hierarchyLevels[levelIndex + 1].items.length === 0) {
+              hierarchyLevels = hierarchyLevels.slice(0, levelIndex + 1);
+          }
+      } else {
+          targetTariffCodeId = levelIndex > 0 ? hierarchyLevels[levelIndex - 1].selected?.id || null : null;
+      }
+      hierarchyLevels = [...hierarchyLevels];
+  }
+
   onMount(async () => {
     await fetchDistribution();
-    await fetchAllTariffs();
+    // Fetch initial top level
+    await fetchLevel(null, 0);
   });
 
   async function fetchDistribution() {
@@ -321,43 +367,62 @@
               </div>
 
               <div class="space-y-3">
-                <div class="relative">
-                  <Search
-                    class="absolute left-3 top-2.5 w-4 h-4 text-gray-400"
-                  />
-                  <input
-                    type="text"
-                    bind:value={tariffSearchQuery}
-                    placeholder="Search new code..."
-                    class="w-full pl-9 pr-3 py-2 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white"
-                  />
+                <p class="text-[11px] text-blue-700 font-bold uppercase tracking-wider mb-1">Hierarchy Browser</p>
+                
+                <div class="space-y-2 max-h-64 overflow-y-auto pr-1 custom-scrollbar">
+                  {#each hierarchyLevels as level, i}
+                    <div class="flex flex-col space-y-1">
+                      <label class="text-[9px] uppercase tracking-wider text-gray-400 font-bold">
+                        {i === 0 ? 'Category' : i === 1 ? 'Sub-Category' : i === 2 ? 'Heading' : `Level ${i + 1}`}
+                      </label>
+                      <select 
+                        class="w-full py-1.5 px-3 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white shadow-sm"
+                        value={level.selected?.id || ""}
+                        on:change={(e) => {
+                          const id = parseInt(e.currentTarget.value);
+                          const item = level.items.find(it => it.id === id) || null;
+                          handleHierarchySelect(i, item);
+                        }}
+                      >
+                        <option value="">Select...</option>
+                        {#each level.items as t}
+                          <option value={t.id}>{t.goods_code} - {t.description ? (t.description.length > 50 ? t.description.substring(0, 50) + '...' : t.description) : ''}</option>
+                        {/each}
+                      </select>
+                    </div>
+                  {/each}
+                  
+                  {#if loadingHierarchy}
+                    <div class="flex items-center justify-center p-2">
+                      <RefreshCw class="w-4 h-4 text-blue-400 animate-spin" />
+                    </div>
+                  {/if}
                 </div>
 
-                <select
-                  bind:value={targetTariffCodeId}
-                  class="w-full py-2 px-3 text-sm border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white"
-                >
-                  <option value={null}>Select target code...</option>
-                  {#each filteredTariffs as t}
-                    <option value={t.id}
-                      >{t.goods_code} - {t.description
-                        ? t.description.substring(0, 40) + "..."
-                        : ""}</option
-                    >
-                  {/each}
-                </select>
-
-                <button
-                  on:click={applyBulkUpdate}
-                  disabled={updating || !targetTariffCodeId}
-                  class="w-full flex justify-center items-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                >
-                  {#if updating}
-                    <RefreshCw class="w-4 h-4 animate-spin mr-2" /> Updating...
-                  {:else}
-                    <CheckCircle class="w-4 h-4 mr-2" /> Reassign Codes
+                <div class="pt-2 border-t border-blue-100 mt-2">
+                  {#if targetTariffCodeId}
+                    <div class="mb-3 p-2 bg-white/60 rounded-lg border border-blue-200 text-[11px] shadow-inner text-blue-900">
+                      <div class="flex items-center space-x-2 mb-1">
+                        <span class="px-1.5 py-0.5 bg-blue-600 text-white rounded font-mono font-bold text-[10px]">
+                          {hierarchyLevels[hierarchyLevels.length - 1].selected?.goods_code}
+                        </span>
+                        <span class="font-bold">Target Selection</span>
+                      </div>
+                      <p class="opacity-80 italic line-clamp-2">{hierarchyLevels[hierarchyLevels.length - 1].selected?.description || 'No description'}</p>
+                    </div>
                   {/if}
-                </button>
+                  <button
+                    on:click={applyBulkUpdate}
+                    disabled={updating || !targetTariffCodeId}
+                    class="w-full flex justify-center items-center py-2.5 px-4 border border-transparent rounded-xl shadow-lg text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all active:scale-[0.98]"
+                  >
+                    {#if updating}
+                      <RefreshCw class="w-4 h-4 animate-spin mr-2" /> Updating...
+                    {:else}
+                      <CheckCircle class="w-4 h-4 mr-2" /> Reassign Codes
+                    {/if}
+                  </button>
+                </div>
               </div>
             </div>
           {/if}

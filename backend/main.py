@@ -38,6 +38,54 @@ def get_tariffs(skip: int = 0, limit: int = 200, search: Optional[str] = None, d
     tariffs = query.offset(skip).limit(limit).all()
     return tariffs
 
+@app.get("/tariffs/hierarchy", response_model=List[TariffCodeSchema])
+def get_tariffs_hierarchy(parent_id: Optional[int] = None, db: Session = Depends(get_db)):
+    """
+    Returns the next level of the tariff hierarchy.
+    - If parent_id is None, return top-level categories (indent=2).
+    - If parent_id is provided, return its immediate children.
+    """
+    if parent_id is None:
+        return db.query(TariffCode).filter(TariffCode.indent == 2).order_by(TariffCode.id).all()
+    
+    parent = db.query(TariffCode).filter(TariffCode.id == parent_id).first()
+    if not parent:
+        raise HTTPException(status_code=404, detail="Parent tariff code not found")
+    
+    # Find children: items that follow the parent and have indent = parent.indent + 2
+    # But we need to make sure we don't jump into a different branch.
+    # We look at all items after the parent.
+    # We stop when we hit an item with indent <= parent.indent.
+    
+    all_following = db.query(TariffCode).filter(TariffCode.id > parent.id).order_by(TariffCode.id).all()
+    
+    immediate_children = []
+    target_indent = parent.indent + 2
+    
+    # Sometimes hierarchy jumps (e.g. 4 -> 8 if 6 is missing or structure is weird)
+    # But usually it's +2.
+    # To be safe, we find the MINIMUM indent that is > parent.indent among following items.
+    
+    found_any_child_indent = None
+    for item in all_following:
+        if item.indent <= parent.indent:
+            break
+        
+        if found_any_child_indent is None or item.indent < found_any_child_indent:
+             found_any_child_indent = item.indent
+             
+    if found_any_child_indent is None:
+        return []
+        
+    # Now collect all items with that specific indent within this branch
+    for item in all_following:
+        if item.indent <= parent.indent:
+            break
+        if item.indent == found_any_child_indent:
+            immediate_children.append(item)
+            
+    return immediate_children
+
 from sqlalchemy import func
 
 @app.get("/analytics/distribution", response_model=List[DistributionItemSchema])

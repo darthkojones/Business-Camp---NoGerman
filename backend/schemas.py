@@ -17,6 +17,7 @@ class TariffCodeSchema(BaseModel):
     goods_code: str
     description: Optional[str] = None
     language: Optional[str] = None
+    indent: Optional[int] = None
 
     class Config:
         from_attributes = True

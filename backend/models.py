@@ -9,6 +9,7 @@ class TariffCode(Base):
     goods_code = Column(String, index=True)
     description = Column(Text)
     language = Column(String)
+    indent = Column(Integer)
     start_date = Column(String)
     end_date = Column(String)
 

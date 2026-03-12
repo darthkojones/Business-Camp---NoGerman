@@ -35,10 +35,16 @@ def seed_db():
             
             tariffs_to_insert = []
             for _, row in df_tariffs.iterrows():
+                try:
+                    indent_val = int(row.get('Indent', 0))
+                except (ValueError, TypeError):
+                    indent_val = 0
+                    
                 tariffs_to_insert.append(TariffCode(
                     goods_code=row.get('Goods code', ''),
                     description=row.get('Description', ''),
                     language=row.get('Language', ''),
+                    indent=indent_val,
                     start_date=row.get('Start date', ''),
                     end_date=row.get('End date', '')
                 ))
