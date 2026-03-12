@@ -2514,5 +2514,249 @@
     "cluster_name": "Thermistor",
     "matches": [],
     "timestamp": "2026-03-12T12:26:33.563786"
+  },
+  "CL-014_Schraube": {
+    "cluster_id": "CL-014",
+    "cluster_name": "Schraube",
+    "matches": [
+      {
+        "tariff_code": "7300000000 80",
+        "confidence_score": 0.95,
+        "reasoning": "The products are screws made of iron or steel, which directly falls under the category of goods made from iron or steel.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7301000000 80",
+        "confidence_score": 0.9,
+        "reasoning": "This code covers products made from iron or steel, including fasteners like screws that may be welded or assembled, which aligns with the product cluster.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7301200000 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code includes profiles made from iron or steel, which can encompass various types of screws and fasteners, making it relevant to the product descriptions.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7302900000 80",
+        "confidence_score": 0.8,
+        "reasoning": "This code is for other articles made of iron or steel not specified elsewhere, which can include various types of screws not covered by more specific codes.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7303000000 80",
+        "confidence_score": 0.75,
+        "reasoning": "While primarily for pipes and hollow profiles, this code is relevant as it includes products made from iron or steel, which may encompass certain types of fasteners.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:36:04.430906"
+  },
+  "CL-013_O-Ring": {
+    "cluster_id": "CL-013",
+    "cluster_name": "O-Ring",
+    "matches": [
+      {
+        "tariff_code": "4002510000 80",
+        "confidence_score": 0.95,
+        "reasoning": "O-Rings are commonly made from Nitrile Butadiene Rubber (NBR), which is classified under this code. The descriptions provided indicate the use of NBR, making this the most relevant code.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002000000 80",
+        "confidence_score": 0.9,
+        "reasoning": "This code covers synthetic rubber in primary forms, which includes various elastomers used in O-Rings. Given the diversity of materials (like Viton) mentioned, this code is also highly applicable.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002190000 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code encompasses other types of synthetic rubber, which may include various formulations used in O-Rings. It is a broader classification that still fits the product characteristics.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002700000 80",
+        "confidence_score": 0.8,
+        "reasoning": "This code refers to Ethylene-Propylene-Diene Terpolymer (EPDM), which is another type of synthetic rubber that can be used in O-Rings, particularly in applications requiring high resistance to heat and weather.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      },
+      {
+        "tariff_code": "4002410000 80",
+        "confidence_score": 0.75,
+        "reasoning": "Chloroprene rubber (CR) is sometimes used in O-Rings for its durability and resistance to various chemicals, making this code a relevant option.",
+        "section_info": "Section 40 - Rubber and articles thereof",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:36:25.696616"
+  },
+  "CL-006_Mutter": {
+    "cluster_id": "CL-006",
+    "cluster_name": "Mutter",
+    "matches": [
+      {
+        "tariff_code": "7301000000 80",
+        "confidence_score": 0.95,
+        "reasoning": "The product cluster consists of various types of nuts (Mutter) made from iron or steel, which aligns well with the classification of fasteners and related products made from these materials.",
+        "section_info": "Section XV - Base Metals and Articles of Base Metal",
+        "description": null
+      },
+      {
+        "tariff_code": "7300000000 80",
+        "confidence_score": 0.9,
+        "reasoning": "This code covers goods made of iron or steel, which is the primary material for the nuts listed in the product descriptions.",
+        "section_info": "Section XV - Base Metals and Articles of Base Metal",
+        "description": null
+      },
+      {
+        "tariff_code": "7302900000 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code is for other articles of iron or steel, which can include various fasteners not specifically categorized elsewhere, making it a suitable match for the diverse types of nuts.",
+        "section_info": "Section XV - Base Metals and Articles of Base Metal",
+        "description": null
+      },
+      {
+        "tariff_code": "7304000000 80",
+        "confidence_score": 0.8,
+        "reasoning": "This code includes seamless tubes and hollow profiles made of iron or steel, which may relate to the structural applications of the nuts in various assemblies.",
+        "section_info": "Section XV - Base Metals and Articles of Base Metal",
+        "description": null
+      },
+      {
+        "tariff_code": "7303000000 80",
+        "confidence_score": 0.75,
+        "reasoning": "This code covers pipes and hollow profiles made of cast iron, which may be relevant if the nuts are used in conjunction with such materials in industrial applications.",
+        "section_info": "Section XV - Base Metals and Articles of Base Metal",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:36:34.184470"
+  },
+  "CL-016_Kettenrad": {
+    "cluster_id": "CL-016",
+    "cluster_name": "Kettenrad",
+    "matches": [
+      {
+        "tariff_code": "7300000000 80",
+        "confidence_score": 0.9,
+        "reasoning": "The products in the cluster are categorized as 'Kettenrad', which are likely made of iron or steel and used in machinery, fitting the general category of goods made from iron or steel.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7301000000 80",
+        "confidence_score": 0.85,
+        "reasoning": "This code covers products made from iron or steel, including those that may be welded or consist of assembled elements, which aligns with the mechanical nature of Kettenrad.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7302000000 80",
+        "confidence_score": 0.8,
+        "reasoning": "This code pertains to railway material made from iron or steel, which could relate to the structural aspects of Kettenrad if they are used in rail or heavy machinery applications.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7302900000 80",
+        "confidence_score": 0.75,
+        "reasoning": "This code is for other articles of iron or steel that do not fit into more specific categories, which may include various types of mechanical components like Kettenrad.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      },
+      {
+        "tariff_code": "7303000000 80",
+        "confidence_score": 0.7,
+        "reasoning": "This code is for pipes and hollow profiles made from cast iron, which may not be a direct match but could relate to the manufacturing processes or materials used in Kettenrad.",
+        "section_info": "Section 73 - Articles of Iron or Steel",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:36:41.946131"
+  },
+  "CL-005_Kette": {
+    "cluster_id": "CL-005",
+    "cluster_name": "Kette",
+    "matches": [
+      {
+        "tariff_code": "8482.10",
+        "confidence_score": 0.95,
+        "reasoning": "The products described are chains (Kette) that are typically used in machinery or mechanical applications, which fall under the category of mechanical parts.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances",
+        "description": null
+      },
+      {
+        "tariff_code": "7315.11",
+        "confidence_score": 0.9,
+        "reasoning": "These products can also be classified under chains made of iron or steel, which are specifically designed for use in machines or vehicles.",
+        "section_info": "Section 73 - Articles of iron or steel",
+        "description": null
+      },
+      {
+        "tariff_code": "8482.99",
+        "confidence_score": 0.85,
+        "reasoning": "This code encompasses other machinery parts not specifically mentioned, which could include specialized chains used in various applications.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances",
+        "description": null
+      },
+      {
+        "tariff_code": "7315.90",
+        "confidence_score": 0.8,
+        "reasoning": "This code covers other articles of iron or steel chains, which may apply to the Kette products if they are not specifically categorized under machinery.",
+        "section_info": "Section 73 - Articles of iron or steel",
+        "description": null
+      },
+      {
+        "tariff_code": "8482.20",
+        "confidence_score": 0.75,
+        "reasoning": "This code relates to parts of transmission shafts and cranks, which could be relevant if the chains are used in such applications.",
+        "section_info": "Section 84 - Nuclear reactors, boilers, machinery and mechanical appliances",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:36:48.550847"
+  },
+  "CL-007_Getriebe": {
+    "cluster_id": "CL-007",
+    "cluster_name": "Getriebe",
+    "matches": [],
+    "timestamp": "2026-03-12T12:36:49.049961"
+  },
+  "CL-011_Relais": {
+    "cluster_id": "CL-011",
+    "cluster_name": "Relais",
+    "matches": [
+      {
+        "tariff_code": "8536.50.00",
+        "confidence_score": 0.95,
+        "reasoning": "The product 'Relais 3RU2126-4DB1' is an electrical relay used in various electrical circuits, which falls under the category of electrical apparatus for switching or protecting electrical circuits.",
+        "section_info": "Section 16 - Machinery and Mechanical Appliances",
+        "description": null
+      },
+      {
+        "tariff_code": "8536.90.00",
+        "confidence_score": 0.9,
+        "reasoning": "This code covers parts of electrical apparatus, which may include components like relays that are not specifically classified elsewhere.",
+        "section_info": "Section 16 - Machinery and Mechanical Appliances",
+        "description": null
+      },
+      {
+        "tariff_code": "8537.10.00",
+        "confidence_score": 0.85,
+        "reasoning": "This code pertains to boards, panels, consoles, and similar devices, which can include relay panels used in electrical systems.",
+        "section_info": "Section 16 - Machinery and Mechanical Appliances",
+        "description": null
+      }
+    ],
+    "timestamp": "2026-03-12T12:36:53.789490"
   }
 }

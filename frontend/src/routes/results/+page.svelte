@@ -5,7 +5,7 @@
   import { ArrowLeft, CheckCircle } from "lucide-svelte";
   
   import AnalysisOverview from "$lib/components/AnalysisOverview.svelte";
-  import ConfidenceOverview from "$lib/components/ConfidenceOverview.svelte";
+  // import ConfidenceOverview from "$lib/components/ConfidenceOverview.svelte";
   import ClusterResults from "$lib/components/ClusterResults.svelte";
 
   let clusters: any[] = [];
@@ -78,7 +78,7 @@
       <AnalysisOverview {clusters} {loading} />
 
       <!-- Confidence Level Overview -->
-      <ConfidenceOverview {clusters} {loading} />
+      <!-- <ConfidenceOverview {clusters} {loading} /> -->
 
       <!-- Info Banner -->
       {#if !loading && clusters.length > 0}
