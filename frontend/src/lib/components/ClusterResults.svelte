@@ -5,6 +5,13 @@
   export let loading: boolean = false;
 
   let expandedClusters: Set<string> = new Set();
+  
+  // Track user selections and confirmations for each item
+  // Format: { "clusterId-itemId": "tariff_code" }
+  let itemSelections: Record<string, string> = {};
+  
+  // Format: Set of "clusterId-itemId" for confirmed items
+  let confirmedItems: Set<string> = new Set();
 
   function toggleCluster(clusterId: string) {
     if (expandedClusters.has(clusterId)) {
@@ -13,6 +20,29 @@
       expandedClusters.add(clusterId);
     }
     expandedClusters = expandedClusters; // Trigger reactivity
+  }
+
+  function selectTariffForItem(clusterId: string, itemId: string, tariffCode: string) {
+    const key = `${clusterId}-${itemId}`;
+    itemSelections[key] = tariffCode;
+    itemSelections = itemSelections; // Trigger reactivity
+  }
+
+  function confirmItem(clusterId: string, itemId: string) {
+    const key = `${clusterId}-${itemId}`;
+    if (itemSelections[key]) {
+      confirmedItems.add(key);
+      confirmedItems = confirmedItems; // Trigger reactivity
+      console.log(`Confirmed: Material ${itemId} with HS code ${itemSelections[key]}`);
+    }
+  }
+
+  function isItemConfirmed(clusterId: string, itemId: string): boolean {
+    return confirmedItems.has(`${clusterId}-${itemId}`);
+  }
+
+  function getSelectedTariff(clusterId: string, itemId: string): string | null {
+    return itemSelections[`${clusterId}-${itemId}`] || null;
   }
 
   function getConfidenceColor(score: number): string {
@@ -38,6 +68,11 @@
       default:
         return { class: "bg-gray-100 text-gray-800", label: "Ausstehend" };
     }
+  }
+
+  // Get top N tariff suggestions
+  function getTopSuggestions(suggestions: any[], count: number) {
+    return suggestions ? suggestions.slice(0, count) : [];
   }
 </script>
 
@@ -111,11 +146,11 @@
                 <div class="mb-6 bg-white rounded-lg border border-gray-200 p-4">
                   <h4 class="font-semibold text-[#272425] mb-3 flex items-center gap-2">
                     <CheckCircle class="h-5 w-5 text-green-600" />
-                    LLM-Vorschläge für Zollnummern
+                    LLM-Vorschläge für Zollnummern (Top 3)
                   </h4>
                   
                   <div class="space-y-3">
-                    {#each cluster.tariff_suggestions as suggestion, idx}
+                    {#each getTopSuggestions(cluster.tariff_suggestions, 3) as suggestion, idx}
                       <div class="border-l-4 {idx === 0 ? 'border-green-500' : 'border-gray-300'} pl-4 py-2">
                         <div class="flex items-start justify-between">
                           <div class="flex-1">
@@ -154,40 +189,101 @@
                   <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-50">
                       <tr>
-                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-32">
                           Material-Nr.
                         </th>
-                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-48">
                           Beschreibung
                         </th>
+                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-64">
+                          Zollnummer (Top 2)
+                        </th>
                         <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                          Details
+                          Details (Einkaufsbestelltext)
+                        </th>
+                        <th class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider w-32">
+                          Bestätigen
                         </th>
                       </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
                       {#each cluster.items as item}
-                        <tr class="hover:bg-gray-50">
+                        {@const top2Suggestions = getTopSuggestions(cluster.tariff_suggestions || [], 2)}
+                        {@const itemKey = `${cluster.cluster_id}-${item.item_id}`}
+                        {@const isConfirmed = isItemConfirmed(cluster.cluster_id, item.item_id)}
+                        {@const selectedTariff = getSelectedTariff(cluster.cluster_id, item.item_id)}
+                        
+                        <tr class="hover:bg-gray-50 {isConfirmed ? 'bg-green-50' : ''}">
                           <td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-[#272425]">
                             {item.item_id}
+                            {#if isConfirmed}
+                              <CheckCircle class="inline h-4 w-4 text-green-600 ml-1" />
+                            {/if}
                           </td>
                           <td class="px-4 py-3 text-sm text-[#6b6b6b]">
                             {item.raw_description}
                           </td>
-                          <td class="px-4 py-3 text-sm text-[#6b6b6b]">
-                            {#if Object.keys(item.parsed_data).length > 1}
-                              <div class="flex flex-wrap gap-2">
-                                {#each Object.entries(item.parsed_data) as [key, value]}
-                                  {#if key !== 'type'}
-                                    <span class="px-2 py-1 bg-gray-100 rounded text-xs">
-                                      <span class="font-medium">{key}:</span> {value}
-                                    </span>
-                                  {/if}
+                          <td class="px-4 py-3 text-sm">
+                            {#if top2Suggestions.length > 0}
+                              <div class="space-y-2">
+                                {#each top2Suggestions as suggestion, idx}
+                                  <label class="flex items-start gap-2 cursor-pointer hover:bg-gray-100 p-2 rounded {selectedTariff === suggestion.tariff_code ? 'bg-blue-50 border border-blue-300' : ''}">
+                                    <input
+                                      type="radio"
+                                      name="tariff-{itemKey}"
+                                      value={suggestion.tariff_code}
+                                      disabled={isConfirmed}
+                                      on:change={() => selectTariffForItem(cluster.cluster_id, item.item_id, suggestion.tariff_code)}
+                                      checked={selectedTariff === suggestion.tariff_code}
+                                      class="mt-1 h-4 w-4 text-[#BB1E38] focus:ring-[#BB1E38] disabled:opacity-50"
+                                    />
+                                    <div class="flex-1">
+                                      <div class="flex items-center gap-2">
+                                        <span class="font-mono font-semibold text-[#272425]">
+                                          {suggestion.tariff_code}
+                                        </span>
+                                        <span class="px-1.5 py-0.5 rounded text-xs {getConfidenceBadge(suggestion.confidence_score)}">
+                                          {Math.round(suggestion.confidence_score * 100)}%
+                                        </span>
+                                        {#if idx === 0}
+                                          <span class="px-1.5 py-0.5 rounded text-xs bg-green-100 text-green-800">
+                                            Empfohlen
+                                          </span>
+                                        {/if}
+                                      </div>
+                                    </div>
+                                  </label>
                                 {/each}
                               </div>
                             {:else}
-                              <span class="text-gray-400 text-xs">Keine zusätzlichen Details</span>
+                              <span class="text-gray-400 text-xs">Keine Vorschläge</span>
                             {/if}
+                          </td>
+                          <td class="px-4 py-3 text-sm text-[#6b6b6b] max-w-xs">
+                            <div class="whitespace-pre-wrap text-xs leading-relaxed">
+                              {item.purchase_order_text || 'Keine Details verfügbar'}
+                            </div>
+                          </td>
+                          <td class="px-4 py-3 text-center">
+                            <button
+                              on:click={() => confirmItem(cluster.cluster_id, item.item_id)}
+                              disabled={isConfirmed || !selectedTariff}
+                              class="inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium rounded-md
+                                     {isConfirmed 
+                                       ? 'bg-green-600 text-white cursor-default' 
+                                       : selectedTariff
+                                         ? 'bg-[#BB1E38] hover:bg-[#9a1830] text-white'
+                                         : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                                     }
+                                     disabled:opacity-75 transition-colors"
+                            >
+                              {#if isConfirmed}
+                                <CheckCircle class="h-4 w-4 mr-1" />
+                                Bestätigt
+                              {:else}
+                                Bestätigen
+                              {/if}
+                            </button>
                           </td>
                         </tr>
                       {/each}

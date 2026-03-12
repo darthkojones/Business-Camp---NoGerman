@@ -24,6 +24,7 @@ class TariffCodeSchema(BaseModel):
 class ClusterItemSchema(BaseModel):
     item_id: str
     raw_description: str
+    purchase_order_text: str
     parsed_data: Dict[str, Any]
 
 class ClusterSchema(BaseModel):
