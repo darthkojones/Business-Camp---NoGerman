@@ -19,7 +19,7 @@
     LinearScale,
     type ChartConfiguration,
   } from "chart.js";
-  import { Search, CheckCircle, RefreshCw } from "lucide-svelte";
+  import { Search, CheckCircle, RefreshCw, Download } from "lucide-svelte";
   import NavigationHeader from "$lib/components/NavigationHeader.svelte";
   import { Alert } from "flowbite-svelte";
 
@@ -217,6 +217,7 @@
   }
 
   $: totalItemsExport = exportItems.length;
+  $: exportDisabled = totalItemsExport === 0;
   $: uniqueClustersExport = new Set(exportItems.map((item) => item.cluster_id))
     .size;
 
@@ -677,140 +678,13 @@
   </div>
 </div>
 
-<!-- export section (merged) -->
-<div class="max-w-7xl mx-auto px-8 py-12">
-  <div class="mb-12">
-    <h2 class="text-4xl text-[#BB1E38] font-bold mb-2">Export & Abschluss</h2>
-    <p class="text-base text-[#6b6b6b]">
-      Bestätigte HS-Code-Zuordnungen exportieren
-    </p>
-  </div>
-
-  {#if errorExport}
-    <Alert color="red" class="mb-8">{errorExport}</Alert>
-  {/if}
-
-  {#if loadingExport}
-    <div class="flex justify-center items-center py-20">
-      <div
-        class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-[#BB1E38]"
-      ></div>
-    </div>
-  {:else}
-    <!-- Summary Stats -->
-    <div class="grid md:grid-cols-3 gap-6 mb-8">
-      <div
-        class="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500"
-      >
-        <div class="flex items-center justify-between">
-          <div>
-            <p class="text-sm text-gray-600 font-medium">Bestätigte Artikel</p>
-            <p class="text-3xl font-bold text-[#272425] mt-1">
-              {totalItemsExport}
-            </p>
-          </div>
-          <CheckCircle class="h-12 w-12 text-green-500 opacity-80" />
-        </div>
-      </div>
-
-      <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-500">
-        <div class="flex items-center justify-between">
-          <div>
-            <p class="text-sm text-gray-600 font-medium">Cluster</p>
-            <p class="text-3xl font-bold text-[#272425] mt-1">
-              {uniqueClustersExport}
-            </p>
-          </div>
-          <div
-            class="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center"
-          >
-            <span class="text-2xl font-bold text-blue-600">C</span>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="bg-white rounded-lg shadow-md p-6 border-l-4 border-[#BB1E38]"
-      >
-        <div class="flex items-center justify-between">
-          <div>
-            <p class="text-sm text-gray-600 font-medium">Bereit zum Export</p>
-            <p class="text-3xl font-bold text-[#272425] mt-1">✓</p>
-          </div>
-          <span class="h-12 w-12 text-[#BB1E38] opacity-80">
-            <!-- icon placeholder -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              class="h-12 w-12"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 17v-6a2 2 0 012-2h2a2 2 0 012 2v6m-4 0v4m0-4h4m-4 0H5"
-              />
-            </svg>
-          </span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Export Options -->
-    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
-      <h3 class="text-2xl font-semibold text-[#272425] mb-6">
-        Export-Optionen
-      </h3>
-      {#if totalItemsExport === 0}
-        <div class="text-center py-12">
-          <span class="mx-auto h-16 w-16 text-gray-300 mb-4 block">📄</span>
-          <p class="text-gray-500 text-lg mb-2">
-            Keine bestätigten Einträge vorhanden
-          </p>
-          <p class="text-gray-400 text-sm mb-6">
-            Bitte bestätigen Sie zunächst einige Zuordnungen auf der
-            Ergebnisseite.
-          </p>
-        </div>
-      {:else}
-        <div class="grid md:grid-cols-2 gap-6">
-          <button
-            on:click={exportToCSV}
-            class="group relative overflow-hidden border-2 border-gray-200 rounded-lg p-8 hover:border-[#BB1E38] hover:shadow-lg transition-all"
-          >
-            <div class="relative z-10">
-              <div class="flex items-center justify-between mb-4">
-                <span class="h-12 w-12 text-green-600">📄</span>
-                <span
-                  class="h-8 w-8 text-gray-400 group-hover:text-[#BB1E38] transition-colors"
-                  >⬇️</span
-                >
-              </div>
-              <p class="text-lg font-semibold">CSV herunterladen</p>
-              <p class="text-sm text-gray-500 mt-1">Komma-separierte Werte</p>
-            </div>
-          </button>
-
-          <button
-            on:click={exportToJSON}
-            class="group relative overflow-hidden border-2 border-gray-200 rounded-lg p-8 hover:border-[#BB1E38] hover:shadow-lg transition-all"
-          >
-            <div class="relative z-10">
-              <div class="flex items-center justify-between mb-4">
-                <span class="h-12 w-12 text-indigo-600">🗂️</span>
-                <span
-                  class="h-8 w-8 text-gray-400 group-hover:text-[#BB1E38] transition-colors"
-                  >⬇️</span
-                >
-              </div>
-              <p class="text-lg font-semibold">JSON herunterladen</p>
-              <p class="text-sm text-gray-500 mt-1">Strukturierte Daten</p>
-            </div>
-          </button>
-        </div>
-      {/if}
-    </div>
-  {/if}
-</div>
+<!-- floating export button -->
+<button
+  on:click={exportToCSV}
+  disabled={exportDisabled}
+  class="fixed bottom-8 right-8 z-50 flex items-center px-4 py-3 bg-[#BB1E38] text-white rounded-full shadow-lg hover:bg-[#9a1830]
+         disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+>
+  <Download class="w-5 h-5 mr-2" />
+  Export results / CSV
+</button>
