@@ -7,12 +7,24 @@ from schemas import MaterialSchema, TariffCodeSchema, ClusterSchema, TariffSugge
 from clustering import generate_clusters
 from tariff_matcher import match_cluster_to_tariff, clear_cache
 from typing import List, Optional
+from sqlalchemy import func, or_
 import pandas as pd
 import io
 from datetime import datetime
 import io
 
 app = FastAPI(title="Harmonized Tariff Codes Classification API")
+
+
+def normalize_tariff_code(code: Optional[str]) -> Optional[str]:
+    if code is None:
+        return None
+    raw = str(code).strip()
+    if not raw:
+        return None
+    base = raw.split()[0]
+    normalized = "".join(ch for ch in base if ch.isdigit())
+    return normalized or None
 
 # attempt to repair any records that were seeded with indent == 0 by
 # inferring the level from the HS goods code string.  This runs once on
@@ -22,12 +34,26 @@ app = FastAPI(title="Harmonized Tariff Codes Classification API")
 def repair_indents():
     from sqlalchemy.orm import Session
     session: Session = SessionLocal()
+
+    # Normalize existing tariff codes (remove separators such as dots/spaces)
+    all_codes = session.query(TariffCode).all()
+    for tc in all_codes:
+        normalized = normalize_tariff_code(tc.goods_code)
+        if normalized and tc.goods_code != normalized:
+            tc.goods_code = normalized
+
+    all_confirmations = session.query(UserConfirmation).all()
+    for confirmation in all_confirmations:
+        normalized = normalize_tariff_code(confirmation.assigned_tariff_code)
+        if normalized and confirmation.assigned_tariff_code != normalized:
+            confirmation.assigned_tariff_code = normalized
+
     need_fix = session.query(TariffCode).filter(TariffCode.indent == 0).all()
     if need_fix:
         print(f"repair_indents: fixing {len(need_fix)} records with indent=0")
     for tc in need_fix:
         # goods_code looks like "0100000000 80" – take the numeric part
-        base = tc.goods_code.split()[0].replace(" ", "")
+        base = normalize_tariff_code(tc.goods_code) or ""
         # break into two‑digit groups and count how many are non‑zero
         pairs = [base[i : i + 2] for i in range(0, len(base), 2)]
         new_indent = sum(1 for p in pairs if p != "00") * 2
@@ -45,10 +71,16 @@ app.add_middleware(
 )
 
 @app.get("/materials", response_model=List[MaterialSchema])
-def get_all_materials(skip: int = 0, limit: int = 200, tariff_code_id: Optional[int] = None, is_unclassified: Optional[bool] = None, db: Session = Depends(get_db)):
+def get_all_materials(skip: int = 0, limit: int = 200, tariff_code_id: Optional[int] = None, goods_code: Optional[str] = None, is_unclassified: Optional[bool] = None, db: Session = Depends(get_db)):
     query = db.query(Material)
     if is_unclassified is True:
         query = query.filter(Material.tariff_code_id.is_(None))
+    elif goods_code is not None:
+        normalized_goods_code = normalize_tariff_code(goods_code)
+        if normalized_goods_code:
+            query = query.join(TariffCode, Material.tariff_code_id == TariffCode.id).filter(
+                TariffCode.goods_code == normalized_goods_code
+            )
     elif tariff_code_id is not None:
         query = query.filter(Material.tariff_code_id == tariff_code_id)
     
@@ -60,7 +92,23 @@ def get_tariffs(skip: int = 0, limit: int = 200, search: Optional[str] = None, d
     query = db.query(TariffCode)
     if search:
         search_fmt = f"%{search}%"
-        query = query.filter(TariffCode.goods_code.ilike(search_fmt) | TariffCode.description.ilike(search_fmt))
+        normalized_search = normalize_tariff_code(search)
+        if normalized_search and normalized_search != search:
+            normalized_search_fmt = f"%{normalized_search}%"
+            query = query.filter(
+                or_(
+                    TariffCode.goods_code.ilike(search_fmt),
+                    TariffCode.goods_code.ilike(normalized_search_fmt),
+                    TariffCode.description.ilike(search_fmt),
+                )
+            )
+        else:
+            query = query.filter(
+                or_(
+                    TariffCode.goods_code.ilike(search_fmt),
+                    TariffCode.description.ilike(search_fmt),
+                )
+            )
     tariffs = query.offset(skip).limit(limit).all()
     return tariffs
 
@@ -119,8 +167,6 @@ def get_tariffs_hierarchy(parent_id: Optional[int] = None, db: Session = Depends
         if item.indent == found_any_child_indent:
             immediate_children.append(item)
     return immediate_children
-
-from sqlalchemy import func
 
 @app.get("/analytics/distribution", response_model=List[DistributionItemSchema])
 def get_distribution(db: Session = Depends(get_db)):
@@ -348,7 +394,7 @@ async def upload_files(
             tariffs_to_insert = []
             for _, row in df_tariffs.iterrows():
                 tariffs_to_insert.append(TariffCode(
-                    goods_code=row.get('Goods code', row.get('goods_code', '')),
+                        goods_code=normalize_tariff_code(row.get('Goods code', row.get('goods_code', ''))) or '',
                     description=row.get('Description', row.get('description', '')),
                     language=row.get('Language', row.get('language', 'EN')),
                     start_date=row.get('Start date', row.get('start_date', '')),
@@ -440,9 +486,11 @@ def confirm_material_assignment(
             UserConfirmation.material_number == confirmation.material_number
         ).first()
         
+        normalized_assigned_code = normalize_tariff_code(confirmation.assigned_tariff_code)
+
         if existing:
             # Update existing confirmation
-            existing.assigned_tariff_code = confirmation.assigned_tariff_code
+            existing.assigned_tariff_code = normalized_assigned_code
             existing.cluster_id = confirmation.cluster_id
             existing.confidence_score = confirmation.confidence_score
             existing.confirmed_at = datetime.utcnow()
@@ -452,7 +500,7 @@ def confirm_material_assignment(
                 material_id=material.id,
                 material_number=confirmation.material_number,
                 cluster_id=confirmation.cluster_id,
-                assigned_tariff_code=confirmation.assigned_tariff_code,
+                assigned_tariff_code=normalized_assigned_code,
                 confidence_score=confirmation.confidence_score
             )
             db.add(new_confirmation)
@@ -463,23 +511,23 @@ def confirm_material_assignment(
         # also update the material's tariff_code_id so that overview reflects the
         # user selection. look up the TariffCode row by goods_code (8‑digit HS code)
         # and assign its id; if no match exists we leave it unset.
-        if confirmation.assigned_tariff_code:
+        if normalized_assigned_code:
             tariff = db.query(TariffCode).filter(
-                TariffCode.goods_code == confirmation.assigned_tariff_code
+                TariffCode.goods_code == normalized_assigned_code
             ).first()
             if not tariff:
                 # if user assigned a code that isn't yet in our table, create it
-                tariff = TariffCode(goods_code=confirmation.assigned_tariff_code, description=None)
+                tariff = TariffCode(goods_code=normalized_assigned_code, description=None)
                 db.add(tariff)
                 db.flush()  # assign id
-                print(f"Info: created new tariff code row for {confirmation.assigned_tariff_code}")
+                print(f"Info: created new tariff code row for {normalized_assigned_code}")
             material.tariff_code_id = tariff.id
         
         db.commit()
         
         return ConfirmationResponse(
             material_number=confirmation.material_number,
-            assigned_tariff_code=confirmation.assigned_tariff_code,
+            assigned_tariff_code=normalized_assigned_code,
             confirmed=True,
             message="Tariff assignment confirmed successfully"
         )

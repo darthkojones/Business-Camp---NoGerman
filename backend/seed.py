@@ -5,6 +5,14 @@ from models import Base, Material, TariffCode
 import os
 from sqlalchemy.exc import OperationalError
 
+
+def normalize_tariff_code(code: str) -> str:
+    raw = str(code or "").strip()
+    if not raw:
+        return ""
+    base = raw.split()[0]
+    return "".join(ch for ch in base if ch.isdigit())
+
 def seed_db():
     print("Waiting for database connection...")
     retries = 5
@@ -52,7 +60,7 @@ def seed_db():
                         break
 
                 tariffs_to_insert.append(TariffCode(
-                    goods_code=row.get('Goods code', ''),
+                    goods_code=normalize_tariff_code(row.get('Goods code', '')),
                     description=row.get('Description', ''),
                     language=row.get('Language', ''),
                     indent=indent_val,

@@ -27,6 +27,17 @@ CACHE_FILE = "/app/data/tariff_cache.json"
 _match_cache: Dict[str, TariffSuggestionResponse] = {}
 
 
+def normalize_tariff_code(code: Optional[str]) -> Optional[str]:
+    if code is None:
+        return None
+    raw = str(code).strip()
+    if not raw:
+        return None
+    base = raw.split()[0]
+    normalized = "".join(ch for ch in base if ch.isdigit())
+    return normalized or None
+
+
 def load_cache():
     """Load cache from disk"""
     global _match_cache
@@ -34,9 +45,17 @@ def load_cache():
         try:
             with open(CACHE_FILE, 'r', encoding='utf-8') as f:
                 cache_data = json.load(f)
+                cache_changed = False
                 # Convert JSON back to TariffSuggestionResponse objects
                 for key, value in cache_data.items():
-                    matches = [TariffMatchSchema(**match) for match in value.get('matches', [])]
+                    matches = []
+                    for match in value.get('matches', []):
+                        normalized_code = normalize_tariff_code(match.get('tariff_code'))
+                        if normalized_code and match.get('tariff_code') != normalized_code:
+                            cache_changed = True
+                        if normalized_code:
+                            match['tariff_code'] = normalized_code
+                        matches.append(TariffMatchSchema(**match))
                     _match_cache[key] = TariffSuggestionResponse(
                         cluster_id=value['cluster_id'],
                         cluster_name=value['cluster_name'],
@@ -44,6 +63,8 @@ def load_cache():
                         timestamp=value['timestamp']
                     )
                 print(f"Loaded {len(_match_cache)} cached results from disk")
+                if cache_changed:
+                    save_cache()
         except Exception as e:
             print(f"Error loading cache: {e}")
             _match_cache = {}
@@ -201,13 +222,14 @@ def parse_llm_response(response_text: str) -> List[TariffMatchSchema]:
         matches = []
         
         for match_data in data.get("matches", []):
-            code = match_data.get("tariff_code", "").strip()
+            raw_code = match_data.get("tariff_code", "").strip()
+            code = normalize_tariff_code(raw_code) or ""
             reasoning = match_data.get("reasoning", "")
             # post‑process: flag broad or uncertain codes
             confidence = float(match_data.get("confidence_score", 0.0))
             if code:
                 # if LLM inserted an explicit unsure flag
-                if "unsure" in code.lower():
+                if "unsure" in raw_code.lower():
                     reasoning = f"[UNCERTAIN] {reasoning}"
                 else:
                     # treat too-short codes as prefix suggestions
