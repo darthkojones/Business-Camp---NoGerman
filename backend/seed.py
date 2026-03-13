@@ -35,11 +35,22 @@ def seed_db():
             
             tariffs_to_insert = []
             for _, row in df_tariffs.iterrows():
-                try:
-                    indent_val = int(row.get('Indent', 0))
-                except (ValueError, TypeError):
-                    indent_val = 0
-                    
+                # the CSV we receive has a header named "Indent" in some exports but
+                # older files used "Hier. Pos."; the original import code only looked
+                # at "Indent" which often came through empty and left every row at
+                # zero.  As a result the hierarchy API returned no top‑level entries.
+                #
+                # Try both names and fall back to 0 if the value is missing/invalid.
+                indent_val = 0
+                for col in ("Indent", "Hier. Pos."):
+                    raw = row.get(col)
+                    if raw is not None and str(raw).strip() != "":
+                        try:
+                            indent_val = int(raw)
+                        except (ValueError, TypeError):
+                            indent_val = 0
+                        break
+
                 tariffs_to_insert.append(TariffCode(
                     goods_code=row.get('Goods code', ''),
                     description=row.get('Description', ''),

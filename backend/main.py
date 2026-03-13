@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Depends, HTTPException, Query, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
-from database import get_db, Base, engine
+from database import get_db, Base, engine, SessionLocal
 from models import Material, TariffCode, UserConfirmation
 from schemas import MaterialSchema, TariffCodeSchema, ClusterSchema, TariffSuggestionResponse, EnrichedClusterSchema, ConfirmationRequest, ConfirmationResponse, ExportItemSchema, DistributionItemSchema, BulkUpdateMaterialSchema
 from clustering import generate_clusters
@@ -13,6 +13,28 @@ from datetime import datetime
 import io
 
 app = FastAPI(title="Harmonized Tariff Codes Classification API")
+
+# attempt to repair any records that were seeded with indent == 0 by
+# inferring the level from the HS goods code string.  This runs once on
+# application start so that existing installations pick up a fix without
+# needing to re-seed the database.
+@app.on_event("startup")
+def repair_indents():
+    from sqlalchemy.orm import Session
+    session: Session = SessionLocal()
+    need_fix = session.query(TariffCode).filter(TariffCode.indent == 0).all()
+    if need_fix:
+        print(f"repair_indents: fixing {len(need_fix)} records with indent=0")
+    for tc in need_fix:
+        # goods_code looks like "0100000000 80" – take the numeric part
+        base = tc.goods_code.split()[0].replace(" ", "")
+        # break into two‑digit groups and count how many are non‑zero
+        pairs = [base[i : i + 2] for i in range(0, len(base), 2)]
+        new_indent = sum(1 for p in pairs if p != "00") * 2
+        if new_indent > 0:
+            tc.indent = new_indent
+    session.commit()
+    session.close()
 
 app.add_middleware(
     CORSMiddleware,
@@ -52,48 +74,50 @@ def get_tariffs_count(db: Session = Depends(get_db)):
 def get_tariffs_hierarchy(parent_id: Optional[int] = None, db: Session = Depends(get_db)):
     """
     Returns the next level of the tariff hierarchy.
-    - If parent_id is None, return top-level categories (indent=2).
-    - If parent_id is provided, return its immediate children.
+    The original implementation assumed the database used indent values of 2/4/6 etc.
+    The sample dataset sometimes imports every row at 0 which makes the frontend
+    picker show nothing.  We provide a couple of fallbacks:
+      * if no codes have indent > 0, treat all entries as a flat list (top-level)
+      * if the requested parent has indent == 0 we still try to compute children by
+        looking at subsequent items and picking the first larger indent value.
     """
+    # top level request -------------------------------------------------------
     if parent_id is None:
-        return db.query(TariffCode).filter(TariffCode.indent == 2).order_by(TariffCode.id).all()
+        # prefer indent==2 since that's what the UI expects; otherwise use the
+        # smallest non‑zero indent available, falling back to 0 if the table is
+        # completely un‑indented.
+        indent_to_use = 2
+        exists = db.query(TariffCode).filter(TariffCode.indent == indent_to_use).first()
+        if not exists:
+            # find the minimum indent present (could be 0)
+            indent_to_use = db.query(TariffCode.indent).order_by(TariffCode.indent).first()
+            indent_to_use = indent_to_use[0] if indent_to_use is not None else 0
+        return db.query(TariffCode).filter(TariffCode.indent == indent_to_use).order_by(TariffCode.id).all()
     
     parent = db.query(TariffCode).filter(TariffCode.id == parent_id).first()
     if not parent:
         raise HTTPException(status_code=404, detail="Parent tariff code not found")
     
-    # Find children: items that follow the parent and have indent = parent.indent + 2
-    # But we need to make sure we don't jump into a different branch.
-    # We look at all items after the parent.
-    # We stop when we hit an item with indent <= parent.indent.
-    
+    # Find children: items that follow the parent and have indent > parent.indent.
+    # We look at all subsequent items and stop when the indent drops back down or
+    # equals the parent's indent.
     all_following = db.query(TariffCode).filter(TariffCode.id > parent.id).order_by(TariffCode.id).all()
     
     immediate_children = []
-    target_indent = parent.indent + 2
-    
-    # Sometimes hierarchy jumps (e.g. 4 -> 8 if 6 is missing or structure is weird)
-    # But usually it's +2.
-    # To be safe, we find the MINIMUM indent that is > parent.indent among following items.
-    
+    # determine target indent (smallest indent greater than parent.indent)
     found_any_child_indent = None
     for item in all_following:
         if item.indent <= parent.indent:
             break
-        
         if found_any_child_indent is None or item.indent < found_any_child_indent:
-             found_any_child_indent = item.indent
-             
+            found_any_child_indent = item.indent
     if found_any_child_indent is None:
         return []
-        
-    # Now collect all items with that specific indent within this branch
     for item in all_following:
         if item.indent <= parent.indent:
             break
         if item.indent == found_any_child_indent:
             immediate_children.append(item)
-            
     return immediate_children
 
 from sqlalchemy import func

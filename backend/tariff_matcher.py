@@ -158,11 +158,13 @@ def build_matching_prompt(cluster: ClusterSchema, tariff_codes: List[TariffCode]
 **Instructions:**
 1. Analyze the product characteristics, materials, and usage
 2. Consider the HS code hierarchy and specificity
+   - Only provide the most specific (10‑digit) HS codes. Avoid broad codes such as `7300000000`, `80`, or any code ending in more than four trailing zeros; these are too general.
+   - If you are not confident about a precise 10‑digit code, explicitly state that you are "unsure" and, if possible, offer only the leading digits (e.g. "73" or "7308") as a prefix recommendation instead of a full code.
 3. Suggest 3-5 best matching tariff codes in order of confidence
 4. For each suggestion, provide:
-   - The exact tariff code (goods_code)
+   - The exact tariff code (goods_code) or a prefix with an "unsure" indication when uncertain
    - Confidence score (0.0 to 1.0)
-   - Clear reasoning for why this code matches
+   - Clear reasoning for why this code matches, or why a specific code could not be determined
    - Section information
 
 **Response Format (JSON only, no markdown):**
@@ -199,10 +201,41 @@ def parse_llm_response(response_text: str) -> List[TariffMatchSchema]:
         matches = []
         
         for match_data in data.get("matches", []):
+            code = match_data.get("tariff_code", "").strip()
+            reasoning = match_data.get("reasoning", "")
+            # post‑process: flag broad or uncertain codes
+            confidence = float(match_data.get("confidence_score", 0.0))
+            if code:
+                # if LLM inserted an explicit unsure flag
+                if "unsure" in code.lower():
+                    reasoning = f"[UNCERTAIN] {reasoning}"
+                else:
+                    # treat too-short codes as prefix suggestions
+                    if len(code) < 10:
+                        reasoning = f"[PREFIX SUGGESTION] {reasoning}"
+                        confidence = min(confidence, 0.5)
+                    # detect overly broad codes with many trailing zeros
+                    stripped = code.rstrip('0')
+                    trailing = len(code) - len(stripped)
+                    if len(code) >= 6 and trailing >= 4:
+                        reasoning = f"[BROAD CODE] {reasoning}"
+                        confidence = min(confidence, 0.5)
+            # skip entries that are too broad or not specific enough
+            if code:
+                # we consider a code specific only if it's at least 10 digits and
+                # doesn't have 4+ trailing zeros (indicative of a chapter/heading)
+                if not (len(code) >= 10 and not (trailing >= 4)):
+                    # log or drop the code silently by continuing
+                    print(f"Dropping non-specific tariff code suggestion: {code}")
+                    continue
+            else:
+                # no code provided -> skip
+                continue
+
             matches.append(TariffMatchSchema(
-                tariff_code=match_data.get("tariff_code", ""),
-                confidence_score=float(match_data.get("confidence_score", 0.0)),
-                reasoning=match_data.get("reasoning", ""),
+                tariff_code=code,
+                confidence_score=confidence,
+                reasoning=reasoning,
                 section_info=match_data.get("section_info"),
                 description=match_data.get("description")
             ))
@@ -286,6 +319,9 @@ def match_cluster_to_tariff(
         # Parse the response
         response_text = response.choices[0].message.content
         matches = parse_llm_response(response_text)
+        
+        # sort matches by confidence_score descending so highest is first
+        matches.sort(key=lambda m: m.confidence_score or 0.0, reverse=True)
         
         # Create the final response
         result = TariffSuggestionResponse(
